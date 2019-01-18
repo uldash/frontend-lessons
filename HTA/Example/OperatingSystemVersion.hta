@@ -1,0 +1,33 @@
+<html>
+
+<head>
+  <title>Operating System Version</title>
+  <HTA:APPLICATION 
+    APPLICATIONNAME="Operating System Version"
+    SCROLL="yes"
+    SINGLEINSTANCE="yes"
+  />
+</head>
+
+<script language="VBScript">
+  Sub GetOSVersion
+    strComputer = "."
+    Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\cimv2")
+
+    Set colOperatingSystems = objWMIService.ExecQuery ("Select * from Win32_OperatingSystem")
+
+    For Each objOperatingSystem in colOperatingSystems
+      Msgbox objOperatingSystem.Caption & " " & objOperatingSystem.Version
+    Next
+  End Sub
+</script>
+
+<body style="font:14 pt arial; color:white;
+  filter:progid:DXImageTransform.Microsoft.Gradient (GradientType=1, StartColorStr='#000000', EndColorStr='#0000FF')">
+
+<p>????? ?? ?????? - ???????? ?????????!</p>
+<input type="button" value="Operating System" name="run_button"  onClick="GetOSVersion()">
+
+</body>
+
+</html>
