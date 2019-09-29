@@ -45,9 +45,12 @@ module.exports = function (command) {
     switch (cmd[0]) {
         case 'SHOW':
             return show(phoneBook);
+            break;
         case 'ADD':
-            return add(phoneBook, cmd[1], cmd.slice(2));
+            return add(phoneBook, cmd[1], cmd.slice(2).map(item => item.trim()));
+            break;
         case 'REMOVE_PHONE':
-            return removePhone(phoneBook, cmd.slice(1));
+            return removePhone(phoneBook, cmd.slice(1).map(item => item.trim()));
+            break;
     };
 };
