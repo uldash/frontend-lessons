@@ -1,0 +1,15 @@
+# C extensions
+*.so
+
+# Log
+*.log
+
+# Dll
+*.dll
+
+# exe
+*.exe
+
+# vscode setings
+.vscode/
+.vscode
