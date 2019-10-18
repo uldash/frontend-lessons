@@ -14,3 +14,9 @@ jsc <myapp.js>
 ```
 
 В результате получим exe файл
+
+```cmd
+jsc /t:library LibHello.js
+```
+
+Получим dll библиотеку
