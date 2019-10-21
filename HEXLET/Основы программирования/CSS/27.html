@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .big-text {
+            font-size: 45px;
+            /* Здесь значение указано абсолютное и всегда будет равняться 45 пикселям */
+        }
+
+        .very-big-text {
+            font-size: 150%;
+            /* Относительное значение. В данном случае высчитывается от значения в классе .big-text и будет равно 67.5 пикселей. При изменении значения в классе .big-text данное значение будет пересчитано автоматически */
+        }
+
+        .header {
+            font-size: 22px;
+        }
+
+        .offer {
+            font-size: 200%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big-text">
+        <p>Здесь большой текст</p>
+
+        <div class="very-big-text">
+            <p>А здесь текст на 150% крупнее большого текста</p>
+        </div>
+    </div>
+    <div class="header">Test
+        <p class="offer">Test test</p>
+    </div>
+
+</body>
+
+</html>
