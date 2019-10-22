@@ -1,2 +1,5 @@
 Решил попробовать купить подписку на hexlet
 Денюшки не большие, 24$ в месяц, это примерно 1500р
+
+Профессия Фронтенд JavaScript
+https://ru.hexlet.io/professions/frontend
