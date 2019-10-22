@@ -7,16 +7,19 @@ body {
     padding-top: 32px;
     padding-bottom: 32px;
   }
+ul {
+    margin-top:0;
+}
 p {
     margin-top: 0px;
     margin-bottom: 12px;
 }
 h1,h2,h3 {
     font-weight: 400;
+    margin:0;
 }
 h1 {
     font-size: 36px;
-    margin-bottom: 0px;
 }
 h2 {
     font-size: 32px;
@@ -38,4 +41,10 @@ h4 {
 #footer {
     margin-top: 64px;
     text-align: center;
+}
+.main-section {
+    margin-bottom: 24px;
+}
+.main-section-item {
+    margin-bottom:16px;
 }
