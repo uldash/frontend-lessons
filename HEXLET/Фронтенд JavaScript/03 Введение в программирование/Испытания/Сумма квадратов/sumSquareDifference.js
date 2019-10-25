@@ -21,4 +21,5 @@ function sumSquareDifference(n) {
     return squareSum ** 2 - sumSquare;
 }
 
+//export default sumSquareDifference;
 assert.equal(sumSquareDifference(10), 2640);

@@ -17,58 +17,51 @@ withoutTwoZeros(2, 4); // 10
 
 const assert = require('assert');
 
-const fac = n => n === 1 ? 1 : n * fac(n - 1);
-
-function withoutTwoZeros(zero, one) {
-    let result = 0;
-
-    // сколькими способами можно переставить n предметов, расположенных на n различных местах,
-    // если среди n предметов имеются k различных типов (k < n), т. е. есть одинаковые предметы.
-    // p = n!/(n1!*n2!*...*nk!)
-    result = fac(zero + one) / (fac(zero) * fac(one));
-    // result -= fac(zero + one) / fac(one);
-    return result;
-}
-
-//assert.equal(fac(1), 1);
-//assert.equal(fac(4), 24);
-//assert.equal(fac(10), 3628800);
-
-/*
-console.log(withoutTwoZeros(3, 1)); // 0
-console.log(withoutTwoZeros(3, 2)); // 1
-console.log(withoutTwoZeros(1, 1)); // 2
-console.log(withoutTwoZeros(3, 5)); // 20
-console.log(withoutTwoZeros(1, 3)); // 4
-console.log(withoutTwoZeros(2, 2)); // 3
-console.log(withoutTwoZeros(2, 4)); // 10
-console.log(withoutTwoZeros(4, 6)); // 35
-console.log(withoutTwoZeros(5, 6)); // 21
-console.log(withoutTwoZeros(5, 7)); // 56
-console.log(withoutTwoZeros(6, 8)); // 84
-*/
-
-//построим массив, где на 
-const perebor = (a, b) => {
+const withoutTwoZeros = (a, b) => {
+    const numberChar = (str, chr) => {
+        let result = 0;
+        for (let i = 0; i < str.length; i++) {
+            if (chr === str[i]) {
+                result++;
+            }
+        }
+        return result;
+    }
     let result = 0;
     let binaryNum = ''.padStart(a + b, '1');
     //console.log(binaryNum);
     for (let index = 0; index <= parseInt(binaryNum, 2); index++) {
         let tmpStr = index.toString(2).padStart(a + b, '0');
         if (!tmpStr.includes('00')) {
-            if (((tmpStr.match(/0/g) || []).length === a) && ((tmpStr.match(/1/g) || []).length === b)) {
-                console.log(tmpStr);
+            if ((numberChar(tmpStr, '0') === a) && (numberChar(tmpStr, '1') === b)) {
+                //if (((tmpStr.match(/0/g) || []).length === a) && ((tmpStr.match(/1/g) || []).length === b)) {
+                //console.log(tmpStr);
                 result++;
             }
         }
-        //  console.log(tmpStr);
-        //if (((tmpStr.match(/0/g) || []).length === a) && ((tmpStr.match(/1/g) || []).length === b)) {
-        //    result++;
-        //}
-        //}
-        //console.log(index.toString(2).padStart(a + b, '0'));
     }
     return result;
 }
+/*
+const withoutTwoZeros = (a, b) => {
+  if (a > b + 1) {
+    return 0;
+  }
+  if (a === 0 || b === 0) {
+    return 1;
+  }
 
-console.log(perebor(2, 2));
+  return withoutTwoZeros(a, b - 1) + withoutTwoZeros(a - 1, b - 1);
+};
+*/
+assert.equal(withoutTwoZeros(3, 1), 0);
+assert.equal(withoutTwoZeros(3, 2), 1);
+assert.equal(withoutTwoZeros(1, 1), 2);
+assert.equal(withoutTwoZeros(3, 5), 20);
+assert.equal(withoutTwoZeros(1, 3), 4);
+assert.equal(withoutTwoZeros(2, 2), 3);
+assert.equal(withoutTwoZeros(2, 4), 10);
+assert.equal(withoutTwoZeros(4, 6), 35);
+assert.equal(withoutTwoZeros(5, 6), 21);
+assert.equal(withoutTwoZeros(5, 7), 56);
+assert.equal(withoutTwoZeros(6, 8), 84);

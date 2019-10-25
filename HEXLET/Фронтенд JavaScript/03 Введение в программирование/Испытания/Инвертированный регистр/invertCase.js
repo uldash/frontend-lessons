@@ -14,7 +14,7 @@ function invertCase(str) {
     return result;
 }
 
-export default invertCase;
+//export default invertCase;
 
 console.log(invertCase('Hello, World!')); // hELLO, wORLD!
 console.log(invertCase('I loVe JS'));     // i LOvE js

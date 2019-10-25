@@ -24,6 +24,7 @@ function ackermann(m, n) {
     }
 }
 
+//export default ackermann;
 assert.equal(ackermann(0, 0), 1);
 assert.equal(ackermann(2, 1), 5);
 assert.equal(ackermann(2, 3), 9);
