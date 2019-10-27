@@ -33,3 +33,6 @@ assert.equal(formattedTime(175), '02:55');
 assert.equal(formattedTime(600), '10:00');
 assert.equal(formattedTime(754), '12:34');
 assert.equal(formattedTime(1445), '00:05');
+assert.equal(formattedTime(1504), '01:04');
+
+//console.log(formattedTime(1504));
