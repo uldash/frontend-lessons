@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "assert": "^2.0.0"
+    "assert": "^2.0.0",
+    "hexlet-points": "^1.0.7"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
