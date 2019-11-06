@@ -74,8 +74,8 @@ const containsTheOrigin = (rectangle) => {
     let p2 = makePoint(x0 + width,  y0);
     let p3 = makePoint(x0 + width,  y0 - height);
     let p4 = makePoint(x0,          y0 - height);
-    console.log(`p1:${pointToString(p1)}, p2:${pointToString(p2)}, p3:${pointToString(p3)}, p4:${pointToString(p4)}`);
-    console.log(`p1:${getQuadrant(p1)}, p2:${getQuadrant(p2)}, p3:${getQuadrant(p3)}, p4:${getQuadrant(p4)}`);
+    //console.log(`p1:${pointToString(p1)}, p2:${pointToString(p2)}, p3:${pointToString(p3)}, p4:${pointToString(p4)}`);
+    //console.log(`p1:${getQuadrant(p1)}, p2:${getQuadrant(p2)}, p3:${getQuadrant(p3)}, p4:${getQuadrant(p4)}`);
     return getQuadrant(p1) !== getQuadrant(p2) && getQuadrant(p2) !== getQuadrant(p3) && getQuadrant(p3) !== getQuadrant(p4) && getQuadrant(p4) !== getQuadrant(p1);
 };
 

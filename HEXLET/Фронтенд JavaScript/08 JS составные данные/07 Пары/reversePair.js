@@ -12,3 +12,4 @@ import { cons, car, cdr, toString } from 'hexlet-pairs';
 const reversePair= (pair) => cons(cdr(pair), car(pair));
 
 console.log(toString(reversePair(cons('one', 'two'))));
+
