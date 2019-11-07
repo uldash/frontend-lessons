@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Таблицы:</h2>
+    <table border="1">
+        <caption>Сотрудники отдела поддержки</caption>
+        <thead>
+            <tr>
+                <th>Имя</th>
+                <th>Должность</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Петя</td>
+                <td>Менеджер</td>
+            </tr>
+            <tr>
+                <td>Маша</td>
+                <td>Разработчик</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Вася</td>
+                <td>Девопс</td>
+            </tr>
+        </tfoot>
+    </table>
+    <h3>Объединение столбцов</h3>
+    <table border="1">
+        <tr>
+            <td>Первая ячейка</td>
+            <td>Вторая ячейка</td>
+            <td>Третья ячейка</td>
+        </tr>
+        <tr>
+            <td colspan="3">Единственная ячейка</td>
+        </tr>
+    </table>
+    <h3>Оъединение строк</h3>
+    <table border="1">
+        <tr>
+            <td rowspan="2">Левая ячейка</td>
+            <td>Верхняя ячейка</td>
+        </tr>
+        <tr>
+            <td>Нижняя ячейка</td>
+        </tr>
+    </table>
+    <h3>Объединение строк и столбцов</h3>
+    <table border="1">
+        <tr>
+            <td rowspan="2">Левая ячейка</td>
+            <td>Средняя ячейка</td>
+            <td>Правая ячейка</td>
+        </tr>
+        <tr>
+            <td colspan="2">Нижняя ячейка</td>
+        </tr>
+    </table>
+</body>
+
+</html>
