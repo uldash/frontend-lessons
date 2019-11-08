@@ -1,0 +1,53 @@
+body {
+    background: #ddd;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+  }
+  
+  .block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    margin: 16px;
+    background: #fff;
+    font-size: 32px;
+  }
+  
+  .html-color {
+    /* напиши свой код здесь */
+    background-color: wheat;
+  }
+  
+  .hex-color {
+    /* напиши свой код здесь */
+    background-color: #46E6C9;
+  }
+  
+  .rgb-color {
+    /* напиши свой код здесь */
+    background-color: rgb(188, 67, 75);
+  }
+  
+  .rgba-color {
+    /* напиши свой код здесь */
+    background-color: rgba(203, 142, 145,50%);
+  }
+  
+  .hsl-color {
+    /* напиши свой код здесь */
+    background-color: hsl(119, 51%, 51%);
+  }
+  
+  .hsla-color {
+    /* напиши свой код здесь */
+    background-color: hsl(119, 51%, 51%,50%);
+  }
+  
+  .image {
+    /* напиши свой код здесь */
+    background: url('Torta\ Chiffon.jpg'); 
+    background-size: cover;
+  }
