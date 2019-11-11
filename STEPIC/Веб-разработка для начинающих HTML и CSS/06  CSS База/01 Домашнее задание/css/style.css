@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+header {
+    display: block;
+    background-color:#007765;
+    width: 1219px;
+    height: 84;
+    margin: 0;
+    padding-left: 55px;
+    padding-right: 55px;
+}
+main{
+    display: block;
+    width: 1219px;
+    height: 176;
+    padding-left: 55px;
+    padding-right: 55px;
+}
+footer {
+    display: block;
+    position: absolute;
+    background-color: #333333;
+    width: 1219px;
+    height: 176;
+    padding-left: 55px;
+    padding-right: 55px;   
+}
+footer>p {
+    color: #FFFFFF ;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    line-height: 21px;
+}
+.pipernet {
+    display: block;
+    background-image: url("img/image-8.png");
+}

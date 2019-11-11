@@ -25,8 +25,12 @@ const html6 = append(html5, node('blockquote', 'quote'));
 emptyTagsCount('blockquote', html6); // 2
 */
 
-import { node, append, make, is, getName, getValue } from 'hexlet-html-tags';
-import { l, isEmpty, head, tail, cons, toString } from 'hexlet-pairs-data'
+import {
+    node, append, make, is, getName, getValue,
+} from 'hexlet-html-tags';
+import {
+    l, isEmpty, head, tail, cons, toString,
+} from 'hexlet-pairs-data';
 
 export const reduce = (func, acc, data) => {
     if (isEmpty(data)) {
@@ -38,18 +42,15 @@ export const reduce = (func, acc, data) => {
     return reduce(func, func(element, acc), tailElements);
 };
 
-export const emptyTagsCount = (tag, elements) => {
-    return reduce(
-        (element, acc) => ((is(tag, element) && getValue(element) === '') ? acc + 1 : acc), 0, elements);
-}
+export const emptyTagsCount = (tag, elements) => reduce(
+    (element, acc) => ((is(tag, element) && getValue(element) === '') ? acc + 1 : acc), 0, elements,
+);
 
 const html1 = append(make(), node('h1', 'header1'));
 const html2 = append(html1, node('h1', 'header2'));
 const html3 = append(html2, node('p', 'content'));
 
-console.log(reduce((element, acc) => {
-    return is('h1', element) ? acc + 1 : acc;
-}, 0, html3)); // 2
+console.log(reduce((element, acc) => (is('h1', element) ? acc + 1 : acc), 0, html3)); // 2
 
 const list = l(0, -10, 2, 38, 2, -2);
 const list2 = reduce(Math.max, head(list), list);
