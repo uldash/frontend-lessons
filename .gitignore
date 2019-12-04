@@ -16,3 +16,8 @@
 
 # ESLint
 node_modules/
+
+*.mp4
+*.webm
+*.mp3
+*.ogg

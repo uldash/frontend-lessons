@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Макет на основе сетки 960.GS</title>
+    <link rel="stylesheet" type="text/css" href="css/960_12_col.css">
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #665544;
+            text-align: center;
+        }
+
+        #nav,
+        #feature,
+        .article,
+        #footer {
+            background-color: #efefef;
+            margin-top: 20px;
+            padding: 10px 0px 5px 0px;
+        }
+
+        #feature,
+        .article {
+            height: 100px;
+        }
+
+        li {
+            display: inline;
+            padding: 5px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container_12 clearfix">
+        <div id="header" class="grid_12">
+            <h1>Логотип</h1>
+            <div id="nav">
+                <ul>
+                    <li><a href="">Домой</a></li>
+                    <li><a href="">Товары</a></li>
+                    <li><a href="">Услуги</a></li>
+                    <li><a href="">О нас</a></li>
+                    <li><a href="">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="feature" class="grid_12">
+            <p>Характеристика</p>
+        </div>
+        <div class="article grid_4">
+            <p>Колонка 1</p>
+        </div>
+        <div class="article grid_4">
+            <p>Колонка 2</p>
+        </div>
+        <div class="article grid_4">
+            <p>Колонка 3</p>
+        </div>
+
+        <div id="footer" class="grid_12">
+            <p>&copy; Собственность 2013</p>
+        </div>
+</body>
+
+</html>

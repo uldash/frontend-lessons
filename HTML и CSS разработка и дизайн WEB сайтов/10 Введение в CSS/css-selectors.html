@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Селекторы</title>
+    <style type="text/css">
+        /* универсальный селектор */
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* селектор типа */
+        h1,
+        h2 {
+            color: red;
+        }
+
+        /* селектор класса */
+        p.note {
+            background-color: silver;
+        }
+
+        /* селектор идентификатора */
+        #introduction {
+            background-color: gray;
+        }
+
+        /* дочерний селектор */
+        li>a {
+            border: 2px solid blue;
+        }
+
+        /* селектор потомка */
+        p a {
+            border: 2px solid red;
+        }
+
+        /* селектор сестринского элемента */
+        h1+p {
+            color: greenyellow;
+        }
+
+        /* селектор обобщенных родственных элементов */
+        h2~p {
+            font-size: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="top">Посевной календарь</h1>
+    <p id="introduction">Здecь вы можете прочитать
+        нашу полезную инструкцию о том, что и когда
+        следует делать.</p>
+    <h2>Весна</h2>
+    <ul>
+        <li><a href="mulch.html">Удобрение о вощных грядок</a></li>
+        <li><a href="potato.html">Посадка раннего картофеля</a></li>
+        <li><a href="tomato.html">Посев семян томатов</a></li>
+        <li><a href="beet.html">Посев семян свеклы</a></li>
+        <li><a href="zucchini.html">Посев семян кабачка</a></li>
+        <li><a href="rhubard.html">
+                <div>Срезание увядших листьев ревеня<a href="">TEST</a></div>
+            </a></li>
+    </ul>
+    <p class="note">Эта страница написана
+        <a href="mailto:ivy@example.org">ivy@example.org</a> для <a href="http://www.example.org">примера</a>
+    </p>
+    <p>
+        <a href="#top">К началу страницы</a>
+    </p>
+</body>
+
+</html>

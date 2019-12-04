@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ограничение ширины</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111111;
+        }
+
+        th {
+            color: lightskyblue;
+            border-bottom: 1px solid lightblue;
+            font-weight: normal;
+        }
+
+        td {
+            min-width: 150px;
+            min-height: 200px;
+            vertical-align: top;
+            line-height: 1.4em;
+        }
+
+        td.description {
+            min-width: 450px;
+            max-width: 650px;
+            text-align: left;
+            padding: 5px;
+            margin: 0px
+        }
+    </style>
+</head>
+<table>
+    <thead>
+        <tr>
+            <th>Фотография</th>
+            <th>Описание</th>
+            <th>Цена</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><img src="img/rhodes.jpg" alt="" width="250" height="150"></td>
+            <td class="description">
+                <p>Родес-пиано - электромеханический музыкальный инструмент. Один из знаковых инструментов джаза, поп- и
+                    рок-музыки 1960—1970-х годов, сохраняющий популярность до настоящего времени. В отличие от других
+                    электрических фортепиано, где источником звука является струна или металлический язычок (англ.
+                    reed), источник звука в фортепиано Родеса — металлическая пластина (англ. tine — зубец), подобная
+                    камертону.</p>
+            </td>
+            <td>240000 рублей</td>
+        </tr>
+        <tr>
+            <td><img src="img/wurlitzer.jpg" alt="" width="250" height="150"></td>
+            <td class="description">The Wurlitzer electric piano is an electro-mechanical piano, created by the Rudolph
+                Wurlitzer Company of
+                Mississippi. The Wurlitzer company itself never called the instrument an "electric piano", instead
+                inventing the phrase "Electronic Piano" and using this as a trademark throughout the production of the
+                instrument. It employs a piano-like keyboard with hammers that hit small metal tines, amplified by
+                electromagnetic pickups.</td>
+            <td>67000 рублей.</td>
+        </tr>
+        <tr>
+            <td><img src="img/clavinet.jpg" alt="" width="250" height="150"></td>
+            <td class="description">A Clavinet is an electronically amplified clavichord manufactured by the Hohner
+                company. Each key uses a
+                rubber tip to perform a hammer on a string. Its distinctive bright staccato sound is often compared to
+                that of an electric guitar. Various models were produced over the years, including the models I, II, L,
+                C, D6, and E7.</td>
+            <td>45000 рублей.</td>
+        </tr>
+    </tbody>
+</table>
+
+<body>
+
+</body>
+
+</html>

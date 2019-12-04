@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Стилизация элементов FIELDSET и LEGEND</title>
+    <style type="text/css">
+        label {
+            display: block;
+        }
+
+        fieldset {
+            width: 350px;
+            border: 1px solid #dcdcdc;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: right;
+        }
+
+        legend {
+            background-color: #efefef;
+            border: 1px solid #dcdcdc;
+            border-radius: 10px;
+            padding: 10px 20px;
+            text-align: left;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Рассылка</legend>
+        <label>Имя:<input type="text"></label>
+        <label>Email:<input type="email"></label>
+        <input type="submit" id="submit" value="Подписка">
+    </fieldset>
+</body>
+
+</html>
