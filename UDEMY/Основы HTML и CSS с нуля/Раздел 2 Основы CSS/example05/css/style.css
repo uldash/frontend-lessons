@@ -1,0 +1,37 @@
+.flex-container {
+    background-color: lightgray;
+    padding: 20px;
+    display: flex;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    /* 
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+     */
+}
+.flex-el {
+    width: 100px;
+    height: 100px;
+    margin: 0px;
+    color: #000;
+    text-align: center;
+    font-style: 24px ;
+}
+
+.bg-blue {
+    background-color: blue;
+}
+.bg-orange {
+    background-color: orange;
+    height: 200px;
+}
+.bg-green {
+    background-color: greenyellow;
+}
+.bg-violet {
+    background-color: violet;
+}
+.bg-pink {
+    background-color: pink;
+}

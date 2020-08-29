@@ -1,0 +1,34 @@
+/* 
+    * {}
+    p {}
+    .class-name {}
+    #id-name {}
+    inline-style
+ */
+h1 {
+    color: brown;
+}
+p mark {
+    background-color: cyan;
+}
+mark {
+    background-color: cornflowerblue;
+}
+
+.text {
+    text-transform: uppercase;
+    color: rgb(133, 122, 122) !important;
+    font-weight: bold;
+}
+
+.text-large {
+    width: 700px;   
+}
+
+.text-small {
+    width: 300px;
+}
+
+#text {
+    color: green;
+}

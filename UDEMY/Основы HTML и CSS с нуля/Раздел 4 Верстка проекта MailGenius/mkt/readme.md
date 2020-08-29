@@ -1,0 +1,1 @@
+Макет по адресу: https://www.figma.com/file/yklifRuRdBND4k6wlA7So0/Easy-Code?node-id=2%3A2
