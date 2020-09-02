@@ -1,0 +1,41 @@
+body {
+    background-image: url('../img/bacground.png');
+    /* background-repeat: no-repeat repeat; */
+    /* background-repeat: no-repeat; */
+    /* background-position: 100px 20px; */
+    margin: 0;
+}
+.product-item {
+    background-color: rgba(255,0,0,0.3);
+    
+    color: white;
+    padding: 10px 15px;
+    margin: 0px 0 50px;
+
+    /* border-radius: 20px 0px; */
+    /* outline: 1px solid red; */
+    box-shadow: white 0 0 20px 10px;
+    height: 100vh;
+}
+.product-item:first-child {
+    background: url(../img/pic01.jpg) no-repeat, url(../img/pic01.jpg) no-repeat;
+    background-color: coral;
+    background-position: top center, bottom center;
+    background-size: 500px, 200px;
+}
+
+.product-item:nth-child(2) {
+background: url(../img/pic01.jpg) no-repeat;
+background-color: coral;
+background-size: cover;
+background-position: right top;
+background-attachment: fixed;
+}
+
+.product-item__title {
+    width: 50%;
+    height: auto;
+    box-sizing: border-box;
+    margin: 10px auto;
+    padding: 10px 15px;
+}

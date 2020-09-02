@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блочная модель верстки old-style</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+        }
+
+        img {
+            float: left;
+            margin: 0 10px;
+            opacity: 0.5;
+        }
+
+        .d-table {
+            width: 200px;
+            height: 200px;
+            background-color: darkcyan;
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .block {
+            width: 100px;
+            height: 100px;
+            background-color: darkorchid;
+            float: left;
+        }
+
+        h1 {
+            background-color: red;
+            /* overflow: hidden; */
+        }
+    </style>
+</head>
+<body>
+    <div class="d-table">1</div>
+    <div class="d-table">2</div>
+    <div class="d-table">3</div>
+    <div class="d-table">4</div>
+    <div class="d-table">5</div>
+    <div class="d-table">6</div>
+    <br>
+    <div>
+        <img src="img/html5-and-css3.jpg" alt="html and css">
+        <!-- <div class="block"></div> -->
+        <h1>Lorem ipsum dolor sit.</h1>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam culpa reiciendis necessitatibus doloribus
+        corrupti nisi iure ullam cum rerum quam, quo porro! Necessitatibus autem consequuntur aspernatur harum repellat
+        est recusandae.
+    </div>
+</body>
+</html>

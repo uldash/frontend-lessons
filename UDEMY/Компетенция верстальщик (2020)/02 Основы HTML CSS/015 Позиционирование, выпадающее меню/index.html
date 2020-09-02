@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Позиционирование, выпадающее меню</title>
+    <style>
+        .black {
+            background-color: black;
+            color: white;
+        }
+
+        #child {
+            background-color: red;
+        }
+
+        #parent {
+            position: relative;
+            top: 100px;
+            width: 300px;
+            height: 200px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div>
+            <div id="child">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia rem eligendi quidem alias, harum
+                explicabo quos quae fuga odio itaque asperiores soluta illum dicta ducimus sequi sit. Consequuntur,
+                nobis. Dicta.
+            </div>
+        </div>
+    </div>
+    <div class="black">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+    </div>
+    <!-- /.black -->
+</body>
+</html>

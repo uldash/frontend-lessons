@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 14px;
+}
+
+.font-list {
+    list-style-type: none;
+    list-style-image: url("../img/smile.gif");
+}
+
+.sizes {
+    font-family: 'Lobster', cursive;
+}
+
+.font-type {
+    font-family: 'Pacifico', cursive;
+}
+
+.simple {
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+    /* text-decoration: line-through; */
+    letter-spacing: 1px;
+    text-shadow: red 0 0 10px;
+    text-transform: capitalize;
+}
+
+.complex {
+    width: 50%;
+    font-size: 30px;
+}
+
+.complex span {
+    font-size: 0.5em;
+}
+
+.more {
+    font-size: 1.6rem;
+}
+
+.vw {
+    font-size: 2vw; /* уменьшается ширина - уменьшается размер шрифта*/
+}

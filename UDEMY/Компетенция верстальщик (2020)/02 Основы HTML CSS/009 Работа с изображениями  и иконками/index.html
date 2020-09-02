@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Работа с изображениями и иконками</title>
+</head>
+
+<body>
+    <h1>Images</h1>
+    <h3>Форматы изображений</h3>
+    <ul>
+        <li>JPG/JPEG</li>
+        <li>PNG</li>
+        <li>GIF</li>
+        <li>Webp</li>
+    </ul>
+    <picture>
+        <source type="image/webp" srcset="img/panda.webp">
+        <source type="image/png" srcset="img/panda.png">
+        <img src="img/panda.webp" alt="panda image">
+    </picture>
+    <picture class="pic">
+        <source media="(max-width: 500px)" srcset="img/css.jpg">
+        <source media="(max-width: 900px)" srcset="img/html.png">
+        <img src="img/htmlcss.png" alt="image">
+    </picture>
+    <div class="small-image">
+        <img src="img/code.jpg" alt="html image">
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблицы и табличная верстка</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 400px;
+            margin: auto;
+        }
+
+        caption {
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: lightgrey;
+        }
+
+        tr:nth-child(n+3) {
+            text-transform: capitalize;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        th {
+            text-transform: capitalize;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Table 1</caption>
+        <tr>
+            <th>Заголовок 1</th>
+            <th>Заголовок 1</th>
+            <th>Заголовок 1</th>
+            <th>Заголовок 1</th>
+        </tr>
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+            <td>Cell 3</td>
+            <td>Cell 4</td>
+        </tr>
+        <tr>
+            <td>Cell 5</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <caption>оценки учеников</caption>
+        <tr>
+            <th rowspan="2">ученик</th>
+            <th colspan="3">период обучения</th>
+        </tr>
+        <tr>
+            <td>1-й семестр</td>
+            <td>2-й семестр</td>
+            <td>3-й семестр</td>
+        </tr>
+        <tr>
+            <td>фио</td>
+            <td>оценка</td>
+            <td>оценка</td>
+            <td>оценка</td>
+        </tr>
+        <tr>
+            <td>фио</td>
+            <td>оценка</td>
+            <td>оценка</td>
+            <td>оценка</td>
+        </tr>
+        <tr>
+            <td>фио</td>
+            <td>оценка</td>
+            <td>оценка</td>
+            <td>оценка</td>
+        </tr>
+        <tr>
+            <td>фио</td>
+            <td>оценка</td>
+            <td>оценка</td>
+            <td>оценка</td>
+        </tr>
+        <tr>
+            <td>фио</td>
+            <td>оценка</td>
+            <td>оценка</td>
+            <td>оценка</td>
+        </tr>
+        <tr>
+            <td>фио</td>
+            <td>оценка</td>
+            <td>оценка</td>
+            <td>оценка</td>
+        </tr>
+    </table>
+</body>
+</html>
