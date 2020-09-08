@@ -1,0 +1,39 @@
+@media (max-width: 561px){
+    .resume__experience-items,
+    .resume__education-items,
+    .resume__references-items {
+        flex-direction: column;
+    }
+
+    .resume__experience-where,
+    .resume__education-where,
+    .resume__references-item {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 446px){
+    .resume__experience-items,
+    .resume__education-items,
+    .resume__references-items {
+        flex-direction: column;
+    }
+
+    .resume__experience-where,
+    .resume__education-where,
+    .resume__references-item {
+        margin-top: 5px;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .resume__references-items {
+        margin-bottom: 20px;
+    }
+
+    .ramka {
+        display: none;
+    }
+}

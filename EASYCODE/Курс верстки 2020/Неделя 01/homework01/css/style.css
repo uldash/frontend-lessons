@@ -1,0 +1,314 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+body {
+    color: #3B3B3C;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 9.6px;
+    letter-spacing: 0px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    /* justify-content: space-evenly; */
+}
+
+.ramka {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid #000;
+    z-index: -1;
+}
+
+.header {
+    color: #fff;
+    background-color: #3B3B3C;
+    line-height: 13.2px;
+    font-size: 11px;
+    display: flex;
+    min-width: 210px;
+    flex-direction: column;
+}
+
+.header__foto {
+    border-radius: 50%;
+    height: 125px;
+    width: 125px;
+    background-color: #fff;
+    position: relative;
+    margin-bottom: 55px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.header__foto-myfoto {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-57%, -50%);
+}
+
+.header__inner {
+    margin-left: 30px;
+    position: relative;
+}
+
+.header__contact,
+.header__skills,
+.header__follow {
+    margin-bottom: 40px ;
+}
+
+.header__contact-title,
+.header__skills-title,
+.header__follow-title {
+    font-weight: 600;
+    line-height: 16.8px;
+    font-size: 14px;
+    border-bottom: 1px solid #fff;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+}
+
+.header__contact-addres-title,
+.header__contact-phone-title,
+.header__contact-web-title {
+    text-transform: capitalize;
+    font-weight: 600
+}
+
+.header__contact-addres-text,
+.header__contact-phone-text, 
+.header__contact-web-text {
+    margin-bottom: 16px;
+}
+
+.header__contact-addres::before {
+    content: "\e948";
+}
+
+.header__contact-phone::before {
+    content: "\e942";
+}
+
+.header__contact-web::before {
+    content: "\e9c9";
+}
+
+.header__contact-addres::before,
+.header__contact-phone::before,
+.header__contact-web::before {
+    font-family: 'icomoon';
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.header__contact-addres,
+.header__contact-phone, 
+.header__contact-web {
+    padding-left: 15px;
+    position: relative;
+}
+
+.header__skills-progressbar {
+    width: 120px;
+    background-color: #6D6E71;
+}
+
+.header__skills-progressbar-grey {
+    height: 6px;
+    width: 80%;
+    background-color: #fff;
+}
+
+.header_skills-items {
+    font-size: 11px;
+    line-height: 13.2px;
+    text-transform: uppercase;
+}
+
+.header__skills-item-title {
+    padding-bottom: 10px;
+}
+
+.header__skills-item {
+    padding-bottom: 16px;
+}
+
+.header__follow-item span {
+    display: block;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 13.2px;
+    text-transform: capitalize;
+}
+
+.header__follow-item a{
+    color: #fff;
+    padding-bottom: 13px;    
+}
+
+/* ------------------------------------------- */
+
+.resume {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.resume__inner {
+    padding: 0 30px 0 10px;
+    box-sizing: content-box;
+    /* max-width: 360px; */
+    width: 100%;
+}
+
+.resume__name {
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 40.8px;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+
+.resume__profession {
+    font-size: 19px;
+    line-height: 22.8px;
+    letter-spacing: 0.02em;
+    margin-bottom: 55px;
+    text-transform: uppercase;
+}
+
+.resume__experience-title,
+.resume__education-title,
+.resume__references-title {
+    line-height: 16.8px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 10px 10px 0;
+    border-bottom: 1px solid #6D6E71;
+    margin-bottom: 14px;
+    /* margin-right: 10px; */
+}
+
+.resume__experience-title-img,
+.resume__education-title-img,
+.resume__references-title-img {
+    border-radius: 50%;
+    height: 22px;
+    width: 22px;
+    background-color: #000;
+    display: inline-block;
+    position: relative;
+    top: 25%;
+    transform: translate(0, 25%);
+}
+
+.icon-briefcase,
+.icon-graduation-cap,
+.icon-pencil-square-o {
+    color: #fff;
+}
+
+.resume__experience-title-img span,
+.resume__education-title-img span,
+.resume__references-title-img span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.resume__experience-title-text,
+.resume__education-title-text,
+.resume__references-title-text {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.resume__experience-date,
+.resume__education-date {
+    font-size: 11px;
+    line-height: 13.2px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.resume__experience-point,
+.resume__education-point {
+    font-size: 11px;
+    line-height: 13.2px;
+    font-weight: 600;
+}
+
+.resume__experience-professional,
+.resume__education-professional {
+    font-size: 11px;
+    line-height: 13.2px;
+    text-transform: uppercase;
+}
+
+.resume__experience-job,
+.resume__education-job {
+    line-height: 9.6px;
+}
+
+.resume__experience-items,
+.resume__education-items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.resume__experience-when,
+.resume__education-when {
+    max-width: 110px;
+}
+.resume__experience-where,
+.resume__education-where {
+    max-width: 260px;
+}
+
+.resume__references-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resume__references-name {
+    font-size: 11px;
+    line-height: 13.2px;
+    font-weight: 600;
+}
+
+.resume__references-item {
+    text-align: left;
+    margin-bottom: 20px;
+}
+.resume__references-position,
+.resume__references-phone,
+.resume__references-email {
+    font-size: 10px;
+    line-height: 12px;
+}
