@@ -1,0 +1,51 @@
+/* .outer {
+    width: 300px;
+    height: 300px;
+    background-color: lightblue;
+}
+
+.inner {
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+} */
+
+.ex {
+    margin-bottom: 30px;
+} 
+
+.ex-1 {
+    text-align: center;
+}
+
+.ex-1 > div {
+    height: 50px;
+    width: 50px;
+    background-color: cornflowerblue;
+    display: inline-block;
+}
+
+.ex-2 {
+ text-align: justify;
+}
+
+.ex-2::after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+}
+
+.ex-2 > div {
+    height: 50px;
+    width: 50px;
+    background-color: cornflowerblue;
+    display: inline-block;
+}
+
+.ex-3 .box {
+    width: 300px;
+    height: 50px;
+    background-color: coral;
+    margin: 0 auto; /*  сработает только с блочным элементом, только с фиксированной шириной */
+}
+

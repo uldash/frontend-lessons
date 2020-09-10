@@ -1,0 +1,33 @@
+/* .first-img {
+    float: left;
+}
+
+
+.article {
+    width: 300px;
+    float: left; решает проблему, как оттолкнуть блочный элемент от флотнутого элемента - сделать сам элемент флотнутым
+    margin-left: 20px;
+}
+
+.float-container {
+    background-color: aqua;
+    overflow: hidden;
+}
+
+.float-container::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.clear {
+   clear: both; 
+}
+*/
+
+.float-container {
+    background-color: aqua;
+}
+
+p {
+    clear: both;
+}

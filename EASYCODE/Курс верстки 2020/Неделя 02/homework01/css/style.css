@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-content-center {
+    align-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-items-center {
+    justify-items: center;
+}
+
+.btn-default {
+    background: linear-gradient(90deg, #0CEBEB 0%, #20E3B2 50%, #29FFC6 100%);
+    box-shadow: 0px 4px 20px rgba(32, 228, 179, 0.85);
+    border-width: 0;
+    border-radius: 30px;
+    width: 238px;
+    height: 56px;
+    display: block;
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn-default,
+.btn-default:active,
+.btn-default:focus {
+    outline: none;
+}
+
+.container {
+    width: 1114px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 40px;
+}
+
+.header__nav-main {
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 66px;
+    line-height: 1.71;
+}
+
+.header__nav-info {
+    font-size: 14px;
+    margin-left: auto;
+    line-height: 171%;
+}
+
+.header__nav-main a + a,
+.header__nav-info a + a {
+    padding-left: 30px;
+}
+
+.inner {
+    background: linear-gradient(270deg, #00C6FF 0%, #0072FF 101.47%);
+    height: 100vh;
+}
+
+.call-to-action {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.call-to-action-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.29;
+    text-align: center;
+    width: 542px;
+    margin: 160px auto 0;
+}
+
+.call-to-action-text {
+    font-size: 18px;
+    line-height: 1.33;
+    text-align: center;
+    width: 383px;
+    margin: 20px auto 0;
+}
+
+.call-to-action-text span {
+    font-weight: 700;
+}
+
+.btn {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.33;
+    margin: 44px auto 0;
+}
+
+.no-sign-up {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.71;
+}
+
+.no-sign-up span {
+    margin-left: 14px;
+}
+
+.spam-checker-services-title {
+    max-width: 418px;
+    font-size: 16px;
+    margin: 100px auto 0;
+    font-weight: 400;
+}
+.spam-checker-services-list {
+    margin: 42px auto 0;
+    max-width: 896px;
+}
+
+.image-left {
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -35%);
+    
+}
+
+.image-left-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.image-left-2 {
+    position: absolute;
+    top: 430px;
+    left: 0;
+}
+
+.image-left-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.image-right {
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -35%);
+    
+}
+
+.image-right-1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.image-right-2 {
+    position: absolute;
+    top: 171px;
+    right: 0;
+}
+
+.image-right-3 {
+    position: absolute;
+    top: 0;
+    right: 88px;
+}
+
+.call-to-action,
+.spam-checker
+ {
+    z-index: 5;
+    position: relative;
+}
