@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стилизация checbox без JavaScript</title>
+    <style>
+        label {
+            user-select: none;
+        }
+
+        .custom-checbox input[type="checkbox"] {
+            display: none;
+        }
+
+        .custom-checbox label::before {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #000;
+            margin-right: 10px;
+        }
+
+        .custom-checbox input[type="checkbox"]:checked+label {
+            color: limegreen;
+        }
+
+        .custom-checbox input[type="checkbox"]:checked+label::before {
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-checbox">
+        <input type="checkbox" id="remember-me">
+        <label for="remember-me">remember me</label>
+    </div>
+</body>
+</html>

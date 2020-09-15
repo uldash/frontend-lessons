@@ -1,0 +1,11 @@
+0000000000000000000000000000000000000000 193062de47665ec44bd488f0d04fda7ea7373599 uldash <uldashevue@gmail.com> 1599821284 +0300	commit (initial): add index.html file
+193062de47665ec44bd488f0d04fda7ea7373599 10bb869fd2057e9d3b742577b0259595b33372c7 uldash <uldashevue@gmail.com> 1599821374 +0300	commit: add style.css file
+10bb869fd2057e9d3b742577b0259595b33372c7 17c9f248967b9a436d238fa05753d0eb34501b29 uldash <uldashevue@gmail.com> 1599821514 +0300	commit: change index.html
+17c9f248967b9a436d238fa05753d0eb34501b29 fc23a7529ae7abf3d79d0b241f54db7c7068ebb7 uldash <uldashevue@gmail.com> 1599821625 +0300	commit: change index.html
+fc23a7529ae7abf3d79d0b241f54db7c7068ebb7 b1c02595a1801a97d2d01da9c8542ab98fa3ebb2 uldash <uldashevue@gmail.com> 1599822208 +0300	merge dev: Fast-forward
+b1c02595a1801a97d2d01da9c8542ab98fa3ebb2 0ff387a683224138e9c99de0e3daf8a7d554e131 uldash <uldashevue@gmail.com> 1599823478 +0300	merge newtask: Fast-forward
+0ff387a683224138e9c99de0e3daf8a7d554e131 0ff387a683224138e9c99de0e3daf8a7d554e131 uldash <uldashevue@gmail.com> 1599825271 +0300	Branch: renamed refs/heads/master to refs/heads/master
+0ff387a683224138e9c99de0e3daf8a7d554e131 f43067576ece19d36c7551756eadb939c480c827 uldash <uldashevue@gmail.com> 1599826107 +0300	merge dev: Fast-forward
+f43067576ece19d36c7551756eadb939c480c827 d5951688cfb0587e7195eccf68b54cb6285d54f9 uldash <uldashevue@gmail.com> 1599828070 +0300	merge dev: Fast-forward
+d5951688cfb0587e7195eccf68b54cb6285d54f9 769e4223f205f21e3b61c6728217faaf89394eb8 uldash <uldashevue@gmail.com> 1599835775 +0300	commit: add readme
+769e4223f205f21e3b61c6728217faaf89394eb8 d11709ac41ce222cdf383521021f5af62077d696 uldash <uldashevue@gmail.com> 1599835817 +0300	pull: Merge made by the 'recursive' strategy.

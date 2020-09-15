@@ -1,0 +1,145 @@
+/* font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif; */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font: 400 14px/1 'Roboto', sans-serif;
+    color: #0a0b0f;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+
+label {
+    user-select: none;
+}
+
+input, textarea {
+    border: none;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+img {
+    max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+
+.container-header {
+    max-width: 1850px;
+    width: 100%;
+    padding: 0 15px;
+}
+
+
+.container {
+    max-width: 1630px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ------------------------ start header menu ------------------------ */
+
+header {
+    background-color: #fff;
+    height: 110px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.main-menu {
+    display: inline-block;
+    text-transform: uppercase;  
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: auto;
+}
+
+.main-menu a + a {
+    margin-left: 60px;
+}
+
+.default-btn {
+    display: inline-block;
+    background-color: #00ac6a;
+    border-radius: 17px;
+    width: 87px;
+    height: 34px;
+    line-height: 34px;
+    color: #fff;
+    text-align: center;
+}
+
+/* ------------------------ end header menu ------------------------ */
+
+/* ------------------------ start main-title ------------------------- */
+
+.main-title-title {
+    margin-top: 180px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 112px;
+    font-weight: 700;
+    letter-spacing: -2.8px;
+}
+
+.main-title-text {
+    margin-top: 40px;
+    font-size: 30px;
+    line-height: 1.6;
+}
+
+/* ------------------------ end main-title --------------------------- */
+
+/* ------------------------ start main-form ------------------------- */
+
+.main-form {
+    margin-top: 60px;
+}
+
+.main-form-tabs .main-form-tabs-item + .main-form-tabs-item {
+    margin-left: 30px;
+}
+
+.main-form-tabs-link {
+    width: 264px;
+    height: 101px;
+    border: 1px solid #00ac6a;
+    border-radius: 5px 5px 0 0 ;
+}
+
+/* ------------------------ end main-form --------------------------- */

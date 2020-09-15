@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        textarea {
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="pwd">Password</label>
+        <input type="text" placeholder="You name" name="" value="Yuri">
+        <br>
+        <br>
+        <input type="password" id="pwd" required>
+        <input type="email" value="example@test.com" disabled>
+        <input type="email" value="example@test.com" readonly>
+        <input type="number" min="0" max="100" step="3" autofocus>
+        <input type="file" accept=".png">
+        <input type="checkbox" checked>
+        <input type="radio" name="test">
+        <input type="radio" name="test">
+        <input type="radio" name="test">
+        <input type="date" name="" id="">
+        <br>
+        <select name="" id="">
+            <option value="bmw">BMW</option>
+            <option value="bmw">BMW</option>
+            <option value="bmw">BMW</option>
+            <option value="bmw">BMW</option>
+        </select>
+        <br>
+        <textarea name="" id="" cols="30" rows="10" placeholder="message">
+
+        </textarea>
+        <button type="submit">Send</button>
+        <button type="reset">Reset</button>
+        <button type="button">Default button</button>
+    </form>
+</body>
+</html>

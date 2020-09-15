@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-grow</title>
+    <style>
+        .wrapper1 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .wrapper2 {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            display: flex;
+            height: 100px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item-11 {
+            background-color: aquamarine;
+        }
+
+        .item-12 {
+            background-color: lightcoral;
+        }
+
+        .item-13 {
+            background-color: lightskyblue;
+        }
+
+        .item-21 {
+            flex-grow: 1;
+            background-color: aquamarine;
+        }
+
+        .item-22 {
+            flex-grow: 1;
+            background-color: lightcoral;
+        }
+
+        .item-23 {
+            flex-grow: 1;
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper1">
+        <div class="item item-11">1</div>
+        <div class="item item-12">2222222222222222</div>
+        <div class="item item-13">3333</div>
+    </div>
+
+    <div class="wrapper2">
+        <div class="item item-21">1</div>
+        <div class="item item-22">2222222222222222</div>
+        <div class="item item-23">3333</div>
+    </div>
+    <!-- Ширина элемента = ((flex-grow элемента / сумма значений flex-grow) * доступное пространство) + исходная ширина элемента -->
+</body>
+</html>

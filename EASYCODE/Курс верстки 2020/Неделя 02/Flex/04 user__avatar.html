@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex example</title>
+    <style>
+        .user {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .user__avatar {
+            flex: 0 0 100px;
+            width: 70px;
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="user">
+        <img src="./img/my-foto.jpg" alt="" class="user__avatar">
+        <div>
+            <h3>Adam Smith</h3>
+            <p>Author of debugging CSS</p>
+        </div>
+    </div>
+</body>
+</html>
