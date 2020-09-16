@@ -14,6 +14,7 @@ a {
     text-decoration: none;
     color: inherit;
     outline: none;
+    user-select: none;
 }
 
 label,
@@ -65,6 +66,9 @@ ul {
     justify-content: space-between;
 }
 
+.flex-direction-column {
+    flex-direction: column;
+}
 
 .container-header {
     max-width: 1850px;
@@ -95,6 +99,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 10;
 }
 
 .main-menu {
@@ -154,18 +159,24 @@ header {
 .main-form-tabs-link {
     width: 264px;
     height: 101px;
-    border: 1px solid #00ac6a;
+    border: 1px solid #b7b7b8;
+    border-bottom: 1px solid #00ac6a;
+    color: #b7b7b8;
     border-bottom: none;
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0 ;
     font-size: 18px;
     font-weight: 700;
-    /* background-color: #fff; */
     position: relative;
     bottom: -1px;
-    z-index: -10;
 }
 
+.ui-tabs-active.ui-state-active .main-form-tabs-link {
+    border: 1px solid #00ac6a;
+    border-bottom: none;
+    color: #0a0b0f;
+    background-color: #fff;
 
+}
 
 .container-tab-content {
     max-width: 1788px;
@@ -208,3 +219,116 @@ header {
     text-align: right;
 }
 /* ------------------------ end main-form --------------------------- */
+
+/* ------------------------ start form fixed price --------------------------- */
+/* ------------------------ end form fixed price --------------------------- */
+
+/* ------------------------ start form dedicated team --------------------------- */
+/* ------------------------ end form dedicated team --------------------------- */
+
+
+/* ------------------------ start map-wrapper --------------------------- */
+.map-wrapper {
+    position: relative;
+    top: -25px;
+    z-index: -1;
+}
+
+.map-wrapper-text {
+    width: 100%;
+    padding-top: 150px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+}
+
+.map-wrapper-text-customers {
+    max-width: 540px;
+}
+.map-wrapper-text-customers-title {
+    
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.map-wrapper-text-customers-subtitile {
+    margin-top: 60px;
+    font-size: 36px;
+    font-family: 'Butler';
+    font-weight: 500;
+    line-height: 1.33;
+    letter-spacing: 0.9px;
+}
+
+.map-wrapper-text-customers-name {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.map-wrapper-text-customers-company {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.map-wrapper-text-follow {
+    margin-left: auto;
+}
+.map-wrapper-text-follow-title {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.map-wrapper-text-follow-company {
+    margin-top: 80px;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 10px;
+}
+
+/* ------------------------ end map-wrapper --------------------------- */
+
+/* ------------------------ start footer --------------------------- */
+.footer {
+    margin-top: 100px;
+    height: 220px;
+}
+
+.footer .footer-items + .footer-items {
+    margin-left: 190px;
+}
+
+.footer-title {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.footer-link {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    font-weight: 400;
+    line-height: 1.88;
+}
+
+.footer-articles-link {
+    margin-top: 35px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2.14;
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.footer-rights {
+    margin-left: auto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 2.5;
+    text-align: right;
+}
+/* ------------------------ end footer --------------------------- */
