@@ -16,7 +16,8 @@ a {
     outline: none;
 }
 
-label {
+label,
+a {
     user-select: none;
 }
 
@@ -154,11 +155,17 @@ header {
     width: 264px;
     height: 101px;
     border: 1px solid #00ac6a;
-    border-radius: 5px 5px 0 0 ;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
     font-size: 18px;
     font-weight: 700;
-
+    /* background-color: #fff; */
+    position: relative;
+    bottom: -1px;
+    z-index: -10;
 }
+
+
 
 .container-tab-content {
     max-width: 1788px;
