@@ -67,10 +67,27 @@
         <div class="container-fluid d-flex justify-content-center">
             <div class="container-tab-content d-flex">
                 <div class="tabs-with-form">
-                    <form action="" id="fixed-price">Fixed price</form>
-                    <form action="" id="dedicated-team">dedicated team</form>
+                    <form action="" id="fixed-price">
+                        <div class="main-form-tab-project">
+                            <div class="main-form-tab-project-title">
+                                Select a project type
+                            </div>
+                            <!-- /.main-form-tab-project-title -->
+                            <div class="main-form-tab-btn">
+                                <input type="radio" name="project-type" id="artwork">
+                                <label for="artwork">
+                                    <div class="main-form-tab-btn-label">
+                                        <h3>Artwork</h3>
+                                        <p>Graphics design, animation or UX / UI </p>
+                                    </div>
+                            </div>
+                            </label>
+                        </div>
+                        <!-- /.main-form-tab-btn -->
                 </div>
-                <!-- /.tabs-with-form -->
+                <!-- /.main-form-tab-project -->
+                </form>
+                <form action="" id="dedicated-team">dedicated team</form>
                 <div class="trusted-by">
                     <div class="trusted-by-title">
                         Trusted by
@@ -93,7 +110,9 @@
                 </div>
                 <!-- /.trusted-by -->
             </div>
-            <!-- /.container-tab-content -->
+            <!-- /.tabs-with-form -->
+        </div>
+        <!-- /.container-tab-content -->
         </div>
         <!-- /.container-fluid -->
 

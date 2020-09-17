@@ -221,6 +221,85 @@ header {
 /* ------------------------ end main-form --------------------------- */
 
 /* ------------------------ start form fixed price --------------------------- */
+
+.main-form-tab-project {
+    margin: 135px 0 0 95px;
+}
+
+.main-form-tab-project-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #b2b2b3;
+    letter-spacing: -0.45px;
+}
+
+.main-form-tab-btn {
+    margin-top: 20px;
+}
+
+.main-form-tab-btn input {
+    display: none;
+}
+
+.main-form-tab-btn > label {
+    display: flex;
+    align-items: center;
+    width: 305px;
+    height: 145px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    color: #0a0b0f;
+}
+
+.main-form-tab-btn > label:hover {
+    background-color: #fff;
+    color: #00ac6a;
+    border: 1px solid #00ac6a;
+    border-radius: 5px;
+}
+
+.main-form-tab-btn > input:checked + label{
+    background-color: #00ac6a;
+    color: #fff;
+    border: 1px solid #00ac6a;
+    border-radius: 5px;
+}
+
+.main-form-tab-btn-label:hover::before{
+    content: url(../img/artwork3.png);
+    position: absolute;
+    top: 0;
+    left: -60px;
+    transform: translate(0, 25%);
+}
+
+.main-form-tab-btn-label {
+    max-width: 127px;
+    position: relative;
+    margin-left: 117px;
+}
+
+.main-form-tab-btn-label > h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.33;
+    padding-bottom: 5px;
+}
+
+.main-form-tab-btn-label > p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.28;
+}
+
+.main-form-tab-btn-label::before {
+    content: url(../img/artwork1.png);
+    position: absolute;
+    top: 0;
+    left: -60px;
+    transform: translate(0, 25%);
+}
+
 /* ------------------------ end form fixed price --------------------------- */
 
 /* ------------------------ start form dedicated team --------------------------- */
