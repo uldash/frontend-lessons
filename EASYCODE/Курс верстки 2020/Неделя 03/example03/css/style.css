@@ -413,16 +413,13 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .main-form-quote-get {
     margin-left: 80px;
-    display: inline-block;
     width: 156px;
     height: 50px;
-    line-height: 50px;
     border-radius: 5px;
     background-color: #00ac6a;
     font-size: 16px;
     font-weight: 700;
     color: #ffffff;
-    text-align: center;
 }
 /* ---------------------------------------------------------------------- */
 .map-wrapper {

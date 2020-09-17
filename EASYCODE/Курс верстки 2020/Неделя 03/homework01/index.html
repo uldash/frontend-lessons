@@ -67,17 +67,95 @@
         <div class="container-fluid d-flex justify-content-center">
             <div class="container-tab-content d-flex">
                 <div class="tabs-with-form">
-
                     <form action="" id="fixed-price">
-                        Fixed price
-                    </form>
+                        <div class="main-form-tab d-flex">
+                            <div class="main-form-tab-project">
+                                <div class="main-form-tab-project-title">
+                                    Select a project type
+                                </div>
+                                <!-- /.main-form-tab-project-title -->
+                                <div class="main-form-tab-btn">
+                                    <input type="radio" name="project-type" id="artwork">
+                                    <label for="artwork">
+                                        <img class="main-form-tab-btn-img" src="./img/artwork1.png" alt="">
+                                        <div class="main-form-tab-btn-label">
+                                            <h3>Artwork</h3>
+                                            <p>Graphics design, animation or UX / UI </p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <!-- /.main-form-tab-btn -->
+                                <div class="main-form-tab-btn">
+                                    <input type="radio" name="project-type" id="full-cicle">
+                                    <label for="full-cicle">
+                                        <img class="main-form-tab-btn-img" src="./img/full-cycle.png" alt="">
+                                        <div class="main-form-tab-btn-label">
+                                            <h3>Full-cycle</h3>
+                                            <p>Full-cycle game development</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <!-- /.main-form-tab-btn -->
+                                <div class="main-form-tab-btn">
+                                    <input type="radio" name="project-type" id="mvp">
+                                    <label for="mvp">
+                                        <img class="main-form-tab-btn-img" src="./img/mvp.png" alt="">
+                                        <div class="main-form-tab-btn-label">
+                                            <h3>MVP</h3>
+                                            <p>Game prototyping within 2-4 weeks</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <!-- /.main-form-tab-btn -->
+                            </div>
+                            <!-- /.main-form-tab-project -->
+                            <div class="main-form-tab-attach">
+                                <div class="input-item-attach">
+                                    <input type="text" id="input-text" class="form-control data-label-animated-attach">
+                                    <label for="input-text" class="label-attach">Attach a file</label>
+                                    <input type="file" name="" id="choose-file">
+                                    <label for="choose-file" class="label-browse">Browse</label>
+                                </div>
+                                <!-- /.input-item-attach -->
+                                <div class="input-item">
+                                    <input type="text" name="" id="build" class="form-control data-label-animated">
+                                    <label for="build">
+                                        What do you want to build?
+                                    </label>
+                                </div>
+                                <!-- /.input-item -->
+                                <div class="input-item">
+                                    <input type="text" name="" id="name" class="form-control data-label-animated">
+                                    <label for="name">
+                                        Can we have your name?
+                                    </label>
+                                </div>
+                                <!-- /.input-item -->
+                                <div class="input-item">
+                                    <input type="email" name="" id="email" class="form-control data-label-animated">
+                                    <label for="email">
+                                        How about your email?
+                                    </label>
+                                </div>
+                                <!-- /.input-item -->
+                                <div class="main-form-tab-attach-information">
+                                    <img src="./img/information.png" alt="">
+                                    <p>The information you provide won't be accessible to anyone besides your dedicated
+                                        manager. It is protected through our standard <a
+                                            class="main-form-tab-attach-information-agreement" href="#">Non Disclosure
+                                            Agreement</a>.</p>
 
-                    <form action="" id="dedicated-team">
-                        dedicated team
+                                </div>
+                                <!-- /.main-form-tab-attach-information -->
+                            </div>
+                            <!-- /.main-form-tab-attach -->
+                        </div>
+                        <!-- /.main-form-tab -->
                     </form>
-
+                    <!-- /#fixed-price -->
+                    <form action="" id="dedicated-team">dedicated team</form>
+                    >>>>>>> dev
                 </div>
-                <!-- /.tabs-with-form -->
                 <div class="trusted-by">
                     <div class="trusted-by-title">
                         Trusted by
@@ -100,7 +178,9 @@
                 </div>
                 <!-- /.trusted-by -->
             </div>
-            <!-- /.container-tab-content -->
+            <!-- /.tabs-with-form -->
+        </div>
+        <!-- /.container-tab-content -->
         </div>
         <!-- /.container-fluid -->
 
@@ -233,6 +313,29 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
         $(".main-form").tabs();
+
+        $('#choose-file').change(function () {
+            document.getElementById("input-text").value = $(this).val();
+            $('.data-label-animated-attach').addClass('value-exist');
+        });
+
+        $('.data-label-animated').on('blur', function (event) {
+            // console.log('blur')
+            if (event.target.value) {
+                $(event.target).addClass('value-exist')
+            } else {
+                $(event.target).removeClass('value-exist')
+            }
+        });
+
+        $('.data-label-animated-attach').on('blur', function (event) {
+            // console.log('blur')
+            if (event.target.value) {
+                $(event.target).addClass('value-exist')
+            } else {
+                $(event.target).removeClass('value-exist')
+            }
+        });
     </script>
 </body>
 </html>
