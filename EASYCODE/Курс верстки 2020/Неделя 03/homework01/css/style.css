@@ -205,9 +205,6 @@ header {
     opacity: 0.7;
 }
 
-.trusted-by-company {
-    
-}
 .trusted-by-company-img {
     width: 50%;
     margin: 30px 0;
@@ -222,8 +219,15 @@ header {
 
 /* ------------------------ start form fixed price --------------------------- */
 
+.main-form-tab {
+    margin-top: 135px;
+}
 .main-form-tab-project {
-    margin: 135px 0 0 95px;
+    margin-left: 95px;
+}
+
+.main-form-tab-attach {
+    margin-left: 85px;
 }
 
 .main-form-tab-project-title {
@@ -265,18 +269,19 @@ header {
     border-radius: 5px;
 }
 
-.main-form-tab-btn-label:hover::before{
+/* .main-form-tab-btn > input:checked + label::before{
     content: url(../img/artwork3.png);
-    position: absolute;
-    top: 0;
-    left: -60px;
-    transform: translate(0, 25%);
-}
+    margin-left: 50px;
+} */
 
 .main-form-tab-btn-label {
     max-width: 127px;
-    position: relative;
-    margin-left: 117px;
+    margin-left: 20px;
+}
+
+
+.main-form-tab-btn-img {
+    margin-left: 50px;
 }
 
 .main-form-tab-btn-label > h3 {
@@ -292,12 +297,173 @@ header {
     line-height: 1.28;
 }
 
-.main-form-tab-btn-label::before {
+/* .main-form-tab-btn > label::before {
     content: url(../img/artwork1.png);
+    margin-left: 50px;
+} */
+
+/* .main-form-tab-attach input {
+    display: none;
+} */
+
+.main-form-tab-attach {
+    position: relative;
+}
+
+.main-form-tab-attach-title {
+    display: inline-block;
+    width: 300px;
+    vertical-align: bottom;
+}
+
+.main-form-tab-attach-title {
+    border-bottom:1px solid #b2b2b3;
+}
+
+.main-form-tab-attach-title {
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 5px;
+}
+
+.main-form-tab-attach-button {
+    display: inline-block;
+    width: 156px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #00ac6a;
+    border: 1px solid #00ac6a;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ----------------- */
+.input-item-attach input[type="file"] {
+    display: none;
+}
+
+.input-item-attach {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    max-width: 500px;
+}
+
+.input-item-attach .form-control {
+    width: 400px;
+    border: none;
+    border-bottom: 1px solid #d3d3d4;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 500;
+    outline: none;
+}
+
+.label-attach {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 500;
     position: absolute;
-    top: 0;
-    left: -60px;
-    transform: translate(0, 25%);
+    width: 400px;
+    top: 3px;
+    left: 25px;
+    transition: all 0.2s ease-in;
+}
+
+.input-item-attach .form-control:focus~.label-attach,
+.input-item-attach .form-control.value-exist~.label-attach {
+    top: -20px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #727275;
+}
+
+.label-browse {
+    display: inline-block;
+    width: 156px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #00ac6a;
+    border: 1px solid #00ac6a;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* ----------------- */
+
+.input-item {
+    position: relative;
+    width: 500px;
+}
+
+.main-form-tab-attach .input-item {
+    margin-top: 80px;
+}
+
+.input-item .form-control {
+    width: 100%;
+    border-bottom: 1px solid #d3d3d4;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.input-item label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 500;
+    position: absolute;
+    width: 100%;
+    top: 3px;
+    left: 25px;
+    transition: all 0.2s ease-in;
+}
+
+.input-item label:hover {
+    color: #00ac6a;
+}
+
+.input-item .form-control:focus ~ label,
+.input-item .form-control.value-exist ~ label {
+    top: -20px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #727275;
+}
+
+.main-form-tab-attach-information {
+    height: 40px;
+    position: absolute;
+    bottom: 10px;
+}
+
+.main-form-tab-attach-information img {
+    float: left;
+    margin-right: 10px;
+}
+.main-form-tab-attach-information p{
+    margin-top: auto;
+    max-width: 500px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #727275;
+}
+
+.main-form-tab-attach-information-agreement {
+    color: #00ac6a;
+    border-bottom: 1px solid #00ac6a;
 }
 
 /* ------------------------ end form fixed price --------------------------- */
