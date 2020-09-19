@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Единицы измерения rem em</title>
+    <style>
+        .parent {
+            font-size: 15px;
+        }
+
+        .child-em {
+            font-size: 2em;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        .child-rem {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- em размер относительно родителя или 
+        размера шрифта по умолчанию, задаваемое стилем бораузера -->
+    <div class="parent">
+        15px Text
+        <div class="child-em">
+            30px Text
+            <div class="child-em">
+                60px Text
+                <div class="child-em">
+                    120px Text
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- rem размер относительно root элемента - html -->
+    <div class="parent">
+        15px Text
+        <div class="child-rem">
+            30px Text
+            <div class="child-rem">
+                60px Text
+                <div class="child-rem">
+                    120px Text
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
