@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Results</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="gradient-bg">
+    <header class="header">
+        <div class="container d-flex align-items-center">
+            <a href="#" class="logo">
+                <img src="./img/logo.png" alt="logo">
+            </a>
+
+            <nav class="main-header-nav">
+                <a href="#">Email Consulting</a>
+                <a href="#">Contact Us</a>
+            </nav>
+            <!-- /.main-header-nav -->
+            <nav class="info-header-nav">
+                <a href="#">Privaci Policy</a>
+                <a href="#">Disclaimer</a>
+            </nav>
+            <!-- /.info-header-nav -->
+        </div>
+        <!-- /.container -->
+    </header>
+    <!-- /.header -->
+
+    <main class="main">
+        <section class="process-screen">
+            <div class="container d-flex align-items-top">
+                <div class="process-screen-content d-flex flex-column align-items-center">
+                    <div class="process-screen-content-title">
+                        <span>98</span><sup>/ 100</sup>
+                    </div>
+                    <!-- /.process-screen-content-title -->
+                    <div class="process-screen-content-subtitle">
+                        MailGenius Score
+                    </div>
+                    <!-- /.process-screen-content-subtitle -->
+                    <div class="process-screen-content-text">
+                        We’ve found 2 things you can do to avoid landing in the spam folder and increase security.
+                    </div>
+                    <!-- /.process-screen-content-text -->
+                    <div class="process-screen-content-chkbox d-flex">
+                        <input type="checkbox" name="" id="fix">
+                        <label for="fix">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            2 Things to fix
+                        </label>
+                        <input type="checkbox" name="" id="tests">
+                        <label for="tests">
+                            <i class="fas fa-thumbs-up"></i>
+                            11 Passing tests
+                        </label>
+                        <input type="checkbox" name="" id="preview">
+                        <label for="preview">
+                            <i class="fas fa-envelope"></i>
+                            Email preview
+                        </label>
+                    </div>
+                    <!-- /.process-screen-content-chkbox -->
+                    <div class="process-screen-content-sorted">
+                        <span>Sorted by: Important</span>
+                        <span>Share these results: <a href="#"
+                                class="text-green">mailgenius.com/spam-test/example-1</a></span>
+                    </div>
+                    <!-- /.process-screen-content-sorted -->
+                    <div class="process-screen-content-box">
+                        <div class="process-screen-content-box-title bg-better">
+                            <span class="process-screen-content-box-num bg-green">1</span>
+                            <i class="far fa-meh"></i>
+                            Could be Better - Your email is missing the List-Unsubscribe header.
+                        </div>
+                        <!-- /.process-screen-content-box-title -->
+                        <div class="process-screen-content-box-severity">
+                            Severity of this problem: <span>Low</span>
+                        </div>
+                        <div class="process-screen-content-box-estimated">
+                            Estimated time for you to fix it: <span>120 minutes</span>
+                        </div>
+                        <div class="process-screen-content-box-important">
+                            <h3>Why is this important?</h3>
+                            <p>
+                                Spam complaints are the #1 factor that will hurt your email deliverability. Including an
+                                easy unsubscribe mechanism effectively helps prevent these spam complaints. Email
+                                Service Providers and spam filters also view it favorably when they make inboxing
+                                decisions.
+                            </p>
+                        </div>
+                        <div class="process-screen-content-box-fix">
+                            <h3>Problems you can fix:</h3>
+                            <p>(-1 points) There is no List-Unsubscribe header.</p>
+                        </div>
+                        <div class="process-screen-content-box-solution">
+                            <span>Solution:</span>
+                            <p>
+                                Using an email tool that allows you to alter email headers, add the List-Unsubscribe
+                                header with the appropriate mailto and/or link for receivers to unsubscribe with.
+                            </p>
+                        </div>
+                        <div class="process-screen-content-box-footer d-flex align-items-center">
+                            <a href="#">Learn more about list-unsubscribe header</a>
+                            <a href="#">Get help fixinf this</a>
+                        </div>
+                        <!-- /.process-screen-content-box-footer -->
+                    </div>
+                    <!-- /.process-screen-content-box -->
+                    <div class="process-screen-content-box">
+                        <div class="process-screen-content-box-title bg-good">
+                            <span class="process-screen-content-box-num bg-green">2</span>
+                            <i class="far fa-meh"></i>
+                            Good - Your email is missing the List-Unsubscribe header.
+                        </div>
+                        <!-- /.process-screen-content-box-title -->
+                        <div class="process-screen-content-box-severity">
+                            Severity of this problem: <span>Low</span>
+                        </div>
+                        <div class="process-screen-content-box-estimated">
+                            Estimated time for you to fix it: <span>30 minutes</span>
+                        </div>
+                        <div class="process-screen-content-box-important">
+                            <h3>Why is this important?</h3>
+                            <p>
+                                Without having a Requested Mail Receiver DMARC policy published, emails from your domain
+                                can be spoofed and sent on your behalf.
+                            </p>
+                        </div>
+                        <div class="process-screen-content-box-fix">
+                            <h3>Problems you can fix:</h3>
+                            <p>(-1 points) Your DMARC record policy is set to none.</p>
+                        </div>
+                        <div class="process-screen-content-box-solution">
+                            <span>Solution:</span>
+                            <p>
+                                You may want to set your DMARC record to have a policy of reject or quarantine. A policy
+                                of none results in no action when an email from your domain fails the DMARC mechanism,
+                                allowing spoofers to act more freely.
+                            </p>
+                            <p>
+                                Before making this change it is important to understand that a policy other than none
+                                can result in legitimate email being sent to spam. If anyone sending from this domain
+                                fails an Email Service Provider's DMARC check, only a none policy will allow the mail to
+                                reach to the inbox. This also includes anyone who is fraudulently sending from this
+                                domain. This is why it is important to make sure your DMARC, DKIM, & SPF authentication
+                                is properly setup for all senders of your domain including all email tools you are using
+                                before employing a stricter policy of either reject or quarantine.
+                            </p>
+                            <p>
+                                Existing DNS Records:
+                            </p>
+                            <p>
+                                _dmarc.gmail.com. 60 IN TXT v=DMARC1; p=none; sp=quarantine;
+                                rua=mailto:mailauth-reports@google.com
+                            </p>
+                            <p>
+                                Note: You can only edit these records when sending from a custom domain.
+                            </p>
+                        </div>
+                        <div class="process-screen-content-box-footer d-flex align-items-center">
+                            <a href="#">Learn more about dmarc</a>
+                            <a href="#">Get help fixing this</a>
+                        </div>
+                        <!-- /.process-screen-content-box-footer -->
+                    </div>
+                    <!-- /.process-screen-content-box -->
+                    <div class="process-screen-content-box">
+                        <div class="process-screen-content-box-title bg-badly">
+                            <span class="process-screen-content-box-num bg-green">3</span>
+                            <i class="far fa-meh"></i>
+                            Badly - Your email is missing the List-Unsubscribe header.
+                        </div>
+                        <!-- /.process-screen-content-box-title -->
+                        <div class="process-screen-content-box-severity">
+                            Severity of this problem: <span>Low</span>
+                        </div>
+                        <div class="process-screen-content-box-estimated">
+                            Estimated time for you to fix it: <span>120 minutes</span>
+                        </div>
+                        <div class="process-screen-content-box-important">
+                            <h3>Why is this important?</h3>
+                            <p>
+                                Spam complaints are the #1 factor that will hurt your email deliverability. Including an
+                                easy unsubscribe mechanism effectively helps prevent these spam complaints. Email
+                                Service Providers and spam filters also view it favorably when they make inboxing
+                                decisions.
+                            </p>
+                        </div>
+                        <div class="process-screen-content-box-fix">
+                            <h3>Problems you can fix:</h3>
+                            <p>(-1 points) There is no List-Unsubscribe header.</p>
+                        </div>
+                        <div class="process-screen-content-box-solution">
+                            <span>Solution:</span>
+                            <p>
+                                Using an email tool that allows you to alter email headers, add the List-Unsubscribe
+                                header with the appropriate mailto and/or link for receivers to unsubscribe with.
+                            </p>
+                        </div>
+                        <div class="process-screen-content-box-footer d-flex align-items-center">
+                            <a href="#">Learn more about list-unsubscribe header</a>
+                            <a href="#">Get help fixinf this</a>
+                        </div>
+                        <!-- /.process-screen-content-box-footer -->
+                    </div>
+                    <!-- /.process-screen-content-box -->
+                </div>
+                <!-- /.process-screen-content -->
+                <!-- Steps -->
+                <div class="process-links">
+                    <h6 class="process-links-title">
+                        Helpful Links
+                    </h6>
+                    <!-- /.process-links-title -->
+                    <ul class="process-links-item">
+                        <li><a href="#">Live Chat</a></li>
+                        <li><a href="#">Partners & Discounts</a></li>
+                        <li><a href="#">Free 15 Minute Call</a></li>
+                    </ul>
+                    <!-- /.process-links-item -->
+                    <a href="#" class="process-links-btn btn gradient-btn">New email test</a>
+                    <img class="process-links-img" src="./img/neverbounce.svg"></img>
+                    <!-- /.process-links-subtitle -->
+                    <div class="process-links-tip">
+                        <p>Pro Tip: Always verify your email lists.</p>
+                        <p class="text-green">10% discount on NeverBounce</p>
+                    </div>
+                    <!-- /.process-links-tip -->
+                </div>
+                <!-- /.process-links -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /.process-screen -->
+    </main>
+    <!-- /.main -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content d-flex align-items-center">
+                <a href="#"><img src="./img/footer-logo.png" alt=""></a>
+                <div class="footer-tip">
+                    <p class="footer-tip-pro">Pro Tip: Always verify your email lists.</p>
+                    <p class="footer-discount">10% discount on NeverBounce</p>
+                </div>
+            </div>
+            <!-- /.footer-content -->
+        </div>
+        <!-- /.container -->
+    </footer>
+    <!-- /.footer -->
+</body>
+</html>

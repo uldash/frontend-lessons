@@ -161,7 +161,7 @@ p, h1, h2, h3, h4, h5, h6 {
 /* -------------------------------------------------------------------- */
 
 .gradient-bg {
-    background: radial-gradient(circle at 30% -48%, #0072ff,  #00C6FF 55%, #ffffff00 55.1% 100%) no-repeat, radial-gradient(circle at 80% 215%, rgba(0, 198, 255, 0.04),  rgba(0, 114, 255, 0.04) 55%, #ffffff00 55.1% 100%) no-repeat;
+    background: radial-gradient(circle at 30% -4%, #0072ff,  #00C6FF 55%, #ffffff00 55.1% 100%) no-repeat, radial-gradient(circle at 80% 215%, rgba(0, 198, 255, 0.04),  rgba(0, 114, 255, 0.04) 55%, #ffffff00 55.1% 100%) no-repeat;
     background-size: 100% 100%, contain, 100% 100%, contain;
 }
 
