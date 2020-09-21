@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* -------------------------------------------------------------------- */
+/* не поддерживается во всех браузерах */
+.image-set-example {
+    width: 200px;
+    height: 200px;
+    background-image: url(https://via.placeholder.com/200x200/15c26b);
+    background-image: -webkit-image-set(
+        url(https://via.placeholder.com/200x200/15c26b) 1x,
+        url(https://via.placeholder.com/400x400/15c26b) 2x
+    );
+    background-image: image-set(
+        url(https://via.placeholder.com/200x200/15c26b) 1x,
+        url(https://via.placeholder.com/400x400/15c26b) 2x
+    );
+}
+
+/* --------------------------------------------------------------- */
+.dpr-example {
+    width: 200px;
+    height: 200px;
+    background-image: url(https://via.placeholder.com/200x200/15c26b);
+}
+
+@media (min-resolution: 2dppx),
+(-webkit-min-device-pixel-ratio: 2) {
+    .dpr-example {
+        background-size: contain;
+        background-image: url(https://via.placeholder.com/400x400/15c26b);
+    }
+}
+/* ------------------------------------------------------------- */
+
+.sprite-sheet {
+    background: url(../img/sprite-sheet.png);
+}
+
+.amazon-logo {
+    width: 305px;
+    height: 305px;
+    background-position: -0px -305px;
+}
