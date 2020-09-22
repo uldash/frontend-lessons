@@ -1,0 +1,38 @@
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    /* animation: move 0.8s ease alternate forwards paused; */
+    animation: move 0.8s ease alternate infinite forwards;
+}
+
+.box:hover {
+    animation-play-state: running;
+}
+/* @keyframes move {
+    from {
+        background-color:brown;
+        transform: translateX(0px);
+    }
+    to {
+        background-color: blue;
+        transform: translateX(150px);
+    }
+} */
+
+@keyframes move {
+    0% {
+        opacity: 0;
+        background-color:brown;
+        transform: translateX(0px) rotate(90deg);
+    }
+    25% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        background-color: blue;
+        transform: translateX(150px);
+    }
+}
