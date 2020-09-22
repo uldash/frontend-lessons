@@ -277,7 +277,7 @@ p, h1, h2, h3, h4, h5, h6 {
     border-radius: 4px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767.98px) {
     .gradient-bg {
         background: radial-gradient(circle at 25% -26%, #0072ff, #00C6FF 55%, #ffffff00 55.1% 100%) no-repeat, radial-gradient(circle at 80% 215%, rgba(0, 198, 255, 0.04), rgba(0, 114, 255, 0.04) 55%, #ffffff00 55.1% 100%) no-repeat;
     }
@@ -312,7 +312,7 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 }
 
-@media (max-width: 481px) {
+@media (max-width: 479.98px) {
     .providers-content-items {
         flex-direction: column;
         height: auto;
