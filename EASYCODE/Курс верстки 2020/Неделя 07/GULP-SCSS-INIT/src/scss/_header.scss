@@ -1,0 +1,37 @@
+.header {
+  background-color: $white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+
+  @media (max-width: $media-xl) {
+    padding: 10px 0;
+  }
+
+  @media (max-width: $media-md) {
+    padding: 5px 0;
+  }
+     
+  .container {
+    @include flex(center, space-between); }
+
+  .logo {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &-nav {
+    color: #000;
+    font-size: 14px;
+
+    a {
+      & + a {
+        margin-left: 10px;
+      }
+
+      &:hover {
+        color: orange;
+      }
+    }
+  }
+}

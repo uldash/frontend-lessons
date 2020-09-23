@@ -1,0 +1,16 @@
+// @each $direction, $value in $directions {
+//     @each $key, $var in $margins {
+//         @include mrgn('.m#{$direction}-#{$key}', $value, $var)    
+//     }
+// }
+
+
+@each $mkey, $rem in $margins {
+    @each $dkey, $direct in $directions {
+        @include mrgn('.m#{$dkey}-#{$mkey}', $direct, $rem)    
+    }
+}
+
+@each $mkey, $rem in $margins-auto {
+    @include mrgn-auto('.#{$mkey}', $rem)    
+}

@@ -1,0 +1,40 @@
+@mixin btn (
+    $background: green,
+    $border: 1px solid grey,
+    $hover-background: lightgreen,
+    $hover-border: 2px solid lightgrey,
+    $active-background: lightgreen,
+    $active-border: 2px solid lightgrey,
+)
+{
+    background: $background;
+    border: $border;
+    
+    &:hover {
+        background: $hover-background;
+        border: $hover-border;
+    }
+
+    &:active {
+        background: $active-background;
+        border: $active-border;
+    }
+}
+
+// @mixin mrgn ($selector, $tag, $margin) {
+//     #{$selector}  {
+//         $tag: $margin !important;
+//     }
+// }
+
+@mixin mrgn-auto($selector, $rem) {
+    #{$selector} {
+        margin: $rem !important;
+    }
+}
+
+@mixin mrgn($selector, $drct, $rem) {
+    #{$selector} {
+        #{$drct}: $rem !important;
+    }
+}

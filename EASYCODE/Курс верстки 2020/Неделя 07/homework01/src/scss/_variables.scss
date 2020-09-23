@@ -1,0 +1,25 @@
+$margins: (
+    '1': 1rem,
+    '2': 2rem,
+    '3': 3rem,
+    '4': 4rem,
+    '5': 5rem,
+    '6': 6rem,
+    '7': 7rem,
+    '8': 8rem,
+    '9': 9rem,
+    '10': 10rem,
+);
+
+$directions: (
+    't': 'margin-top',
+    'r': 'margin-right',
+    'l': 'margin-left',
+    'b': 'margin-bottom',
+);
+
+$margins-auto: (
+    'mx-auto': '0 auto',
+    'my-auto': 'auto 0',
+);
+    

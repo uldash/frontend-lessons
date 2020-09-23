@@ -1,0 +1,20 @@
+@mixin flex(
+  $ali: stretch,
+  $jc: flex-start,
+  $fw: wrap,
+    
+) {
+  align-items: $ali;
+  display: flex;
+  flex-wrap: $fw;
+  justify-content: $jc;
+  // @if $direction = column {
+
+  // }
+}
+
+@mixin bg-variant( $selector, $color) {
+  #{$selector} {
+    background-color: $color !important;
+  }
+}
