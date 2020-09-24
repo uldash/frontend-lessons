@@ -1,0 +1,20 @@
+{
+  "name": "GULP-SCSS-INIT",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx gulp watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^4.14.1",
+    "stylelint": "^13.7.1",
+    "stylelint-config-sass-guidelines": "^7.1.0"
+  }
+}
