@@ -1,0 +1,90 @@
+.blockquote {
+    background-color: $blockquote-bg;
+    position: relative;
+    
+    &::after {
+        border: 30px solid transparent;
+        bottom: 0;
+        content: '';
+        height: 0;
+        left: 0;
+        position: absolute;
+        width: 0;
+    }
+
+    &--arrow-bottom {
+        &::after {
+            border-left-color: $blockquote-bg;
+            transform: translateY(50%);
+        }
+    }
+
+    &--arrow-left {
+        &::after {
+            border-bottom-color: $blockquote-arrow-color;
+            transform: translateX(-50%);
+        }
+    }
+
+    &--w-bg {
+        background: url('../images/blockquote-bg.jpg') no-repeat center / cover, $blockquote-bg;
+    }
+
+    &--lg {
+        padding: 35px 100px;
+    }
+
+    &--sm {
+        padding: 30px 40px 30px 70px;
+    }
+
+    &__icon {
+        position: absolute;
+
+        &--lg {
+            left: 35px;
+            top: 42px;
+        }
+
+        &--sm {
+            left: 20px;
+            top: 30px;
+        }
+    }
+
+    &__text {
+        color: $blockquote-text-color;
+        font-family: $blockquote-text-ff;
+        font-style: italic;
+        line-height: 1.44;
+
+        &--lg {
+            font-size: $blockquote-text-fz-lg;
+            letter-spacing: 0.5px;
+            margin-bottom: 25px;
+        }
+
+        &--sm {
+            font-size: $blockquote-text-fz-sm;
+            letter-spacing: 0.3px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__author {
+        color: $blockquote-author-color;
+        font-family: $blockquote-author-ff;
+       
+        &--lg {
+            font-size: $blockquote-author-fz-lg;
+            letter-spacing: 0.35px;
+            line-height: 2.22;
+        }
+
+        &--sm {
+            font-size: $blockquote-author-fz-lg;
+            letter-spacing: 0.2px;
+            line-height: 1.86;
+        }
+    }
+}

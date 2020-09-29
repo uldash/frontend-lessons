@@ -1,0 +1,26 @@
+{
+  "name": "RENT-BIKE",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx gulp watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^4.14.1",
+    "stylelint": "^13.7.1",
+    "stylelint-config-sass-guidelines": "^7.1.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "gulp.spritesmith": "^6.11.0",
+    "merge-stream": "^2.0.0"
+  }
+}

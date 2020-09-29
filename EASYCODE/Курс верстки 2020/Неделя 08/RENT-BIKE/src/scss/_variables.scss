@@ -1,0 +1,112 @@
+$fonts: (
+    'norwesterregular': (
+        'woff2': '../fonts/norwester-webfont.woff2',
+        'woff': '../fonts/norwester-webfont.woff'
+    )
+);
+
+// Text Colors
+$text-gray: #a6a6a6;
+$text-blue: #435566;
+$text-white: #fff;
+$text-green: #9c0;
+
+// Bg Colors
+
+$bg-blue: #658099;
+$bg-white: #fff;
+$bg-green: #9c0;
+
+// Fontawesome
+
+$fa-font-path: '../fonts';
+
+// Common
+
+$main-font: 'Lato', sans-serif;
+$secondary-font: 'norwesterregular', sans-serif;
+
+$html-font-size: 10px;
+$body-font-color: $text-gray;
+$body-font: $main-font;
+$body-fz: 1rem;
+$body-fw: 400;
+$body-lh: 1;
+
+// Grid
+$container-width: 1200px;
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+
+$grid-breakpoints: (
+    xl: 1199px,
+    lg: 991px,
+    md: 767px,
+    sm: 576px,
+);
+
+$container-max-width: (
+    xl: 960px,
+    lg: 720px,
+    md: 540px,
+    sm: 100%,
+);
+
+$displays: none, inline-block, block, flex;
+
+// Tiles
+
+$title-h1-fz: 7rem;
+$title-h2-fz: 6rem;
+$title-h3-fz: 5rem;
+$title-h4-fz: 3rem;
+
+$title-h5-fz: 2.5rem;
+$title-h6-fz: 2.2rem;
+
+$title-ff: $secondary-font;
+$title-color: $text-blue;
+
+$title-sizes: (
+    h1: $title-h1-fz,
+    h2: $title-h2-fz,
+    h3: $title-h3-fz,
+    h4: $title-h4-fz,
+    h5: $title-h5-fz,
+    h6: $title-h6-fz,
+);
+
+// Articles
+
+$article-ff: $main-font;
+$article-color: $text-gray;
+
+$article-sm-fz: 1.6rem;
+$article-md-fz: 1.8rem;
+$article-lg-fz: 2rem;
+
+$article-sizes: (
+    sm: $article-sm-fz,
+    md: $article-md-fz,
+    lg: $article-lg-fz,
+);
+
+// Blockquote
+
+$blockquote-bg: $bg-blue;
+$blockquote-arrow-color: #546b80;
+
+$blockquote-text-color: $text-white;
+$blockquote-author-color: #cfdae5;
+$blockquote-text-ff: $main-font;
+$blockquote-author-ff: $secondary-font;
+
+$blockquote-text-fz-lg: 2.5rem;
+$blockquote-author-fz-lg: 1.8rem;
+$blockquote-text-fz-sm: 1.8rem;
+$blockquote-author-fz-sm: 1.5rem;
+
+// Footer
+
+$footer-subscribe-bg: #2c3c4b;
+$footer-contacts-bg: #2c3c4b;
