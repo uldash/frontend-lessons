@@ -1,7 +1,11 @@
 $fonts: (
     'norwesterregular': (
         'woff2': '../fonts/norwester-webfont.woff2',
-        'woff': '../fonts/norwester-webfont.woff'
+        'woff': '../fonts/norwester-webfont.woff',
+    ),
+    'texgyrecursor' : (
+        'woff2': '../fonts/texgyrecursor-regular-webfont.woff2',
+        'woff': '../fonts/texgyrecursor-regular-webfont.woff',
     )
 );
 
@@ -25,6 +29,8 @@ $fa-font-path: '../fonts';
 
 $main-font: 'Lato', sans-serif;
 $secondary-font: 'norwesterregular', sans-serif;
+$code-font: 'texgyrecursor', sans-serif;
+$icon-font: 'Font Awesome 5 Free';
 
 $html-font-size: 10px;
 $body-font-color: $text-gray;
@@ -110,3 +116,10 @@ $blockquote-author-fz-sm: 1.5rem;
 
 $footer-subscribe-bg: #2c3c4b;
 $footer-contacts-bg: #2c3c4b;
+$footer-follow-bg: #263340;
+
+// Table
+
+$table-head-bg: #f0f3f7;
+$table-body-bg: #f0f3f7;
+

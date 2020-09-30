@@ -19,7 +19,7 @@
     "stylelint-config-sass-guidelines": "^7.1.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.14.0",
+    "@fortawesome/fontawesome-free": "^5.15.0",
     "gulp.spritesmith": "^6.11.0",
     "merge-stream": "^2.0.0"
   }

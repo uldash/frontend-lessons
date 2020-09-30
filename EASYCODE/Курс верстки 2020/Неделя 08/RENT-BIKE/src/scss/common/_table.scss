@@ -1,0 +1,33 @@
+.table {
+    //border-collapse: collapse;
+    cellspacing: 2px;
+    font-size: 16px;
+    letter-spacing: 0.02;
+    line-height: 1.625;
+    max-width: 100%;
+    table-layout: fixed;
+
+    & td,
+    & th {
+        padding: 20px;
+    }
+
+    &__head th {
+        background-color: $table-head-bg;
+        color: #8c8c8c;
+        font-weight: 900;
+    }
+
+    &__body tr {
+        color: #999;
+        font-weight: 500;
+
+        &:nth-child(even) {
+            background-color: $table-head-bg;
+        }
+
+        &:nth-child(odd) {
+            background-color: transparent;
+        }
+    }
+}

@@ -1,12 +1,12 @@
 .footer {
     position: relative;
 
-    &__subscribe {
+    &-subscribe {
         background-color: $footer-subscribe-bg;
         border-bottom: 2px solid rgba(255, 255, 255, 0.15);
         padding: 25px 0;
 
-        &-form {
+        &__form {
             &-control {
                 color: $text-white;
                 font-family: $secondary-font;
@@ -24,21 +24,21 @@
             }
         }
     
-        &-text {
+        &__text {
             color: $text-white;
             font-family: $secondary-font;
             font-size: 3rem;
             text-transform: uppercase;
         }
 
-        &-icon {
+        &__icon {
             color: $text-white;
             font-size: 3rem;
             margin-left: 30px;
         }
     }
 
-    &__content {
+    &-content {
         background: url('../images/footer-bg.jpg') no-repeat center / cover;
         border-bottom: 2px solid rgba(255, 255, 255, 0.15);
         padding: 145px 0 135px;
@@ -72,12 +72,55 @@
                 color: $text-white;
                 font-family: $secondary-font;
                 font-size: 1.6rem;
-                margin-top: 25px;
+
+                &:hover {
+                    color: $text-green;
+                }
             }
 
             &-icon {
-                color: $text-white;
                 font-size: 4rem;
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    &-follow {
+        background-color: $footer-follow-bg;
+        padding: 35px 0;
+
+        &__theme-by {
+            color: #fffefe;
+            font-size: 1.4rem;
+            font-weight: 900;
+            letter-spacing: 0.05rem;
+
+            &--link {
+                color: $text-green;
+                font-weight: 900;
+                text-transform: uppercase;
+            }
+        }
+
+        &__followus-title {
+            color: $text-white;
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: 0.05rem;
+            margin-right: 25px;
+        }
+
+        &__followus-item {
+            color: $text-white;
+            font-size: 30px;
+            font-weight: 400;
+
+            &:hover {
+                color: $text-green;
+            }
+
+            & + & {
+                margin-left: 30px;
             }
         }
     }
