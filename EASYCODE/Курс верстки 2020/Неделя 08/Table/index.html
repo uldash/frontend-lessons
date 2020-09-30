@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        .table-section {
+            overflow-x: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            padding: 0 15px;
+            margin: auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            table-layout: fixed;
+            min-width: 1000px;
+        }
+
+        th,
+        td {
+            border: 1px solid gray;
+            padding: 15px 10px;
+            text-align: left;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <section class="table-section">
+        <div class="container">
+            <table>
+                <thead>
+                    <th>#id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Balance</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Denis</td>
+                        <td>assa@xaas.ru</td>
+                        <td>$1111.11</td>
+                    </tr>
+                    <tr>
+                        <!-- rowspan="2" -->
+                        <td>1</td>
+                        <td>Denis</td>
+                        <td>assa@xaas.ru</td>
+                        <td>$1111.11</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Denis</td>
+                        <td>assa@xaas.ru</td>
+                        <td>$1111.11</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Denis</td>
+                        <td>assa@xaas.ru</td>
+                        <td>$1111.11</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">total balnce</td>
+                        <td>$99999</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </section>
+</body>
+</html>
