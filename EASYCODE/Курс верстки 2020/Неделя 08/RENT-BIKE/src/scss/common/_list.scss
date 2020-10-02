@@ -1,12 +1,22 @@
-.list-marked {
+.list {
     color: #a6a6a6;
     font-size: 1.8rem;
     font-weight: 500;
     letter-spacing: 0.02;
     line-height: 1.2;
-    
 
-    &>li {
+    li + li {
+        margin-top: 20px;
+    }
+}
+
+.list-marked {
+    &--box> li {
+        padding-left: 3.6rem;
+        position: relative;
+    }
+
+    &--circle> li {
         padding-left: 3.6rem;
         position: relative;
     }
@@ -27,41 +37,19 @@
         font-weight: 400;
         left: 0;
         position: absolute;
-    }
-
-    li + li {
-        margin-top: 20px;
-    }
+    }   
 }
 
 .list-ordered {
-    color: #a6a6a6;
-    font-size: 1.8rem;
-    font-weight: 500;
-    letter-spacing: 0.02;
-    line-height: 1.2;
+
     list-style-type: decimal;
 
     &>li {
         padding-left: 2.5rem;
     }
-
-    li + li {
-        margin-top: 20px;
-    }
 }
 
 .list-marked-ordered {
-    color: #a6a6a6;
-    font-size: 1.8rem;
-    font-weight: 500;
-    letter-spacing: 0.02;
-    line-height: 1.2;
-
-    li + li {
-        margin-top: 20px;
-    }
-
     li > ul {
         margin-left: 45px;
         margin-top: 20px;

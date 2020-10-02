@@ -1,0 +1,114 @@
+.product-item {
+    // !delete
+    margin-bottom: 20px;
+
+    &:hover &__details {
+        border-color: $bg-blue;
+    }
+
+    &__type {
+        color: $text-white;
+        font-family: $secondary-font;
+        font-size: 1.5rem;
+        left: 20px;
+        position: absolute;
+        top: 20px;
+    }
+
+    &__img {
+        background-color: #658099;
+        display: flex;
+        height: 285px;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+       
+        &-source {
+            flex-shrink: 0;
+            height: 100%;
+            max-width: none;
+        }
+    }
+
+    &__equipment {
+        align-items: center;
+        bottom: 20px;
+        display: flex;
+        left: 20px;
+        position: absolute;
+
+        &-item {
+            & + & {
+                margin-left: 25px;
+            }
+        }
+    }
+
+    &__name {
+        background-color: $bg-blue;
+        padding: 30px 20px;
+        position: relative;
+
+        &::after {
+            border: 25px solid transparent;
+            border-right-color: $blockquote-bg;
+            content: '';
+            height: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translateY(-50%);
+        }
+
+        &-title {
+            color: $text-white;
+            font-family: $secondary-font;
+            font-size: 2.5rem;
+            font-weight: normal;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-transform: uppercase;
+
+            white-space: nowrap;
+        }
+    }
+
+    &__details {
+        background-color: #f0f3f7;
+        border: 2px solid #f0f3f7;
+        border-top-width: 0;
+        transition: all 0.2s ease-in;
+    }
+
+    &__price {
+        &-item {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+
+            &:nth-child(odd) {
+                background-color: #fff;
+            }
+            
+        }
+
+        &-time {
+            color: $text-light-blue;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        &-value {
+            color: #7695b2;
+            font-size: 1.8rem;
+            font-weight: 900;
+        }
+    }
+
+    &__action {
+        display: flex;
+        justify-content: center;
+        padding: 30px 10px;
+    }
+}

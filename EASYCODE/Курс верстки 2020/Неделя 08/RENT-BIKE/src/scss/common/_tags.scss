@@ -1,0 +1,63 @@
+.tags__icon {
+    align-items: center;
+    background-color: transparent;
+    color: #435566;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.5rem;
+    height: 46px;
+    justify-content: center;
+    transition: all 0.2s ease-in;
+    width: 46px;
+
+    &:hover {
+        background-color: #435566;
+        color: $text-white;
+    }
+}
+
+.tags {
+    &__items {
+        border: 2px solid transparent;
+        display: inline-block;
+        padding: 15px 25px;
+
+        &--border {
+            border: 2px solid #cbced2;
+            padding: 15px 25px;
+        }
+    }
+}
+
+.tags {
+    &__item {
+        //border: 2px solid #cbced2;
+        border: 2px solid transparent;
+        color: #cbced2;
+        font-family: $secondary-font;
+        font-size: 1.5rem;
+        font-weight: 400;
+        padding: 12px;
+        text-transform: uppercase;
+        transition: all 0.2s ease-in;
+    
+        & + & {
+            margin-left: 10px;
+        }
+
+        &:hover {
+            color: #435566;
+        }
+
+        &--border {
+            border: 2px solid #cbced2;
+            padding: 12px;
+
+            &:hover {
+                background-color: #435566;
+                border: 2px solid transparent;
+                color: $text-white;
+            }
+        }
+    }
+}
