@@ -1,0 +1,130 @@
+.pagination {
+    &-items {
+        align-items: center;
+        display: flex;
+        position: relative;
+
+        & li {
+            color: #cbced2;
+            cursor: pointer;
+            font-family: $secondary-font;
+            font-size: 2.5rem;
+            user-select: none;
+            
+            &.pagenumber {
+                line-height: 5rem;
+                line-height: 5rem;
+                text-align: center;
+                
+                &:hover a,
+                &.active a {
+                    color: #435566;
+                }
+            }
+
+            &:first-child {
+                font-size: 3rem;
+            }
+
+            &:last-child {
+                font-size: 3rem;
+                margin-left: 3rem;
+            }
+        }
+
+        & li + li {
+            margin-left: 3rem;
+        }
+    }
+}
+
+.btn {
+    &-nav {
+        font-size: 2rem;
+        height: 45px;
+        letter-spacing: 0.005;
+        width: 45px;
+
+        &--ghost {
+            border: 2px solid #cbced2;
+            color: #cbced2;
+        }
+
+        &--secondary {
+            background-color: #658099;
+            color: $text-white;
+
+            &:hover {
+                background-color: #435566;                
+            }
+        }
+
+        &--primary {
+            background-color: #9c0;
+            color: $text-white;
+
+            &:hover {
+                background-color: #7ca600;                
+            }
+        }
+
+        &--angle {
+            background-color: #9c0;
+            overflow: hidden;
+            position: relative;
+
+            &::before {
+                border: 15px solid transparent;
+                border-left-color: #7ca600;
+                bottom: 0;
+                content: '';
+                left: 0;
+                position: absolute;
+                transform: translateY(50%);
+            }
+
+            &:hover {
+                background-color: #7ca600;
+
+                &::before {
+                    border: 15px solid transparent;
+                    border-left-color: #9c0;
+                    bottom: 0;
+                    content: '';
+                    left: 0;
+                    position: absolute;
+                    transform: translateY(50%);
+                }
+            }
+        }
+
+        
+    }
+}
+
+%for-stroke {
+    background-color: #658099;
+    color: $text-white;
+    height: 60px;
+    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+
+    &:hover {
+        background-color: #9c0;                
+    }
+}
+
+.btn-nav--stroke-left {
+    @extend %for-stroke;
+    left: 0;
+}
+
+.btn-nav--stroke-right {
+    @extend %for-stroke;
+    right: 10px;
+}
+
+

@@ -1,0 +1,40 @@
+.progressbar-tours {
+    &--item {
+        align-items: center;
+        display: flex;
+        height: 75px;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        width: 75px;
+
+        &:hover {
+            background-image: linear-gradient(to right, $bg-green 0% 10%, transparent 10% 90%, $bg-green 90% 100%),
+                linear-gradient(to right, $bg-green 0% 10%, transparent 10% 90%, $bg-green 90% 100%),
+                linear-gradient(to bottom, $bg-green 0% 10%, transparent 10% 90%, $bg-green 90% 100%),
+                linear-gradient(to bottom, $bg-green 0% 10%, transparent 10% 90%, $bg-green 90% 100%);
+            background-position: 0 0, 0 100%, 0 0, 100% 0;
+            background-repeat: no-repeat;
+            background-size: 100% 1px, 100% 1px, 1px 100%, 1px 100%;
+        }
+
+        &-current img {
+            // filter: brightness(0.5) sepia(1) saturate(10000%); // red
+            filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(50deg) saturate(1000%) contrast(1.3); //green
+            transform: scale(1.3, 1.3);
+        }
+
+        &-disabled img {
+            filter: opacity(0.25);
+        }
+    }
+
+    &--arrow {
+        color: cbced2;
+        margin: 0 30px;
+
+        &-disabled {
+            color: #64717d;
+        }
+    }
+}
