@@ -32,6 +32,10 @@ textarea {
     outline: none;
 }
 
+textarea {
+    resize: vertical;
+}
+
 button {
     background-color: transparent;
     border: 0;

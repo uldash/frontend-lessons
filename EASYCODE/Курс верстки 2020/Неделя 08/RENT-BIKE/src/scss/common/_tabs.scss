@@ -1,0 +1,33 @@
+.tabs {
+    &__nav {
+        padding-bottom: 20px;
+
+        &-item {
+            & + & {
+                margin-left: 75px;
+            }
+        }
+
+        &-item-link {
+            color: #cdced2;
+            font-family: $secondary-font;
+            font-size: 2.6rem;
+            letter-spacing: 0.2px;
+            outline: none;
+            text-transform: uppercase;
+        }
+
+        &-item-icon {
+            color: #cdced2;
+            font-size: 2.6rem;
+            margin-right: 15px;
+        }
+    }
+
+    &__nav {
+        .ui-tabs-active &-item-link,
+        .ui-tabs-active &-item-icon {
+            color: #658099;
+        }
+    }
+}

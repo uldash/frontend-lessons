@@ -1,0 +1,92 @@
+.form-control {
+    position: relative;
+    width: 100%;
+
+    &__input {
+        background-color: $form-control-bg-color;
+        border: 2px solid $form-control-border-color;
+        color: $form-control-text-color;
+        font-family: $form-control-ff;
+        font-size: $form-control-fz;
+        height: $form-control-height;
+        line-height: 1;
+        padding: 0 35px 0 16px;
+        transition: color 0.2s ease-in, border-color 0.2s ease-in, background-color 0.2s ease-in;
+        width: 100%;
+
+        &--textarea {
+            height: auto;
+            min-height: 180px;
+            padding: 12px;
+        } 
+
+        &::placeholder {
+            color: $form-control-text-color;
+        }
+
+        &:focus {
+            background-color: $form-control-active-bg-color;
+            border-color: $form-control-active-border-color;
+            color: $form-control-active-text-color;
+        }
+
+        &--error {
+            background-color: $form-control-error-bg-color !important;
+            border-color: $form-control-error-border-color !important;
+            color: $form-control-error-text-color !important;
+
+            &::placeholder {
+                color: $form-control-error-text-color !important;
+            }
+        }
+
+        &--success {
+            background-color: $form-control-success-bg-color !important;
+            border-color: $form-control-success-border-color !important;
+            color: $form-control-success-text-color !important;
+
+            &::placeholder {
+                color: $form-control-success-text-color !important;
+            }
+        }
+    }
+
+    &__icon {
+        color: $form-control-text-color;
+        font-size: $form-control-fz;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__error-icon {
+        color: $form-control-error-text-color;
+        display: none;
+    }
+
+    &__success-icon {
+        color: $form-control-success-text-color;
+        display: none;
+    }
+ 
+    // сначала скрываем
+    &--error &__icon {
+        display: none;
+    }
+
+    &--success &__icon {
+        display: none;
+    }
+
+    //  и только потом показываем нужные иконки, но если дописать !important  можно не заботится о порядке
+    &--error &__error-icon {
+        display: block;
+    }
+
+    &--success &__success-icon {
+        display: block;
+    }
+
+}
+   
