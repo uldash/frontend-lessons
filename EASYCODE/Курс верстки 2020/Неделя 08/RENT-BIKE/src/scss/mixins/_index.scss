@@ -7,7 +7,9 @@
 @import 'columns';
 @import 'title';
 @import 'articles';
+@import 'alerts';
 
  
 @include sprites($spritesheet-sprites);
 @include generate-font-face($fonts);
+@include make-alerts($alert-color-types, $alert-angle-types);

@@ -1,0 +1,122 @@
+%for-chkb-label {
+    background-color: $btn-label-bg-color;
+    border: 2px solid $btn-label-border-color;
+    color: $btn-label-border-color;
+    content: '';
+    font-family: $icon-font;
+    font-weight: 900;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+%for-chkb-label-checked {
+    align-items: center;
+    background-color: $btn-label-checked-bg-color;
+    border: 2px solid $btn-label-checked-border-color;
+    color: $btn-label-checked-border-color;
+    content: '\f00c';
+    display: flex;
+    font-family: $icon-font;
+    font-weight: 900;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-chkb {
+    display: none;
+
+    &:checked + .chkb-label {
+        color: $btn-label-color;
+        font-family: $btn-label-ff;
+    
+        &--lg {
+            font-size: $btn-label-fz-lg;
+
+            &::before {
+                @extend %for-chkb-label-checked;
+                font-size: 2.2rem;
+                height: $btn-label-lh-lg;
+                width: $btn-label-lh-lg;
+            }
+        }
+
+        &--md {
+            font-size: $btn-label-fz-md;
+
+            &::before {
+                @extend %for-chkb-label-checked;
+                font-size: 1.8rem;
+                height: $btn-label-lh-md;
+                width: $btn-label-lh-md;
+            }
+        }
+
+        &--sm {
+            font-size: $btn-label-fz-sm;
+
+            &::before {
+                @extend %for-chkb-label-checked;
+                font-size: 1.2rem;
+                height: $btn-label-lh-sm;
+                width: $btn-label-lh-sm;
+            }
+        }
+    }
+}
+
+.chkb-label {
+    color: $btn-label-color;
+    display: inline-block;
+    font-family: $btn-label-ff;
+    font-weight: 500;
+    padding: 4px 0;
+    user-select: none;
+
+    &--lg {
+        font-size: $btn-label-fz-lg;
+        line-height: $btn-label-lh-lg;
+        padding-left: 60px;
+        position: relative;
+        
+        &::before {
+            @extend %for-chkb-label;
+            height: $btn-label-lh-lg;
+            width: $btn-label-lh-lg;
+        }
+    }
+
+    &--md {
+        font-size: $btn-label-fz-md;
+        line-height: $btn-label-lh-md;
+        padding-left: 50px;
+        position: relative;
+        
+        &::before {
+            @extend %for-chkb-label;
+            height: $btn-label-lh-md;
+            width: $btn-label-lh-md;
+        }
+    }
+
+    &--sm {
+        font-size: $btn-label-fz-sm;
+        line-height: $btn-label-lh-sm;
+        padding-left: 40px;
+        position: relative;
+        
+        &::before {
+            @extend %for-chkb-label;
+            height: $btn-label-lh-sm;
+            width: $btn-label-lh-sm;
+        }
+    }
+
+}
+

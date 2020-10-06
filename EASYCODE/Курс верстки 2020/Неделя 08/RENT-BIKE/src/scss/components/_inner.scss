@@ -1,0 +1,43 @@
+.inner {
+    background: url('../images/home-inner-bg.jpg') no-repeat center / cover;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 79px;
+}
+
+.inner-carousel {
+    height: 100%;
+
+    .slick-list,
+    .slick-track {
+        height: 100%;
+    }
+
+    &__slide-content {
+        padding-top: 120px;
+    }
+
+    &__slide-title {
+        color: #304155;
+        font-family: $title-ff;
+        font-size: 12rem;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+
+    &__slide-text {
+        color: $text-white;
+        font-family: $secondary-font;
+        font-size: 4rem;
+        letter-spacing: 0.5px;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+    }
+
+    &__slide-price {
+        font-size: 7em;
+        letter-spacing: 0.25px;
+    }
+}
+
+

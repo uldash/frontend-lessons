@@ -172,6 +172,48 @@ $form-control-select-option-color: #fff;
 $form-control-select-option-bg-color: #93b0cc;
 $form-control-select-option-bg-hover-color: #9ebddb;
 
+// Checbox & radio button
+$btn-label-ff: $main-font;
+$btn-label-fz-lg: 1.8rem;
+$btn-label-fz-md: 1.6rem;
+$btn-label-fz-sm: 1.4rem;
+
+$btn-label-lh-lg: 40px;
+$btn-label-lh-md: 30px;
+$btn-label-lh-sm: 20px;
+
+$btn-label-color: #a6a6a6;
+$btn-label-bg-color: #fafafa;
+$btn-label-border-color: #dfe2e6;
+
+$btn-label-checked-bg-color: #fafafa;
+$btn-label-checked-border-color: #658099;
+
+// Allert
+
+$allert-bg-color-normal: #658099;
+$allert-bg-color-info: #47bbed;
+$allert-bg-color-success: #87d285;
+$allert-bg-color-warning: #ff9445;
+$allert-bg-color-error: #f66;
+
+$allert-ff: $text-white;
+$allert-fz: 1.4rem;
+$allert-fw: 500;
+$allert-fc: #fff;
+
+$alert-color-types: (
+    normal: #658099,
+    info: #47bbed,
+    success: #87d285,
+    warning: #ff9445,
+    error: #f66,
+);
+
+$alert-angle-types: (
+    'left', 'top', 
+);
 
 
+// Date Picker
 

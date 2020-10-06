@@ -1,0 +1,45 @@
+@mixin make-alerts ($ctypes, $atypes) {
+    @each $type, $clr in $ctypes {
+        @each $angle in $atypes {
+            .allert {
+                &__#{$type} {
+                    &--#{$angle} {
+                        background-color: #{$clr};
+                        color: $allert-fc;
+                        padding: 0 25px;
+                        position: relative;
+                        width: 560px;
+            
+                        & span {
+                            display: inline-block;
+                            font-family: serif;
+                            line-height: 3rem;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            width: 100%;
+                        }
+            
+                        &::before {
+                            border: 11px solid transparent;
+                            content: '';
+                            left: 0;
+                            position: absolute;
+                            top: 0;
+                            
+                            @if $angle == 'top' {
+                                border-left-color: #{$clr};
+                                transform: translateY(-50%);
+                            }
+                            @else {
+                                border-top-color: #{$clr};
+                                transform: translateX(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

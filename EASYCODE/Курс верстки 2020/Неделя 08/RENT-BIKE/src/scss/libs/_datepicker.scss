@@ -1,0 +1,420 @@
+$width: 285px;
+$radius: 0;
+$transition: 0.3s;
+$font-size: $width * 0.056;
+$lightblue: lightblue;
+$dp-container-bg: #232f3b;
+$dp-container-color: #fff;
+$dp-controls-bg: #232f3b;
+$dp-controls-fz: 1.8rem;
+$dp-controls-color: $text-green;
+$dp-controls-arrow-width: 35px;
+
+$dp-week-days-bg: #384858;
+$dp-week-days-color: #fff;
+$dp-week-days-fz: 1.5rem;
+
+$dp-day-color: #a6acb3;
+$dp-day-height: 38px;
+$dp-day-fz: 1.5rem;
+
+
+
+
+
+$label-color: #a3b900;
+$label-fz: 1.5rem;
+$label-ff: $main-font;
+
+$input-height: 43px;
+$input-width: 100%;
+$input-fz: 1.8rem;
+$input-color: $text-green;
+$input-bg-color: transparent;
+
+/*
+  All a user has to do to change the calendar size is
+  change the font-size on the container and everything
+  magically resizes accordingly. Relative units ftw!
+*/
+
+.date-picker-control {
+    position: relative;
+
+    &__label {
+        color: $label-color;
+        display: block;
+        font-size: $label-fz;
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
+
+    &__input-wrap {
+        position: relative;
+    }
+
+    &__input {
+        background-color: $input-bg-color;
+        border-bottom: 2px solid $bg-green;
+        border-top: 2px solid $bg-green;
+        color: $input-color;
+        font-family: $secondary-font;
+        font-size: $input-fz;
+        height: $input-height;
+        padding: 0 30px 0 11px;
+        text-transform: uppercase;
+        width: $input-width;
+    }
+
+    &__icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.qs-datepicker-container {
+    background: $dp-container-bg;
+    // border: 1px solid gray;
+    // border-radius: $radius;
+    // box-shadow: 0 ($width * 0.08) ($width * 0.08) ($width * -0.06) rgba(0, 0, 0, 0.3);
+    color: $dp-container-color;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    font-size: 1rem;
+    overflow: hidden;
+    position: absolute;
+    user-select: none;
+    width: $width;
+    z-index: 9001;
+
+    // * {
+    //     box-sizing: border-box;
+    // }
+}
+
+.qs-centered {
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.qs-hidden {
+    display: none;
+}
+
+.qs-overlay {
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    left: 0;
+    opacity: 1;
+    padding: 0.5em;
+    position: absolute;
+    top: 0;
+    transition: opacity $transition;
+    width: 100%;
+    z-index: 1;
+
+    &.qs-hidden {
+        opacity: 0;
+        z-index: -1;
+    }
+
+    .qs-overlay-year { // Overlay year input element.
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid white;
+        border-radius: 0;
+        color: white;
+        display: block;
+        font-size: $font-size;
+        margin: 0 auto;
+        padding: 0.25em 0;
+        text-align: center;
+        width: 80%;
+
+        // https://goo.gl/oUuGkG
+        &::-webkit-inner-spin-button {
+            appearance: none;
+        }
+    }
+
+    .qs-close {
+        cursor: pointer;
+        padding: 0.5em;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .qs-submit {
+        background: rgba(128, 128, 128, 0.4);
+        border: 1px solid white;
+        border-radius: $radius;
+        cursor: pointer;
+        margin: 0 auto auto;
+        padding: 0.5em;
+
+        &.qs-disabled {
+            border-color: gray;
+            color: gray;
+            cursor: not-allowed;
+        }
+    }
+
+    .qs-overlay-month-container {
+        display: flex;
+        flex-grow: 1;
+        flex-wrap: wrap;
+    }
+
+    .qs-overlay-month {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        opacity: 0.5;
+        transition: opacity $transition / 2;
+        width: calc(100% / 3);
+
+        &.active,
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.qs-controls {
+    align-items: center;
+    background: $dp-controls-bg;
+    display: flex;
+    filter: blur(0);
+    flex-grow: 1;
+    flex-shrink: 0;
+    height: 50px;
+    justify-content: space-between;
+    transition: filter $transition;
+    width: 100%;
+
+
+    &.qs-blur {
+        filter: blur(5px);
+    }
+}
+
+.qs-arrow {
+    // border-radius: $radius;
+    cursor: pointer;
+  
+    height: $width / 10;
+    position: relative;
+    transition: background 0.15s;
+    width: $dp-controls-arrow-width;
+
+    &:hover {
+
+        // background: rgba(0, 0, 0, 0.1);
+
+        &.qs-left::after {
+            // border-right-color: black;
+            color: $text-green;
+        }
+
+        &.qs-right::after {
+            // border-left-color: black;
+            color: $text-green;
+        }
+    }
+
+    &::after {
+        color: #fff;
+        // border: ($width / 40) solid transparent;
+        content: '';
+        font-family: 'Font Awesome 5 Free';
+        font-size: 2rem;
+        font-weight: 900;
+        position: absolute;
+        top: 50%;
+        transition: border 0.2s;
+    }
+
+    &.qs-left::after {
+        // border-right-color: gray;
+        content: '\f104';
+        right: 50%;
+        transform: translate(25%, -50%);
+    }
+
+    &.qs-right::after {
+        // border-left-color: gray;
+        content: '\f105';
+        left: 50%;
+        transform: translate(-25%, -50%);
+    }
+}
+
+.qs-month-year {
+    // border-bottom: 1px solid transparent;
+    color: $dp-controls-color;
+    cursor: pointer;
+    font-family: $secondary-font;
+    font-size: $dp-controls-fz;
+    text-transform: uppercase;
+    // font-weight: bold;
+    transition: border 0.2s;
+
+    // &:hover {
+    //     border-bottom: 1px solid gray;
+    // }
+
+    &:focus,
+    &:active:focus {
+        outline: none;
+    }
+}
+
+.qs-month {
+    padding-right: 0.5ex;
+}
+
+.qs-year {
+    padding-left: 0.5ex;
+}
+
+.qs-squares {
+    display: flex;
+    filter: blur(0);
+    flex-wrap: wrap;
+    // padding: $width * 0.02;
+    transition: filter $transition;
+
+    &.qs-blur {
+        filter: blur(5px);
+    }
+}
+
+.qs-square {
+    align-items: center;
+    border-top: 1px solid #2e3c4a;
+    color: $dp-day-color;
+
+    // Overriden for date-range dates below.
+    // border-radius: $radius;
+    cursor: pointer;
+    display: flex;
+    font-family: $secondary-font;
+    font-size: $dp-day-fz;
+    // height: $width / 10;
+    height: $dp-day-height;
+    justify-content: center;
+    transition: background 0.1s;
+    width: calc(100% / 7);
+
+    &:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active) {
+        &:hover {
+            // background: orange;
+            color: $text-green;
+        }
+    }
+}
+
+// Today's date
+.qs-current {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/*
+  3 possibilities:
+    1. Single, active date.
+    2. Daterange start selection.
+    3. Daterange end selection.
+*/
+.qs-active ,
+.qs-range-start,
+.qs-range-end {
+    // background: $lightblue;
+    background: $bg-green;
+    color: $text-white;
+}
+
+// Daterange start selection.
+.qs-range-start {
+    &:not(.qs-range-6) {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
+
+// Daterange middle selections.
+.qs-range-middle {
+    background: lighten($lightblue, 10%);
+
+    &:not(.qs-range-0):not(.qs-range-6) {
+        border-radius: 0;
+    }
+
+    &.qs-range-0 {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    &.qs-range-6 {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+}
+
+// Daterange end selection.
+.qs-range-end {
+    &:not(.qs-range-0) {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+}
+
+.qs-disabled,
+.qs-outside-current-month {
+    // opacity: 0.2;
+    color: #384858;
+}
+
+.qs-disabled {
+   
+    cursor: not-allowed;
+}
+
+.qs-empty {
+    cursor: default;
+}
+
+.qs-day {
+    background-color: $dp-week-days-bg;
+    // font-weight: bold;
+    color: $dp-week-days-color;
+    cursor: default;
+    font-family: $secondary-font;
+    font-size: $dp-week-days-fz;
+    height: 43px;
+}
+
+.qs-event {
+    position: relative;
+
+    &::after {
+        background: #07f;
+        border-radius: 50%;
+        bottom: 0;
+        content: '';
+        height: $width * 0.03;
+        position: absolute;
+        right: 0;
+        width: $width * 0.03;
+    }
+}
