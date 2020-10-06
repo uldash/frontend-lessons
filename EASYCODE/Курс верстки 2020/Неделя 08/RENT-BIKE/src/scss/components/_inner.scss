@@ -38,6 +38,16 @@
         font-size: 7rem;
         letter-spacing: 0.25px;
     }
+
+    &__slide-img {
+        filter: sepia(100%) brightness(0.1) grayscale(100%) opacity(20%);
+        margin: 0 auto;
+        margin-top: -200px;
+        max-width: 1450px;
+        position: relative;
+        width: 100%;
+        z-index: -1;
+    }
 }
 
 

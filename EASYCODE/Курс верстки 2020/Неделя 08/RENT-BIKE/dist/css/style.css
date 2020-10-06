@@ -5061,101 +5061,11 @@ button {
   cursor: pointer;
   display: inline-block;
   font-family: "norwesterregular", sans-serif;
-  overflow: hidden;
   position: relative;
   text-align: center;
   text-transform: uppercase;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in; }
-  .btn-stores {
-    color: #fff;
-    font-size: 2rem;
-    letter-spacing: 0.025em;
-    padding: 20px 55px 20px 80px; }
-    .btn-stores--apple {
-      background-color: #333; }
-      .btn-stores--apple::before {
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        background-color: #000;
-        color: #fff;
-        content: '\f179';
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        font-family: "Font Awesome 5 Brands";
-        font-size: 4rem;
-        height: 100%;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 25%; }
-    .btn-stores--google {
-      background-color: #1dafc2; }
-      .btn-stores--google::before {
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        background-color: #1a9bab;
-        color: #fff;
-        content: '\f3ab';
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        font-family: "Font Awesome 5 Brands";
-        font-size: 4rem;
-        height: 100%;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 25%; }
-    .btn-stores--microsoft {
-      background-color: #0bf; }
-      .btn-stores--microsoft::before {
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        background-color: #00aced;
-        color: #fff;
-        content: '\f17a';
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        font-family: "Font Awesome 5 Brands";
-        font-size: 4rem;
-        height: 100%;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 25%; }
-  .btn--angle-lg::after {
-    border: 20px solid transparent;
-    border-bottom-color: rgba(0, 0, 0, 0.25);
-    bottom: 0;
-    content: '';
-    position: absolute;
-    right: 0;
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%); }
-  .btn--angle-md::after {
-    border: 15px solid transparent;
-    border-bottom-color: rgba(0, 0, 0, 0.25);
-    bottom: 0;
-    content: '';
-    position: absolute;
-    right: 0;
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%); }
   .btn--lg {
     font-size: 2.5rem;
     padding: 14px 40px; }
@@ -5167,181 +5077,33 @@ button {
     color: #fff; }
     .btn--default:hover {
       background-color: #9c0; }
-    .btn--default--ghost-lg {
-      background-color: transparent;
-      border: 2px solid #fff;
-      position: relative; }
-      .btn--default--ghost-lg:hover {
-        background-color: transparent; }
-        .btn--default--ghost-lg:hover::after {
-          border: 20px solid transparent;
-          border-bottom-color: #fff;
-          bottom: 0;
-          content: '';
-          position: absolute;
-          right: 0;
-          -webkit-transform: translateX(50%);
-                  transform: translateX(50%); }
-    .btn--default--ghost-sm {
-      background-color: transparent;
-      border: 2px solid #fff;
-      position: relative; }
-      .btn--default--ghost-sm:hover {
-        background-color: transparent; }
-        .btn--default--ghost-sm:hover::after {
-          border: 15px solid transparent;
-          border-bottom-color: #fff;
-          bottom: 0;
-          content: '';
-          position: absolute;
-          right: 0;
-          -webkit-transform: translateX(50%);
-                  transform: translateX(50%); }
   .btn--secondary {
     background-color: #435566;
     color: #fff; }
     .btn--secondary:hover {
       background-color: #9c0; }
-    .btn--secondary--ghost-lg {
-      background-color: transparent;
-      border: 2px solid #9c0;
-      position: relative; }
-      .btn--secondary--ghost-lg:hover {
-        background-color: transparent; }
-        .btn--secondary--ghost-lg:hover::after {
-          border: 20px solid transparent;
-          border-bottom-color: #9c0;
-          bottom: 0;
-          content: '';
-          position: absolute;
-          right: 0;
-          -webkit-transform: translateX(50%);
-                  transform: translateX(50%); }
-    .btn--secondary--ghost-sm {
-      background-color: transparent;
-      border: 2px solid #9c0;
-      position: relative; }
-      .btn--secondary--ghost-sm:hover {
-        background-color: transparent; }
-        .btn--secondary--ghost-sm:hover::after {
-          border: 15px solid transparent;
-          border-bottom-color: #9c0;
-          bottom: 0;
-          content: '';
-          position: absolute;
-          right: 0;
-          -webkit-transform: translateX(50%);
-                  transform: translateX(50%); }
   .btn--primary {
     background-color: #9c0;
     color: #fff; }
     .btn--primary:hover {
       background-color: #7ca600; }
-    .btn--primary--ghost-lg {
-      background-color: transparent;
-      border: 2px solid #7ca600;
-      position: relative; }
-      .btn--primary--ghost-lg:hover {
-        background-color: transparent; }
-        .btn--primary--ghost-lg:hover::after {
-          border: 20px solid transparent;
-          border-bottom-color: #7ca600;
-          bottom: 0;
-          content: '';
-          position: absolute;
-          right: 0;
-          -webkit-transform: translateX(50%);
-                  transform: translateX(50%); }
-    .btn--primary--ghost-sm {
-      background-color: transparent;
-      border: 2px solid #7ca600;
-      position: relative; }
-      .btn--primary--ghost-sm:hover {
-        background-color: transparent; }
-        .btn--primary--ghost-sm:hover::after {
-          border: 15px solid transparent;
-          border-bottom-color: #7ca600;
-          bottom: 0;
-          content: '';
-          position: absolute;
-          right: 0;
-          -webkit-transform: translateX(50%);
-                  transform: translateX(50%); }
   .btn--disabled {
     background-color: #cbced2;
     color: #fff; }
     .btn--disabled:hover {
       background-color: #cbced2;
       cursor: not-allowed; }
-    .btn--disabled--ghost-lg {
-      background-color: transparent;
-      border: 2px solid #cbced2;
-      position: relative; }
-      .btn--disabled--ghost-lg:hover {
-        background-color: transparent; }
-        .btn--disabled--ghost-lg:hover::after {
-          border: 20px solid transparent;
-          border-bottom-color: #cbced2;
-          bottom: 0;
-          content: '';
-          position: absolute;
-          right: 0;
-          -webkit-transform: translateX(50%);
-                  transform: translateX(50%); }
-    .btn--disabled--ghost-sm {
-      background-color: transparent;
-      border: 2px solid #cbced2;
-      position: relative; }
-      .btn--disabled--ghost-sm:hover {
-        background-color: transparent; }
-        .btn--disabled--ghost-sm:hover::after {
-          border: 15px solid transparent;
-          border-bottom-color: #cbced2;
-          bottom: 0;
-          content: '';
-          position: absolute;
-          right: 0;
-          -webkit-transform: translateX(50%);
-                  transform: translateX(50%); }
-
-.btn-social {
-  border: 2px solid #cbced2;
-  color: #cbced2;
-  font-family: "Font Awesome 5 Brands";
-  font-size: 2rem;
-  font-weight: 400;
-  min-height: 43px;
-  min-width: 43px;
-  position: relative;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in; }
-  .btn-social:hover {
-    background-color: #658099;
-    border-style: none;
-    color: #fff; }
-  .btn-social--facebook::before {
-    content: '\f39e'; }
-  .btn-social--twitter::before {
-    content: '\f099'; }
-  .btn-social--google-plus::before {
-    content: '\f0d5';
-    text-transform: uppercase; }
-  .btn-social--linkedin::before {
-    content: '\f0e1'; }
-  .btn-social--rss::before {
-    content: '\f09e';
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900; }
-  .btn-social--instagram::before {
-    content: '\f16d'; }
-  .btn-social--mail::before {
-    content: '\f0e0';
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900; }
-  .btn-social--vk::before {
-    content: '\f189'; }
-  .btn-social--facebook::before {
-    content: '\f39e'; }
+  .btn--angle::after {
+    border: 0.6em solid transparent;
+    border-left-color: rgba(0, 0, 0, 0.2);
+    bottom: 0;
+    content: '';
+    height: 0;
+    position: absolute;
+    right: 0;
+    -webkit-transform: translateY(50%) translateX(50%) rotate(45deg);
+            transform: translateY(50%) translateX(50%) rotate(45deg);
+    width: 0; }
 
 .product-item {
   margin-bottom: 20px; }
@@ -5443,6 +5205,9 @@ button {
 
 .bg-blue {
   background: url("../images/bg-blue.jpg") repeat; }
+
+.bg-service {
+  background: url("../images/bg-service.jpg") repeat; }
 
 .bg-gray {
   background: url("../images/bg-gray.jpg") repeat; }
@@ -5840,6 +5605,9 @@ button {
   .form-control--success .form-control__success-icon {
     display: block; }
 
+.icon {
+  display: inline-block; }
+
 .guide-section {
   border-bottom: 2px solid #ededed;
   padding: 65px 0; }
@@ -5885,6 +5653,106 @@ button {
   .inner-carousel__slide-price {
     font-size: 7rem;
     letter-spacing: 0.25px; }
+  .inner-carousel__slide-img {
+    -webkit-filter: sepia(100%) brightness(0.1) grayscale(100%) opacity(20%);
+            filter: sepia(100%) brightness(0.1) grayscale(100%) opacity(20%);
+    margin: 0 auto;
+    margin-top: -200px;
+    max-width: 1450px;
+    position: relative;
+    width: 100%;
+    z-index: -1; }
+
+.event-item__preview {
+  background-color: #f0f3f7;
+  height: 300px;
+  overflow: hidden;
+  position: relative; }
+  .event-item__preview::after {
+    border: 0 solid transparent;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    width: 100%;
+    will-change: border-color, border-width;
+    z-index: 0; }
+
+.event-item:hover .event-item__preview::after {
+  border-color: #fff;
+  border-width: 10px; }
+
+.event-item__img {
+  height: 100%;
+  max-width: none; }
+
+.event-item__date {
+  background-color: #2e3c4a;
+  color: #fff;
+  font-family: "norwesterregular", sans-serif;
+  height: 85px;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 85px;
+  z-index: 1; }
+  .event-item__date-day {
+    font-size: 4rem; }
+  .event-item__date-month {
+    font-size: 2rem; }
+
+.event-item__desc {
+  background-color: #658099; }
+
+.event-item__desc-content {
+  height: 100%;
+  left: 0;
+  padding: 25px 30px;
+  position: absolute;
+  top: 0;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  width: 100%;
+  will-change: transform; }
+  .event-item__desc-content--hover {
+    opacity: 0;
+    padding: 30px 40px;
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+
+.event-item__desc-title {
+  color: #fff;
+  font-size: 2.8rem;
+  margin-bottom: 40px; }
+
+.event-item:hover .event-item__desc {
+  background-color: #000; }
+
+.event-item:hover .event-item__desc-content {
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0); }
+  .event-item:hover .event-item__desc-content--hover {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+
+.event-item--reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse; }
+
+.event-item--reverse .event-item__date {
+  left: 0;
+  right: auto; }
 
 .container {
   margin-left: auto;
@@ -5932,6 +5800,9 @@ button {
   padding-right: 15px;
   position: relative;
   width: 100%; }
+  .col--no-gutter {
+    padding-left: 0;
+    padding-right: 0; }
 
 .col-1 {
   max-width: 8.33333%; }
@@ -6953,6 +6824,59 @@ button {
   .logo__text--big {
     font-size: 5.6rem; }
 
+.page-section {
+  padding: 125px 0; }
+  .page-section__header {
+    margin-bottom: 55px;
+    position: relative; }
+    .our-service .page-section__header .title {
+      color: #fff; }
+
+.our-service__item {
+  background-color: transparent;
+  max-width: 330px;
+  padding: 30px;
+  width: 100%; }
+  .our-service__item .btn {
+    display: none; }
+  .our-service__item:hover {
+    background-color: #3c4d5e; }
+    .our-service__item:hover .btn {
+      display: block; }
+  .our-service__item-img {
+    margin-bottom: 45px; }
+  .our-service__item-title {
+    color: #fff;
+    font-family: "norwesterregular", sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 0.05;
+    line-height: 3rem;
+    margin-bottom: 28px; }
+  .our-service__item-text {
+    height: 100px;
+    margin-bottom: 40px; }
+
+.events-section {
+  background-color: #f0f3f7; }
+
+.slick-arrow {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1; }
+
+.slick-prev {
+  margin-left: auto;
+  margin-right: 10px; }
+
+.latest-news-section {
+  background-color: lightgray; }
+
+.event-item__desc-title {
+  font-family: "norwesterregular", sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.2px;
+  text-transform: uppercase; }
+
 /* Slider */
 .slick-slider {
   -webkit-box-sizing: border-box;
@@ -7055,6 +6979,13 @@ button {
           transform: translate(0, -50%);
   width: 45px;
   z-index: 99; }
+  .slick-arrow--medium {
+    height: 46px;
+    width: 46px; }
+  .slick-arrow--static {
+    position: static;
+    -webkit-transform: none;
+            transform: none; }
   .slick-arrow:hover, .slick-arrow:focus {
     background: #9c0;
     color: transparent;

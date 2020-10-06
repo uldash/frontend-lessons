@@ -1,0 +1,107 @@
+.event-item {
+    &__preview {
+        background-color: #f0f3f7;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+
+        &::after {
+            border: 0 solid transparent;
+            box-sizing: border-box;
+            content: '';
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            transition: all 0.2s ease-in;
+            width: 100%;
+            will-change: border-color, border-width;
+            z-index: 0;
+        }
+    }
+
+    &:hover &__preview {
+        &::after {
+            border-color: $bg-white;
+            border-width: 10px;
+        }
+    }
+
+    &__img {
+        height: 100%;
+        max-width: none;
+    }
+
+    &__date {
+        background-color: #2e3c4a;
+        color: $text-white;
+        font-family: $secondary-font;
+        height: 85px;
+        padding: 5px;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
+        width: 85px;
+        z-index: 1;
+
+        &-day {
+            font-size: 4rem;
+        }
+
+        &-month {
+            font-size: 2rem;
+        }
+    }
+
+    &__desc {
+        background-color: $bg-blue;
+    }
+
+    &__desc-content {
+        height: 100%;
+        left: 0;
+        padding: 25px 30px;
+        position: absolute;
+        top: 0;
+        transition: all 0.2s ease-in;
+        width: 100%;
+        will-change: transform;
+
+        &--hover {
+            opacity: 0;
+            padding: 30px 40px;
+            transform: scale(0);
+        }
+    }
+
+    &__desc-title {
+        @extend %base-title;
+        color: $text-white;
+        font-size: 2.8rem;
+        margin-bottom: 40px;
+    }
+
+    &:hover &__desc {
+        background-color: #000;
+    }
+
+    &:hover &__desc-content {
+        opacity: 0;
+        transform: scale(0);
+
+        &--hover {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    &--reverse {
+        flex-direction: row-reverse;
+    }
+
+    &--reverse &__date {
+        left: 0;
+        right: auto;
+    }
+}

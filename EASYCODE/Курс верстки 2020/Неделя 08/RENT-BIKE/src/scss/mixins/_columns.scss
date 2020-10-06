@@ -1,46 +1,51 @@
 @mixin make-grid-columns(
-  $columns: $grid-columns,
-  $gutter: $grid-gutter-width,
+    $columns: $grid-columns,
+    $gutter: $grid-gutter-width,
   $breakpoints: $grid-breakpoints
 ) {
-  // 1. создать базовый класс колонки
-  .col {
-    padding-left: $gutter / 2;
-    padding-right: $gutter / 2;
-    position: relative;
-    width: 100%;
-  }
+    // 1. создать базовый класс колонки
+    .col {
+        padding-left: $gutter / 2;
+        padding-right: $gutter / 2;
+        position: relative;
+        width: 100%;
 
-  // 2. сгенерироввать 12 классов с шириной
-  @for $i from 1 through $columns {
-    .col-#{$i} {
-      max-width: percentage($i / $columns);
-    }
-  }
-
-  // 3. создать под каждый медиа запрос колонки
-  // .col-sm-1..., col-md-1 ..., ...
-  // @media (max-width: 1199px) {
-  //   .col-xl-1 {
-  //     max-width: 8.33%;
-  //   }
-  //   // 12
-  // }
-
-  // @media (max-width: 991px) {
-  //   .col-lg-1 {
-  //     max-width: 8.33%;
-  //   }
-  //   // 12
-  // }
-
-  @each $name, $value in $breakpoints {
-    @include media-breakpoint($value) {
-      @for $i from 1 through $columns {
-        .col-#{$name}-#{$i} {
-          max-width: percentage($i / $columns);
+        &--no-gutter {
+            padding-left: 0;
+            padding-right: 0;
         }
-      }
     }
-  }
+
+    // 2. сгенерироввать 12 классов с шириной
+    @for $i from 1 through $columns {
+        .col-#{$i} {
+            max-width: percentage($i / $columns);
+        }
+    }
+
+    // 3. создать под каждый медиа запрос колонки
+    // .col-sm-1..., col-md-1 ..., ...
+    // @media (max-width: 1199px) {
+    //   .col-xl-1 {
+    //     max-width: 8.33%;
+    //   }
+    //   // 12
+    // }
+
+    // @media (max-width: 991px) {
+    //   .col-lg-1 {
+    //     max-width: 8.33%;
+    //   }
+    //   // 12
+    // }
+
+    @each $name, $value in $breakpoints {
+        @include media-breakpoint($value) {
+            @for $i from 1 through $columns {
+                .col-#{$name}-#{$i} {
+                    max-width: percentage($i / $columns);
+                }
+            }
+        }
+    }
 }
