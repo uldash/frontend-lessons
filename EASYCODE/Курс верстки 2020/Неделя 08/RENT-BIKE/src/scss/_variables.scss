@@ -1,16 +1,12 @@
 $fonts: (
-  'norwesterregular': (
-    'woff2': '../fonts/norwester-webfont.woff2',
-    'woff': '../fonts/norwester-webfont.woff'
-  )
+    'norwesterregular': (
+        'woff2': '../fonts/norwester-webfont.woff2',
+        'woff': '../fonts/norwester-webfont.woff'
+    )
 );
 
 // Fontawesome
 $fa-font-path: '../fonts';
-
-// Common
-$main-font: 'Lato', sans-serif;
-$secondary-font: 'norwesterregular', sans-serif;
 
 // Text Colors
 $text-gray: #a6a6a6;
@@ -18,6 +14,21 @@ $text-blue: #435566;
 $text-light-blue: #869db2;
 $text-white: #fff;
 $text-green: #9c0;
+
+// Common
+$main-font: 'Lato', sans-serif;
+$secondary-font: 'norwesterregular', sans-serif;
+
+$code-font: 'texgyrecursor', sans-serif;
+$icon-font: 'Font Awesome 5 Free';
+$icon-brand-font: 'Font Awesome 5 Brands';
+
+$html-font-size: 10px;
+$body-font-color: $text-gray;
+$body-font: $main-font;
+$body-fz: 1rem;
+$body-fw: 400;
+$body-lh: 1;
 
 // Bg colors
 $bg-blue: #658099;
@@ -37,17 +48,17 @@ $grid-columns: 12;
 $grid-gutter-width: 30px;
 
 $grid-breakpoints: (
-  xl: 1199px,
-  lg: 991px,
-  md: 767px,
-  sm: 575px
+    xl: 1199px,
+    lg: 991px,
+    md: 767px,
+    sm: 575px
 );
 
 $container-max-width: (
-  xl: 960px,
-  lg: 720px,
-  md: 540px,
-  sm: 100%
+    xl: 960px,
+    lg: 720px,
+    md: 540px,
+    sm: 100%
 );
 
 $displays: none, inline-block, block, flex;
@@ -65,12 +76,12 @@ $title-ff: $secondary-font;
 $title-color: $text-blue;
 
 $title-sizes: (
-  h1: $title-h1-fz,
-  h2: $title-h2-fz,
-  h3: $title-h3-fz,
-  h4: $title-h4-fz,
-  h5: $title-h5-fz,
-  h6: $title-h6-fz,
+    h1: $title-h1-fz,
+    h2: $title-h2-fz,
+    h3: $title-h3-fz,
+    h4: $title-h4-fz,
+    h5: $title-h5-fz,
+    h6: $title-h6-fz,
 );
 
 // Articles
@@ -82,9 +93,9 @@ $article-md-fz: 1.8rem;
 $article-lg-fz: 2rem;
 
 $article-sizes: (
-  sm: $article-sm-fz,
-  md: $article-md-fz,
-  lg: $article-lg-fz,
+    sm: $article-sm-fz,
+    md: $article-md-fz,
+    lg: $article-lg-fz,
 );
 
 // Blockquote
@@ -104,6 +115,12 @@ $blockquote-author-fz-sm: 1.5rem;
 // Footer
 $footer-subscribe-bg: #304152;
 $footer-contacts-bg: #304152;
+$footer-follow-bg: #263340;
+
+// Table
+
+$table-head-bg: #f0f3f7;
+$table-body-bg: #f0f3f7;
 
 // Buttons
 $btn-ff: $secondary-font;
