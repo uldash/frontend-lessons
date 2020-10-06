@@ -1,19 +1,19 @@
-@mixin make-articles (
-    $sizes: $article-sizes,
-    $color: $article-color,
-    $font: $article-ff,
+@mixin make-articles(
+  $sizes: $article-sizes,
+  $color: $article-color,
+  $font: $article-ff
 ) {
-    .article {
-        color: $color;
-        font-family: $font;
-        font-weight: normal;
-        letter-spacing: 0.2;
-        line-height: 1.75;
-        
-        @each $name, $value in $sizes {
-            &--#{$name} {
-                font-size: $value;
-            }    
-        }
+  .article {
+    color: $color;
+    font-family: $font;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+    line-height: 1.75;
+
+    @each $name, $value in $sizes {
+      &--#{$name} {
+        font-size: $value;
+      }
     }
+  }
 }

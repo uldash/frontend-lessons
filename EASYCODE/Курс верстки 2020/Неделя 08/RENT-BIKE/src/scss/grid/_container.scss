@@ -1,13 +1,15 @@
 .container {
-    @include make-container();
+  @include make-container();
 
-    @each $name, $value in $grid-breakpoints {
-        @include media-breakpoint($value) {
-            max-width: map-get($container-max-width, $name);
-        }
+  @each $name, $value in $grid-breakpoints {
+    // $name - xl
+    // $value - 1199px
+    @include media-breakpoint($value) {
+      max-width: map-get($container-max-width, $name);
     }
+  }
 }
 
 .container-fluid {
-    @include make-container('none');
+  @include make-container('none');
 }

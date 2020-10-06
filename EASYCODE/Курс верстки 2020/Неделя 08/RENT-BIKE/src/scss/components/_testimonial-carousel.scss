@@ -1,19 +1,17 @@
-.testimonial-carousel {
-    &__item {
-        &-img {
-            // width: 200px;
-            img {
-                vertical-align: bottom;
-            }
-        }
-
-        &-text {
-            // flex-grow: 1;
-            // width: 70%;                
-        }
-    }
-}
 
 .testimonial-carousel-section {
-    position: relative;
+  position: relative;
+}
+
+.testimonial-carousel {
+  &__item {
+    &-img {
+      width: 200px;
+    }
+
+    &-text {
+      flex-grow: 1;
+      width: 70%;
+    }
+  }
 }

@@ -1,44 +1,45 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    font-size: $html-font-size;
+  font-size: $html-font-size;
 }
 
 body {
-    color: $body-font-color;
-    font: $body-fw $body-fz/$body-lh $body-font;
+  color: $body-font-color;
+  font: $body-fw $body-fz/$body-lh $body-font;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 input,
 textarea {
-    background-color: transparent;
-    border: 0;
-    outline: none;
+  background-color: transparent;
+  border: 0;
+  outline: none;
 }
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 button {
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-    outline: none;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  outline: none;
 }
+

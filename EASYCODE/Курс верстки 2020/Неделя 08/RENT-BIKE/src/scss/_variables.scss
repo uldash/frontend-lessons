@@ -1,13 +1,16 @@
 $fonts: (
-    'norwesterregular': (
-        'woff2': '../fonts/norwester-webfont.woff2',
-        'woff': '../fonts/norwester-webfont.woff',
-    ),
-    'texgyrecursor' : (
-        'woff2': '../fonts/texgyrecursor-regular-webfont.woff2',
-        'woff': '../fonts/texgyrecursor-regular-webfont.woff',
-    )
+  'norwesterregular': (
+    'woff2': '../fonts/norwester-webfont.woff2',
+    'woff': '../fonts/norwester-webfont.woff'
+  )
 );
+
+// Fontawesome
+$fa-font-path: '../fonts';
+
+// Common
+$main-font: 'Lato', sans-serif;
+$secondary-font: 'norwesterregular', sans-serif;
 
 // Text Colors
 $text-gray: #a6a6a6;
@@ -16,23 +19,10 @@ $text-light-blue: #869db2;
 $text-white: #fff;
 $text-green: #9c0;
 
-// Bg Colors
-
+// Bg colors
 $bg-blue: #658099;
-$bg-white: #fff;
 $bg-green: #9c0;
-
-// Fontawesome
-
-$fa-font-path: '../fonts';
-
-// Common
-
-$main-font: 'Lato', sans-serif;
-$secondary-font: 'norwesterregular', sans-serif;
-$code-font: 'texgyrecursor', sans-serif;
-$icon-font: 'Font Awesome 5 Free';
-$icon-brand-font: 'Font Awesome 5 Brands';
+$bg-white: #fff;
 
 $html-font-size: 10px;
 $body-font-color: $text-gray;
@@ -47,28 +37,27 @@ $grid-columns: 12;
 $grid-gutter-width: 30px;
 
 $grid-breakpoints: (
-    xl: 1199px,
-    lg: 991px,
-    md: 767px,
-    sm: 576px,
+  xl: 1199px,
+  lg: 991px,
+  md: 767px,
+  sm: 575px
 );
 
 $container-max-width: (
-    xl: 960px,
-    lg: 720px,
-    md: 540px,
-    sm: 100%,
+  xl: 960px,
+  lg: 720px,
+  md: 540px,
+  sm: 100%
 );
 
 $displays: none, inline-block, block, flex;
 
-// Tiles
 
+// Titles
 $title-h1-fz: 7rem;
 $title-h2-fz: 6rem;
 $title-h3-fz: 5rem;
 $title-h4-fz: 3rem;
-
 $title-h5-fz: 2.5rem;
 $title-h6-fz: 2.2rem;
 
@@ -76,16 +65,15 @@ $title-ff: $secondary-font;
 $title-color: $text-blue;
 
 $title-sizes: (
-    h1: $title-h1-fz,
-    h2: $title-h2-fz,
-    h3: $title-h3-fz,
-    h4: $title-h4-fz,
-    h5: $title-h5-fz,
-    h6: $title-h6-fz,
+  h1: $title-h1-fz,
+  h2: $title-h2-fz,
+  h3: $title-h3-fz,
+  h4: $title-h4-fz,
+  h5: $title-h5-fz,
+  h6: $title-h6-fz,
 );
 
 // Articles
-
 $article-ff: $main-font;
 $article-color: $text-gray;
 
@@ -94,15 +82,14 @@ $article-md-fz: 1.8rem;
 $article-lg-fz: 2rem;
 
 $article-sizes: (
-    sm: $article-sm-fz,
-    md: $article-md-fz,
-    lg: $article-lg-fz,
+  sm: $article-sm-fz,
+  md: $article-md-fz,
+  lg: $article-lg-fz,
 );
 
 // Blockquote
-
 $blockquote-bg: $bg-blue;
-$blockquote-arrow-color: #546b80;
+$blockquote-arrow-color: #476b83;
 
 $blockquote-text-color: $text-white;
 $blockquote-author-color: #cfdae5;
@@ -115,44 +102,30 @@ $blockquote-text-fz-sm: 1.8rem;
 $blockquote-author-fz-sm: 1.5rem;
 
 // Footer
-
-$footer-subscribe-bg: #2c3c4b;
-$footer-contacts-bg: #2c3c4b;
-$footer-follow-bg: #263340;
-
-// Table
-
-$table-head-bg: #f0f3f7;
-$table-body-bg: #f0f3f7;
+$footer-subscribe-bg: #304152;
+$footer-contacts-bg: #304152;
 
 // Buttons
-
 $btn-ff: $secondary-font;
 $btn-fz-lg: 2.5rem;
 $btn-fz-sm: 1.8rem;
-
 $btn-default-bg: #658099;
 $btn-default-bg-hover: #9c0;
 $btn-default-text-color: #fff;
-
 $btn-secondary-bg: #435566;
 $btn-secondary-bg-hover: #9c0;
 $btn-secondary-text-color: #fff;
-
 $btn-primary-bg: #9c0;
 $btn-primary-bg-hover: #7ca600;
 $btn-primary-text-color: #fff;
-
 $btn-disabled-bg: #cbced2;
-$btn-disabled-bg-hover: #435566;
 $btn-disabled-text-color: #fff;
+$btn-angle-color: rgba(0, 0, 0, 0.2);
 
-
-// Form controls 
-$form-control-ff: 'Lato', sans-serif;
+// Form controls
+$form-control-ff: $main-font;
 $form-control-fz: 1.6rem;
 $form-control-height: 46px;
-
 $form-control-text-color: #cbced2;
 $form-control-active-text-color: #666;
 $form-control-error-text-color: #ff4c4c;
@@ -171,7 +144,3 @@ $form-control-success-bg-color: #f3faf3;
 $form-control-select-option-color: #fff;
 $form-control-select-option-bg-color: #93b0cc;
 $form-control-select-option-bg-hover-color: #9ebddb;
-
-
-
-

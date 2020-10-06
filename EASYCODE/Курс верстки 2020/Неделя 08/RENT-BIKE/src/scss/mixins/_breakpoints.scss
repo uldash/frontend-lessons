@@ -1,5 +1,5 @@
-@mixin media-breakpoint($breakpoint) {
-    @media (max-width: $breakpoint) {
-        @content;
-    }
+@mixin media-breakpoint($brakpoint) {
+  @media (max-width: $brakpoint) {
+    @content;
+  }
 }
