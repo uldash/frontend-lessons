@@ -1,0 +1,107 @@
+.custom-select {
+    position: relative;
+    font-family: Arial;
+    width: 170px;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element:*/
+  }
+  
+  /* .select-selected {
+    color: #78838e;
+    background-color: transparent;
+    border-top: 2px solid #78838e;
+    border-bottom: 2px solid #78838e;
+  } */
+
+  .select-selected {
+    color: #78838e;
+    background-color: transparent;
+    border-top: 2px solid #78838e;
+    border-bottom: 2px solid #78838e;
+    text-transform: uppercase;
+  }
+  
+  /*style the arrow inside the select element:*/
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    transform: translateY(-50%) rotate(-45deg);
+    
+    border-color: #99cc00 transparent transparent transparent;
+  }
+  /* .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  } */
+  .select-selected.select-arrow-active {
+      color: #99cc00;
+      border-color: #99cc00;
+  }
+
+  /*point the arrow upwards when the select box is open (active):*/
+  .select-selected.select-arrow-active:after {
+  }
+
+  /* .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  } */
+  
+  /*style the items (options), including the selected item:*/
+  .select-items div {
+    border-bottom: 1px solid #2e3c4a;
+  }
+
+  .select-items div,.select-selected {
+    /* color: #ffffff; */
+    padding: 8px 16px;
+    cursor: pointer;
+    user-select: none;
+    
+  }
+  /* .select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+  } */
+  
+  /*style items (options):*/
+  .select-items {
+    position: absolute;
+    color: #8b9299;
+    background-color: #232f3b;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  /*hide the items when the select box is closed:*/
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover {
+    border-left: 2px solid #99cc00;
+    color: #99cc00;
+  }
+
+  /* .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  } */
