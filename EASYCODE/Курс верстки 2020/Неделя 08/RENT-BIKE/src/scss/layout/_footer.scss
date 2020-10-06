@@ -1,0 +1,146 @@
+.footer {
+    position: relative;
+
+    &-subscribe {
+        background-color: $footer-subscribe-bg;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+        padding: 25px 0;
+
+        &__form {
+            &-control {
+                color: $text-white;
+                font-family: $secondary-font;
+                font-size: 3rem;
+                text-transform: uppercase;
+
+                &::placeholder {
+                    color: #cbced2;
+                    transition: all 0.2s ease-in;
+                }
+
+                &:focus::placeholder {
+                    color: transparent;
+                }
+            }
+        }
+    
+        &__text {
+            color: $text-white;
+            font-family: $secondary-font;
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+
+        &__icon {
+            color: $text-white;
+            font-size: 3rem;
+            margin-left: 30px;
+        }
+    }
+
+    &-content {
+        background: url('../images/footer-bg.jpg') no-repeat center / cover;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+        padding: 145px 0 135px;
+    }
+
+    &-nav {
+        margin-top: 65px;
+
+        &__item {
+            color: #cbced2;
+            font-family: $secondary-font;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $text-green;
+            }
+
+            & + & {
+                margin-left: 70px;
+            }
+        }
+    }
+
+    &-contacts {
+        background-color: $footer-contacts-bg;
+        padding: 35px 0;
+
+        &__item {
+            &-text {
+                color: $text-white;
+                font-family: $secondary-font;
+                font-size: 1.6rem;
+
+                &:hover {
+                    color: $text-green;
+                }
+            }
+
+            &-icon {
+                font-size: 4rem;
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    &-follow {
+        background-color: $footer-follow-bg;
+        padding: 35px 0;
+
+        &__theme-by {
+            color: #fffefe;
+            font-size: 1.4rem;
+            font-weight: 900;
+            letter-spacing: 0.05rem;
+
+            &--link {
+                color: $text-green;
+                font-weight: 900;
+                text-transform: uppercase;
+            }
+        }
+
+        &__followus-title {
+            color: $text-white;
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: 0.05rem;
+            margin-right: 25px;
+        }
+
+        &__followus-item {
+            color: $text-white;
+            font-size: 30px;
+            font-weight: 400;
+
+            &:hover {
+                color: $text-green;
+            }
+
+            & + & {
+                margin-left: 30px;
+            }
+        }
+    }
+}
+
+.scroll-up-btn {
+    background-color: $bg-green;
+    cursor: pointer;
+    height: 26px;
+    left: 50%;
+    padding: 5px 0;
+    position: absolute;
+    transform: translateX(-50%) translateY(-100%);
+    width: 100px;
+    
+    &-icon {
+        color: $text-white;
+        font-size: 1.8rem;
+    }
+}
+
+
+
