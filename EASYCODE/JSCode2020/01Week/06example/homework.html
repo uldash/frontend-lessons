@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Строки, ДЗ</title>
+</head>
+<body>
+    <script>
+        let str = 'some test string';
+
+        console.log(`First character: ${str[0]}\nlast character" ${str[str.length - 1]}`);
+        console.log(`First character: ${str[0].toUpperCase()}\nlast character" ${str[str.length - 1].toUpperCase()}`);
+
+        console.log(str.indexOf('string'));
+
+        console.log(str.indexOf(' ', str.indexOf(' ') + 1));
+
+        console.log(str.substr(5, 4));
+
+        console.log(str.substring(5, 9));
+
+        console.log(str.slice(0, -6));
+
+        let a = 20, b = 16;
+        console.log(String(a) + b);
+    </script>
+</body>
+</html>
