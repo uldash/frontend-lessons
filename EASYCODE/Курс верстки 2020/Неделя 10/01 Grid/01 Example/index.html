@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .item {
+            background-color: coral;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 30px;
+
+        }
+
+        .grid-container {
+            background-color: lightskyblue;
+            display: grid;
+            /* grid-template-columns: 200px 50% auto auto; */
+            grid-template-columns: repeat(3, 20%) 200px;
+            grid-template-rows: 100px 200px auto;
+            grid-gap: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+    </div>
+</body>
+</html>

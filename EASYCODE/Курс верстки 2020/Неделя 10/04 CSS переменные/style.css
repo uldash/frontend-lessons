@@ -1,0 +1,16 @@
+:root {
+    --box-bg: lightsalmon;
+    --text-color:aliceblue;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    background-color: var(--box-bg, red);   
+}
+
+.box p {
+    --text-color:black;
+    color: var(--text-color);
+}

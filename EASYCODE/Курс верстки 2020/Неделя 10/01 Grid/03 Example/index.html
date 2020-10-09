@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid sizing, fr</title>
+    <style>
+        .item {
+            background-color: coral;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 30px;
+
+        }
+
+        .grid-container {
+            background-color: lightskyblue;
+            display: grid;
+            grid-gap: 20px;
+            /* grid-template-columns: 25% 25% 25% 25%; */
+            /* grid-template-columns: auto 2fr 1fr; */
+            grid-template-columns: repeat(2, 1fr 10px) 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">6</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid выравнивание и центрирование</title>
+    <style>
+        .item {
+            background-color: coral;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 30px;
+
+        }
+
+        .grid-container {
+            background-color: lightslategray;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(5, 100px);
+            grid-template-rows: repeat(2, 100px);
+            /* justify-items: center;
+            align-items: center; */
+            height: 500px;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+
+        .item3 {
+            justify-self: start;
+            align-self: end;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        <div class="item item7">7</div>
+        <div class="item item8">8</div>
+        <div class="item item9">9</div>
+        <div class="item item10">10</div>
+    </div>
+</body>
+</html>
