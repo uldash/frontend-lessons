@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Методы массивов, ДЗ</title>
+</head>
+<body>
+    <script>
+        /*
+        Создать функцию, которая принимает число n и возвращает массив, заполненный числами от 1 до n: getArray(10); // [1,2,3,4,5,6,7,8,9,10]
+        */
+        const getArray = function (num) {
+            let result = [];
+            for (let i = 1; i <= num; i++) {
+                result.push(i);
+            }
+            return result;
+        }
+        console.log(getArray(15));
+
+        /*
+        Создать функцию, которая принимает массив, а возвращает новый массив с дублированными элементами входного массива.
+        doubleArray([1,2,3]) // [1,2,3,1,2,3]
+        */
+        const doubleArray = function (arr) {
+            return arr.concat(arr);
+        }
+        console.log(doubleArray([1, 2, 3]));
+
+        /*
+         Создать функцию, которая принимает произвольное (любое) число массивов и удаляет из каждого массива первый элемент, а возвращает массив из оставшихся значений. Данное задание выполните после того как познакомитесь с методами массивов: 
+        changeCollection([1,2,3], [‘a’, ’b’, ‘c’]) → [ [2,3], [‘b’, ‘c’] ], changeCollection([1,2,3]) → [ [2,3] ] и т.д.
+        */
+        const changeCollection = function () {
+            let result = [];
+            for (let key of arguments) {
+                key.shift();
+                result.push(key)
+            }
+            return result;
+        }
+        console.log(changeCollection([1, 2, 3]))
+        console.log(changeCollection([1, 2, 3], ['a', 'b', 'c']))
+
+        /*
+        Создать функцию которая принимает массив пользователей, поле на которое хочу проверить и значение на которое хочу проверять. Проверять что все аргументы переданы. Возвращать новый массив с пользователями соответсвующие указанным параметрам.
+        funcGetUsers(users, “gender”, “male”); // [ {name: “Denis”, age: “29”, gender: “male”} , {name: “Ivan”, age: “20”, gender: “male”} ]
+        */
+
+        const usersArr = [{ name: 'Den', age: '29', gender: 'male' }, { name: 'Ivan', age: '20', gender: 'male' }, { name: 'Nana', age: '20', gender: 'female' }];
+
+        const funcGetUsers = function (users, item, parameter) {
+            const result = [];
+            if (arguments.length !== 3) {
+                return console.error('Not enoutch arguments');
+            }
+
+            for (let key of users) {
+                if (key[item] === parameter) {
+                    result.push(key);
+                }
+            }
+            return result;
+        }
+        console.table(usersArr);
+        console.log(funcGetUsers(usersArr, 'male'))
+        console.log(funcGetUsers(usersArr, 'gender', 'male'))
+    </script>
+</body>
+</html>

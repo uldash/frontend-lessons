@@ -8,6 +8,117 @@
 <body>
     <script>
         // > < >= <= == === != !==
+        let value;
+
+        value = 1 > 2;
+        value = 2 <= 2;
+
+        value = 1 == 1; // true
+        value = 1 == '1'; // true
+
+        value = 1 == true; // true
+        value = 1 === true; // false
+
+        value = 1 != '1'; // false
+        value = 1 !== '1'; // true
+
+        value = 'a' > 'a'; // false
+        value = 'a' == 'a'; // true
+        value = 'a' == 'A'; // false
+        value = 'a' > 'ab'; // false
+
+        value = 'a'.charCodeAt(); // 97
+        value = 'A'.charCodeAt(); // 65
+
+        console.log(value);
+
+        if (value) {
+            console.log(true);
+        } else {
+            console.log(false);
+        }
+
+        value = 10;
+        if (value === 10) {
+            console.log(true);
+        } else {
+            console.log(false);
+        }
+
+        value = undefined; //false
+        value = null; //false
+        value = ''; // false
+        value = 0; //false
+        value = NaN; //false
+
+        if (value) {
+            console.log(true);
+        } else {
+            console.log(false);
+        }
+
+        value = [];
+        console.log(!!value);
+
+        if (value.length) {
+            console.log(value);
+        } else {
+            console.log('array is empty');
+        }
+
+        if (Array.isArray(value)) {
+            console.log('is array');
+        } else {
+            console.log('is not array');
+        }
+
+        let user = {
+            name: 'Tom',
+        }
+
+        if (user.hasOwnProperty('name')) {
+            console.log(user.name);
+        } else {
+            console.log('else');
+        }
+
+        if (user.name) {
+            console.log(user.name);
+        } else {
+            console.log('else');
+        }
+
+        // || или спотыкается на истине
+        value = 0 || 0 || null || 2;
+        console.log(value);
+
+        // && и спотыкается на лжи
+        value = 1 && 0 && null && 2;
+        console.log(value);
+
+        let serverNickName = ''
+        let nickName = serverNickName || 'default nickname';
+        console.log(nickName);
+
+        value = 1 && 0 && 3;
+        console.log(value);
+
+        let productPrice = 10;
+
+        if (productPrice >= 5 && productPrice <= 20) {
+            console.log('беру');
+        } else {
+            console.log('else');
+        }
+
+        value = 10;
+        if (value < 10) {
+            console.log('value < 10: ', value);
+        } else if (value > 10) {
+            console.log('value > 10: ', value);
+        } else {
+            console.log('value = 10: ', value);
+        }
     </script>
 </body>
 </html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Функции, ДЗ</title>
+</head>
+<body>
+    <script>
+        /*
+        Создать функцию multiply, которая будет принимать любое количество чисел и возвращать их произведение: multiply(1,2,3) = 6 (1*2*3)
+        Если нет ни одного аргумента, вернуть ноль: multiply() // 0
+        */
+        const multiply = function () {
+            let result = arguments.length ? 1 : 0;
+            for (let key of arguments) {
+                result *= key;
+            }
+            return result;
+        }
+        console.log(multiply(2, 3, 4))
+
+        /*
+        Создать функцию, которая принимает строку и возвращает строку-перевертыш: reverseString(‘test’) // “tset”.
+        */
+        let str = 'test';
+        const reverseString = function (str) {
+            let result = '';
+            for (let key of str) {
+                result = key + result;
+            }
+            return result;
+        }
+        console.log(str);
+        console.log(reverseString(str));
+
+        /*
+        Создать функцию, которая в качестве аргумента принимает строку из букв и возвращает строку, где каждый символ разделен пробелом и заменен на юникод-значение символа:
+        getCodeStringFromText(‘hello’) // “104 101 108 108 111”
+        */
+        const getCodeStringFromText = function (str) {
+            let result = '';
+            for (let key of str) {
+                console.log(key)
+                result = result + key.charCodeAt(0) + ' '
+            }
+            return result.slice(0, -1);
+        }
+        console.log(str);
+        console.log(getCodeStringFromText(str));
+
+        /*
+        Создать функцию угадай число. Она принимает число от 1-10 (обязательно проверить что число не больше 10 и не меньше 0). Генерирует рандомное число от 1-10 и сравнивает с заданным числом если они совпали то возвращает “Вы выиграли” если нет то “Вы не угадали ваше число 8 а выпало число 5”. Числа в строке указаны как пример вы подставляете реальные числа.
+        */
+        const guessNumber = function (num) {
+            if (num > 10 || num < 0) return console.error('wrong number');
+            let fnum = Math.floor(Math.random() * 11);
+            if (num === fnum)
+                return `Вы угадали, загаданное число ${fnum} равно вашему числу ${num}`;
+            else
+                return `Вы не угадали, загаданное число ${fnum} не равно вашему числу ${num}`;
+        }
+
+        console.log(guessNumber(1));
+    </script>
+</body>
+</html>

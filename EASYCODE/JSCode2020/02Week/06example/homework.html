@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Функции высшего порядка, ДЗ</title>
+</head>
+<body>
+    <script>
+        /*Создать две функции и дать им осмысленные названия:
+    - первая функция принимает массив и колбэк (одна для всех вызовов)
+    - вторая функция (колбэк) обрабатывает каждый элемент массива (для каждого вызова свой callback)
+
+    Первая функция возвращает строку “New value: ” и результат обработки:
+
+    firstFunc([‘my’, ‘name’, ‘is’, ‘Trinity’], handler1) → “New value: MyNameIsTrinity”
+    firstFunc([10, 20, 30], handler2) → “New value: 100, 200, 300,”
+    firstFunc([{age: 45, name: ‘Jhon’}, {age: 20, name: ‘Aaron’}], handler3) →
+    “New value: Jhon is 45, Aaron is 20,”
+    firstFunc([‘abc’, ‘123’], handler4) → “New value: cba, 321,” // строки инвертируются
+
+    Подсказка: secondFunc должна быть представлена функцией, которая принимает
+    один аргумент (каждый элемент массива) и возвращает результат его обработки
+        */
+        const map = function (arr, fn) {
+            let result = 'New value:';
+            for (let key of arr) {
+                result += fn(key);
+            }
+            return result;
+        }
+
+        const handler1 = function (item) {
+            return item[0].toUpperCase() + item.substring(1);
+        }
+
+        const handler2 = function (item) {
+            return item * 10 + ', ';
+        }
+
+        const handler3 = function (item) {
+            return ` ${item['name']} is ${item['age']},`;
+        }
+
+        const handler4 = function (item) {
+            let result = '';
+            for (let key of item) {
+                console.log(key);
+                result = key + result;
+            }
+            return ` ${result},`;
+        }
+
+        console.log(map(['my', 'name', 'is', 'Trinity'], handler1));
+        console.log(map([10, 20, 30], handler2));
+        console.log(map([{ age: 45, name: 'Jhon' }, { age: 20, name: 'Aaron' }], handler3));
+        console.log(map(['abc', '123'], handler4));
+
+        /*
+        Написать аналог метода every. Создайте функцию every, она должна принимать первым аргументом массив чисел (обязательно проверьте что передан массив) вторым аргументом callback (обязательно проверьте что передана функция)
+        функция должна возвращать true или false в зависимости от результата вызова callback (проверить число больше 5). Callback  должен принимать один элемент массива, его индекс в массиве и весь массив. 
+        */
+        const every = function (arr, fn) {
+            if (typeof (fn) !== 'function' || !Array.isArray(arr)) return console.error('wrong arguments')
+            for (let i = 0; i < arr.length; i++) {
+                if (!fn(arr[i], i, arr)) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        const moreFive = function (item, index, items) {
+            return item > 5;
+        }
+
+        console.log(every([6, 8, 11, 12], moreFive));
+        console.log(every('1', moreFive));
+
+        /*
+        9. Даны объект и функция:
+        ```jsx
+        let sizes = { width: 5, height: 10 },
+        getSquare = function () { return this.width * this.height };
+        ```
+        Не изменяя функцию или объект, получить результат функции
+        *getSquare* для объекта sizes
+        */
+
+        let sizes = { width: 5, height: 10 };
+        const getSquare = function () { return this.width * this.height };
+        sizes.getSquare = getSquare;
+        console.log(sizes.getSquare());
+    </script>
+</body>
+</html>

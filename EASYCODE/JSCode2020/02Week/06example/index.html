@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Функции высшего порядка</title>
+</head>
+<body>
+    <script>
+        function foo() {
+            console.log('Hello world');
+        }
+        foo();
+        foo.field = 'Den';
+        console.log(foo.field);
+
+        const arr = ['Tom', 'Bill', 'Ivan', 'Olga'];
+        // => [3, 4, 4, 4]
+
+        function mapArray(arr, fn) {
+            const res = [];
+            for (let item of arr) {
+                res.push(fn(item));
+            }
+            return res
+        }
+
+        function nameLength(el) {
+            return el.length;
+        }
+
+        function nameToUpperCase(el) {
+            return el.toUpperCase();
+        }
+
+        console.log(mapArray(arr, nameLength))
+        console.log(mapArray(arr, nameToUpperCase))
+
+
+        function greeting(firstName) {
+            return function (lastName) {
+                return `Hello ${firstName} ${lastName}`
+            }
+        }
+
+        // const testGreeting = greeting('Denis');
+        // console.log(testGreeting);
+        // const fullName = testGreeting('Ivanov');
+
+        const fullName = greeting('Denis')('Ivanov');
+        console.log(fullName);
+
+        function question(job) {
+            // if (job === 'developer') {
+            //     return function (name) {
+            //         return `${name}, что такое JS?`;
+            //     }
+            // } else if (job === 'teacher') {
+            //     return function (name) {
+            //         return `${name}, какой предмет вы ведете?`;
+            //     }
+            // }
+
+            const jobDictionary = {
+                developer: 'что такое JS?',
+                teacher: 'какой предмет вы ведете?',
+            }
+
+            return function (name) {
+                return `${name}, ${jobDictionary[job]}`
+            }
+        }
+
+        const developerQuestion = question('developer');
+        console.log(developerQuestion('denis'))
+        const teacherQuestion = question('teacher');
+        console.log(teacherQuestion('denis'))
+
+
+
+
+    </script>
+</body>
+</html>

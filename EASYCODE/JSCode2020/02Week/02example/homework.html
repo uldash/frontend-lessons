@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тернарный оператор, ДЗ</title>
+</head>
+<body>
+    <script>
+        let a = 'block';
+        if (a === 'block') {
+            console.log('block')
+        } else if (a === 'none') {
+            console.log('none')
+        } else if (a === 'inline') {
+            console.log('inline')
+        } else {
+            console.log('other')
+        }
+
+        switch (a) {
+            case 'block':
+                console.log('block')
+                break;
+            case 'none':
+                console.log('none')
+                break;
+            case 'inline':
+                console.log('inline')
+                break;
+            default:
+                console.log('other')
+        }
+
+        let varl = 'hidden';
+        val = (varl === 'hidden') ? 'visible' : 'hidden';
+        console.log(val);
+
+        let b = 0;
+        b = b === 0 ? 0 : b < 0 ? 'less then zero' : b > 0 ? b * 10 : b;
+        console.log(b)
+    </script>
+</body>
+</html>

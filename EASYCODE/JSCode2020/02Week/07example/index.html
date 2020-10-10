@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This</title>
+</head>
+<body>
+    <script>
+        function getThis() {
+            console.log(this);
+        }
+
+        window.getThis();
+        console.log(getThis());
+        console.log(window.getThis);
+
+        function getPrice(currency = '$') {
+            console.log(currency + this.price);
+            return this;
+        };
+
+        function getName() {
+            console.log(this.name);
+            return this;
+        }
+
+        const prod1 = {
+            name: 'Intel',
+            price: 100,
+            getPrice,
+            getName,
+            info: {
+                information: ['2.3ghz'],
+                getInfo: function () {
+                    console.log(this);
+                },
+            },
+        }
+
+
+        prod1.getPrice();
+        prod1.info.getInfo();
+        prod1.getName();
+        // getPrice();
+
+        console.table(prod1);
+        prod1.getPrice();
+
+        const prod2 = {
+            name: 'AMD',
+            price: 50,
+            getPrice,
+            info: {
+                information: ['3.3ghz'],
+                getInfo: function () {
+                    console.log(this);
+                },
+            },
+        }
+
+
+        prod2.getName = prod1.getName;
+        prod2.getName();
+
+        let str = 'Hello world';
+        const reversStr = str.split('').reverse().join('');
+        console.log(reversStr);
+
+        const prod3 = {
+            name: 'Intel',
+            price: 200,
+            getPrice,
+        }
+
+        //prod3.getName().getPrice();
+
+        // getPrice.call(prod3, '*');
+        // getPrice.apply(prod3, ['*']);
+
+        const getPriceBind = prod3.getPrice.bind(prod3, '&')
+        setTimeout(getPriceBind, 1000);
+
+    </script>
+</body>
+</html>

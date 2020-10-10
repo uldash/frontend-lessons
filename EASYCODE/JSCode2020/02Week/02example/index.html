@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тернарный оператор</title>
+</head>
+<body>
+    <script>
+        let a = -1;
+        let b = 0;
+
+        // if (a > 0) {
+        //     b = a;
+        // } else {
+        //     b += 1;
+        // }
+
+        console.log(b);
+        b = a > 0 ? a : ++b;
+        console.log(b)
+
+        let color = 'black';
+        switch (color) {
+            case 'black':
+            case 'yellow':
+                console.log('color is black || yellow');
+                break;
+            case 'red':
+                console.log('color is red');
+                break;
+            case 'orange':
+                console.log('color is orange');
+                break;
+            default:
+                console.log('Default');
+        }
+    </script>
+</body>
+</html>
