@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Замыкания, ДЗ</title>
+</head>
+<body>
+    <script>
+        /*
+        Создайте функцию которая бы умела делать:
+        minus(10)(6); // 4
+        minus(5)(6); // -1
+        minus(10)(); // 10
+        minus()(6); // -6
+        minus()(); // 0
+        */
+        function minus(val = 0) {
+            return function (num = 0) {
+                return val - num;
+            }
+        }
+
+        console.log(minus())
+        console.log(minus(10)(6)); // 4
+        console.log(minus(5)(6)); // -1
+        console.log(minus(10)()); // 10
+        console.log(minus()(6)); // -6
+        console.log(minus()()); // 0
+        console.log('-'.repeat(40))
+
+        /*
+        Реализовать функцию, которая умножает и умеет запоминать возвращаемый результат между вызовами:
+            function multiplyMaker ...
+            const multiply = multiplyMaker(2);
+            multiply(2); // 4 (2 * 2)
+            multiply(1); // 4 (4 * 1)
+            multiply(3); // 12 (4 * 3)
+            multiply(10); // 120 (12 * 10)
+
+        */
+
+        function multiplyMaker(val = 1) {
+            return function (num = 1) {
+                return val *= num
+            }
+        }
+        const multiply = multiplyMaker(2);
+        console.log(multiply(2)); // 4 (2 * 2)
+        console.log(multiply(1)); // 4 (4 * 1)
+        console.log(multiply(3)); // 12 (4 * 3)
+        console.log(multiply(10)); // 120 (12 * 10)
+        console.log('-'.repeat(40))
+
+        /*
+        Реализовать модуль, который работает со строкой и имеет методы:
+            a. установить строку
+                i. если передано пустое значение, то установить пустую строку
+                ii. если передано число, число привести к строке
+            b. получить строку
+            c. получить длину строки
+            d. получить строку-перевертыш
+        Пример:
+            модуль.установитьСтроку(‘abcde’);
+            модуль.получитьСтроку(); // ‘abcde’
+            модуль.получитьДлину(); // 5
+        */
+        function mdl() {
+            let val;
+            return {
+                getString() {
+                    return val;
+                },
+                setString(str) {
+                    return val = String(str);
+                },
+                getLength() {
+                    return val.length;
+                },
+                getReverse() {
+                    return val.split('').reduce((acc, item) => acc = item + acc, '')
+                },
+            }
+        }
+        const modul = mdl();
+        console.log(modul.setString('Hello'));
+        console.log(modul.getString());
+        console.log(modul.getLength());
+        console.log(modul.getReverse());
+        console.log('-'.repeat(40));
+
+        /*
+        Создайте модуль “калькулятор”, который умеет складывать, умножать, вычитать, делить и возводить в степень. Конечное значение округлить до двух знаков после точки (значение должно храниться в обычной переменной, не в this).
+
+        модуль.установитьЗначение(10); // значение = 10
+        модуль.прибавить(5); // значение += 5
+        модуль.умножить(2); // значение *= 2
+        модуль.узнатьЗначение(); // вывести в консоль 30 (здесь надо округлить)
+
+        Также можно вызывать методы цепочкой:
+        модуль.установитьЗначение(10).вСтепень(2).узнатьЗначение(); // 100
+        */
+
+        function calc(val = 0) {
+            return {
+                getValue() {
+                    return val;
+                },
+                setValue(num) {
+                    val = num;
+                    return this;
+                },
+                setSum(num) {
+                    val += num;
+                    return this;
+                },
+                setSubtract(num) {
+                    val -= num;
+                    return this;
+                },
+                setMultiply(num) {
+                    val *= num;
+                    return this;
+                },
+                setDiv(num) {
+                    val = (val / num).toFixed(2);
+                    return this;
+                },
+                setExp(num) {
+                    val = Math.pow(val, num);
+                    return this;
+                },
+            }
+        }
+        const calculator = calc();
+        console.log(calculator.setValue(2).setExp(3).getValue());
+        console.log(calculator.setValue(42).getValue());
+        console.log(calculator.setSum(5).getValue());
+        console.log(calculator.setMultiply(2).getValue());
+        console.log(calculator.setDiv(3).getValue());
+        console.log(calculator.setValue(42).setSum(5).setMultiply(2).setDiv(3).getValue());
+
+        console.log('-'.repeat(40));
+    </script>
+</body>
+</html>

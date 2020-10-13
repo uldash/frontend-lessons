@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Description, ДЗ</title>
+</head>
+<body>
+    <script>
+        /*
+        1. На основе массива **map** и массива **users** собрать новый массив объектов где в каждом объекте будут только те свойства которые перечислены в массиве **map**
+
+        ```jsx
+        const map = ["_id", "name", "isActive", "balance"];
+        const users = [
+        {
+            "_id": "5d220b10e8265cc978e2586b",
+            "isActive": true,
+            "balance": 2853.33,
+            "age": 20,
+            "name": "Buckner Osborne",
+            "gender": "male",
+            "company": "EMPIRICA",
+            "email": "bucknerosborne@empirica.com",
+            "phone": "+1 (850) 411-2997",
+            "registered": "2018-08-13T04:28:45 -03:00"
+        },
+        {
+            "_id": "5d220b10144ef972f6c2b332",
+            "isActive": true,
+            "balance": 1464.63,
+            "age": 38,
+            "name": "Rosalie Smith",
+            "gender": "female",
+            "company": "KATAKANA",
+            "email": "rosaliesmith@katakana.com",
+            "phone": "+1 (943) 463-2496",
+            "registered": "2016-12-09T05:15:34 -02:00"
+        },
+        {
+            "_id": "5d220b1083a0494655cdecf6",
+            "isActive": false,
+            "balance": 2823.39,
+            "age": 40,
+            "name": "Estrada Davenport",
+            "gender": "male",
+            "company": "EBIDCO",
+            "email": "estradadavenport@ebidco.com",
+            "phone": "+1 (890) 461-2088",
+            "registered": "2016-03-04T03:36:38 -02:00"
+        }
+        ];
+        ```
+        На выходе мы должны получить массив вида: 
+
+        ```jsx
+        [ { _id: ..., name: ..., isActive: ..., balance: ... }, ... ];
+        ```
+        */
+        const map = ["_id", "name", "isActive", "balance"];
+        const users = [
+            {
+                "_id": "5d220b10e8265cc978e2586b",
+                "isActive": true,
+                "balance": 2853.33,
+                "age": 20,
+                "name": "Buckner Osborne",
+                "gender": "male",
+                "company": "EMPIRICA",
+                "email": "bucknerosborne@empirica.com",
+                "phone": "+1 (850) 411-2997",
+                "registered": "2018-08-13T04:28:45 -03:00"
+            },
+            {
+                "_id": "5d220b10144ef972f6c2b332",
+                "isActive": true,
+                "balance": 1464.63,
+                "age": 38,
+                "name": "Rosalie Smith",
+                "gender": "female",
+                "company": "KATAKANA",
+                "email": "rosaliesmith@katakana.com",
+                "phone": "+1 (943) 463-2496",
+                "registered": "2016-12-09T05:15:34 -02:00"
+            },
+            {
+                "_id": "5d220b1083a0494655cdecf6",
+                "isActive": false,
+                "balance": 2823.39,
+                "age": 40,
+                "name": "Estrada Davenport",
+                "gender": "male",
+                "company": "EBIDCO",
+                "email": "estradadavenport@ebidco.com",
+                "phone": "+1 (890) 461-2088",
+                "registered": "2016-03-04T03:36:38 -02:00"
+            }
+        ];
+
+        let result = users.map((item) => {
+            let obj = {};
+            for (let key of map) {
+                obj[key] = item[key];
+            }
+            return obj
+        });
+        console.table(result);
+        console.log('-'.repeat(40));
+        /*
+        2. Дан массив объектов, где каждый объект содержит информацию о букве и месте её положения в строке {буква: “a”, позиция_в_предложении: 1}:
+
+        ```jsx
+        [{char:"a",index:12}, {char:"w",index:8}, {char:"Y",index:10}, {char:"p",index:3}, {char:"p",index:2},
+        {char:"N",index:6}, {char:" ",index:5}, {char:"y",index:4}, {char:"r",index:13}, {char:"H",index:0},
+        {char:"e",index:11}, {char:"a",index:1}, {char:" ",index:9}, {char:"!",index:14}, {char:"e",index:7}]
+        ```
+
+        Напишите функцию, которая из элементов массива соберет и вернёт строку, основываясь на index каждой буквы. Например:
+
+        ```jsx
+        // [{char:"H",index:0}, {char:"i",index: 1}, {char:"!",index:2}] → "Hi!"
+        ```
+        */
+
+        const arr = [{ char: "a", index: 12 }, { char: "w", index: 8 }, { char: "Y", index: 10 }, { char: "p", index: 3 }, { char: "p", index: 2 },
+        { char: "N", index: 6 }, { char: " ", index: 5 }, { char: "y", index: 4 }, { char: "r", index: 13 }, { char: "H", index: 0 },
+        { char: "e", index: 11 }, { char: "a", index: 1 }, { char: " ", index: 9 }, { char: "!", index: 14 }, { char: "e", index: 7 }];
+
+        function arrToWord([...arr]) {
+            console.log(arr.sort((prev, next) => prev.index - next.index).reduce((acc, item) => acc += item.char, ''))
+        }
+
+        console.log(arrToWord(arr));
+        console.log('-'.repeat(40));
+
+        /*
+        3. Организовать функцию getInfo, которая принимает объект вида**{ name: ..., info: { employees: [...], partners: [ … ] } }**и выводит в консоль имя (если имени нет, показывать ‘Unknown’) и первые две компании из массива partners:
+
+        ```jsx
+        **const** organisation = {
+        name: 'Google',
+        info: {
+            employees: ['Vlad', 'Olga'],
+            partners: ['Microsoft', 'Facebook', 'Xing']
+        } };
+        // *getInfo*(organisation); → Name: Google Partners: Microsoft Facebook
+        ```
+        */
+        const organisation = {
+            name: 'Google',
+            info: {
+                employees: ['Vlad', 'Olga'],
+                partners: ['Microsoft', 'Facebook', 'Xing']
+            },
+        };
+
+        function getInfo({ name = 'Unknown', info: { partners: [first = 'none', second = 'none',] = [] } } = {}) {
+            console.log(`Name: ${name}`);
+            console.log(`Partners: ${first} ${second}`);
+        }
+
+        getInfo(organisation);
+        console.log('-'.repeat(40));
+
+        /*
+        4. Дан объект:
+        ```jsx
+        const person = {
+            name: 'Denis',
+            age: 30,
+            lastGet: '',
+            lastUpdate: ''
+        };
+        ```
+        Сделать так что-бы при получении или изменении свойства **name** в свойствах **lastGet** и **lastUpdate** сохранялась дата последнего получения или последнего обновления соответсвенно.
+        */
+
+        const person = {
+            name: 'Den',
+            age: 30,
+            lastGet: '',
+            lastUpdate: '',
+            get firstName() {
+                this.lastGet = Date();
+                return this.name;
+            },
+            set firstName(value) {
+                this.name = value;
+                this.lastUpdate = Date()
+                return this
+            },
+        };
+
+        person.firstName = 'Tom';
+        console.log(person.firstName);
+        console.log(person);
+        console.log('-'.repeat(40));
+
+        /*
+        5. Дан объект:
+
+        ```jsx
+        const product = {
+            brand: 'Apple',
+            model: 'iPhone 7',
+            price: '$300'
+        };
+        ```
+
+        сделать геттер который будет возвращать **brand** и **model** в виде строки "Apple iPhone 7" ****а также сделать сеттер в который будет передаваться строка например "Samsung S8 Gold" и в объекте в поле **brand** будет записано "Samsung" а в поле **model** будет записано "S8 Gold"
+        */
+        const product = {
+            brand: 'Apple',
+            model: 'iPhone 7',
+            price: '$300',
+            get item() {
+                return `${this.brand} ${this.model}`;
+            },
+            set item(val) {
+                this.brand = val.substring(0, val.indexOf(' '));
+                this.model = val.substring(val.indexOf(' ') + 1);
+            },
+        };
+
+        console.log(product.item);
+        product.item = "Samsung S8 Gold";
+        console.log(product.item);
+        console.log('-'.repeat(40));
+
+        // (function () {
+        //     console.log(a);
+        //     c();
+        //     console.log(b)
+        //     function c() {
+        //         console.log('hello');
+        //     }
+        //     var a = 10;
+        //     b = 25;
+        // })()
+
+        var foo = { bar: function () { return this.baz }, baz: 1 };
+        (function () { return typeof (arguments[0]); })(foo.baz)
+    </script>
+</body>
+</html>

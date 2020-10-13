@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перебирающие методы массивов</title>
+</head>
+<body>
+    <script>
+        //  forEach
+        //  filter
+        //  map
+        //  reduce
+        //  some/every
+        //  sort
+        //  find
+
+        const users = [
+            {
+                "_id": "5d220b10e8265cc978e2586b",
+                "isActive": true,
+                "balance": 2853.33,
+                "age": 20,
+                "name": "Buckner Osborne",
+                "gender": "male",
+                "company": "EMPIRICA",
+                "email": "bucknerosborne@empirica.com",
+                "phone": "+1 (850) 411-2997",
+                "registered": "2018-08-13T04:28:45 -03:00"
+            },
+            {
+                "_id": "5d220b1083a0494655cdecf6",
+                "isActive": false,
+                "balance": 2823.39,
+                "age": 40,
+                "name": "Estrada Davenport",
+                "gender": "male",
+                "company": "EBIDCO",
+                "email": "estradadavenport@ebidco.com",
+                "phone": "+1 (890) 461-2088",
+                "registered": "2016-03-04T03:36:38 -02:00"
+            },
+            {
+                "_id": "5d220b10144ef972f6c2b332",
+                "isActive": true,
+                "balance": 1464.63,
+                "age": 38,
+                "name": "Rosalie Smith",
+                "gender": "female",
+                "company": "KATAKANA",
+                "email": "rosaliesmith@katakana.com",
+                "phone": "+1 (943) 463-2496",
+                "registered": "2016-12-09T05:15:34 -02:00"
+            },
+        ];
+
+        // forEach
+        // users.forEach((user, i, arr) => {
+        //     console.log(user, i, arr)
+        // });
+
+        // filter
+        // const userLess30 = users.filter(user => user.age < 30);
+        // console.log(userLess30);
+        // const activeUsers = users.filter(user => user.isActive);
+        // console.log(activeUsers);
+
+        // map
+        // const usersName = users.map((user) => { user.name });
+        // const usersName = users.map((user) => ({ name: user.name, age: user.age }));
+        // console.log(usersName);
+
+        // reduce
+        // const totalBalance = users.reduce((acc, user) => acc += user.balance, 0);
+        // console.log(totalBalance);
+        // const usersObj = users.reduce((acc, user) => {
+        //     acc[user._id] = user;
+        //     return acc;
+        // }, {});
+        // console.log(usersObj);
+
+        // some/every
+        // const isMale = users.some((user) => user.gender === 'male');
+        // console.log(isMale);
+        // const isAllMale = users.every((user) => user.gender === 'male');
+        // console.log(isAllMale);
+        // const is18 = users.every((user) => user.age > 18);
+        // console.log(is18);
+
+        // find
+        // const user = users.find(user => user.name === 'Estrada Davenport');
+        // console.log(user);
+        // const user = users.find(user => user.isActive);
+        // console.log(user);
+
+        // sort изменяет исходный массив
+        const strArr = ['Den', 'Bill', 'Anna'];
+        strArr.sort();
+        console.log(strArr);
+
+        const numArr = [10, 7, 44, 32];
+        numArr.sort();
+        console.log(numArr); // index.html:103 (4) [10, 32, 44, 7]
+        // numArr.sort((prev, next) => {
+        //     console.log(prev, next);
+        // });
+        numArr.sort((prev, next) => prev - next);
+        console.log(numArr);
+
+        users.sort((prevUser, nextUser) => prevUser.age - nextUser.age)
+        console.log(users)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Деструктуризация, оператор rest/spred, ДЗ</title>
+</head>
+<body>
+    <script>
+        /*
+        Используя rest оператор и деструктуризацию, создать функцию, которая принимает любое количество аргументов и возвращает объект, содержащий первый аргумент и массив из остатка:
+
+        func(‘a’, ‘b’, ‘c’, ‘d’) →
+            {
+            first: ‘a’,
+            other: [‘b’, ‘c’, ‘d’]
+            }
+        */
+
+        function foo(firstItem, ...otherItem) {
+            return { first: firstItem, other: [otherItem] }
+        }
+        const arr = ['a', 'b', 'c', 'd'];
+        console.log(foo(...arr));
+        console.log('-'.repeat(40));
+
+        function foo1() {
+            let [f, ...a] = [...arguments[0]];
+            return { first: f, other: a }
+        }
+        console.log(foo1(arr));
+        console.log('-'.repeat(40));
+
+        /*
+        Организовать функцию getInfo, которая принимает объект вида
+        { name: ...,  info: { employees: [...], partners: [ … ]  } }
+        и выводит в консоль имя (если имени нет, показывать ‘Unknown’) и первые две компании из массива partners:
+
+        const organisation = {
+            name: 'Google',
+            info: { employees: [‘Vlad’, ‘Olga’], partners: ['Microsoft', 'Facebook', 'Xing']   }
+        };
+        getInfo(organisation); →
+        Name: Google
+        Partners: Microsoft Facebook
+        */
+
+        const organisation = {
+            name: 'Google',
+            info: {
+                employees: ['Vlad', 'Olga'],
+                partners: ['Microsoft', 'Facebook', 'Xing']
+            },
+        };
+
+        function getInfo({ name = 'Unknown', info: { partners: [first = 'none', second = 'none',] = [] } } = {}) {
+            console.log(`Name: ${name}`);
+            console.log(`Partners: ${first} ${second}`);
+        }
+
+        getInfo(organisation);
+        console.log('-'.repeat(40));
+
+    </script>
+</body>
+</html>

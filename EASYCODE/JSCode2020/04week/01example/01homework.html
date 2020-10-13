@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Введение в DOM, ДЗ</title>
+</head>
+<body>
+    <div>
+        <p>Text</p>
+        <p>Other</p>
+        <p>Next</p>
+        <p>Last</p>
+    </div>
+    <div></div>
+    <div></div>
+    <script>
+        /*
+        Зная структуру html, с помощью изученных
+        методов получить (в консоль):
+        1. head
+        2. body
+        3. все дочерние элементы body и вывести их в
+        консоль.
+        4. первый div и все его дочерние узлы
+        а) вывести все дочерние узлы в консоль
+        б) вывести в консоль все дочерние узлы,
+        кроме первого и последнего
+        Для навигации по DOM использовать методы,
+        которые возвращают только элементы
+        */
+        let head = document.head;
+        let body = document.querySelector('body');
+
+        console.log(head);
+        console.log(body);
+        console.log([...body.querySelectorAll('*')])
+
+        let div = document.querySelector('div')
+        console.log(div);
+        let subDiv = div.firstElementChild;
+        while ((subDiv = subDiv.nextElementSibling) && subDiv.nextElementSibling) {
+            console.log(subDiv);
+        }
+
+    </script>
+</body>
+</html>

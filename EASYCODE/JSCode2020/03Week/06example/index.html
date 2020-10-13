@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Деструктуризация, оператор rest/spred</title>
+</head>
+<body>
+    <script>
+        const user = {
+            firstName: 'Den',
+            lastName: 'Ivanov',
+            age: 25,
+            info: {
+                skills: ['html', 'css'],
+                work: 'EasyCode',
+            },
+        }
+
+        // const firstName = user.firstName;
+        // const lastName = user.lastName;
+        // console.log(firstName);
+
+        const { firstName: name, lastName, age = 30 } = user;
+        console.log(name, lastName);
+        console.log(age);
+
+        const { info, info: { work, skills } } = user;
+        console.log(work, skills);
+
+        const colors = ['white', 'black', 'red'];
+        const [w, b, red, green = 'green'] = colors;
+        // console.log(w, b, red, green);
+        let names = ['Denis', 'Ivan', 'Maksim'];
+        const [, name2, name3,] = names;
+        console.log(name2, name3);
+
+        const nestedArr = ['hello world', ['key', 'value']];
+        const [, [key, value]] = nestedArr;
+        console.log(key, value);
+
+        //rest
+        names = ['Denis', 'Ivan', 'Maksim'];
+        const [name1, ...otherNames] = names;
+        console.log(name1, otherNames);
+        const [...newNames] = names;
+        console.log(newNames);
+        //spred
+        const newNames1 = [...names];
+        console.log(...newNames1);
+
+        const colorNames = ['some value', ...colors, ...names];
+        console.log(colorNames);
+
+        const newUser = { ...user, age: 40 };
+        console.log(newUser);
+
+        const { info: { skills: [html, css] } } = newUser;
+        console.log(html, css);
+
+        function myPerson({ lastName = '&', firstName = '&', info: { skills } = {} } = {}) {
+            console.log(lastName, firstName, skills);
+        }
+
+        myPerson(newUser);
+        myPerson();
+
+        function foo(x, y, ...others) {
+            console.log(arguments);
+            console.log([].slice.call(arguments));
+            console.log([...arguments]);
+            console.log(others);
+        }
+        foo(1, 2, 5, 6)
+
+
+        const numbers = [2, 3]
+        function foo2(x, y) {
+            console.log(x, y);
+        }
+
+        foo2(numbers[0], numbers[1]);
+        foo2(...numbers)
+
+    </script>
+</body>
+</html>

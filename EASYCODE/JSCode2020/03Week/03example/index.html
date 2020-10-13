@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Замыкания</title>
+</head>
+<body>
+    <script>
+        function getFullName(firstName, lastName) {
+            // console.log(firstName, lastName);
+            return function () {
+                return `${firstName} ${lastName}`;
+            };
+        }
+
+        const getName = getFullName('Den', 'Ivanov');
+        console.log(getName());
+
+        function updateValue(val = 0) {
+            let x = val;
+            return function (num = 0) {
+                return (x += num)
+            }
+        }
+
+        const updValue = updateValue(2);
+        const updValue2 = updateValue(4);
+
+        console.log(updValue(1));
+        console.log(updValue(0));
+        console.log(updValue(1));
+
+        console.log(updValue2(2));
+        console.log(updValue2(0));
+
+        console.log(updateValue(3)(2))
+
+        function checkCred() {
+            const login = 'test';
+            const passwrd = 'somepassword';
+            return {
+                checkLogin(value) {
+                    return login === value;
+                },
+                checkPasswd(value) {
+                    return passwd === value;
+                }
+            }
+        }
+
+        const check = checkCred();
+        console.log(check);
+        console.log(check.checkLogin('sdsd'));
+        console.log(check.checkLogin('test'));
+
+        function closureExample() {
+            const arrOfFunc = [];
+            let value = '';
+
+            for (let i = 0; i < 10; i++) {
+                value += i;
+                arrOfFunc.push(function () {
+                    console.log(value, i);
+                })
+            }
+            return arrOfFunc;
+        }
+
+
+        console.log(closureExample());
+        const res = closureExample();
+
+        res[0]();
+        res[5]();
+        res[6]();
+
+        var i = 1;
+        console.log('1', i);
+        function foo() {
+            var i = 2
+            console.log('2', i);
+        }
+        foo();
+        console.log('?', i);
+    </script>
+</body>
+</html>

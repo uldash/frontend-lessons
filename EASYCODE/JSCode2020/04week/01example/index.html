@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Введение в DOM</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <h1>Title</h1>
+    <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur vel, perspiciatis harum
+        provident quasi
+        nihil quas, dolorum iusto distinctio deserunt corrupti architecto suscipit repellat, dolores quis natus
+        repellendus laboriosam aliquam.</div>
+    <script>
+        const div = document.querySelector('div');
+        const titles = document.querySelectorAll('h1');
+        const h1 = document.getElementsByTagName('h1');
+        console.dir(div);
+
+
+        console.dir(titles);
+
+        //console.dir(Array.prototype.slice.call(titles));
+        //console.dir(Array.from(titles));
+        console.log([...titles])
+
+        console.dir(h1)
+
+        
+
+    </script>
+</body>
+</html>

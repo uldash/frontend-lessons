@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+<body>
+    <script>
+        const plus = (x = 0, y = 0) => x + y;
+        const plusRes = plus(1, 2);
+        // function plusFoo(x, y) {
+        //     return x + y;
+        // }
+
+        console.log(plus(1, 2));
+        console.log(plusRes);
+
+        const withoutArgs = () => console.log('Hello world');
+        const singleArgs = x => x * 2;
+
+        const moreAction = (a, b) => {
+            a *= 2;
+            b *= 3;
+            return a + b;
+        }
+        console.log(moreAction(2, 2));
+
+        // const returnObj = (str = '') => {
+        //     return {
+        //         value: str,
+        //         length: str.length,
+        //     }
+        // }
+        const returnObj = (str = '') => ({
+            value: str,
+            length: str.length,
+        });
+        console.table(returnObj('Hello'));
+
+        function plusFoo(x, y) {
+            console.log(arguments);
+            return x + y;
+        }
+        plusFoo(1, 2, 3, 4, 'Hello');
+
+        const obj = {
+            firstName: 'Denb',
+            age: 30,
+            getFirstName() {
+                console.log(this);
+            },
+            //getAge: () => console.log(this),
+            //getAgeArrow: null,
+            getAge() {
+                //this.getAgeArrow = () => console.log(this);
+                setTimeout(() => console.log(this));
+            },
+            foo: {
+                getFoo: () => console.log(this),
+            },
+
+        }
+        // obj.getFirstName();
+        // obj.getAge();
+        // obj.foo.getFoo();
+
+        // obj.getAge();
+        // obj.getAgeArrow();
+
+        obj.getAge();
+    </script>
+</body>
+</html>

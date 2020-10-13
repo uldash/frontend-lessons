@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Методы объектов. Advanced Object. Object.entries, Object.keys, Object.values.</title>
+</head>
+<body>
+    <script>
+        let obj1 = {
+            name: 'Den',
+            info: {
+                skills: ['html', 'css']
+            }
+        }
+
+        let obj2 = {
+            name: 'Ivan',
+            age: 20,
+        }
+
+        // let newObj = obj1;
+        let newObj = Object.assign({}, obj1, obj2);
+        console.log(newObj === obj1);
+        console.log(newObj);
+        console.log('-'.repeat(40))
+
+        newObj = Object.assign({}, obj1);
+        console.log(newObj);
+        console.log(newObj.info === obj1.info); //true
+        console.log('-'.repeat(40))
+
+        newObj = Object.assign({}, obj1);
+        console.log(JSON.stringify(obj1));
+        // глубокое копирование
+        let objJSON = JSON.stringify(obj1);
+        newObj = JSON.parse(objJSON);
+
+        console.log(newObj);
+        console.log(newObj.info === obj1.info); //false
+        console.log('-'.repeat(40));
+
+        let keys = Object.keys(obj2);
+        console.log(keys);
+        console.log('-'.repeat(40));
+
+        let values = Object.values(obj2);
+        console.log(values);
+        console.log('-'.repeat(40));
+
+        let entries = Object.entries(obj2);
+        console.log(entries);
+        console.log('-'.repeat(40));
+
+        let fromEntries = Object.fromEntries([
+            ['foo', 'bar'],
+            ['baz', 42],
+        ]);
+        console.log(fromEntries);
+        console.log('-'.repeat(40));
+    </script>
+</body>
+</html>

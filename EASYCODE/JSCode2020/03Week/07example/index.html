@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Description</title>
+</head>
+<body>
+    <script>
+        const car = {
+            brand: 'Audi',
+            year: 2019,
+            get age() {
+                return `Машина выпущена в ${this.year}`
+            },
+            set age(value) {
+                this.year = value;
+            },
+        };
+
+        // Object.defineProperty(car, 'age', {
+        //     // configurable: false,
+        //     // enumerable: false,
+        //     // writable: false,
+        //     get: function () {
+        //         return `Машина выпущена в ${this.year}`
+        //     }
+        // });
+        /*
+        car
+        {brand: "Audi", year: 2019}
+        car
+        {brand: "Audi", year: 2019}brand: "Audi"year: 2019__proto__: Object
+        car.year = 2020
+        2020
+        Object.keys(car)
+        ["brand"]
+        car.propertyIsEnumerable('year')
+        false
+        */
+
+        car.age = 2020;
+        console.log(car.age);
+
+        Object.defineProperty(window, 'globalVar', {
+            set: function (value) {
+                console.log(value);
+                debugger;
+            }
+        });
+        function foo() {
+            globalVar = 10;
+        };
+        foo();
+    </script>
+</body>
+</html>
