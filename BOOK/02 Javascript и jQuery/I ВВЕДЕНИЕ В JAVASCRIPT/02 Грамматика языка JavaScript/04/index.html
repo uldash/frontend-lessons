@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Массив</title>
+    <style>
+        header {
+            height: 100px;
+            background-color: gray;
+            color: honeydew;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 100px;
+            font-size: 2rem;
+        }
+
+        div h1 {
+            border-bottom: 1px solid gray;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span>javascript и jquery: недостающее руководство</span>
+    </header>
+    <div>
+        <h1>
+            Создание и использование массивов:
+        </h1>
+    </div>
+    <script>
+
+        var authors = [];
+        authors.push('Лев Толстой', 'Николай Гоголь', 'Иван Тургенев', 'Антон Чехов');
+
+        document.write('<p>Первый автор - <strong>');
+        document.write(authors[0] + '</strong></p>');
+        document.write('<p>Последний автор - <strong>');
+        document.write(authors[authors.length - 1] + '</strong></p>');
+
+        authors.unshift('Жюль Верн')
+        document.write('<p> Массив: <strong>');
+        document.write(authors + '</strong></p>');
+    </script>
+
+</body>
+</html>

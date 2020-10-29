@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>События</title>
+    <style>
+        header {
+            height: 100px;
+            background-color: gray;
+            color: honeydew;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 100px;
+            font-size: 2rem;
+        }
+
+        div h1 {
+            border-bottom: 1px solid gray;
+        }
+
+        header+div {
+            margin-top: 40px;
+        }
+
+        ul {
+            font-size: 1rem;
+        }
+
+        .list li {
+            user-select: none;
+        }
+    </style>
+    <script src="../../../Lib/jQuery/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.addButton').click(function () {
+                let msg = $('.input').val();
+                $('.input').val('');
+                $('.ulist').append('<li>' + msg + '</li>')
+            });
+
+            $('.ulist').on('click', 'li', function () {
+                // alert('asasa');
+                $(this).css({
+                    'text-decoration': 'line-through',
+                    'opacity': 0.5
+                })
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <span>javascript и jquery: недостающее руководство</span>
+    </header>
+    <div>
+        <input type="text" class='input'>
+        <button type="button" class='addButton'>Добавить задание</button>
+        <h1>
+            Список дел:
+        </h1>
+    </div>
+
+    <br>
+    <ul class='ulist'>
+    </ul>
+</body>
+</html>

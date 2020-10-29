@@ -1,0 +1,649 @@
+@import 'normalize';
+
+// ====================== Mixins ==================================
+@mixin font-main {
+    font-family: 'Lato', sans-serif;
+}
+
+@mixin font-secondary {
+    font-family: 'Montserrat', sans-serif;
+}
+// ====================== /Mixins ==================================
+
+// ======================  Variables ===============================
+$cWhite: #fff;
+$cMain: #414141;
+
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+$screen-xs-max: 575px;
+$screen-sm-max: 767px;
+$screen-md-max: 991px;
+$screen-lg-max: 1199px;
+
+// ====================== /Variables ===============================
+
+// ====================== Common ===================================
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @include font-main;
+
+    color: $cMain;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.section-outer {
+    padding: 0 20px;
+}
+
+.section-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.description-item {
+    &__icon {
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        margin-bottom: 14px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+    }
+
+    &__text {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 28px;
+        color: #6c6c6c;
+    }
+}
+
+@mixin start-button {
+    @include font-secondary;
+
+    display: inline-block;
+    padding: 15px 40px;
+    margin: 0;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+}
+
+.btn-main {
+    @include start-button;
+
+    color: $cWhite;
+    background: linear-gradient(to right, #fe985b, #fe4fa7);
+    border: none;
+
+    &:hover {
+        background: linear-gradient(to right, #fe4fa7, #fe985b);
+    }
+}
+
+.btn-secondary {
+    @include start-button;
+
+    color: $cMain;
+    background: $cWhite;
+    border: 1px solid #707070;
+    transition: .2s;
+
+    &:hover {
+        color: #fe4fa7;
+        border-color: #fe4fa7;
+    }
+}
+
+.btn-free {
+    @include start-button;
+
+    color: #464646;
+    background: $cWhite;
+}
+// ====================== /Common ==================================
+
+// ====================== Header ===================================
+.section-header {
+    position: relative;
+    color: $cWhite;
+    background: url('../img/bg-header.jpg') no-repeat 50% 50%;
+    background-size: cover;
+
+    .section-inner {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 5;
+        content: '';
+        background-color: rgba(#142729, .47);
+    }
+
+    &-logo {
+        flex-shrink: 1;
+        margin-top: 35px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    &-content {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+    }
+
+    &-wrapper {
+        margin: 0 auto;
+
+        &__title,
+        &__subtitle {
+            text-align: center;
+        }
+
+        &__title {
+            margin: 0 auto 11px;
+            font-size: 55px;
+            font-weight: 700;
+            line-height: 60px;
+        }
+
+        &__subtitle {
+            @include font-secondary;
+
+            margin: 0 auto 44px;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 32px;
+
+            // @media (max-width: $screen-xs-max) {
+
+            // }
+
+            @media (min-width: $screen-sm) {
+                width: 60%;
+            }
+        }
+
+        &__form {
+            display: flex;
+
+            &-input {
+                flex: 1;
+
+                input {
+                    @include font-secondary;
+
+                    width: 100%;
+                    padding: 16px 20px;
+                    margin: 0;
+                    font-size: 16px;
+                    color: $cWhite;
+                    background: rgba(255, 255, 255, 0.25);
+                    border: none;
+                    border-radius: 4px;
+                    outline: none;
+                    transition: .2s;
+
+                    &::placeholder {
+                        color: $cWhite;
+                    }
+
+                    &:focus {
+                        background: rgba(255, 255, 255, 0.5);
+                    }
+                }
+            }
+
+            &-button {
+
+            }
+
+            @media (max-width: $screen-sm-max) {
+                flex-direction: column;
+                // align-items: center;
+
+                &-input {
+                    margin-bottom: 10px;
+                }
+
+                &-button {
+                    flex: 1;
+                }
+
+                .btn-main {
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            @media (min-width: $screen-md) {
+                &-input {
+                    padding-right: 40px;
+                }
+            }
+        }
+    }
+}
+// ====================== /Header ==================================
+
+// ====================== Promo ====================================
+.section-promo {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    &-1 {
+        display: flex;
+
+        &__content,
+        &__video {
+            display: flex;
+            flex-basis: 50%;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        &__content {
+            // padding-right: 90px;
+
+            .title {
+                // margin-bottom: 56px;
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 51px;
+            }
+
+            .description-item {
+                margin-top: 28px;
+            }
+        }
+
+        &__video {
+            video {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: $screen-sm-max) {
+            flex-direction: column;
+            justify-content: center;
+            color: red;
+
+            &__video {
+                order: -1;
+                margin-bottom: 20px;
+            }
+
+            &__content {
+                padding-right: 0;
+            }
+        }
+
+        @media (min-width: $screen-md) {
+            &__content {
+                padding-right: 90px;
+            }
+        }
+    }
+
+    &-2 {
+        display: flex;
+        padding-top: 86px;
+        margin-top: 120px;
+        text-align: center;
+        border-top: 1px solid #e2e2e2;
+
+        .description-item {
+            &__icon {
+                img {
+                    width: 60px;
+                    height: auto;
+                }
+            }
+        }
+
+        @media (max-width: $screen-xs-max) {
+            flex-direction: column;
+
+            .description-item {
+                margin-top: 20px;
+            }
+        }
+
+        @media (min-width: $screen-sm) {
+            .description-item + .description-item {
+                margin-left: 40px;
+            }
+        }
+    }
+}
+// ====================== /Promo ===================================
+
+// ====================== Founder ==================================
+
+.section-founder {
+    padding-top: 34px;
+    background-color: #f6fafd;
+
+    .section-inner {
+        display: flex;
+    }
+
+    &__content {
+        &-text {
+            @include font-secondary;
+
+            font-size: 24px;
+            line-height: 40px;
+        }
+
+        &-name {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 29px;
+        }
+
+        &-post {
+            font-size: 20px;
+            line-height: 29px;
+        }
+    }
+
+    @media (max-width: $screen-sm-max) {
+        &__img img {
+            max-width: 100%;
+        }
+
+        .section-inner {
+            flex-direction: column;
+        }
+
+        &__content {
+            order: -1;
+            margin-bottom: 40px;
+        }
+    }
+
+    @media (min-width: $screen-md) {
+        &__img {
+            align-self: flex-end;
+        }
+
+        &__content {
+            align-self: center;
+            padding-left: 50px;
+        }
+    }
+}
+
+// ====================== /Founder =================================
+
+// ====================== Plans ====================================
+
+.section-plans {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    text-align: center;
+
+    &__title {
+        margin-bottom: 30px;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 51px;
+    }
+
+    &__subtitle {
+        margin-bottom: 80px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 28px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+
+        &-item {
+            flex-basis: 370px;
+            padding: 60px 45px;
+
+            &_title {
+                margin-bottom: 26px;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 17px;
+                text-transform: uppercase;
+            }
+
+            &_price {
+                margin-bottom: 26px;
+
+                .prefix {
+                    font-size: 72px;
+                    font-weight: 700;
+                    line-height: 86px;
+                    color: #fe4fa7;
+                }
+
+                .postfix {
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 17px;
+                }
+            }
+
+            &_description {
+                margin-bottom: 40px;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 28px;
+            }
+
+            &_button {
+
+            }
+
+            &.active {
+                background-color: #f6fafd;
+            }
+        }
+
+        @media (max-width: $screen-xs-max) {
+            flex-direction: column;
+        }
+
+        @media (min-width: $screen-sm) {
+
+        }
+    }
+
+    @media (min-width: $screen-sm) {
+        &__subtitle {
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+}
+
+// ====================== /Plans ===================================
+
+// ====================== Free== ===================================
+.section-free {
+    color: $cWhite;
+    text-align: center;
+    background: linear-gradient(to right, #fe985b, #fe4fa7);
+
+    &__title {
+        margin-bottom: 26px;
+        font-size: 55px;
+        font-weight: 700;
+        line-height: 60px;
+    }
+
+    &__description {
+        @include font-secondary;
+
+        margin-bottom: 40px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    &__button {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    @media (min-width: $screen-lg) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+
+        &__description {
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: $screen-md-max) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+// ====================== /Free ====================================
+
+// ====================== Footer ===================================
+
+.section-footer {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    &__logo {
+        margin-bottom: 30px;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 29px;
+        text-align: center;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 75px;
+
+        li {
+            a {
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 20px;
+                color: #464646;
+                text-decoration: none;
+                text-transform: uppercase;
+                transition: .2s;
+
+                &.active,
+                &:hover {
+                    color: #fe50a6;
+                }
+            }
+        }
+
+        @media (max-width: $screen-xs-max) {
+            flex-direction: column;
+            text-align: center;
+
+            li {
+                & + li {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        @media (min-width: $screen-sm) {
+            li {
+                & + li {
+                    margin-left: 60px;
+                }
+            }
+        }
+    }
+
+    &__copyright_and_links {
+        @include font-secondary;
+
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        line-height: 18px;
+
+        @media (min-width: $screen-xl) {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        @media (max-width: $screen-sm-max) {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &-copyright {
+        }
+
+        &-links {
+            .helper-link {
+                .helper-link_item {
+                    & + .helper-link_item {
+                        margin-left: 20px;
+                    }
+
+                    .helper-link_item-link {
+                        color: #464646;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                @media (max-width: $screen-sm-max) {
+                    display: inline-flex;
+                    margin-top: 20px;
+                }
+
+                @media (min-width: $screen-md) {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+
+// ====================== /Footer ==================================

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Использование переменной, часть II</title>
+    <style>
+        header {
+            height: 100px;
+            background-color: gray;
+            color: honeydew;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 100px;
+            font-size: 2rem;
+        }
+
+        div h1 {
+            border-bottom: 1px solid gray;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    </style>
+    <script>
+        var name = prompt('Как вас зовут?', '');
+    </script>
+</head>
+<body>
+    <header>
+        <span>javascript и jquery: недостающее руководство</span>
+    </header>
+    <div>
+        <h1>
+            Использование переменной, часть II
+        </h1>
+    </div>
+    <script>
+        document.write('<p>Добро пожаловать ' + name + '<\p>');
+    </script>
+
+</body>
+</html>

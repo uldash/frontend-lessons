@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>События</title>
+    <style>
+        header {
+            height: 100px;
+            background-color: gray;
+            color: honeydew;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 100px;
+            font-size: 2rem;
+        }
+
+        div h1 {
+            border-bottom: 1px solid gray;
+        }
+
+        header+div {
+            margin-top: 40px;
+        }
+
+        .login {
+            width: 300px;
+
+            position: relative;
+        }
+
+        .login__title {
+            padding: 10px;
+            padding-left: 30px;
+            user-select: none;
+            position: relative;
+        }
+
+        .login__title.open {
+            background-color: gray;
+        }
+
+        .login__title.open::before {
+            content: '-';
+            position: absolute;
+            left: 15px;
+            font-size: 2rem;
+            top: -5px;
+        }
+
+        .login__title.close {
+            background-color: lightgray;
+        }
+
+        .login__title.close::before {
+            content: '+';
+            position: absolute;
+            left: 15px;
+            font-size: 2rem;
+            top: -5px;
+        }
+
+        .login__form {
+            position: absolute;
+            background-color: lawngreen;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .login__form>form {
+            text-align: end;
+            padding-right: 20px;
+            padding-bottom: 20px;
+        }
+    </style>
+    <script src="../../../Lib/jQuery/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.login__title').click(function (evt) {
+                let $frm = $(this).next('.login__form');
+                evt.preventDefault();
+                // $('.login__form').slideToggle();
+                if ($frm.is(':hidden')) {
+                    $('.login__form').slideDown();
+                    $(this).removeClass('close');
+                    $(this).addClass('open')
+                } else {
+                    $('.login__form').slideUp();
+                    $(this).removeClass('open');
+                    $(this).addClass('close')
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <span>javascript и jquery: недостающее руководство</span>
+    </header>
+    <div>
+        <h1>
+            Форма авторизации:
+        </h1>
+    </div>
+
+    <div class='login'>
+        <div class="login__title open">
+            <a href="#">Login</a>
+        </div>
+        <div class="login__form">
+            <form action="">
+                <p>
+                    Username:
+                    <input type="text">
+                </p>
+                <p>
+                    Password:
+                    <input type="password" name="" id="">
+                </p>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi vel rerum id accusantium quisquam corrupti!
+        Ipsam placeat minima neque aut facere, nostrum accusantium in iure illo reiciendis praesentium beatae alias!
+        Similique, autem nulla repellendus, sit minima vitae repudiandae laboriosam voluptatem quod, consectetur at.
+        Enim pariatur beatae suscipit modi, neque earum reprehenderit! Tempore, ratione at. Distinctio quos rem
+        voluptatem minus porro.
+        Nulla eligendi minus hic deleniti iure commodi nisi totam recusandae ab! Blanditiis vero reprehenderit sed cum,
+        accusantium doloribus numquam soluta ea velit assumenda nam natus perspiciatis? Doloremque sint numquam neque.
+        Natus aliquam repudiandae ipsum vel ratione repellat adipisci quisquam sed itaque enim, quia numquam fugit
+        facere esse labore fugiat velit veritatis commodi est quam consectetur laborum voluptates. Iste, eum illum.
+        Obcaecati molestias inventore, animi in harum, rerum quae, tenetur magnam nobis autem possimus? In nisi iste,
+        necessitatibus ad quidem excepturi quasi voluptatem veniam quisquam doloribus ullam laudantium ex dolor quas?
+    </p>
+</body>
+</html>
