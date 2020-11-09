@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Распространенные задачи</title>
+    <style>
+        header {
+            height: 100px;
+            background-color: gray;
+            color: honeydew;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 100px;
+            font-size: 2rem;
+        }
+
+        div h1 {
+            border-bottom: 1px solid gray;
+        }
+
+        header+div {
+            margin-top: 40px;
+        }
+
+        .one {
+            background-color: lightgrey;
+            display: flex;
+            width: 60%;
+            padding: 20px;
+            justify-content: space-around;
+        }
+
+        a {
+            width: 100px;
+            height: 100px;
+        }
+
+        .photo {
+            height: 100%;
+            /* transition: 1s; */
+        }
+
+        /* .photo:hover {
+            transform: scale(1.2);
+        } */
+    </style>
+    <script src="../../../Lib/jQuery/jquery-3.5.1.js"></script>
+    <script src="../../../Lib/jQuery/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <span>javascript и jquery: недостающее руководство</span>
+    </header>
+    <div>
+        <h1>
+            Сменяемые изображения:
+        </h1>
+    </div>
+    <h3>Наведите указатель мыши на изображение</h3>
+    <br>
+    <div class="one">
+        <a href="#"><img src="./img/1.jpg" alt="" class='photo'></a>
+        <a href="#"><img src="./img/2.jpg" alt="" class='photo'></a>
+        <a href="#"><img src="./img/3.jpg" alt="" class='photo'></a>
+        <a href="#"><img src="./img/4.jpg" alt="" class='photo'></a>
+        <a href="#"><img src="./img/5.jpg" alt="" class='photo'></a>
+        <a href="#"><img src="./img/6.jpg" alt="" class='photo'></a>
+        <a href="#"><img src="./img/7.jpg" alt="" class='photo'></a>
+        <a href="#"><img src="./img/8.jpg" alt="" class='photo'></a>
+    </div>
+</body>
+</html>

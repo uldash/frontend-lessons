@@ -23,29 +23,48 @@
             margin-top: 40px;
         }
 
-        .nav ul {
+        .nav {
+            background-color: gray;
+            width: 160px;
             list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            padding: 20px 0 20px 0;
+            position: absolute;
+            left: -140px;
+
         }
 
         li {
             width: 100px;
             height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
         }
 
         img {
-            width: 100%;
-            overflow: hidden;
+            height: 100px;
         }
 
         li+li {
             margin-top: 20px;
+
         }
     </style>
     <script src="../../../Lib/jQuery/jquery-3.5.1.js"></script>
     <script src="../../../Lib/jQuery/jquery-ui.js"></script>
     <script>
         $(document).ready(function () {
-
+            $('.nav').hover(function () {
+                $(this).stop().animate({ left: '0', 'background-color': 'rgb(65, 64, 64)' }, 500,)
+            }, function () {
+                $(this).stop().animate({ left: '-140px', 'background-color': 'gray' }, 1500,)
+            })
         });
     </script>
 </head>
@@ -59,15 +78,13 @@
         </h1>
     </div>
 
-    <div class='nav'>
-        <ul>
-            <li><a href="#"><img src="./img/1.jpg" alt=""></a></li>
-            <li><a href="#"><img src="./img/2.jpg" alt=""></a></li>
-            <li><a href="#"><img src="./img/3.jpg" alt=""></a></li>
-            <li><a href="#"><img src="./img/4.jpg" alt=""></a></li>
-            <li><a href="#"><img src="./img/5.jpg" alt=""></a></li>
-            <li><a href="#"><img src="./img/6.jpg" alt=""></a></li>
-        </ul>
-    </div>
+    <ul class='nav'>
+        <li><a href="#"><img src="./img/1.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./img/2.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./img/3.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./img/4.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./img/5.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./img/6.jpg" alt=""></a></li>
+    </ul>
 </body>
 </html>
