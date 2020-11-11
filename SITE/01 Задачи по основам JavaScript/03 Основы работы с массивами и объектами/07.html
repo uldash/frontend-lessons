@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Создайте объект с днями недели. Ключами в нем должны служить номера дней 
+        от начала недели (понедельник - первый и т.д.). Выведите на экран текущий день недели.
+        */
+        let weekDays = {
+            1: 'Понедельник',
+            2: "Вторник",
+            3: "Среда",
+            4: "Четверг",
+            5: "Пятница",
+            6: "Суббота",
+            7: "Воскресенье",
+        }
+        let date = new Date();
+        console.log(weekDays[date.getDay() == 0 ? 7 : date.getDay()]);
+
+        /*
+        Пусть теперь номер дня недели хранится в переменной day, 
+        например там лежит число 3. Выведите день недели, соответствующий значению переменной day.
+        */
+        let day = 3;
+        console.log(weekDays[day]);
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Массив в обратном порядке
+        У массивов есть метод reverse, который изменяет порядок следования
+        элементов в массиве. Для выполнения этого упражнения напишите две
+        функции: reverseArray и reverseArrayinPlace. Первая функция, reverseArray,
+        принимает массив в качестве аргумента и создает новый массив, содержащий
+        те же элементы в обратном порядке. Вторая, reverseArrayinPlace, делает
+        то же, что и метод reverse: преобразовывает массив, заданный в качестве
+        аргумента, меняя порядок следования его элементов на обратный. Не используйте
+        для этого стандартный метод reverse.
+        Вспомните, что мы говорили о побочных эффектах и чистых функциях
+        в предыдущей главе, и ответьте на вопрос: какой из этих вариантов, по вашему
+        мнению, будет полезен в большинстве случаев? Какой из них быстрее
+        работает?
+        */
+        const reverseArray = function (arr) {
+            let result = [];
+            for (let i of arr) {
+                result.unshift(i)
+            }
+            return result;
+        }
+        const reverseArrayinPlace = function (arr) {
+            let tmp;
+            for (let i = 0; i < arr.length / 2; i++) {
+                tmp = arr[arr.length - 1 - i]
+                arr[arr.length - 1 - i] = arr[i];
+                arr[i] = tmp;
+            }
+            return arr
+        }
+
+        const range = function (start, end, step = 1) {
+            let result = [];
+
+            for (let i = start; step > 0 ? i <= end : i >= end; i += step) {
+                result.push(i)
+            }
+            return result;
+        }
+
+        let arr = range(1, 9);
+
+        console.log(`Array: ${arr} \nreverseArray: ${reverseArray(arr)}`);
+
+        console.log(`Array: ${arr}`);
+        reverseArrayinPlace(arr);
+        console.log(`reverseArrayinPlace: ${arr}`);
+
+        arr = range(1, 10000);
+        let time = performance.now();
+        reverseArray(arr); // создание массива и ваыделение памяти на каждый элемент очень дорогая операция
+        time = performance.now() - time;
+        console.log(`${arr.length} элементов, reverseArray время: ${time} `);
+
+        time = performance.now();
+        reverseArrayinPlace(arr);
+        time = performance.now() - time;
+        console.log(`${arr.length} элементов, reverseArrayinPlace время: ${time} `);
+    </script>
+</body>
+</html>

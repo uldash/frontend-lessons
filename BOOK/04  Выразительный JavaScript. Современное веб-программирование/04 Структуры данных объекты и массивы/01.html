@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Сумма диапазона
+        Во введении к этой книге упоминался следующий хороший способ вычислить
+        сумму диапазона чисел:
+        console.log(sum(range(l, 10)));
+        Напишите функцию range, которая принимает два аргумента, start и end,
+        и возвращает массив, содержащий все числа от start до end включительно.
+        Затем напишите функцию sum, которая принимает массив чисел и возвращает
+        их сумму. Запустите пример программы и посмотрите, действительно
+        ли она возвращает 55.
+        В качестве дополнительного задания: измените функцию range так, чтобы
+        она принимала необязательный третий аргумент, который указывал бы
+        значение шага, используемое при построении массива. Если шаг не задан,
+        элементы увеличиваются на единицу, что соответствует старому поведению.
+        Вызов функции range(l, 10, 2) должен возвращать [1, з, 5, 7, 9). Убедитесь,
+        что функция также работает и с отрицательными значениями шага, так что
+        результатом range(5, 2, -1) является [5, 4, з, 2).
+        */
+
+        const range = function (start, end, step = 1) {
+            let result = [];
+
+            for (let i = start; step > 0 ? i <= end : i >= end; i += step) {
+                result.push(i)
+            }
+            return result;
+        }
+        console.log(range(1, 10, 2));
+        console.log(range(5, 2, -1));
+        const sum = function (arr) {
+            return arr.reduce(function (accumulator, currentValue) { return accumulator + currentValue })
+        }
+        console.log(sum(range(1, 10)));
+    </script>
+</body>
+</html>

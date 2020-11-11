@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Список
+        Объекты как обобщенные скопления значений можно использовать для
+        построения любых структур данных. Одной из таких распространенных
+        структур данных является список (не путать с массивом). Список - это
+        иерархический набор объектов, где первый объект содержит ссылку на
+        второй, второй - на третий и т. д.
+        let list = {
+            value: 1,
+            rest: {
+                value: 2,
+                rest: {
+                    value: З,
+                    rest: null
+                }
+            }
+        };
+
+        Напишите функцию arrayToList, которая строит список, чья структура
+        подобна показанной, если передать функции массив [1, 2, з] в качестве
+        аргумента. Напишите также функцию listToArray, создающую массив из
+        списка. Затем добавьте вспомогательную функцию prepend, принимающую
+        элемент и список и создающую новый список, в котором заданный элемент
+        добавлен в начало исходного списка. Кроме того, создайте функцию nth,
+        принимающую список и число и возвращающую элемент, находящийся в заданной
+        позиции в этом списке (где ноль соответствует первому элементу),
+        или undefined, если элемента в заданной позиции не существует.
+        Если вам этого все еще недостаточно, напишите рекурсивную версию функции
+        nth.
+        */
+
+        const arrayToList = function (arr) {
+            let list = null;
+            for (let i = arr.length - 1; i >= 0; i--)
+                list = { value: arr[i], rest: list };
+            return list || {};
+        }
+
+        const listToArray = function (list, arr = []) {
+            for (let key in list) {
+                if (typeof (list[key]) == 'object') {
+                    listToArray(list[key], arr);
+                } else {
+                    arr.push(list[key]);
+                }
+            }
+            return arr;
+        }
+
+        const nth = function (list, num) {
+            // итерационный подход
+            // let tmp = list;
+            // while (num > 0) {
+            //     num--;
+            //     tmp = tmp.rest;
+            // }
+            // return tmp.value;
+
+            // рекурсивный подход
+            if (num > 0) {
+                num--;
+                return nth(list.rest, num)
+            } else {
+                // console.log(list.value)
+                return list.value;
+            }
+        }
+
+        const prepend = function (val, list) {
+            return { value: val, rest: list }
+        }
+
+        let arr = [1, 2, 3];
+        let list = {
+            value: 1,
+            rest: {
+                value: 2,
+                rest: {
+                    value: 3,
+                    rest: null,
+                }
+            }
+        };
+
+        console.log(`Array: ${arr}`);
+        console.log('List:', arrayToList(arr));
+        console.log(listToArray(list));
+
+        console.log(listToArray(arrayToList([10, 20, 30])));
+        // [10, 20, 30]
+        console.log(prepend(10, prepend(20, null)));
+        // {value: 10, rest: {value: 20, rest: null}}
+        console.log('NTH: ', nth(arrayToList([10, 20, 30]), 2));
+        // 20
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Глубокое сравнение
+        Оператор == сравнивает объекты по их тождественности. Но иногда желательно
+        сравнить значения их реальных свойств.
+        Напишите функцию deepEqual, которая принимает два значения и возвращает
+        true, только если эти объекты имеют одинаковое значение или
+        являются объектами с одинаковыми свойствами и значения свойств равны
+        при сравнении с рекурсивным вызовом deepEqual.
+        Чтобы выяснить, нужно сравнивать значения напрямую (для этого используйте
+        оператор ===) или их свойства, можете использовать оператор typeof.
+        Если его результатом для обоих значений является "object", то требуется
+        выполнить глубокое сравнение. Но вам следует принять во внимание одно
+        глупое исключение: исторически сложилось так, что результатом typeof
+        null также будет "object".
+        Для перебора и сравнения свойств объекта вам также пригодится функция
+        Object. keys.
+        */
+
+        const deepEqual = function (obj1, obj2) {
+            if (typeof (obj1) !== 'object' || typeof (obj2) !== 'object') {
+                return false;
+            }
+            if (obj1 === obj2) {
+                return true;
+            }
+            if (Object.keys(obj1).length !== Object.keys(obj2).length) {
+                return false;
+            }
+
+            for (let key of Object.keys(obj1)) {
+                // console.log(obj1[key], obj2[key]);
+                if (typeof (obj1[key]) === 'object') {
+                    return deepEqual(obj1[key], obj2[key]);
+                }
+                if (obj1[key] !== obj2[key]) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        let a = {
+            name: 'tony',
+            age: 20,
+            sex: 'male',
+            rest: {
+                name: 'tony',
+                age: 20,
+                sex: 'male',
+                rest: null,
+            }
+        }
+        let b = {
+            age: 20,
+            name: 'tony',
+            sex: 'male',
+            rest: {
+                name: 'tony',
+                age: 20,
+                sex: 'male',
+                rest: null,
+            }
+        }
+        let c = {
+            name: 'tony',
+            age: 20,
+            sex: 'male',
+            rest: {
+                name: 'tony',
+                age: 30,
+                sex: 'male',
+                rest: null,
+            }
+        }
+        let d = {
+            name: 'tony',
+            sex: 'male',
+            rest: {
+                name: 'tony',
+                sex: 'male',
+                rest: null,
+            }
+        }
+
+        let e = a;
+
+        console.log('true // a === e?', deepEqual(a, e));
+        console.log('true // a === b?', deepEqual(a, b));
+        console.log('false // a === c?', deepEqual(a, c));
+        console.log('false // a === d?', deepEqual(a, d));
+        console.log('false // "a" === d?', deepEqual("a", d));
+
+
+    </script>
+</body>
+</html>
