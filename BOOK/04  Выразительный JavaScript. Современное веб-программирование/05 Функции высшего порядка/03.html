@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Метод every
+        Для массивов существует метод every, аналогичный методу some. Этот метод
+        возвращает true, когда заданная функция возвращает true для каждого
+        элемента массива. В некотором смысле some - это версия оператора || для
+        массивов, а метод every подобен оператору &&.
+        Реализуйте метод every, принимающий в качестве параметров массив и предикативную
+        функцию. Напишите две версии: одну с использованием цикла,
+        а вторую - с применением метода some.
+        */
+        const myEvery = function (arr, foo) {
+            for (let key of arr) {
+                if (!foo(key)) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        let arr = [2, 2, 3, 4, 1]
+        // () => (val >= 2) ? true : false
+        console.log(myEvery(arr, item => item >= 2));
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 11</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="inner">
+            <h1>Creating a chart</h1>
+            <p>To create a chart, we need to instantiate the <code class="code--inline">Chart</code> class. To do this,
+                we need to pass in
+                the 2d context of where we want to draw the chart. Here's an example</p>
+            <p>
+                <code class="code--block overflowx">
+                    <span class="cDarkBlue">&lt;canvas</span> <span class="cGreen">id=</span><span class="cRed">"myChart"</span> <span class="cGreen">width=</span><span class="cRed">"400"</span> <span class="cGreen">height=</span><span class="cRed">"400"</span><span class="cDarkBlue">&gt;&lt;/canvas&gt</span>;
+                </code>
+            </p>
+            <p>
+                <code class='code--block overflowx'>
+                    <span class="cGray">//Get the context of the canvas element we want to select</span><br>
+                    <span class="cBlack fBold">var</span> ctx = <span class="cBlue">document</span>.getElementById(<span class="cRed">"myChart"</span>).getContext(<span class="cRed">"2d"</span>);<br>
+                    <span class="cBlack fBold">var</span> myNewChart = <span class="cBlack fBold">new</span> Chart(ctx).PolarArea(data);
+                </code>
+            </p>
+            <p>
+                We can also get the context of our canvas with jQuery. To do this, we need to get the DOM node out of
+                the jQuery collection, and call the <code class="code--inline">getContext("2d")</code> methid on that.
+            </p>
+            <p>
+                <code class="code--block overflowx">
+                    <span class="cGray">//Get context with jQuery - using jQuery's .get() method.</span><br>
+                    <span class="cBlack fBold">var</span> ctx = $(<span class="cRed">"#myChart"</span>).get(<span class="cBlue">0</span>).getContext(<span class="cRed">"2d"</span>);
+                    <span class="cGray">// This will get the first returned node in the jQuery collection</span><br>
+                    <span class="cBlack fBold">var</span> myNewChart = <span class="cBlack fBold">new</span> Chart(ctx);
+                </code>
+            </p>
+            <p>
+                After we've instantiated the Chart class on the canvas we want to draw on, Chart.js will handle the
+                scalling for retina displays.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

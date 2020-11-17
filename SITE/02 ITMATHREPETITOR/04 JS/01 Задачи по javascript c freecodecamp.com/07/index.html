@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задачи по javascript c freecodecamp.com</title>
+</head>
+<body>
+    <script>
+        /*
+        Обрежьте данную строку str, если ее длина превосходит данное число num. Добавьте в конец обрезанной строки троеточие "...", если num более 3. Заметим, что троеточие должно учитываться при проверке длины строки str.
+
+        truncate("A-tisket a-tasket A green and yellow basket", 11) ⇒ "A-tisket..."
+        truncate("Peter Piper picked a peck of pickled peppers", 14) ⇒ "Peter Piper..."
+        truncate("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length) ⇒ "A-tisket a-tasket A green and yellow basket"
+        truncate("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2) ⇒ "A-tisket a-tasket A green and yellow basket"
+        truncate("A-", 1) ⇒ "A..."
+        truncate("Absolutely Longer", 2) ⇒ "Ab..."
+        */
+        const truncate = function (str, num) {
+            if (str.length > num && num > 3) {
+                str = str.slice(0, num - 3) + '...';
+            } else if (str.length > num && num <= 3) {
+                str = str.slice(0, num) + '...';
+            }
+            return str;
+        }
+
+        console.log(truncate("A-tisket a-tasket A green and yellow basket", 11));
+        console.log(truncate("Peter Piper picked a peck of pickled peppers", 14));
+        console.log(truncate("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length));
+        console.log(truncate("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2));
+        console.log(truncate("A-", 1));
+        console.log(truncate("Absolutely Longer", 2));
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-font-color: #7B96C8;
+    --code-green: #A4C8B1;
+    --code-black: #000;
+    --code-red: #D01040;
+    --code-blue: #84CEFA;
+    --code-dark-blue: #527DA7;
+    --code-gray: #C9C9C1;
+    --code-main: #527DA7;
+    --code-bg: #eeeeee;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+code {
+    line-height: 1.75em;
+    background-color: var(--code-bg);
+    color: var(--code-main);
+    white-space: nowrap;
+}
+.code--block {
+    display: block;
+    padding: 10px;
+}
+.code--inline {
+    display: inline-block;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+p {
+    color: var(--main-font-color);
+}
+
+.fBold {
+    font-weight: 700;
+}
+.cGreen {
+    color: var(--code-green);
+}
+.cBlack {
+    color: var(--code-black);
+}
+.cRed {
+    color: var(--code-red);
+}
+.cBlue {
+    color: var(--code-blue);
+}
+.cDarkBlue {
+    color: var(--code-dark-blue);
+}
+.cGray {
+    color: var(--code-gray);
+}
+
+.overflowx {
+    overflow-x: auto;
+}

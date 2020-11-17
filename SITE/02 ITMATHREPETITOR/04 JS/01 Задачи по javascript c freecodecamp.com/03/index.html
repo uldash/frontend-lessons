@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задачи по javascript c freecodecamp.com</title>
+</head>
+<body>
+    <script>
+        /*
+        Проверить, является ли данная строка палиндромом. Под палиндромом будем понимать слово или предложение, которые произносятся одинаково слева направо и справа налево без учета знаков препинания, регистра и пробельных символов.
+        */
+        function palindrome(str) {
+            console.log(str);
+            str = str.replace(/\s/g, '');
+            return (str === str.split('').reduce((acc, curVal) => { return curVal + acc }));
+        }
+
+        console.log(palindrome("race car"));
+        console.log(palindrome("not a palindrome"));
+    </script>
+</body>
+</html>

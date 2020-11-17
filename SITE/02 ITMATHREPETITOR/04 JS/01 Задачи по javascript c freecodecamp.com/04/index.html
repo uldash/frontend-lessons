@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задачи по javascript c freecodecamp.com</title>
+</head>
+<body>
+    <script>
+        /*
+        Найти самое длинное слово в предложении. 
+        Результатом работы функции должна быть длина такого слова.        
+        */
+        const findLongestWord = function (str) {
+            //return Math.max.apply(null, str.split(' ').map(curVal => curVal.length));
+            let res = str.split(' '),
+                num = 0;
+
+            for (let i of res) {
+                if (num < i.length) {
+                    num = i.length;
+                }
+            }
+
+            return num;
+        }
+
+        console.log(6, findLongestWord('The quick brown fox jumped over the lazy dog'));
+        console.log(5, findLongestWord('May the force be with you'));
+        console.log(6, findLongestWord('Google do a barrel roll'));
+        console.log(8, findLongestWord('What is the average airspeed velocity of an unladen swallow'));
+        console.log(19, findLongestWord('What if we try a super-long word such as otorhinolaryngology'));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задачи по javascript c freecodecamp.com</title>
+</head>
+<body>
+    <script>
+        /*
+        Найти факториал данного числа.
+        */
+        const range = function (start = 1, end = 1) {
+            let res = []
+            for (let i = start; i <= end; i++) {
+                res.push(i)
+            }
+            return res;
+        }
+
+        // console.log(range(1, 10));
+        let num = 100;
+        const factorial = function (num) {
+            return range(1, num).reduce((acc, curVal) => { return acc * curVal });
+        };
+
+        const fact = function (num) {
+            if (num < 2) {
+                return 1;
+            }
+            return num * fact(num - 1);
+        }
+
+        const factIter = function (num) {
+            let res = 1;
+            for (let i = num; i > 1; i--) {
+                res *= i;
+            }
+            return res;
+        }
+
+        let time = performance.now();
+        console.log(factorial(num));
+        time = performance.now() - time;
+        console.log('time factorial reduce', time);
+
+        time = performance.now();
+        console.log(fact(num));
+        time = performance.now() - time;
+        console.log('time fact recursia', time);
+
+        time = performance.now();
+        console.log(factIter(num));
+        time = performance.now() - time;
+        console.log('time fact cicle', time);
+    </script>
+</body>
+</html>

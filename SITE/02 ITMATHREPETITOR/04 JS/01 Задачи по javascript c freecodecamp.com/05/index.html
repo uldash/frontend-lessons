@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задачи по javascript c freecodecamp.com</title>
+</head>
+<body>
+    <script>
+        /*
+        Преобразовать строку так, чтобы все буквы были
+        в нижнем регистре за исключением первой буквы каждого слова.
+
+        titleCase("I'm a little tea pot") ⇒ I'm A Little Tea Pot
+        titleCase("sHoRt AnD sToUt") ⇒ Short And Stout
+        titleCase("HERE IS MY HANDLE HERE IS MY SPOUT") ⇒ Here Is My Handle Here Is My Spout
+        */
+        const titleCase = function (str) {
+            let res = str[0].toUpperCase();
+
+            for (let i = 1; i < str.length; i++) {
+                if (str[i - 1] == ' ') {
+                    res += str[i].toUpperCase();
+                } else {
+                    res += str[i].toLowerCase();
+                }
+            }
+            return res;
+        }
+
+        console.log(titleCase("I'm a little tea pot"));
+        console.log(titleCase("sHoRt AnD sToUt"));
+        console.log(titleCase("HERE IS MY HANDLE HERE IS MY SPOUT"));
+    </script>
+</body>
+</html>
