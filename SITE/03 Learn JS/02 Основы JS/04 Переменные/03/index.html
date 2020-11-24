@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Рассмотрим следующий код:
+
+        const birthday = '18.04.1982';
+
+        const age = someCode(birthday);
+        У нас есть константа birthday, а также age, которая вычисляется при помощи некоторого кода, используя значение из birthday (в данном случае детали не имеют значения, поэтому код не рассматривается).
+
+        Можно ли использовать заглавные буквы для имени birthday? А для age? Или одновременно для обеих переменных?
+
+        const BIRTHDAY = '18.04.1982'; // использовать заглавные буквы?
+
+        const AGE = someCode(BIRTHDAY); // а здесь?
+        */
+        const BIRTHDAY = '18.04.1982'; // известна до начала выполнения скрипта
+        const age = someCode(BIRTHDAY); // становится известна после начала выполнения скрипта
+
+    </script>
+</body>
+</html>

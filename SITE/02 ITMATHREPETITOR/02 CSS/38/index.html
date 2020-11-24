@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 38</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            padding: 0 5px;
+            margin: 0 auto;
+        }
+
+        .books__items {
+            width: 100%;
+        }
+
+        .books__title {
+            padding: 10px;
+            font-weight: 700;
+            text-align: center;
+            background-color: #C0D0E0;
+        }
+
+        .books__item-author-follow-img {
+            width: 15px;
+        }
+
+        .books__item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+        }
+
+        .books__item-name {
+            flex-basis: 100%;
+            line-height: 22px;
+        }
+
+        .books__item-name-title {
+            margin-bottom: 30px;
+        }
+
+        .books__item-number {
+            flex: 0 0 140px;
+            font-size: 0.75rem;
+        }
+
+        .books__item-number-themes {
+            margin-bottom: 5px;
+            line-height: 22px;
+        }
+
+        .books__item-author {
+            flex: 0 0 200px;
+        }
+
+        .books__item-author-name {
+            margin-bottom: 5px;
+        }
+
+        .books__item-author-name-link::before {
+            content: '';
+        }
+
+        .books__item-author-name-img {
+            width: 1.25rem;
+            margin-right: 7px;
+            position: relative;
+            bottom: -5px;
+        }
+
+        .books__item-author p+p {
+            margin-top: 7px;
+            line-height: 22px;
+        }
+
+        .books__item+.books__item {
+            border-top: 2px solid #E7E7E7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="books__items">
+            <div class="books__title">
+                <h2>Книги</h2>
+            </div>
+            <div class="books__item">
+                <div class="books__item-name">
+                    <h3 class="books__item-name-title"><a href="#">Книги и кино</a></h3>
+                    <p class="books__item-name-desq">
+                        Обсуждение фиьмов и экранизаций
+                    </p>
+                </div>
+                <div class="books__item-number">
+                    <p class="books__item-number-themes">147 тем</p>
+                    <p class="books__item-number-comments">4374 комментария</p>
+                </div>
+                <div class="books__item-author">
+                    <p class="books__item-author-name"><img src="./img/user.svg" alt=""
+                            class="books__item-author-name-img"><a href="#"
+                            class="books__item-author-name-link">slonixxx</a></p>
+                    <p class="books__item-author-date">вчера 22.37</p>
+                    <p><a href="#" class="books__item-author-follow"><img src="./img/rightarrow.svg" alt=""
+                                class="books__item-author-follow-img"></a></p>
+                </div>
+            </div>
+            <div class="books__item">
+                <div class="books__item-name">
+                    <h3 class="books__item-name-title"><a href="#">Книги и кино</a></h3>
+                    <p class="books__item-name-desq">
+                        Обсуждение фиьмов и экранизаций
+                    </p>
+                </div>
+                <div class="books__item-number">
+                    <p class="books__item-number-themes">147 тем</p>
+                    <p class="books__item-number-comments">4374 комментария</p>
+                </div>
+                <div class="books__item-author">
+                    <p class="books__item-author-name"><img src="./img/user.svg" alt=""
+                            class="books__item-author-name-img"><a href="#"
+                            class="books__item-author-name-link">slonixxx</a></p>
+                    <p class="books__item-author-date">вчера 22.37</p>
+                    <p><a href="#" class="books__item-author-follow"><img src="./img/rightarrow.svg" alt=""
+                                class="books__item-author-follow-img"></a></p>
+                </div>
+            </div>
+            <div class="books__item">
+                <div class="books__item-name">
+                    <h3 class="books__item-name-title"><a href="#">Книги и кино</a></h3>
+                    <p class="books__item-name-desq">
+                        Обсуждение фиьмов и экранизаций
+                    </p>
+                </div>
+                <div class="books__item-number">
+                    <p class="books__item-number-themes">147 тем</p>
+                    <p class="books__item-number-comments">4374 комментария</p>
+                </div>
+                <div class="books__item-author">
+                    <p class="books__item-author-name"><img src="./img/user.svg" alt=""
+                            class="books__item-author-name-img"><a href="#"
+                            class="books__item-author-name-link">slonixxx</a></p>
+                    <p class="books__item-author-date">вчера 22.37</p>
+                    <p><a href="#" class="books__item-author-follow"><img src="./img/rightarrow.svg" alt=""
+                                class="books__item-author-follow-img"></a></p>
+                </div>
+            </div>
+            <div class="books__item">
+                <div class="books__item-name">
+                    <h3 class="books__item-name-title"><a href="#">Книги и кино</a></h3>
+                    <p class="books__item-name-desq">
+                        Обсуждение фиьмов и экранизаций
+                    </p>
+                </div>
+                <div class="books__item-number">
+                    <p class="books__item-number-themes">147 тем</p>
+                    <p class="books__item-number-comments">4374 комментария</p>
+                </div>
+                <div class="books__item-author">
+                    <p class="books__item-author-name"><img src="./img/user.svg" alt=""
+                            class="books__item-author-name-img"><a href="#"
+                            class="books__item-author-name-link">slonixxx</a></p>
+                    <p class="books__item-author-date">вчера 22.37</p>
+                    <p><a href="#" class="books__item-author-follow"><img src="./img/rightarrow.svg" alt=""
+                                class="books__item-author-follow-img"></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

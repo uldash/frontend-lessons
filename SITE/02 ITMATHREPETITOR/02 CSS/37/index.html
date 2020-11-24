@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 37</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 5px;
+        }
+
+        .plan {
+            width: 100%;
+            border: 1px solid #FF9823;
+        }
+
+        .plan__title {
+            margin: 0;
+            background-color: #FCF8E4;
+            color: rgb(25, 25, 25);
+            padding: 8px;
+            font-weight: 700;
+        }
+
+        .plan__subtitile {
+            background-color: #FF9823;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+            font-weight: 700;
+        }
+
+        .plan__subtitile-lesson {
+            flex: 0 1 25%;
+            text-align: left;
+            padding: 0 5px;
+        }
+
+        .plan__subtitile-name {
+            text-align: left;
+            flex-basis: 100%;
+            padding: 0 5px;
+        }
+
+        .plan__subtitile-name button {
+            color: #fff;
+            background-color: transparent;
+            cursor: pointer;
+            border: 0;
+            font-weight: 700;
+            font-size: 1rem;
+            outline: none;
+        }
+
+
+        .plan__subtitile-date {
+            flex: 0 1 25%;
+            text-align: left;
+            padding: 0 5px;
+        }
+
+        .plan__items {}
+
+        .plan__items p {
+            margin: 0 0 10px 0;
+        }
+
+        .plan__items h4 {
+            color: #399DCE;
+            margin: 10px 0;
+        }
+
+        .plan__item {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px;
+            text-align: left;
+            border-top: 1px solid #FF9823;
+        }
+
+        .plan__item-lesson {
+            flex: 0 1 25%;
+            text-align: left;
+            padding: 0 5px;
+            font-weight: 700;
+        }
+
+        .plan__item-name {
+            text-align: left;
+            flex-basis: 100%;
+            padding: 0 5px;
+        }
+
+        .plan__item-name h4 {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .plan__item-name h4::before {
+            content: '\25BA';
+            text-align: center;
+            line-height: 1.3rem;
+            color: #fff;
+            width: 1.3rem;
+            height: 1.3rem;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: #FF9823;
+            border-radius: 50%;
+            font-size: 0.9rem;
+        }
+
+        .plan__item-name-desc {
+            /* transition: all 20s; */
+        }
+
+        .plan__item-date {
+            flex: 0 1 25%;
+            text-align: left;
+            padding: 0 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="plan">
+            <h3 class="plan__title">План занятий</h3>
+            <div class="plan__subtitile">
+                <div class="plan__subtitile-lesson">
+                    Занятие
+                </div>
+                <div class="plan__subtitile-name">
+                    <button class="plan__subtitile-name-toggle" onclick="toggleDesc()">Заголовок >></button>
+                </div>
+                <div class="plan__subtitile-date">
+                    Дата изучения
+                </div>
+            </div>
+            <div class="plan__items">
+                <div class="plan__item">
+                    <div class="plan__item-lesson">
+                        <h4>Лекция 1</h4>
+                        <p>37 минут</p>
+                    </div>
+                    <div class="plan__item-name">
+                        <h4>Основы ТРИЗ</h4>
+                        <p class="plan__item-name-desc">
+                            Введение в дисциплинуб цели и содержание предметной области. Основные постулаты ТРИЗ.
+                            Примеры
+                            творческих задач. Уровни сложности.
+                        </p>
+                    </div>
+                    <div class="plan__item-date">
+                        <p>
+                            &mdash;
+                        </p>
+                    </div>
+                </div>
+                <div class="plan__item">
+                    <div class="plan__item-lesson">
+                        <h4>Лекция 2</h4>
+                        <p>1 час 14 минут</p>
+                    </div>
+                    <div class="plan__item-name">
+                        <h4>Примеры разрешения технических противоречий</h4>
+                        <p class="plan__item-name-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugiat harum vitae numquam,
+                            ad dignissimos repellat deserunt voluptatem odit velit nisi perspiciatis? Perspiciatis
+                            delectus vel repellendus minima impedit aliquid modi?
+                        </p>
+                    </div>
+                    <div class="plan__item-date">
+                        <p>
+                            &mdash;
+                        </p>
+                    </div>
+                </div>
+                <div class="plan__item">
+                    <div class="plan__item-lesson">
+                        <h4>Лекция 3</h4>
+                        <p>1 час 24 минут</p>
+                    </div>
+                    <div class="plan__item-name">
+                        <h4>Примеры решени язадач</h4>
+                        <p class="plan__item-name-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugiat harum vitae numquam,
+                            ad dignissimos repellat deserunt voluptatem odit velit nisi perspiciatis? Perspiciatis
+                            delectus vel repellendus minima impedit aliquid modi?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum minus ab aliquam dolorem
+                            dolorum voluptate, dicta nisi est eaque natus suscipit rerum quis molestiae aut aspernatur
+                            magni animi repellat dolores.
+                        </p>
+                    </div>
+                    <div class="plan__item-date">
+                        <p>
+                            &mdash;
+                        </p>
+                    </div>
+                </div>
+                <div class="plan__item">
+                    <div class="plan__item-lesson">
+                        <h4>Лекция 4</h4>
+                        <p>1 час 25 минут</p>
+                    </div>
+                    <div class="plan__item-name">
+                        <h4>Повышение идеальности</h4>
+                        <p class="plan__item-name-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugiat harum vitae numquam,
+                            ad dignissimos repellat deserunt voluptatem odit velit nisi perspiciatis? Perspiciatis
+                            delectus vel repellendus minima impedit aliquid modi?
+                        </p>
+                    </div>
+                    <div class="plan__item-date">
+                        <p>
+                            &mdash;
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleDesc() {
+            let title = document.querySelector(".plan__subtitile-name-toggle");
+            title.innerHTML = (title.textContent.slice(-2) == ">>") ? title.textContent.slice(0, -2) + '<<' : title.textContent.slice(0, -2) + '>>';
+
+            let desqItems = document.querySelectorAll(".plan__item-name-desc");
+            desqItems.forEach(element => element.style.display = (element.style.display == 'none') ? 'block' : 'none');
+        }
+    </script>
+</body>
+</html>

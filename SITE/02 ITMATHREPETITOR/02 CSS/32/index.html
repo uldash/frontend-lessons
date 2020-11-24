@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .counter {
+            width: 300px;
+            height: 140px;
+            padding: 15px;
+            border: 2px solid #DEDEDE;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .counter__title {
+            text-transform: uppercase;
+            color: red;
+            margin: 0 0 10px 0;
+        }
+
+        .counter__item {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+        }
+
+        .counter-text {
+            color: #39404D;
+        }
+
+        .counter-num {
+            color: black;
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter">
+        <h3 class="counter__title">сегодня на сайте</h3>
+        <p class="counter__item">
+            <span class="counter-text">Резюме:</span>
+            <span class="counter-num">771 589</span>
+        </p>
+        <p class="counter__item">
+            <span class="counter-text">Вакансий:</span>
+            <span class="counter-num">11 540</span>
+        </p>
+        <p class="counter__item">
+            <span class="counter-text">Компаний:</span>
+            <span class="counter-num">33 010</span>
+        </p>
+    </div>
+</body>
+</html>

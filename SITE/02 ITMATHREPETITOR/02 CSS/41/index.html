@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 41</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #DCDCDC;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 5px;
+        }
+
+        .item {
+            padding: 15px;
+            background-color: #FFFFFF;
+        }
+
+        .item__title {
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .item__subtitile-data {
+            color: #A1A2A2;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .date-val,
+        .category-val,
+        .comment {
+            font-weight: 700;
+        }
+
+        .date {
+            margin-right: 20px;
+        }
+
+        .date__img,
+        .category__img,
+        .comment__img {
+            height: 20px;
+            transform: translateY(20%);
+        }
+
+        .comment {
+            margin-left: auto;
+        }
+
+        .item__subtitile-tag {
+            padding: 0 10px;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #989999;
+            color: #fff;
+            font-weight: 700;
+            padding: 3px 10px;
+            text-decoration: none;
+        }
+
+        .tag+.tag {
+            margin-left: 5px;
+        }
+
+        .item_body {
+            display: flex;
+        }
+
+        .item_body-img {
+            width: 30%;
+        }
+
+        .item_body-text {
+            width: 550px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item_body-text p:first-child {
+            margin-bottom: 20px;
+        }
+
+        .item_body-text a {
+            color: #4971A8;
+            font-style: italic;
+            font-weight: 700;
+            text-decoration: none;
+            display: block;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            <h2 class="item__title">Блог: техническое</h2>
+            <div class="item__subtitile">
+                <div class="item__subtitile-data">
+                    <div class="date"><img src="./img/calendar.png" alt="" class="date__img"> Опубликовано: <span
+                            class="date-val">22.12.2011</span></div>
+                    <div class="category"><img src="./img/cartoteka.png" alt="" class="category__img"> Категория: <span
+                            class="category-val">Блог</span></div>
+                    <div class="comment"><img src="./img/comment.png" alt="" class="comment__img"> Оставить комментарий
+                    </div>
+                </div>
+                <div class="item__subtitile-tag">
+                    <a href="#" class="tag">blog</a>
+                    <a href="#" class="tag">lytdybr</a>
+                    <a href="#" class="tag">thoughts</a>
+                </div>
+            </div>
+            <div class="item_body">
+                <img src="./img/Wall-e.jpg" alt="" class="item_body-img">
+                <div class="item_body-text">
+                    <p>Друзья, нужна помощь!</p>
+                    <p>
+                        Бес попутал и я пару месяцев назад решил <q>оптимизировать</q> файл robot.txt на сайте.
+                        Дооптимизировался!
+                    </p>
+                    <a href="#">Читать далее</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

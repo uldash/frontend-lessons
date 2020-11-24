@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 35</title>
+    <style>
+        .eng-course {
+            width: 500px;
+            height: 200px;
+            background-color: #F2F2F2;
+            position: relative;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .eng-course__img {
+            width: 30%;
+            position: absolute;
+            bottom: 10px;
+        }
+
+        .eng-course__list {
+            background-color: #4576BA;
+            display: inline-block;
+            text-transform: uppercase;
+            padding: 5px 15px;
+            margin-left: 160px;
+            margin-top: 40px;
+            text-decoration: none;
+            color: #fff;
+            font-family: sans-serif;
+            font-weight: 700;
+            position: relative;
+            text-align: center;
+        }
+
+        .eng-course__list::after {
+            position: absolute;
+            content: '';
+            width: 500%;
+            height: 5px;
+            background-color: #4576BA;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .eng-course__res {
+            background-color: #D80000;
+            display: inline-block;
+            text-transform: uppercase;
+            padding: 5px 10px;
+            margin-left: 180px;
+            margin-top: 40px;
+            text-decoration: none;
+            color: #fff;
+            font-family: sans-serif;
+            font-weight: 700;
+            font-size: 0.5rem;
+            position: relative;
+            width: 150px;
+            line-height: 0.75rem;
+            text-align: center;
+        }
+
+        .eng-course__res::after {
+            position: absolute;
+            content: '';
+            width: 500%;
+            height: 5px;
+            background-color: #D80000;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="eng-course">
+        <img src="./img/121345382_2.png" alt="" class="eng-course__img">
+        <a href="#" class="eng-course__list">
+            list-english
+        </a>
+        <a href="#" class="eng-course__res">
+            список ресурсов для изучения английсого языка
+        </a>
+    </div>
+</body>
+</html>

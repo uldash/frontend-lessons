@@ -1,0 +1,61 @@
+@import 'solid.css';
+@import 'fontawesome.css';
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+.menu,
+.theory {
+    list-style: none;
+}
+
+.menu {
+    width: 260px;
+    /* border: 1px solid #000000; */
+    /* padding: 10px */
+}
+
+.menu li {
+    border-bottom: 2px solid #D4D4D4;
+    padding: 10px 0;
+}
+.theory li {
+    border-bottom: none;
+}
+
+.theory {
+    position: relative;
+    padding-left: 10px;
+    display: none;
+}
+.submenu>a {
+    color: blue;
+    text-decoration: underline;
+}
+.submenu:hover>.theory {
+    display: block;
+   
+}
+
+.theory__li {
+    /* padding-left: 20px; */
+}
+.theory__li::before {
+    position: absolute;
+    content: '\f0da';
+    color: #000;
+    font-weight: 900;
+    font-family: 'Font Awesome 5 Free';
+    font-size: 0.75rem;
+    left: 0px;
+    transform: translateY(25%);
+}
+
+.menu>li:last-child {
+    border-bottom: none;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 25</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            text-align: center;
+            background: url("noisy_grid.webp");
+        }
+
+        h1 {
+            margin-top: 200px;
+            font-family: serif;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.75em;
+        }
+
+        .cBlack {
+            background-color: black;
+        }
+
+        .pixel {
+            height: 2em;
+            width: 2em;
+            vertical-align: middle;
+            margin-right: 0.75em;
+            /* background-color: green; */
+            display: inline-flex;
+            flex-wrap: wrap;
+        }
+
+        .square {
+            width: 33.33%;
+            height: 33.33%;
+        }
+    </style>
+</head>
+<body>
+    <h1>smart pi<span class="pixel">
+            <div class="square cBlack"></div>
+            <div class="square"></div>
+            <div class="square cBlack"></div>
+            <div class="square"></div>
+            <div class="square cBlack"></div>
+            <div class="square"></div>
+            <div class="square cBlack"></div>
+            <div class="square"></div>
+            <div class="square cBlack"></div>
+        </span>el</h1>
+</body>
+</html>

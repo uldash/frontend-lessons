@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 33</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .most-reading {
+            padding: 10px;
+            border: 1px solid #345E50;
+            width: 260px;
+        }
+
+        .most-reading__items {
+            padding: 5px;
+        }
+
+        .most-reading__title {
+            color: black;
+            font-size: 1.2rem;
+            white-space: nowrap;
+            text-transform: uppercase;
+            overflow: hidden;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .most-reading__item {
+            border-top: 2px solid #714F56;
+            padding: 10px 0;
+        }
+
+        .most-reading__item-img {
+            width: 40%;
+            float: left;
+            margin-right: 5px;
+            overflow: hidden;
+        }
+
+        .most-reading__item-img img {
+            width: 100%;
+        }
+
+        .most-reading__item-img img:hover {
+            transform: scale(1.2);
+            transition: 1s;
+        }
+
+        .most-reading__item-title {
+            margin: 0;
+            font-size: 1rem;
+            color: #000;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="most-reading">
+        <div class="most-reading__items">
+            <h2 class="most-reading__title">самое читаемое</h2>
+            <div class="most-reading__item">
+                <a href="#">
+                    <div class="most-reading__item-img">
+                        <img src="./img/1.jpg" alt="">
+                    </div>
+                    <h3 class="most-reading__item-title">На обходе Волгограда начали возводить пролеты моста через ВДСК
+                    </h3>
+                </a>
+            </div>
+            <div class="most-reading__item">
+                <a href="#">
+                    <div class="most-reading__item-img">
+                        <img src="./img/2.jpg" alt="">
+                    </div>
+                    <h3 class="most-reading__item-title">4 женщины и 1 мужчина умерли от коронавируса в Волгоградской
+                        области
+                    </h3>
+                </a>
+            </div>
+            <div class="most-reading__item">
+                <a href="#">
+                    <div class="most-reading__item-img">
+                        <img src="./img/3.jpg" alt="">
+                    </div>
+                    <h3 class="most-reading__item-title">Пассажирка пострадала в ДТП с двумя иномарками в центре
+                        Волгограде
+                    </h3>
+                </a>
+            </div>
+            <div class="most-reading__item">
+                <a href="#">
+                    <div class="most-reading__item-img">
+                        <img src="./img/4.jpg" alt="">
+                    </div>
+                    <h3 class="most-reading__item-title">На юге Волгограда задержали стрелявшего из окна подростка
+                    </h3>
+                </a>
+            </div>
+            <div class="most-reading__item">
+                <a href="#">
+                    <div class="most-reading__item-img">
+                        <img src="./img/5.jpg" alt="">
+                    </div>
+                    <h3 class="most-reading__item-title">Международный аэропорт Волгограда проверили на COVID-19
+                    </h3>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

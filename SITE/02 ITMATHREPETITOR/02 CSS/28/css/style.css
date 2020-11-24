@@ -1,0 +1,71 @@
+@import './solid.css';
+@import './fontawesome.css';
+
+:root {
+    --cGreen-background: #DFF6E1;
+    --cGreen-border: #BCE6C0;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.cGreen {
+    background-color: var(--cGreen-background);
+    border: 2px solid var(--cGreen-border);
+    border-radius: 4px;
+}
+
+.alert {
+    width: 800px;
+    height: 60px;
+    padding: 5px 60px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.alert::before {
+    content: '\f13e';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 26px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding-left: 15px;
+    color: #64B108;
+}
+
+.alert::after {
+    content: '\f057';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding-right: 15px;
+    color: #64B108;
+}
+
+.alert__title {
+    color: #2D5799;
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+.alert__subtitile {
+    color: #70AB6C;
+    font-size: 14px;
+}

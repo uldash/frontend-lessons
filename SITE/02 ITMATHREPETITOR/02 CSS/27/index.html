@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 27</title>
+    <style>
+        :root {
+            --cRed: #F25D66;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .stailer {
+            display: inline-flex;
+            /* width: 400px; */
+            height: 100px;
+            /* background-color: gray; */
+            padding: 12px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .stailer__text {
+            margin-right: 30px;
+        }
+
+        .stailer__text-title {
+            margin-bottom: 15px;
+        }
+
+        .stailer__text-subtitle {
+            color: var(--cRed);
+            font-weight: 700;
+            font-size: 22px;
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .stailer__text-subtitle::before {
+            content: '';
+            background-image: url("alarm-clock_icon-icons.com_64799.svg");
+            width: 30px;
+            height: 30px;
+            /* background-color: green; */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .stailer__discount {
+            align-self: center;
+            border: 1px dashed var(--cRed);
+            border-radius: 5px;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .stailer__discount-title {
+            font-size: 16px;
+        }
+
+        .stailer__discount-persent {
+            font-size: 32px;
+            color: var(--cRed);
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <div class="stailer">
+        <div class="stailer__text">
+            <h3 class="stailer__text-title">Распродажа стайлеров</h3>
+            <p class="stailer__text-subtitle">
+                Действует до 06 декабря
+            </p>
+        </div>
+        <div class="stailer__discount">
+            <h3 class="stailer__discount-title">Скидки до</h3>
+            <p class="stailer__discount-persent">
+                12%
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>

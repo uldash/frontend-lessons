@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 23</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #BEBEBE;
+
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .inner {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center  ;
+        }
+
+        .quad-1,
+        .quad-2,
+        .quad-3 {
+            width: 160px;
+            height: 160px;
+            background-color: transparent;
+            border: 80px solid transparent;
+        }
+
+        .quad-1,
+        .quad-3 {
+            border-bottom: 80px solid #006400;
+        }
+
+        .quad-2 {
+            border-top: 80px solid #006400;
+            transform: translateY(50%) scaleY(2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inner">
+            <div class="quad-1"></div>
+            <div class="quad-2"></div>
+            <div class="quad-3"></div>
+
+        </div>
+    </div>
+
+</body>
+</html>

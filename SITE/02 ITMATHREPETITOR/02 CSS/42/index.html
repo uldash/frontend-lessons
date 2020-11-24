@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 42</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        ul {
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+
+        li+li {
+            margin-top: 7px;
+        }
+
+        li {
+            color: #7E44AA;
+        }
+
+        ul a {
+            text-decoration: none;
+            color: #738792;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 5px;
+        }
+
+        .service__title {
+            margin-left: 40px;
+            font-size: 1.5rem;
+        }
+
+        .service__col {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .service__col>a {
+            margin-right: 30px;
+        }
+
+        ul+ul {
+            margin-left: 30px;
+        }
+
+
+        .service__col-punkt {
+            display: flex;
+            border: 2px solid #EDEBF9;
+            border-radius: 6px;
+            width: 300px;
+            height: 130px;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .service__col-punkt img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .service__col-punkt p {
+            /* display: inline-block; */
+            font-weight: 700;
+            font-size: 1.5rem;
+            width: 150px;
+            color: #834AAE;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="service">
+            <h2 class="service__title">
+                Сервис и помощь
+            </h2>
+            <div class="service__col">
+                <a href="#" class="service__col-punkt">
+                    <img src="./img/home.png" alt="">
+                    <p>Пункты самовывоза</p>
+                </a>
+                <ul class="service__col-item">
+                    <li><a href="#">Как сделать заказ</a></li>
+                    <li><a href="#">Способы оплаты</a></li>
+                    <li><a href="#">Возврат</a></li>
+                    <li><a href="#">Правила продажи</a></li>
+                </ul>
+                <ul class="service__col-item">
+                    <li><a href="#">Публичная оферта</a></li>
+                    <li><a href="#">Ткани и уход за ними</a></li>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
