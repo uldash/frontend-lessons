@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 49</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .menu {
+            display: inline-flex;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            background: linear-gradient(#69959C, #3C5155);
+            padding: 0;
+        }
+
+        li {
+            height: 40px;
+        }
+
+        a {
+            text-transform: uppercase;
+            color: #fff;
+            text-decoration: none;
+            display: inline-flex;
+            padding: 0 20px;
+            height: 100%;
+            align-items: center;
+            white-space: nowrap;
+            border-bottom: 4px solid transparent;
+            border-top: 4px solid transparent;
+        }
+
+        a:hover:not(.active) {
+            color: #C2EB86;
+            border-bottom: 4px solid #C2EB86;
+        }
+
+        .active {
+            background-color: #C2EB86;
+            color: #6C9682;
+            box-shadow: inset 0 0 5px rgb(109, 109, 109);
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="#">новости</a></li>
+            <li><a href="#" class="active">аналитика</a></li>
+            <li><a href="#">достижения науки</a></li>
+            <li><a href="#">наука и власть</a></li>
+            <li><a href="#">мнения</a></li>
+            <li><a href="#">территория</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

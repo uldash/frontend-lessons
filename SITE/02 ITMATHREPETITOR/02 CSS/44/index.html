@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 44</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 5px;
+        }
+
+        .order__items {
+            background-color: #F2F5FA;
+            padding: 0 10px;
+        }
+
+        .order__item {
+            border-bottom: 2px solid #D6C17E;
+            display: flex;
+            padding: 10px 0;
+        }
+
+        .order__items-left {
+            color: #9AB5D4;
+            padding: 0 5px;
+            flex: 0 0 140px;
+        }
+
+        .order__items-right {
+            color: #495A78;
+            padding: 0 5px;
+            flex: 1 0;
+        }
+
+        .alert {
+            background-color: #319901;
+            color: #fff;
+            padding: 5px;
+        }
+
+        .link {
+            color: #378FDD;
+            text-decoration: underline;
+        }
+
+        .order__return {
+            text-align: right;
+        }
+
+        .order__return button {
+            color: #378FDD;
+            font-weight: 700;
+            text-align: right;
+            background-color: transparent;
+            border: 0;
+            margin-top: 20px;
+            outline: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="order">
+        <div class="container">
+            <div class="order__items">
+                <div class="order__item">
+                    <div class="order__items-left">
+                        <p>
+                            Заезд
+                        </p>
+                    </div>
+                    <div class="order__items-right">
+                        <p>
+                            17.00 &mdash; 20.00
+                        </p>
+                    </div>
+                </div>
+                <div class="order__item">
+                    <div class="order__items-left">
+                        <p>
+                            Отъезд
+                        </p>
+                    </div>
+                    <div class="order__items-right">
+                        <p>
+                            09.00 &mdash; 11.00
+                        </p>
+                    </div>
+                </div>
+                <div class="order__item">
+                    <div class="order__items-left">
+                        <p>
+                            Отмена/предоплата
+                        </p>
+                    </div>
+                    <div class="order__items-right">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quidem architecto
+                            reprehenderit! Maxime a assumenda repellendus tenetur <a href="#" class="link">nemo sequi
+                                excepturi</a>, eaque unde nisi
+                            reiciendis! Nulla ipsa aliquid libero assumenda repudiandae.
+                        </p>
+                    </div>
+                </div>
+                <div class="order__item">
+                    <div class="order__items-left">
+                        <p>
+                            Размещение детей и представление дополнительных кроватей
+                        </p>
+                    </div>
+                    <div class="order__items-right">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, neque facilis! Placeat,
+                            ratione, est temporibus tempore accusantium recusandae dolorum ipsum eligendi doloremque
+                            quasi corporis neque optio blanditiis quo velit eaque.
+                        </p>
+                        <p class="alert">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil explicabo, repellat ex
+                            eligendi architecto molestias et inventore maxime labore consectetur, quia sint consequuntur
+                            accusamus officia minima repudiandae iste iusto distinctio.
+                        </p>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, ea sapiente, vel
+                            consequuntur omnis quaerat qui molestias quam voluptatem reiciendis nihil laboriosam dolores
+                            praesentium rerum eum obcaecati quasi eos aperiam.
+                        </p>
+                    </div>
+                </div>
+                <div class="order__item">
+                    <div class="order__items-left">
+                        <p>
+                            Домашние животные
+                        </p>
+                    </div>
+                    <div class="order__items-right">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quidem architecto
+                            reprehenderit! Maxime a assumenda repellendus tenetur nemo sequi excepturi, eaque unde nisi
+                            reiciendis! Nulla ipsa aliquid libero assumenda repudiandae.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="order__return">
+                <button onclick="up()">&#9650; В начало страницы</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function up() {
+            var top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+            if (top > 0) {
+                window.scrollBy(0, ((top + 100) / -10));
+                t = setTimeout('up()', 20);
+            } else clearTimeout(t);
+            return false;
+        } 
+    </script>
+</body>
+</html>

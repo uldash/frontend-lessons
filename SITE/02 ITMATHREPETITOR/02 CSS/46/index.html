@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 46</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 5px;
+        }
+
+        .timetable__title {
+            border-top: 6px solid #CBCCCE;
+            border-bottom: 2px solid #CBCCCE;
+            padding: 10px;
+        }
+
+        .timetable__item:nth-child(odd)>.timetable__title {
+            background-color: #EDFBFE;
+        }
+
+        .timetable__item:nth-child(even)>.timetable__title {
+            background-color: #F5F5F5;
+        }
+
+        .timetable__text {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .timetable__action {
+            margin-top: 40px;
+        }
+
+        .btn+.btn {
+            margin-left: 20px;
+        }
+
+        .btn {
+            /* width: 20px; */
+            padding: 20px 40px;
+            color: #fff;
+            background: linear-gradient(#26D7F9, #08436A);
+            border-radius: 8px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="timetable">
+        <div class="container">
+            <div class="timetable__item">
+                <h2 class="timetable__title">
+                    Физика / Химия
+                </h2>
+                <div class="timetable__text">
+                    <p class="timetable__text-date">
+                        06 декабря (сб - 10:00)
+                    </p>
+                    <p class="timetable__text-balance">
+                        Осталось 133 мест
+                    </p>
+                </div>
+                <div class="timetable__text">
+                    <p class="timetable__text-date">
+                        06 декабря (сб - 14:00)
+                    </p>
+                    <p class="timetable__text-balance">
+                        Осталось 136 мест
+                    </p>
+                </div>
+            </div>
+            <div class="timetable__item">
+                <h2 class="timetable__title">
+                    Все предметы
+                </h2>
+                <div class="timetable__text">
+                    <p class="timetable__text-date">
+                        06 декабря (сб - 10:00)
+                    </p>
+                    <p class="timetable__text-balance">
+                        Осталось 133 мест
+                    </p>
+                </div>
+                <div class="timetable__text">
+                    <p class="timetable__text-date">
+                        06 декабря (сб - 14:00)
+                    </p>
+                    <p class="timetable__text-balance">
+                        Осталось 136 мест
+                    </p>
+                </div>
+                <div class="timetable__text">
+                    <p class="timetable__text-date">
+                        06 декабря (сб - 10:00)
+                    </p>
+                    <p class="timetable__text-balance">
+                        Осталось 133 мест
+                    </p>
+                </div>
+                <div class="timetable__text">
+                    <p class="timetable__text-date">
+                        06 декабря (сб - 14:00)
+                    </p>
+                    <p class="timetable__text-balance">
+                        Осталось 136 мест
+                    </p>
+                </div>
+            </div>
+            <div class="timetable__action">
+                <button class="btn">Записаться на рт</button>
+                <button class="btn">Узнать результат рт</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

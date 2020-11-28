@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 52</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .wrapper {
+            /* width: 100%; */
+            background-color: #575757;
+            padding: 10px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        nav {
+            border: 2px solid #8b8b8b;
+            height: 100%;
+            width: 100%;
+            border-radius: 4px;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            padding: 0;
+        }
+
+        li {
+            height: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        li:nth-child(4),
+        li:nth-child(6) {
+            border-right: 2px solid #8b8b8b;
+        }
+
+        li>a {
+            color: #fff;
+            display: inline-block;
+            padding: 0 20px;
+
+        }
+
+        li>a:hover {
+            color: rgb(216, 213, 213);
+        }
+
+        li input {
+            width: 220px;
+            border-radius: 4px;
+            height: 1.5rem;
+            padding: 0 20px 0 5px;
+            position: relative;
+        }
+
+        li label {
+            position: relative;
+            vertical-align: middle;
+        }
+
+        li label::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 5px;
+            transform: translateY(-50%);
+            width: 1.2rem;
+            height: 1.2rem;
+            background: no-repeat center/90% url("./img/lup.jpg");
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="wrapper">
+            <nav>
+                <ul>
+                    <li><a href="#">Вакансии</a></li>
+                    <li>
+                        <form>
+                            <input type="text" id="search">
+                            <label for="search"></label>
+                        </form>
+                    </li>
+                    <li><a href="#">Зарплаты</a></li>
+                    <li><a href="#">Компании</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Календарь</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+</body>
+</html>

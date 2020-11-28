@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("Переделайте этот код так, чтобы в нем использовались операции +=, -=, *=, /=. Количество строк кода при этом не должно измениться.<br>");
+        document.write(`
+    <pre>
+        var num = 47;
+        num = num + 7;
+        num = num - 18;
+        num = num * 10;
+        num = num / 15;
+        alert(num);
+    </pre> <hr>`);
+        var num = 47;
+        num += 7;
+        num -= 18;
+        num *= 10;
+        num /= 15;
+        document.write(`
+        <pre>
+        var num = 47;
+        num += 7;
+        num -= 18;
+        num *= 10;
+        num /= 15;
+        </pre><br>
+        `);
+        document.write("num = " + num);
+    </script>
+</body>
+</html>

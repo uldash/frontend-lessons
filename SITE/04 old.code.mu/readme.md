@@ -1,0 +1,1 @@
+http://old.code.mu/tasks/javascript/

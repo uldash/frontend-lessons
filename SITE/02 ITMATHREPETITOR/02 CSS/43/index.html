@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 43</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            padding: 0 5px;
+            margin: 0 auto;
+        }
+
+        .header__title {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 15px 5px;
+        }
+
+        .header__title-logo h2 {
+            margin: 0;
+        }
+
+        .header__title-logo a {
+            font-style: italic;
+            text-decoration: none;
+            font-weight: 900;
+            color: #820000;
+            font-size: 2rem;
+        }
+
+        .header__title-logo p {
+            margin-top: 5px;
+            color: #9C9D96;
+            font-size: 1.2rem;
+
+        }
+
+        .header__title-phone a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: #3B509A;
+        }
+
+        .header__title-phone p {
+            margin-top: 5px;
+            color: #820000;
+
+        }
+
+        .header__menu {
+            border-top: 2px dashed #B5B5B5;
+            border-bottom: 2px dashed #B5B5B5;
+        }
+
+        .header__menu ul {
+            padding: 0 5px;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header__menu a {
+            font-style: italic;
+            color: #3B509A;
+        }
+
+        .header__submenu {}
+
+        .header__submenu ul {
+            padding: 10px 5px;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header__submenu a {
+            text-decoration: none;
+            color: #9C9D96;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header__title">
+                <div class="header__title-logo">
+                    <h2><a href="#">Chetki</a></h2>
+                    <p>Интернет-магазин самых лучших чёток</p>
+                </div>
+                <div class="header__title-phone">
+                    <a href="tel:+75558376355">+7 (555) 63 55</a>
+                    <p>
+                        Заказы он-лайн круглосуточно, по телефону с 10.00 до 21.00
+                    </p>
+                </div>
+            </div>
+            <nav class="header__menu">
+                <ul>
+                    <li><a href="#">Внеконфессиональные</a></li>
+                    <li><a href="#">Православные</a></li>
+                    <li><a href="#">Мусульманские</a></li>
+                    <li><a href="#">Католические</a></li>
+                    <li><a href="#">Буддийские</a></li>
+                    <li><a href="#">Лютеранские</a></li>
+                    <li><a href="#">Англиканские</a></li>
+                    <li><a href="#">Перекидные</a></li>
+                </ul>
+            </nav>
+            <nav class="header__submenu">
+                <ul>
+                    <li><a href="#">Натуральные материалы</a></li>
+                    <li><a href="#">Ручная авторская работа</a></li>
+                    <li><a href="#">Доставка по Росси и зарубеж</a></li>
+                    <li><a href="#">Удобные способы оплаты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
+</html>

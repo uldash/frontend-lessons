@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 51</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .cOrange {
+            background-color: #FF8400;
+        }
+
+        .cRed {
+            background-color: #E42B2B;
+        }
+
+        .cViolet {
+            background-color: #A800FF;
+        }
+
+        .cBlue {
+            background-color: #49A7F3;
+        }
+
+        .cGreen {
+            background-color: #41D05F;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            height: 100vh;
+        }
+
+        .menu {
+            margin-top: 20px;
+            background-color: #444444;
+            height: 40px;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            position: relative;
+        }
+
+        li>a {
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            height: 40px;
+            padding: 10px 30px;
+            text-transform: uppercase;
+        }
+
+
+        li>a:hover {
+            padding-bottom: 40px;
+        }
+
+        .active {
+            padding-bottom: 40px;
+        }
+
+        a:hover::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            bottom: -2px;
+            left: 0;
+            background-color: inherit;
+        }
+
+        .active::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            bottom: -2px;
+            left: 0;
+            background-color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="menu">
+            <ul>
+                <li><a href="#" class="cOrange active">Главная</a></li>
+                <li><a href="#" class="cRed">Математика</a></li>
+                <li><a href="#" class="cViolet">Физика</a></li>
+                <li><a href="#" class="cBlue">Химия</a></li>
+                <li><a href="#" class="cGreen">История</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

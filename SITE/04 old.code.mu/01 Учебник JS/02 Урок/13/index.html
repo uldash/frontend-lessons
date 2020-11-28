@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("Создайте переменную num и присвойте ей значение '12345'. Найдите произведение (умножение) цифр этого числа.<hr>");
+        let num = '12345';
+        let result = 1;
+
+        document.write(num.split("").reduce((acc, currVal) => { return acc *= currVal }));
+    </script>
+</body>
+</html>

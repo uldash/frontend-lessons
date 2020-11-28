@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Рисуем столько котиков, сколько захотим
+        // document.body.insertAdjacentHTML("beforebegin", "Рисуем столько котиков, сколько захотим </br>");
+        document.write("Рисуем столько котиков, сколько захотим </br>")
+        let drawCats = function (howManyTimes) {
+            for (var i = 0; i < howManyTimes; i++) {
+                //console.log(i + " =^.^=");
+                document.write(i + "&nbsp;&nbsp;=^.^= </br>");
+                // document.body.insertAdjacentHTML("beforebegin", i + "&nbsp;&nbsp;=^.^= </br>");
+            }
+        };
+
+        drawCats(10)
+
+    </script>
+</body>
+</html>

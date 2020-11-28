@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор дразнилок</title>
+</head>
+<body>
+    <script>
+        // Генератор дразнилок
+        var randomBodyParts = ["глаз", "нос", "череп"];
+        var randomAdjectives = ["вонючая", "унылая", "дурацкая"];
+        var randomWords = ["муха", "выдра", "дубина", "мартышка", "крыса"];
+
+        var randomResult = [];
+        randomResult.push("У тебя ")
+        randomResult.push(randomBodyParts[Math.floor(Math.random() * randomBodyParts.length)]);
+        randomResult.push(" словно ");
+        randomResult.push(randomAdjectives[Math.floor(Math.random() * randomAdjectives.length)]);
+        randomResult.push(" ");
+        randomResult.push(randomWords[Math.floor(Math.random() * randomWords.length)]);
+        randomResult.push("!!!");
+
+        document.writeln(randomResult.join(" "));
+    </script>
+</body>
+</html>
