@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        code {
+            display: block;
+            background-color: rgb(233, 233, 233);
+            padding: 5px 10px;
+            line-height: 2em;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Напишите генератор случайных строк. Для этого вам понадобится строка со всеми буквами алфавита.
+        <code>var alphabet ="абвгдеёжзийклмнопрстуфхцчшщъыьэюя"</code>
+    </p>
+    <hr>
+    <script>
+        var alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+        let randomString = "";
+        let strNum = 10;
+        let strLen;
+        let count = 0;
+        while (count < strNum) {
+            strLen = Math.floor(Math.random() * 20);
+            for (let i = 0; i < strLen; i++) {
+                randomString += alphabet[Math.floor(Math.random() * alphabet.length)];
+            }
+            count++;
+            document.write(randomString + '<br>');
+            randomString = '';
+        }
+    </script>
+</body>
+</html>

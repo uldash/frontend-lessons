@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Пусть теперь в переменной lang хранится язык (она принимает одно из значений или 'ru', или 'en'
+        - либо то, либо то), а в переменной day - номер дня. Выведите словом день недели, соответствующий переменным
+        lang и day. То есть: если, к примеру, lang = 'ru' и day = 3 - то выведем 'среда'.
+    </p>
+    <hr>
+    <script>
+        let daysOfWeek = {
+            "ru": ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье",],
+            "en": ["Mondays", "Tuesdays", "Wednesdays", "Thursdays", "Fridays", "Saturdays", "Sundays",],
+        }
+
+        let lang = "ru", day = 3;
+
+        document.write(daysOfWeek[lang][day - 1] + "<br>");
+    </script>
+</body>
+</html>
