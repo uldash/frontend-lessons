@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача</title>
+    <style>
+        code {
+            background-color: rgb(235, 235, 235);
+            line-height: 2rem;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Дан массив с числами. Числа могут быть положительными и отрицательными. Найдите сумму положительных элементов
+        массива.
+    </p>
+    <hr>
+    <script>
+        var arr = [-2, -5, 9, 15, 0, -4,];
+        let sum = 0;
+        for (let key in arr) {
+            if (arr[key] > 0) {
+                sum += arr[key]
+
+            }
+        }
+        document.write(`${sum}<br>`)
+    </script>
+</body>
+</html>

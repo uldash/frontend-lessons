@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Если переменная a равна нулю или равна двум, то прибавьте к ней 7, иначе поделите ее на 10. Выведите новое
+        значение переменной на экран. Проверьте работу скрипта при a, равном 5, 0, -3, 2.
+    </p>
+    <hr>
+    <script>
+        let arr = [5, 0, -3, 2];
+        arr.forEach(val => {
+            document.write(`0 = ${val} = 2?<br>`);
+            if (val === 0 || val === 2) {
+                document.write(`${val} + 7 = ${val + 7}<br>`);
+            } else {
+                document.write(`${val} / 10 = ${val / 10}<br>`);
+            }
+        });
+    </script>
+</body>
+</html>

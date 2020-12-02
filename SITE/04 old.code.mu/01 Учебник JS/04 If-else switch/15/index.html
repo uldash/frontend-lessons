@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Переменная num может принимать 4 значения: 1, 2, 3 или 4. Если она имеет значение '1', то в переменную result
+        запишем 'зима', если имеет значение '2' – 'весна' и так далее. Решите задачу через switch-case.
+    </p>
+    <hr>
+    <script>
+        let num = [1, 2, 3, 4];
+        num.forEach(val => {
+            switch (val) {
+                case 1:
+                    document.write("Зима");
+                    break;
+                case 2:
+                    document.write("Весна");
+                    break;
+                case 3:
+                    document.write("Лето");
+                    break;
+                case 4:
+                    document.write("Осень");
+                    break;
+                default:
+                    document.write("Нет таких значений")
+            }
+            document.write("<br>")
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Если переменная a больше 2-х и меньше 11-ти, или переменная b больше или равна 6-ти и меньше 14-ти, то выведите
+        'Верно', в противном случае выведите 'Неверно'.
+    </p>
+    <hr>
+    <script>
+        let arr = [{ a: 1, b: 3, }, { a: 0, b: 6, }, { a: 3, b: 5, }]
+        arr.forEach(val => {
+            document.write(`${val.a} &gt; 2 и ${val.a} &lt; 11 или ${val.b} &ge; 6 и ${val.b} &lt; 14?<br>`)
+            if ((val.a > 2 && val.a < 11) || (val.b >= 6 && val.b < 14)) {
+                document.write(`Верно<br>`)
+            } else {
+                document.write(`Неверно<br>`)
+            }
+            document.write("<br>")
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Дана строка с цифрами, например, '12345'. Проверьте, что первым символом этой строки является цифра 1, 2 или 3.
+        Если это так - выведите 'да', в противном случае выведите 'нет'.
+    </p>
+    <hr>
+    <script>
+        let str = '12345';
+        let arr = [1, 2, 3];
+        if (arr.some(val => {
+            return val == str[0]
+        })) {
+            document.write("Да")
+        } else {
+            document.write("Нет")
+        }
+
+    </script>
+</body>
+</html>

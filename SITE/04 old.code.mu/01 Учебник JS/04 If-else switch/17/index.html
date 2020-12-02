@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        В переменной month лежит какое-то число из интервала от 1 до 12. Определите в какую пору года попадает этот
+        месяц (зима, лето, весна, осень).
+    </p>
+    <hr>
+    <script>
+        let month = Math.floor(Math.random() * 12 + 1)
+        switch (month) {
+            case 12:
+            case 1:
+            case 2:
+                document.write(`month = ${month}, Зима<br>`);
+                break;
+            case 3:
+            case 4:
+            case 5:
+                document.write(`month = ${month}, Весна<br>`);
+                break;
+            case 6:
+            case 7:
+            case 8:
+                document.write(`month = ${month}, Лето<br>`);
+                break
+            default:
+                document.write(`month = ${month}, Осень<br>`);
+        }
+    </script>
+</body>
+</html>

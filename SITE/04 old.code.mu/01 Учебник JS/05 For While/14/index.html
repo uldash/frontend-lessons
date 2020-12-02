@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Составьте массив дней недели. С помощью цикла for выведите все дни недели, а выходные дни выведите жирным.
+    </p>
+    <hr>
+    <script>
+        let daysOfWeek = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье",];
+        for (let key in daysOfWeek) {
+            if (key == 5 || key == 6) {
+                // var newP = document.createElement('p')
+                // newP.innerHTML = "<strong>" + daysOfWeek[key] + "</strong><br>"
+                // document.body.appendChild(newP)
+                document.write(`<strong>${daysOfWeek[key]}</strong><br>`)
+            } else {
+                document.write(`${daysOfWeek[key]}<br>`)
+            }
+        }
+    </script>
+</body>
+</html>

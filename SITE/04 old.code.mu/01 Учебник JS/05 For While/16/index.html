@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача</title>
+</head>
+<body>
+    <p>
+        Дано число n=1000. Делите его на 2 столько раз, пока результат деления не станет меньше 50. Какое число
+        получится? Посчитайте количество итераций, необходимых для этого (итерация - это проход цикла), и запишите его в
+        переменную num.
+    </p>
+    <hr>
+    <script>
+        let val = 1000;
+        let count = 0;
+        while (val > 50) {
+            val /= 2;
+            count++
+        }
+        document.write(`Число: ${val}<br>Количество итераций: ${count}<br>`)
+    </script>
+</body>
+</html>

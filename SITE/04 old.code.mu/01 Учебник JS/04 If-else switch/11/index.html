@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Если переменная a больше нуля и меньше 5-ти, то выведите 'Верно', иначе выведите 'Неверно'. Проверьте работу
+        скрипта при a, равном 5, 0, -3, 2.
+    </p>
+    <hr>
+    <script>
+        let a = [5, 0, -3, 2];
+        a.forEach(val => {
+            document.write(`0 &lt; <b>${val}</b> &lt; 5<br>`);
+            if (val > 0 && val < 5) {
+                document.write("Верно");
+            } else {
+                document.write("Неверно");
+            }
+            document.write("<br>")
+        });
+    </script>
+</body>
+</html>

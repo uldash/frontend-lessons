@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Если переменная a равна '1' и по значению и по типу, то выведите 'Верно', иначе выведите 'Неверно'. Проверьте
+        работу скрипта при a, равном '1', 1, 3.
+    </p>
+    <hr>
+    <script>
+        let a = ['1', 1, 3];
+        a.forEach(val => {
+            document.write(`a = ${val}, ${typeof val} ${val}= "1"?<br>`);
+            if (val === '1') {
+                document.write("Верно");
+            } else {
+                document.write("Неверно");
+            }
+            document.write("<br>")
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача</title>
+</head>
+<body>
+    <p>
+        Дан массив числами, например: [10, 20, 30, 50, 235, 3000]. Выведите на экран только те числа из массива, которые
+        начинаются на цифру 1, 2 или 5.
+    </p>
+    <hr>
+    <script>
+        let arr = [10, 20, 30, 50, 235, 3000];
+        for (let key in arr) {
+            if (String(arr[key])[0] == 1 || String(arr[key])[0] == 2 || String(arr[key])[0] == 5) {
+                document.write(`${arr[key]}<br>`)
+            }
+        }
+    </script>
+</body>
+</html>

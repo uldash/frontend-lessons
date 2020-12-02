@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Если переменная test не равна true, то выведите 'Верно', иначе выведите 'Неверно'. Проверьте работу скрипта при
+        test, равном true, false. Напишите два варианта скрипта - с короткой записью и с длинной.
+    </p>
+    <hr>
+    <script>
+        let test = [true, false];
+
+        test.forEach(val => {
+            document.write(`${val} &ne; 'true'? <br>`)
+            document.write(`${!val ? "Верно" : "Неверно"}<br>`)
+        });
+    </script>
+</body>
+</html>

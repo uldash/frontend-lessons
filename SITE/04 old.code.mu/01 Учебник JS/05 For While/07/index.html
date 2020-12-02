@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа с for-in</title>
+    <style>
+        code {
+            background-color: rgb(235, 235, 235);
+            line-height: 2rem;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Дан объект obj. С помощью цикла for-in выведите на экран ключи и элементы этого объекта. <br>
+        <code>
+            var obj = {green: 'зеленый', red: 'красный', blue: 'голубой'}
+        </code>
+    </p>
+    <hr>
+    <script>
+        var obj = { green: 'зеленый', red: 'красный', blue: 'голубой' }
+        for (let key in obj) {
+            document.write(`Ключ: ${key} элемент: ${obj[key]}<br>`)
+        }
+    </script>
+</body>
+</html>

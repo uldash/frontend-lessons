@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Дана строка из 6-ти цифр. Проверьте, что сумма первых трех цифр равняется сумме вторых трех цифр. Если это так -
+        выведите 'да', в противном случае выведите 'нет'.
+    </p>
+    <hr>
+    <script>
+        let str = "123321";
+        let res = 0;
+        // document.write(str.length / 2 + "<br>")
+        document.write(`str = ${str} Суммы совпадают?<br>`)
+        for (let i = 0; i < str.length / 2; i++) {
+            res += Number(str[i]);
+            // document.write(res + "<br>");
+            res -= Number([str[str.length - 1 - i]]);
+            // document.write(res + "<br>");
+        }
+
+        if (res === 0) {
+            document.write("Да");
+        } else {
+            document.write("Нет")
+        }
+    </script>
+</body>
+</html>

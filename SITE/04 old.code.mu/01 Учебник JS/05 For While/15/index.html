@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача</title>
+</head>
+<body>
+    <p>
+        Составьте массив дней недели. С помощью цикла for выведите все дни недели, а текущий день выведите курсивом.
+        Текущий день должен храниться в переменной day.
+    </p>
+    <hr>
+    <script>
+        let daysOfWeek = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье",];
+
+        let day = new Date();
+        day = day.getDay();
+
+        for (let key in daysOfWeek) {
+            if (key == day) {
+                document.write(`<i>${daysOfWeek[key]}</i><br>`)
+            } else {
+                document.write(`${daysOfWeek[key]}<br>`)
+            }
+        }
+    </script>
+</body>
+</html>
