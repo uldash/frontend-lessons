@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Максимальные и минимальные числа</title>
+</head>
+<body>
+    <p>
+        Даны числа 4, -2, 5, 19, -130, 0, 10. Найдите минимальное и максимальное число.
+    </p>
+    <hr>
+    <script>
+        let arr = [4, -2, 5, 19, -130, 0, 10];
+        document.write(`Массив: [${arr}]<br>`)
+        document.write(`Максимальное число: ${Math.max.apply(null, arr)}<br>`)
+        document.write(`Минимальное число: ${Math.min.apply(null, arr)}<br>`)
+    </script>
+</body>
+</html>

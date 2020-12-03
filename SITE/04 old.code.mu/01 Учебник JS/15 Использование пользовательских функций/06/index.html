@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Дан массив с целыми числами. Создайте из него новый массив, где останутся лежать только четные из этих чисел.
+        Для этого используйте вспомогательную функцию isEven из предыдущей задачи.
+    </p>
+    <hr>
+    <script>
+        function isEven(num) {
+            return !Boolean(num % 2);
+        }
+
+        let arr = [1, 2, 3, 4, 5, 6, 7,];
+        let res = arr.filter(item => isEven(item));
+
+        document.write(`${arr}<br> ${res}<br>`);
+    </script>
+</body>
+</html>

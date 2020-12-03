@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        С помощью двух вложенных циклов нарисуйте следующую пирамидку:
+    <pre>
+        1
+        22
+        333
+        4444
+        55555
+        666666
+        7777777
+        88888888
+        999999999
+        </pre>
+    </p>
+    <hr>
+    <script>
+        let str = "";
+        let counter = 9;
+        for (let i = 1; i < counter + 1; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write(`${i}`);
+            }
+            document.write(`<br>`)
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заполнение массивов</title>
+</head>
+<body>
+    <p>
+        Сделайте функцию arrayFill, которая будет заполнять массив заданными значениями. Первым параметром функция
+        принимает значение, которым заполнять массив, а вторым - сколько элементов должно быть в массиве. Пример:
+        arrayFill('x', 5) сделает массив ['x', 'x', 'x', 'x', 'x'].
+    </p>
+    <hr>
+    <script>
+        function arrayFill(arr, str, l) {
+            for (let i = 0; i < l; i++) {
+                arr.push(str)
+            }
+            return arr;
+        }
+        let arr = [];
+        document.write(`${arrayFill(arr, "x", 5)}`);
+    </script>
+</body>
+</html>

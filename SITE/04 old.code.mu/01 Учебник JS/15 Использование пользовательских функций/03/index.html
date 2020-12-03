@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Сделайте функцию getDigitsSum (digit - это цифра), которая параметром принимает целое число и возвращает сумму
+        его цифр.
+    </p>
+    <hr>
+    <script>
+        function getDigitsSum(digit) {
+            let sum = 0;
+            let str = String(digit);
+            for (let i = 0; i < str.length; i++) {
+                sum += Number(str[i]);
+            }
+            return sum;
+        }
+
+        document.write(`123:<br> Сумма цифр:${getDigitsSum(123)}<br>`);
+    </script>
+</body>
+</html>

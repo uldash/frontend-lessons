@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Дан массив с числами. Запишите в новый массив только те числа, которые больше нуля и меньше 10-ти. Для этого
+        используйте вспомогательную функцию isNumberInRange из предыдущей задачи.
+    </p>
+    <hr>
+    <script>
+        function isNumberInRange(num) {
+            return num > 0 && num < 10;
+        }
+
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, -2,];
+        let newArr = [];
+
+        for (let i = 0; i < arr.length; i++) {
+            if (isNumberInRange(arr[i])) {
+                newArr.push(arr[i]);
+            }
+        }
+        document.write(`${arr}<br> ${newArr}<br>`);
+
+    </script>
+</body>
+</html>

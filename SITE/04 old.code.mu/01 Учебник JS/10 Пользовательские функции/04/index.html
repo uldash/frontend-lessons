@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простые функции</title>
+</head>
+<body>
+    <p>
+        Сделайте функцию, которая принимает параметром число от 1 до 7, а возвращает день недели на русском языке.
+    </p>
+    <hr>
+    <script>
+        function daysOfWeek(day) {
+            let d = {
+                1: "Понедельник",
+                2: "Вторник",
+                3: "Среда",
+                4: "Четверг",
+                5: "Пятница",
+                6: "Суббота",
+                7: "Воскресенье",
+            }
+            return d[day];
+        }
+        document.write(`${daysOfWeek(1)}`)
+    </script>
+</body>
+</html>

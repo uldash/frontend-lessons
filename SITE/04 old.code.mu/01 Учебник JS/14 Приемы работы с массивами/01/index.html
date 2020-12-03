@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заполнение массивов</title>
+</head>
+<body>
+    <p>
+        Заполните массив следующим образом: в первый элемент запишите 'x', во второй 'xx', в третий 'xxx' и так далее.
+    </p>
+    <hr>
+    <script>
+        let arr = [];
+        let str = "";
+        let l = 5;
+        for (let i = 0; i < l; i++) {
+            str += 'x';
+            arr.push(str);
+        }
+
+        document.write(`${arr}`);
+    </script>
+</body>
+</html>

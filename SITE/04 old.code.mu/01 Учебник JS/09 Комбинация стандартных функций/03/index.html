@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отработка стандартных функций JavaScript</title>
+</head>
+<body>
+    <p>
+        Проверьте, что строка начинается на http://.
+    </p>
+    <hr>
+    <script>
+        let str = 'http://phphtml';
+        document.write(`${(str.slice(0, 7) === 'http://') ? "Да" : "Нет"}<br>`);
+    </script>
+</body>
+</html>

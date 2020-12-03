@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача</title>
+</head>
+<body>
+    <p>
+        Преобразуйте первую букву каждого слова строки в верхний регистр.
+    </p>
+    <hr>
+    <script>
+        let str = "hello world foo";
+        let res = str.split(" ").map((val) => {
+            return val[0].toUpperCase() + val.slice(1);
+        }).join(' ');
+        document.write(`${str} &rarr; ${res}`);
+    </script>
+</body>
+</html>

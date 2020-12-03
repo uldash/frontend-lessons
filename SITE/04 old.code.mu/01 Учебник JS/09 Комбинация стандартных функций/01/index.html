@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отработка стандартных функций JavaScript</title>
+</head>
+<body>
+    <p>
+        Дана строка. Сделайте заглавным первый символ этой строки не используя цикл. Найдите два решения.
+    </p>
+    <hr>
+    <script>
+        let str = "hello";
+        document.write(`${str}<br>`);
+        document.write(`${str[0].toUpperCase() + str.slice(1)}<br>`);
+        document.write(`${str.slice(0, 1).toUpperCase() + str.slice(1)}<br>`);
+    </script>
+</body>
+</html>

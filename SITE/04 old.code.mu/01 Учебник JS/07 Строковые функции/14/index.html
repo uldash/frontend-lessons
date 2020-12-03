@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача</title>
+</head>
+<body>
+    <p>
+        Преобразуйте строку 'var_test_text' в 'varTestText'. Скрипт, конечно же, должен работать с любыми аналогичными
+        строками.
+    </p>
+    <hr>
+    <script>
+        let str = 'var_test_text';
+        let res = str.split("_");
+        for (let i = 1; i < res.length; i++) {
+            res[i] = res[i][0].toUpperCase() + res[i].slice(1);
+        }
+        res = res.join('');
+        document.write(`${str} &rarr; ${res}`);
+    </script>
+</body>
+</html>

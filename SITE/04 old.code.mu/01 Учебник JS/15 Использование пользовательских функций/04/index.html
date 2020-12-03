@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Найдите все года от 1 до 2020, сумма цифр которых равна 13. Для этого используйте вспомогательную функцию
+        getDigitsSum из предыдущей задачи.
+    </p>
+    <hr>
+    <script>
+        function getDigitsSum(digit) {
+            let sum = 0;
+            let str = String(digit);
+            for (let i = 0; i < str.length; i++) {
+                sum += Number(str[i]);
+            }
+            return sum;
+        }
+
+        let res = [];
+        for (let i = 1; i <= 2020; i++) {
+            if (getDigitsSum(i) === 13) {
+                res.push(i);
+            }
+        }
+        document.write(`${res.join("<br>")}<br>`);
+    </script>
+</body>
+</html>

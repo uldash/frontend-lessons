@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>replace</title>
+</head>
+<body>
+    <p>
+        Дана строка 'Я-учу-javascript!'. Замените все дефисы на '!' с помощью глобального поиска и замены.
+    </p>
+    <hr>
+    <script>
+        let str = 'Я-учу-javascript!';
+        document.write(`Строка "${str}", строка после замены: "${str.replace(/-/g, '!')}"<br>`);
+    </script>
+</body>
+</html>

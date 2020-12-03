@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Дана строка вида 'var_text_hello'. Сделайте из него текст 'varTextHello'.
+    </p>
+    <hr>
+    <script>
+        function ucfirst(str) {
+            return str[0].toUpperCase() + str.slice(1);
+        }
+
+        let str = "var_text_hello";
+        let counter = str.indexOf("_");
+        while (counter != -1) {
+            str = str.slice(0, counter) + str[counter + 1].toUpperCase() + str.slice(counter + 2)
+            counter = str.indexOf("_");
+        }
+
+        document.write(`${str}`)
+    </script>
+</body>
+</html>

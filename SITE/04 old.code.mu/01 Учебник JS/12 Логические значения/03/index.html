@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Сделайте функцию, которая параметром принимает число и проверяет - отрицательное оно или нет. Если отрицательное
+        - пусть функция вернет true, а если нет - false.
+    </p>
+    <hr>
+    <script>
+        function isNegative(a) {
+            return a < 0;
+        }
+
+        let a = -2;
+        document.write(`${a} < 0? ${isNegative(a) ? "Да" : "Нет"}`);
+    </script>
+</body>
+</html>

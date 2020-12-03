@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рандом</title>
+</head>
+<body>
+    <p>
+        Заполните массив 10-ю случайными целыми числами. (Подсказка: нужно воспользоваться циклами for или while)
+    </p>
+    <hr>
+    <script>
+        let arr = [];
+        for (let i = 0; i < 10; i++) {
+            arr.push(Math.floor(Math.random() * 100))
+        }
+        document.write(`[${arr}]`);
+    </script>
+</body>
+</html>

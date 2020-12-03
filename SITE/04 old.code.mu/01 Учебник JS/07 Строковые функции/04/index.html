@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>length, substr, substring, slice. Работа с indexOf</title>
+</head>
+<body>
+    <p>
+        Дана строка 'я учу javascript!'. Вырежите из нее слово 'учу' и слово 'javascript' тремя разными способами (через
+        substr, substring, slice).
+    </p>
+    <hr>
+    <script>
+        let str = 'я учу javascript!';
+        document.write(`Строка "${str}", подстрока "учу": "${str.substr(2, 3)}"<br>`);
+        document.write(`Строка "${str}", подстрока "javascript"": "${str.substr(6, 10)}"<br><br>`);
+
+        document.write(`Строка "${str}", подстрока "учу": "${str.substring(2, 5)}"<br>`);
+        document.write(`Строка "${str}", подстрока "javascript"": "${str.substring(6, 16)}"<br><br>`);
+
+        document.write(`Строка "${str}", подстрока "учу": "${str.slice(2, 5)}"<br>`);
+        document.write(`Строка "${str}", подстрока "javascript"": "${str.slice(-11, -1)}"<br><br>`);
+    </script>
+</body>
+</html>

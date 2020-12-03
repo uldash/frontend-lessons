@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рекурсия</title>
+</head>
+<body>
+    <p>
+        Дан массив с числами. Выведите последовательно его элементы используя рекурсию и не используя цикл.
+    </p>
+    <hr>
+    <script>
+        function getElem(arr) {
+            if (arr.length > 0) {
+                document.write(`${arr.shift()}<br>`)
+                getElem(arr)
+            }
+        }
+
+        let arr = [1, 2, 3, 4, 5, 6,];
+        getElem(arr);
+    </script>
+</body>
+</html>

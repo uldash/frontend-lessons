@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Дана строка, например, '123456'. Сделайте из нее '214365'.
+    </p>
+    <hr>
+    <script>
+
+        let str = '123456';
+        let res = ""
+        for (let i = 0; i < str.length; i += 2) {
+            // document.write(i + "<br>")
+            // document.write(str.slice(i, i + 2)[1] + str.slice(i, i + 2)[0] + "<br>")
+            // document.write(str.slice(i + 2) + "!<br>")
+            res += str.slice(i, i + 2)[1] + str.slice(i, i + 2)[0];
+        }
+        document.write(`'123456' &rarr; ${res}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Флаги</title>
+</head>
+<body>
+    <p>
+        Дан массив с числами. Проверьте, что в этом массиве есть число 5. Если есть - выведите 'да', а если нет -
+        выведите 'нет'.
+    </p>
+    <hr>
+    <script>
+        function hasFive(arr) {
+            let flag = false;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == 5) {
+                    flag = true;
+                    break;
+                }
+            }
+            return flag;
+        }
+
+        let arr = [1, 2, 3, 4, "5", 6, 7];
+        document.write(`Массив: ${arr}<br>`);
+        document.write(`В массиве содержится 5? ${(hasFive(arr) ? "Да" : "Нет")}<br>`);
+    </script>
+</body>
+</html>

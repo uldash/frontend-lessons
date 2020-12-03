@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача</title>
+</head>
+<body>
+    <p>
+        Напишите скрипт, который будет находить факториал числа. Факториал (обозначается !) - это произведение
+        (умножение) всех целых чисел, меньше данного, и его самого. Например, 4! = 1*2*3*4.
+    </p>
+    <hr>
+    <script>
+        let num = 4, fact = 1;
+        for (let i = 2; i <= num; i++) {
+            fact *= i;
+        }
+
+        document.write(`${num}! = ${fact}`);
+    </script>
+</body>
+</html>

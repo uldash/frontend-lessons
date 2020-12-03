@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Многомерные массивы</title>
+</head>
+<body>
+    <p>
+        Дан двухмерный массив с числами, например [[1, 2, 3], [4, 5], [6]]. Найдите сумму элементов этого массива.
+        Массив, конечно же, может быть произвольным.
+    </p>
+    <hr>
+    <script>
+        let arr = [[1, 2, 3], [4, 5], [6], 7];
+        let sum = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            if (Array.isArray(arr[i])) {
+                for (let j = 0; j < arr[i].length; j++) {
+                    sum += arr[i][j];
+                }
+            } else {
+                sum += arr[i]
+            }
+        }
+        document.write(`${arr}<br> Сумма элементов:${sum}`);
+    </script>
+</body>
+</html>

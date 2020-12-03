@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Переворот массива</title>
+</head>
+<body>
+    <p>
+        Дан массив с числами. Не используя метода reverse переверните его элементы в обратном порядке.
+    </p>
+    <hr>
+    <script>
+        function reverse(arr) {
+            let rarr = [];
+            for (let i = 0; i < arr.length; i++) {
+                rarr.unshift(arr[i])
+            }
+            return rarr;
+        }
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9,];
+        document.write(`${arr}<br> ${reverse(arr)}`);
+    </script>
+</body>
+</html>

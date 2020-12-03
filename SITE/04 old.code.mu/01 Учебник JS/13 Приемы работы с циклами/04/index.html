@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Нарисуйте пирамиду, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5:
+    <pre>
+            x
+            xx
+            xxx
+            xxxx
+            xxxxx
+        </pre>
+    </p>
+    <hr>
+    <script>
+        let str = "";
+        let counter = 20;
+        for (let i = 1; i < counter + 1; i++) {
+            str += "x";
+            document.write(`${i} ${str}<br>`);
+        }
+
+    </script>
+</body>
+</html>

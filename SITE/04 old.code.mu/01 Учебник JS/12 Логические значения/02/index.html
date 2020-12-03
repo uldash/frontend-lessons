@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Сделайте функцию, которая параметрами принимает 2 числа. Если их сумма больше 10 - пусть функция вернет true, а
+        если нет - false.
+    </p>
+    <hr>
+    <script>
+        function isEqual(a, b) {
+            return a + b > 10;
+        }
+
+        let a = 2, b = 12;
+        document.write(`${a} + ${b} > 10? ${isEqual(a, b) ? "Да" : "Нет"}`);
+    </script>
+</body>
+</html>
