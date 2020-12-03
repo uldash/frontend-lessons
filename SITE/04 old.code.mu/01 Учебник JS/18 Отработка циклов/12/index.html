@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Циклы</title>
+</head>
+<body>
+    <p>
+        Дан массив с числами. Найдите среднее арифметическое его элементов (сумма элементов, делить на количество).
+    </p>
+    <hr>
+    <script>
+
+        function setArr(num) {
+            let arr = [];
+            for (let i = 1; i <= num; i++) {
+                arr.push(Math.floor(Math.random() * 20));
+            }
+            return arr;
+        }
+        let arr = setArr(10);
+        let res = 0;
+        for (let i = 0; i < arr.length; i++) {
+            res += arr[i];
+        }
+
+        res /= arr.length;
+        document.write(`${arr}<br>Среднее арифметическое:${res}`);
+
+    </script>
+</body>
+</html>
