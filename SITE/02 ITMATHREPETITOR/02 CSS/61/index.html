@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нетленка</title>
+    <style>
+        :root {
+            --cGreen: #4F846D;
+            --border-width: 5px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .best {
+            max-width: 240px;
+        }
+
+
+        .imperishable,
+        .seminar,
+        .project,
+        .document,
+        .about {
+            padding: 0 0 0 10px;
+            margin: 0;
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        .imperishable__title,
+        .seminar__title,
+        .project__title,
+        .document__title,
+        .about__title {
+            text-transform: uppercase;
+            color: var(--cGreen);
+            margin: 0;
+        }
+
+        .imperishable {
+            border-left: var(--border-width) solid var(--cGreen);
+        }
+
+        .imperishable__link {
+            text-decoration: none;
+        }
+
+        .imperishable__link:hover {
+            text-decoration: underline;
+            text-decoration-color: #EA7641;
+        }
+
+
+        .imperishable__autor {
+            color: #20262B;
+        }
+
+        .imperishable__text {
+            color: #EA7641;
+        }
+
+        .seminar,
+        .project,
+        .document,
+        .about {
+            border-left: var(--border-width) solid transparent;
+        }
+
+        .seminar__title,
+        .project__title,
+        .document__title,
+        .about__title {
+            position: relative;
+        }
+
+        .seminar__title::before,
+        .project__title::before,
+        .document__title::before,
+        .about__title::before {
+            content: '';
+            width: var(--border-width);
+            height: var(--border-width);
+            background-color: var(--cGreen);
+            top: 50%;
+            left: 0px;
+            transform: translate(-15px, -50%);
+            position: absolute;
+        }
+
+        .imperishable__item {
+            margin-top: 0.5rem;
+        }
+
+        .imperishable__autor,
+        .imperishable__text {
+            margin: 0;
+        }
+
+        .project__link {
+            text-decoration: none;
+            color: #2B2E30;
+        }
+
+        .project__link:hover {
+            text-decoration: underline;
+            text-decoration-color: #2B2E30;
+        }
+
+        .partners {
+            background-color: #000;
+            padding: 7px 10px;
+        }
+
+        .partners__title {
+            margin: 0;
+        }
+
+        .partners__link {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="best">
+            <ul class="imperishable">
+                <h3 class="imperishable__title">Нетленка</h3>
+                <li class="imperishable__item">
+                    <a href="#" class="imperishable__link">
+                        <h4 class="imperishable__autor">Арсений Рогинский</h4>
+                        <p class="imperishable__text">Нобелевская премия и память о терроре</p>
+                    </a>
+                </li>
+                <li class="imperishable__item">
+                    <a href="#" class="imperishable__link">
+                        <h4 class="imperishable__autor">Каха Бендукидзе</h4>
+                        <p class="imperishable__text">"Обмена политических взглядов на комфортную жизнь не будет"</p>
+                    </a>
+                </li>
+                <li class="imperishable__item">
+                    <a href="#" class="imperishable__link">
+                        <h4 class="imperishable__autor">Теодор шанин Борис Юдин</h4>
+                        <p class="imperishable__text">Сила самоиронии. К 80-летию Юрия Левады</p>
+                    </a>
+                </li>
+                <li class="imperishable__item">
+                    <a href="#" class="imperishable__link">
+                        <h4 class="imperishable__autor">Сергей Неклюдов</h4>
+                        <p class="imperishable__text">Гуманитарное знание и народная традиция</p>
+                    </a>
+                </li>
+                <li class="imperishable__item">
+                    <a href="#" class="imperishable__link">
+                        <h4 class="imperishable__autor">Михаил Фаворов</h4>
+                        <p class="imperishable__text">Вакцины, вакцинация и их роль в общественном здравоохранении</p>
+                    </a>
+                </li>
+            </ul>
+            <ul class="seminar">
+                <h3 class="seminar__title">семинары</h3>
+            </ul>
+            <ul class="project">
+                <h3 class="project__title">спецпроекты</h3>
+                <li><a href="#" class="project__link">Экологическая повестка</a></li>
+                <li><a href="#" class="project__link">Открытое государство</a></li>
+                <li><a href="#" class="project__link">Русская политейя</a></li>
+                <li><a href="#" class="project__link">Прыжок в будушее</a></li>
+                <li><a href="#" class="project__link">Проект "Москва"</a></li>
+                <li><a href="#" class="project__link">История: человекб институты</a></li>
+            </ul>
+            <ul class="document">
+                <h3 class="document__title">документы</h3>
+            </ul>
+            <ul class="about">
+                <h3 class="about__title">о проекте</h3>
+            </ul>
+            <div class="partners">
+                <h3 class="partners__title"><a href="#" class="partners__link">партнеры</a></h3>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>

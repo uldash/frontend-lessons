@@ -3,9 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задача 58</title>
+    <title>T Magazine</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .items {
+            display: flex;
+            border-top: 1px solid rgb(200, 200, 200);
+            border-bottom: 1px solid rgb(200, 200, 200);
+            padding: 20px 0;
+        }
+
+        .item {
+            padding: 10px 10px;
+        }
+
+        .item+.item {
+            border-left: 1px solid rgb(200, 200, 200);
+        }
+
+        .item__title {
+            margin: 0;
+        }
+
+        .item__link {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .item__picture {
+            width: 80px;
+            float: right;
+            margin: 1rem 0.5rem 0.5rem;
+        }
+    </style>
 </head>
 <body>
-
+    <div class="container">
+        <div class="items">
+            <div class="item">
+                <h2 class="item__title"><a href="#" class="item__link">Automobiles &raquo;</a></h2>
+                <img src="./img/placeholder-200x200.jpg" alt="" class="item__picture">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure debitis expedita aliquid sed delectus
+                    officia. Ea aliquid alias inventore necessitatibus possimus sunt repellendus quia autem quibusdam
+                    molestiae? Similique, suscipit facilis!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio labore iste deleniti, veniam
+                    modi eligendi aliquam dolorum beatae excepturi consequuntur similique voluptatem velit qui numquam
+                    perspiciatis repellat officiis consequatur dolore.</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quos, ipsum error omnis
+                    porro commodi
+                </p>
+            </div>
+            <div class="item">
+                <h2 class="item__title"><a href="#" class="item__link">Automobiles &raquo;</a></h2>
+                <img src="./img/placeholder-200x200.jpg" alt="" class="item__picture">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure debitis expedita aliquid sed delectus
+                    officia. Ea aliquid alias inventore necessitatibus possimus sunt repellendus quia autem quibusdam
+                    molestiae? Similique, suscipit facilis!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio labore iste deleniti, veniam
+                    modi eligendi aliquam dolorum beatae excepturi consequuntur similique voluptatem velit qui numquam
+                    perspiciatis repellat officiis consequatur dolore.</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quos, ipsum error omnis
+                    porro commodi
+                </p>
+            </div>
+            <div class="item">
+                <h2 class="item__title"><a href="#" class="item__link">Automobiles &raquo;</a></h2>
+                <img src="./img/placeholder-200x200.jpg" alt="" class="item__picture">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure debitis expedita aliquid sed delectus
+                    officia. Ea aliquid alias inventore necessitatibus possimus sunt repellendus quia autem quibusdam
+                    molestiae? Similique, suscipit facilis!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio labore iste deleniti, veniam
+                    modi eligendi aliquam dolorum beatae excepturi consequuntur similique voluptatem velit qui numquam
+                    perspiciatis repellat officiis consequatur dolore.</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quos, ipsum error omnis
+                    porro commodi
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cBlue: #1D7CAE;
+            --cGray: #858C97;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .news__block {
+            padding: 20px;
+        }
+
+        .news__title {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .news__title-selector-link {
+            text-decoration: none;
+            padding: 0 1em;
+            color: var(--cBlue);
+        }
+
+        .items__row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .item {
+            width: 33.33%;
+            padding: 10px 30px 10px 0;
+        }
+
+        .item__pic {
+            height: 80px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .item__text {
+            padding-top: 10px;
+        }
+
+        .item__text-title {
+            margin: 0;
+            font-size: 1rem;
+            color: var(--cGray);
+        }
+
+        .item__text-subtitle {
+            max-height: 3.5em;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .item__text-subtitle-link {
+            text-decoration: none;
+            color: var(--cBlue);
+        }
+
+        .item_pagination {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .item_pagination-btn {
+            text-decoration: none;
+            color: var(--cBlue);
+            display: inline-block;
+            width: 1.2em;
+            height: 1.2em;
+
+        }
+
+        .item_pagination-btn+.item_pagination-btn {
+            margin-left: 0.5em;
+        }
+
+        .item_pagination-btn:hover,
+        .item_pagination-btn--active {
+            color: #fff;
+            background-color: #37BEEE;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="news__block">
+            <div class="news__title">
+                <h2 class="news__title-title">Новости</h2>
+                <div class="news__title-selectors">
+                    <span class="news__title-selector"><a href="#" class="news__title-selector-link">Выберите
+                            дату</a></span>
+                    /
+                    <span class="news__title-selector"><a href="#" class="news__title-selector-link">Покаазть весь
+                            архив</a></span>
+                </div>
+            </div>
+            <div class="items">
+                <div class="items__row">
+                    <div class="item">
+                        <a href="#" class="item__pic-link"><img src="./img/placeholder-200x200.jpg" alt=""
+                                class="item__pic"></a>
+                        <div class="item__text">
+                            <h3 class="item__text-title">30 ноября 2014</h3>
+                            <p class="item__text-subtitle"><a href="#" class="item__text-subtitle-link">Важная
+                                    информация с 1
+                                    декабря
+                                    2014г.</a></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a href="#" class="item__pic-link"><img src="./img/placeholder-200x200.jpg" alt=""
+                                class="item__pic"></a>
+                        <div class="item__text">
+                            <h3 class="item__text-title">30 ноября 2014</h3>
+                            <p class="item__text-subtitle"><a href="#" class="item__text-subtitle-link">Важная
+                                    информация с 1
+                                    декабря
+                                    2014г.Важная
+                                    информация с 1
+                                    декабря
+                                    2014г.Важная
+                                    информация с 1
+                                    декабря
+                                    2014г.</a></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a href="#" class="item__pic-link"><img src="./img/placeholder-200x200.jpg" alt=""
+                                class="item__pic"></a>
+                        <div class="item__text">
+                            <h3 class="item__text-title">30 ноября 2014</h3>
+                            <p class="item__text-subtitle"><a href="#" class="item__text-subtitle-link">Важная
+                                    информация с 1
+                                    декабря
+                                    2014г.</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="items__row">
+                    <div class="item">
+                        <a href="#" class="item__pic-link"><img src="./img/placeholder-200x200.jpg" alt=""
+                                class="item__pic"></a>
+                        <div class="item__text">
+                            <h3 class="item__text-title">30 ноября 2014</h3>
+                            <p class="item__text-subtitle"><a href="#" class="item__text-subtitle-link">Важная
+                                    информация с 1
+                                    декабря
+                                    2014г.</a></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a href="#" class="item__pic-link"><img src="./img/placeholder-200x200.jpg" alt=""
+                                class="item__pic"></a>
+                        <div class="item__text">
+                            <h3 class="item__text-title">30 ноября 2014</h3>
+                            <p class="item__text-subtitle"><a href="#" class="item__text-subtitle-link">Важная
+                                    информация с 1
+                                    декабря
+                                    2014г.</a></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a href="#" class="item__pic-link"><img src="./img/placeholder-200x200.jpg" alt=""
+                                class="item__pic"></a>
+                        <div class="item__text">
+                            <h3 class="item__text-title">30 ноября 2014</h3>
+                            <p class="item__text-subtitle"><a href="#" class="item__text-subtitle-link">Важная
+                                    информация с 1
+                                    декабря
+                                    2014г.</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item_pagination">
+                <a href="#" class="item_pagination-btn item_pagination-btn--active">1</a>
+                <a href="#" class="item_pagination-btn">2</a>
+                <a href="#" class="item_pagination-btn">3</a>
+                <a href="#" class="item_pagination-btn">4</a>
+                <a href="#" class="item_pagination-btn">5</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
