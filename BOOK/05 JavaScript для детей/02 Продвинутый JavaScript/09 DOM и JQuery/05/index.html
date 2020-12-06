@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изучаем DOM</title>
+</head>
+<body>
+    <h1 id="main-heading">Hello world</h1>
+    <script src="../lib/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#main-heading").text("Мои друзья");
+
+            let myFrends = ["Tom", "Nina", "Alex", "Bob",]
+            myFrends.forEach((item) => {
+                newP = $("body").append(`<p>${item}</p>`)
+            });
+            $("p").hide();
+            $("p").fadeIn(2000);
+            $("p").append(" Лучший");
+        });
+    </script>
+</body>
+</html>

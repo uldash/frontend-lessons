@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Образование</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .forum__title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            background-color: #0082B5;
+            height: 2.5rem;
+        }
+
+        .forum__title a {
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .forum__title-education {
+            color: #bacfd8;
+
+        }
+
+        .forum__title-rss {
+            color: #fff;
+        }
+
+        .forum__theme {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .forum__theme-head-row {
+            background-color: #DFE6ED;
+            height: 2.5rem;
+            color: #696C6E;
+        }
+
+        .forum__theme-title-theme,
+        .forum__theme-title-renewal {
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        td {
+            border: 1px solid #c7cfd4;
+        }
+
+        td {
+            padding: 10px 20px;
+        }
+
+        .forum__theme-body-row {
+            background-color: #FBFBFB;
+            color: #696C6E;
+        }
+
+        .forum__theme-cell-img {
+            width: 60px;
+        }
+
+        .forum__theme-cell-theme {
+            width: auto;
+        }
+
+        .forum__theme-cell-answer {
+            width: 8%;
+        }
+
+        .forum__theme-cell-viewer {
+            width: 10%;
+        }
+
+        .forum__theme-cell-renewal {
+            width: 25%;
+        }
+
+        .forum__theme-body-row {
+            /* vertical-align: text-top; */
+        }
+
+        .forum__theme-cell-pic {
+            vertical-align: top;
+        }
+
+        .theme__img {}
+
+        .forum__theme-cell-theme {
+            vertical-align: top;
+            /* padding-top: 10px; */
+        }
+
+        .theme__title {
+            margin: 0;
+        }
+
+        .theme__link {
+            text-decoration: none;
+            color: #2D9AD3;
+            font-weight: 700;
+        }
+
+        .--cRed {
+            color: #f00;
+        }
+
+        .theme__pagination {
+            text-decoration: none;
+            font-weight: 700;
+            color: #2D9AD3;
+            word-spacing: 0.1em;
+        }
+
+        .theme__subtitle {
+            margin: 0;
+        }
+
+        .forum__theme-cell-answer {
+            vertical-align: top;
+        }
+
+        .answer__count {
+            margin: 0;
+        }
+
+        .forum__theme-cell-viewer {
+            vertical-align: top;
+        }
+
+        .viewer__count {
+            margin: 0;
+        }
+
+        .forum__theme-cell-renewal {
+            vertical-align: top;
+        }
+
+        .renewal__date {
+            margin: 0;
+        }
+
+        .renewal__date-link {
+            text-decoration: none;
+            font-weight: 700;
+            color: #2D9AD3;
+        }
+
+        .renewal__author {
+            margin: 0;
+        }
+
+        .renewal__author-link {
+            text-decoration: none;
+            color: #696C6E;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="forum">
+            <div class="container">
+                <div class="forum__title">
+                    <a href="#" class="forum__title-education">Образование</a>
+                    <a href="#" class="forum__title-rss">RSS</a>
+                </div>
+                <table class="forum__theme">
+                    <thead>
+                        <tr class="forum__theme-head-row">
+                            <th colspan="2" class="forum__theme-title-theme">Темы</th>
+                            <th class="forum__theme-title-answer">Ответы</th>
+                            <th class="forum__theme-title-viewer">Просмотры</th>
+                            <th class="forum__theme-title-renewal">Обновление</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="forum__theme-body-row">
+                            <td class="forum__theme-cell-pic">
+                                <img src="./img/active.jpg" alt="" class="theme__img">
+                            </td>
+                            <td class="forum__theme-cell-theme">
+                                <p class="theme__title">
+                                    <a href="#" class="theme__link">Образование должно служить Человеку, не рынку. <span
+                                            class="--cRed">new</span></a>
+                                    (<a href="#" class="theme__pagination">1, 2, 3 ... 66</a>)
+                                </p>
+                                <p class="theme__subtitle">
+                                    Высшее образование - ВСЕМ, тараторщина - это дебилизация и дескриминация - автор:
+                                    Владимир Васильевич Машков
+                                </p>
+                            </td>
+                            <td class="forum__theme-cell-answer">
+                                <p class="answer__count">
+                                    667
+                                </p>
+                            </td>
+                            <td class="forum__theme-cell-viewer">
+                                <p class="viewer__count">
+                                    36575
+                                </p>
+                            </td>
+                            <td class="forum__theme-cell-renewal">
+                                <p class="renewal__date">
+                                    <a href="#" class="renewal__date-link">27.11.2014 16:09:16</a>
+                                </p>
+                                <p class="renewal__author">
+                                    <a href="#" class="renewal__author-link">ecoil</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="forum__theme-body-row">
+                            <td class="forum__theme-cell-pic">
+                                <img src="./img/not-active.jpg" alt="" class="theme__img">
+                            </td>
+                            <td class="forum__theme-cell-theme">
+                                <p class="theme__title">
+                                    <a href="#" class="theme__link">Какой должна быть школа будущего </a>
+                                    (<a href="#" class="theme__pagination">1, 2, 3 ... 33</a>)
+                                </p>
+                                <p class="theme__subtitle">
+                                    Прежде всего, школа обязана сформировать из ребенка Человека. Не накачивать его
+                                    знаниями, а изменять, чтобы понимал себя, природу и человеческое общество. - автор:
+                                    andre75
+                                </p>
+                            </td>
+                            <td class="forum__theme-cell-answer">
+                                <p class="answer__count">
+                                    326
+                                </p>
+                            </td>
+                            <td class="forum__theme-cell-viewer">
+                                <p class="viewer__count">
+                                    50557
+                                </p>
+                            </td>
+                            <td class="forum__theme-cell-renewal">
+                                <p class="renewal__date">
+                                    <a href="#" class="renewal__date-link">04.10.2014 20:11:48</a>
+                                </p>
+                                <p class="renewal__author">
+                                    <a href="#" class="renewal__author-link">PINGVIN</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="forum__theme-body-row">
+                            <td class="forum__theme-cell-pic">
+                                <img src="./img/not-active.jpg" alt="" class="theme__img">
+                            </td>
+                            <td class="forum__theme-cell-theme">
+                                <p class="theme__title">
+                                    <a href="#" class="theme__link">Какой должна быть школа будущего </a>
+                                    (<a href="#" class="theme__pagination">1, 2, 3 ... 33</a>)
+                                </p>
+                                <p class="theme__subtitle">
+                                    Прежде всего, школа обязана сформировать из ребенка Человека. Не накачивать его
+                                    знаниями, а изменять, чтобы понимал себя, природу и человеческое общество. - автор:
+                                    andre75
+                                </p>
+                            </td>
+                            <td class="forum__theme-cell-answer">
+                                <p class="answer__count">
+                                    326
+                                </p>
+                            </td>
+                            <td class="forum__theme-cell-viewer">
+                                <p class="viewer__count">
+                                    50557
+                                </p>
+                            </td>
+                            <td class="forum__theme-cell-renewal">
+                                <p class="renewal__date">
+                                    <a href="#" class="renewal__date-link">04.10.2014 20:11:48</a>
+                                </p>
+                                <p class="renewal__author">
+                                    <a href="#" class="renewal__author-link">PINGVIN</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="forum__theme-body-row">
+                            <td class="forum__theme-cell-pic">
+                                <img src="./img/not-active.jpg" alt="" class="theme__img">
+                            </td>
+                            <td class="forum__theme-cell-theme">
+                                <p class="theme__title">
+                                    <a href="#" class="theme__link">Какой должна быть школа будущего </a>
+                                    (<a href="#" class="theme__pagination">1, 2, 3 ... 33</a>)
+                                </p>
+                                <p class="theme__subtitle">
+                                    Прежде всего, школа обязана сформировать из ребенка Человека. Не накачивать его
+                                    знаниями, а изменять, чтобы понимал себя, природу и человеческое общество. - автор:
+                                    andre75
+                                </p>
+                            </td>
+                            <td class="forum__theme-cell-answer">
+                                <p class="answer__count">
+                                    326
+                                </p>
+                            </td>
+                            <td class="forum__theme-cell-viewer">
+                                <p class="viewer__count">
+                                    50557
+                                </p>
+                            </td>
+                            <td class="forum__theme-cell-renewal">
+                                <p class="renewal__date">
+                                    <a href="#" class="renewal__date-link">04.10.2014 20:11:48</a>
+                                </p>
+                                <p class="renewal__author">
+                                    <a href="#" class="renewal__author-link">PINGVIN</a>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

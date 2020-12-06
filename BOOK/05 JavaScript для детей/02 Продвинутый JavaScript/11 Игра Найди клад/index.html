@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            /* display: inline-block; */
+            /* background-color: burlywood; */
+            /* width: 180px; */
+            text-align: center;
+        }
+
+        figure {
+            /* position: relative; */
+        }
+    </style>
+</head>
+<body>
+    <h1>Найди клад</h1>
+    <!-- <img src="./img/treasuremap.webp" alt="" class="map__treasure">
+    
+    <p class="map__label">Карта сокровищ</p>
+    -->
+    <figure>
+        <img src="./img/treasuremap.webp" alt="" class="map__treasure">
+        <figcaption class="map__label">Карта сокровищ</figcaption>
+    </figure>
+    <script src="../lib/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            let getDistance = function (event, target) {
+                let diffX = event.offsetX - target.x;
+                let diffY = event.offsetY - target.y;
+
+                return Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2));
+            };
+
+            let getDistanceHint = function (distance) {
+                if (distance < 10) {
+                    return "Обожжешься!!!";
+                } else if (distance < 20) {
+                    return "Очень горячо";
+                } else if (distance < 40) {
+                    return "Гоячо";
+                } else if (distance < 80) {
+                    return "Тепло";
+                } else if (distance < 160) {
+                    return "Холодно";
+                } else if (distance < 320) {
+                    return "Очень холодно";
+                } else {
+                    return "Замерзнеш!"
+                }
+            }
+
+            let clicks = 0;
+            let width = 400;
+            let height = 400;
+
+            let target = {
+                x: Math.floor(Math.random() * width + $(".map__treasure").offset().left),
+                y: Math.floor(Math.random() * height + $(".map__treasure").offset().top),
+
+            }
+
+            $(".map__treasure").click((event) => {
+                // $(".map__label").text(`${event.pageX} ${event.pageY} ${target.x} ${target.x}`)
+                clicks++;
+                let distance = getDistance(event, target);
+                let distanceHint = getDistanceHint(distance);
+                $(".map__label").text(distanceHint);
+
+                if (distance < 8) {
+                    alert(`Клад найден! Сделано кликов: ${clicks}`)
+                }
+            });
+        });
+    </script>
+</body>
+</html>

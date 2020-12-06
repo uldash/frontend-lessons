@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="main-heading">
+        Hello World!!!
+    </h1>
+    <script>
+        let headingElement = document.getElementById("main-heading");
+        document.write(headingElement.innerHTML);
+        document.write(headingElement.innerText);
+        console.log(headingElement.innerHTML);
+        console.log(headingElement.innerText);
+
+        let newHeadingText = prompt("Введите новый заголовок");
+        headingElement.innerHTML = newHeadingText;
+    </script>
+</body>
+</html>

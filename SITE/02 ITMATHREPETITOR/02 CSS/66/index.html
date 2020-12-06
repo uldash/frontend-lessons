@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 декабря</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .--cRed {
+            color: #a53625;
+        }
+
+        body {
+            background-color: #2B2F32;
+        }
+
+
+        .calendar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+            max-width: 300px;
+            width: 100%;
+            height: 300px;
+            background-color: #212528;
+            color: #777979;
+            text-shadow: 0px 2px 2px #000;
+            padding: 10px 20px;
+            border-radius: 6px;
+            box-shadow: inset 0 0 10px 5px #101013;
+            border-bottom: 2px solid #363B3E;
+            /* display: flow-root; */
+            /* overflow: auto; */
+        }
+
+        .calendar__title {
+            color: #fff;
+            margin-top: 0;
+            margin-bottom: 10px;
+
+        }
+
+        .calendar__month {
+            /* color: #777979; */
+            margin: 0;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .calendar__table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .laquo {
+            color: #777979;
+            margin-right: 20px;
+        }
+
+
+        .raquo {
+            color: #777979;
+            margin-left: 20px;
+        }
+
+        .laquo:hover,
+        .raquo:hover {
+            color: #fff;
+        }
+
+        .calendar__day-name,
+        .calendar__day {
+            width: 1.9rem;
+            height: 1.9rem;
+            text-align: center;
+        }
+
+        .calendar__day {
+            cursor: pointer;
+        }
+
+        .calendar__day:not(.--active-day):hover {
+            background-color: #fff;
+        }
+
+        .--active-day {
+            cursor: auto;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="calendar">
+        <div class="wrapper">
+            <h2 class="calendar__title">
+                Календарь
+            </h2>
+            <h3 class="calendar__month"><a href="#" class="laquo">&laquo;</a>Декабрь 2014<a href="#"
+                    class="raquo">&raquo;</a>
+            </h3>
+            <table class="calendar__table">
+                <tr class="calendar__day-of-week">
+                    <th class="calendar__day-name">Пн</th>
+                    <th class="calendar__day-name">Вт</th>
+                    <th class="calendar__day-name">Ср</th>
+                    <th class="calendar__day-name">Чт</th>
+                    <th class="calendar__day-name">Пт</th>
+                    <th class="calendar__day-name --cRed">Сб</th>
+                    <th class="calendar__day-name --cRed">Вс</th>
+                </tr>
+                <tr class="calendar__day-of-month">
+                    <td class="calendar__day">1</td>
+                    <td class="calendar__day">2</td>
+                    <td class="calendar__day --active-day">3</td>
+                    <td class="calendar__day">4</td>
+                    <td class="calendar__day">5</td>
+                    <td class="calendar__day --cRed">6</td>
+                    <td class="calendar__day --cRed">7</td>
+                </tr>
+                <tr>
+                    <td class="calendar__day">8</td>
+                    <td class="calendar__day">9</td>
+                    <td class="calendar__day">10</td>
+                    <td class="calendar__day">11</td>
+                    <td class="calendar__day">12</td>
+                    <td class="calendar__day --cRed">13</td>
+                    <td class="calendar__day --cRed">14</td>
+                </tr>
+                <tr>
+                    <td class="calendar__day">15</td>
+                    <td class="calendar__day">16</td>
+                    <td class="calendar__day">17</td>
+                    <td class="calendar__day">18</td>
+                    <td class="calendar__day">19</td>
+                    <td class="calendar__day --cRed">20</td>
+                    <td class="calendar__day --cRed">21</td>
+                </tr>
+                <tr>
+                    <td class="calendar__day">22</td>
+                    <td class="calendar__day">23</td>
+                    <td class="calendar__day">24</td>
+                    <td class="calendar__day">25</td>
+                    <td class="calendar__day">26</td>
+                    <td class="calendar__day --cRed">27</td>
+                    <td class="calendar__day --cRed">28</td>
+                </tr>
+                <tr>
+                    <td class="calendar__day">29</td>
+                    <td class="calendar__day">30</td>
+                    <td class="calendar__day">31</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            display: inline-block;
+            background-color: burlywood;
+            width: 180px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <script src="../lib/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            let x = 0; y = 0, lh = 200;
+            let counter = 0;
+
+            let direction = {
+                "right": {
+                    x: 1,
+                    y: 0,
+                },
+                "down": {
+                    x: 0,
+                    y: 1,
+                },
+                "left": {
+                    x: -1,
+                    y: 0,
+                },
+                "up": {
+                    x: 0,
+                    y: -1,
+                },
+                "currentDirection": "right",
+                "next": function () {
+                    let drct = ["right", "down", "left", "up",]
+                    this.currentDirection = (drct.indexOf(this.currentDirection) === 3) ? drct[0] : drct[drct.indexOf(this.currentDirection) + 1];
+                    return this;
+                },
+                setStep: function (stp) {
+                    this["right"].x = stp;
+                    this["down"].y = stp;
+                    this["left"].x = -stp;
+                    this["up"].y = -stp;
+                    return this;
+                },
+            }
+
+            let moveSquad = function () {
+                $("h1").offset({ left: x, top: y })
+
+                if (x > lh) {
+                    direction.next();
+                    x -= counter
+                }
+                if (y > lh) {
+                    direction.next();
+                    y -= counter
+                }
+                if (x < 0) {
+                    direction.next();
+                    x += counter
+                }
+                if (y < 0) {
+                    direction.next();
+                    y += counter
+                }
+
+
+                x += direction[direction.currentDirection].x
+                y += direction[direction.currentDirection].y
+            }
+
+            let intervalId;
+
+
+            $("h1").click(() => {
+                if (intervalId) {
+                    clearInterval(intervalId);
+                    counter += 1;
+                    direction.setStep(counter);
+                    intervalId = setInterval(moveSquad, 10)
+                    $("h1").text(counter);
+                } else {
+                    intervalId = setInterval(moveSquad, 10)
+                }
+
+                if (counter === 5) {
+                    clearInterval(intervalId);
+                    alert("WIN")
+                    counter = 0;
+                }
+            })
+        });
+    </script>
+</body>
+</html>

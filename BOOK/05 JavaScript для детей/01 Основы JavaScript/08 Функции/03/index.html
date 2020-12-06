@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let areArraySame = function (arr1, arr2) {
+            if (arr1.length != arr1.length) {
+                return false;
+            };
+            for (let i = 0; i < arr1.length; i++) {
+                if (arr1[i] != arr2[i]) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        let arr1 = [1, 2, 3];
+        let arr2 = [4, 5, 6];
+        document.write(`${arr1} == ${arr2}? ${areArraySame(arr1, arr2)}<br>`);
+
+        arr2 = [1, 2, 3];
+        document.write(`${arr1} == ${arr2}? ${areArraySame(arr1, arr2)}<br>`);
+
+        arr2 = [1, 2];
+        document.write(`${arr1} == ${arr2}? ${areArraySame(arr1, arr2)}<br>`);
+
+        arr2 = [1, 2, 3, 4];
+        document.write(`${arr1} == ${arr2}? ${areArraySame(arr1, arr2)}<br>`);
+    </script>
+</body>
+</html>
