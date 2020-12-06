@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виселица</title>
+</head>
+<body>
+    <script>
+        let words = ["программа", "макака", "прекрасный", "оладушек"];
+
+        let word = words[Math.floor(Math.random() * words.length)];
+
+        let answerArray = "_".repeat(word.length).split("");
+
+        let remainingLetters = word.length;
+
+        while (remainingLetters > 0) {
+            alert(answerArray.join(" "));
+
+            var guess = prompt("Угадайте букву или нажмите Отмена для выхода из игры");
+            if (guess === null) {
+                break;
+            } else if (guess.length != 1) {
+                alert("Пожалуйста, введите только одну букву.")
+            } else {
+                guess = guess.toLowerCase();
+                for (let i = 0; i < word.length; i++) {
+                    if (word[i] === guess && answerArray[i] === "_") {
+                        answerArray[i] = guess;
+                        remainingLetters--;
+                    }
+                }
+            }
+        }
+        alert(answerArray.join(" "));
+        alert("Отлично, было загадано слово " + word);
+    </script>
+</body>
+</html>
