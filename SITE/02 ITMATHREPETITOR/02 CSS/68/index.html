@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Научное сотрудничество</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+            background-color: #EDEDED;
+            padding: 10px 40px;
+            border-radius: 6px;
+        }
+
+        .menu-link {
+            text-decoration: none;
+            display: inline-block;
+            color: #38798D;
+            /* font-weight: 700; */
+        }
+
+        .menu-link:hover {
+            color: #70B0CE;
+        }
+
+        .menu-li+.menu-li {
+            margin-left: 20px;
+        }
+
+        .content {
+            border: 2px solid #EDEDED;
+            border-radius: 6px;
+            padding: 0 40px 20px;
+        }
+
+        .content__items {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .content__item {
+            width: 200px;
+        }
+
+        .content__item+.content__item {
+            margin-left: 10px;
+        }
+
+        .content__item-picture {
+            border: 12px solid #ECECEC;
+            background-color: #fff;
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content__item-picture-img {
+            width: 80%;
+        }
+
+        .content__item-caption {
+            text-align: center;
+            color: #38798D;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="menu_main">
+                <ul class="menu">
+                    <li class="menu-li"><a href="#" class="menu-link">Все партнеры</a></li>
+                    <li class="menu-li"><a href="#" class="menu-link">Научное сотрудничество</a></li>
+                    <li class="menu-li"><a href="#" class="menu-link">Федеральное сотрудничество</a></li>
+                    <li class="menu-li"><a href="#" class="menu-link">Клиника</a></li>
+                    <li class="menu-li"><a href="#" class="menu-link">Производство</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="content">
+                <h2 class="content__title">
+                    Научное сотрудничество
+                </h2>
+                <div class="content__items">
+                    <div class="content__item">
+                        <div class="content__item-picture">
+                            <img src="./img/1.jpg" alt="" class="content__item-picture-img">
+                        </div>
+                        <p class="content__item-caption">
+                            Санкт-Петербургский Институт Биорегуляции и Геронтологии
+                        </p>
+                    </div>
+                    <div class="content__item">
+                        <div class="content__item-picture">
+                            <img src="./img/2.jpg" alt="" class="content__item-picture-img">
+                        </div>
+                        <p class="content__item-caption">
+                            Общество антивозрастной медицины
+                        </p>
+                    </div>
+                    <div class="content__item">
+                        <div class="content__item-picture">
+                            <img src="./img/3.jpg" alt="" class="content__item-picture-img">
+                        </div>
+                        <p class="content__item-caption">
+                            Международная ассоциация геронтологии и гериатрии
+                        </p>
+                    </div>
+                    <div class="content__item">
+                        <div class="content__item-picture">
+                            <img src="./img/4.jpg" alt="" class="content__item-picture-img">
+                        </div>
+                        <p class="content__item-caption">
+                            Фонд поддержки препаратов для профилактики онкологических заболеваний
+                        </p>
+                    </div>
+                    <div class="content__item">
+                        <div class="content__item-picture">
+                            <img src="./img/5.jpg" alt="" class="content__item-picture-img">
+                        </div>
+                        <p class="content__item-caption">
+                            ФМБА России
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+</body>
+</html>

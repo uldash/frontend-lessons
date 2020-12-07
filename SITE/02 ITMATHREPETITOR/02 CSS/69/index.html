@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            color: #fff;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .accommodation {
+            background-image: url("./img/paris.jpg");
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 20px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .accommodation__wrapper {
+            background-color: rgba(80, 80, 80, 0.7);
+            width: 300px;
+            padding: 10px;
+            margin-bottom: 60px;
+        }
+
+        .accommodation__title {
+            font-size: 2rem;
+            margin: 0;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        .accommodation__number {
+            margin: 0;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        .accommodation__flag {
+            height: 0.5em;
+            margin-left: 0.3em;
+            box-shadow: 2px 2px 5px #000;
+        }
+
+        .booked {
+            background-color: #F3F4F8;
+            border-radius: 6px;
+            padding: 20px;
+        }
+
+        .booked__title {
+            color: #073372;
+        }
+
+        .booked__items {}
+
+        .booked__item {
+            padding: 20px;
+            background-color: #fff;
+            overflow: auto;
+            border-left: 4px solid #003581;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .booked__item::before {
+            content: "";
+            position: absolute;
+            border: 10px solid transparent;
+            border-left: 7px solid #003581;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        .booked__item-logo {
+            float: left;
+            width: 80px;
+            border-radius: 4px;
+            margin-right: 20px;
+        }
+
+        .booked__item-who {
+            color: #89817F;
+            margin: 0 0 5px 0;
+        }
+
+        .booked__item-that {
+            color: #073372;
+            margin: 0;
+        }
+
+        .booked__item-that-link {
+            color: #5DB9F2;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+
+        <div class="accommodation">
+            <div class="container">
+                <div class="accommodation__wrapper">
+                    <h2 class="accommodation__title">Париж <img src="./img/flag.jpg" alt="" class="accommodation__flag">
+                    </h2>
+                    <h3 class="accommodation__number">2748 вариантов размещения</h3>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="booked">
+                <h2 class="booked__title">Только что забронировано</h2>
+                <div class="booked__items">
+                    <div class="booked__item">
+                        <img src="./img/69-1.jpg" alt="" class="booked__item-logo">
+                        <h3 class="booked__item-who">
+                            Гость из Франции
+                        </h3>
+                        <p class="booked__item-that">
+                            забронировал проживание в: <a href="#" class="booked__item-that-link">Hotel Royal Phare</a>
+                        </p>
+                    </div>
+                    <div class="booked__item">
+                        <img src="./img/69-2.jpg" alt="" class="booked__item-logo">
+                        <h3 class="booked__item-who">
+                            Гость из Германии
+                        </h3>
+                        <p class="booked__item-that">
+                            забронировал проживание в: <a href="#" class="booked__item-that-link">Amelie</a>
+                        </p>
+                    </div>
+                    <div class="booked__item">
+                        <img src="./img/69-3.jpg" alt="" class="booked__item-logo">
+                        <h3 class="booked__item-who">
+                            Гость из Бельгии
+                        </h3>
+                        <p class="booked__item-that">
+                            забронировал проживание в: <a href="#" class="booked__item-that-link">Les Jardins Du
+                                Marais</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

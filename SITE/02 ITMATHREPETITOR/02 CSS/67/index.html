@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебники и пособия</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .textbooks__title {
+
+            margin-bottom: 15px;
+        }
+
+        .table-of-contens {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            border-top: 1px solid #000;
+            border-bottom: 1px solid rgb(180, 180, 180);
+            padding: 6px 10px 0 10px;
+            margin-top: 0;
+
+        }
+
+        .table-of-contens-link {
+            color: #6F6F6F;
+            display: inline-block;
+            border: 1px solid transparent;
+            padding: 6px;
+            position: relative;
+            bottom: -1px;
+            outline: none;
+
+        }
+
+        .ui-state-active>.table-of-contens-link {
+            border: 1px solid rgb(180, 180, 180);
+            border-bottom: 1px solid #fff;
+            background-color: #fff;
+        }
+
+        .--no-active {
+            color: #CDCBCC;
+            text-decoration: none;
+            pointer-events: none;
+            cursor: default;
+        }
+
+        .item {
+            border-bottom: 1px solid rgb(180, 180, 180);
+        }
+
+        .item__cover {
+            width: 60px;
+            float: left;
+            margin-right: 15px;
+        }
+
+        .item__title-link {
+            color: #5895c4;
+
+        }
+
+        .item__text {
+            color: #6A6E6D;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="textbooks">
+            <div class="container">
+                <h2 class="textbooks__title">
+                    Учебники и пособия
+                </h2>
+                <div id="textbooks__tabs">
+                    <ul class="table-of-contens">
+                        <li class="table-of-contens-li"><a href="#ALL" class="table-of-contens-link">Все</a></li>
+                        <li class="table-of-contens-li"><a href="#A" class="table-of-contens-link">А</a></li>
+                        <li class="table-of-contens-li"><a href="#B" class="table-of-contens-link">Б</a></li>
+                        <li class="table-of-contens-li"><a href="#V" class="table-of-contens-link">В</a></li>
+                        <li class="table-of-contens-li"><a href="#G" class="table-of-contens-link --no-active">Г</a>
+                        </li>
+                        <li class="table-of-contens-li"><a href="#D" class="table-of-contens-link">Д</a></li>
+                        <li class="table-of-contens-li"><a href="#E" class="table-of-contens-link">Е</a></li>
+                        <li class="table-of-contens-li"><a href="#ZH" class="table-of-contens-link">Ж</a></li>
+                        <li class="table-of-contens-li"><a href="#Z" class="table-of-contens-link">З</a></li>
+                        <li class="table-of-contens-li"><a href="#I" class="table-of-contens-link --no-active">И</a>
+                        </li>
+                        <li class="table-of-contens-li"><a href="#K" class="table-of-contens-link">К</a></li>
+                        <li class="table-of-contens-li"><a href="#L" class="table-of-contens-link">Л</a></li>
+                        <li class="table-of-contens-li"><a href="#M" class="table-of-contens-link">М</a></li>
+                        <li class="table-of-contens-li"><a href="#N" class="table-of-contens-link">Н</a></li>
+                        <li class="table-of-contens-li"><a href="#O" class="table-of-contens-link">О</a></li>
+                        <li class="table-of-contens-li"><a href="#P" class="table-of-contens-link">П</a></li>
+                        <li class="table-of-contens-li"><a href="#R" class="table-of-contens-link --no-active">Р</a>
+                        </li>
+                        <li class="table-of-contens-li"><a href="#S" class="table-of-contens-link">С</a></li>
+                        <li class="table-of-contens-li"><a href="#T" class="table-of-contens-link">Т</a></li>
+                        <li class="table-of-contens-li"><a href="#U" class="table-of-contens-link --no-active">У</a>
+                        </li>
+                        <li class="table-of-contens-li"><a href="#F" class="table-of-contens-link --no-active">Ф</a>
+                        </li>
+                        <li class="table-of-contens-li"><a href="#H" class="table-of-contens-link --no-active">Х</a>
+                        </li>
+                        <li class="table-of-contens-li"><a href="#C" class="table-of-contens-link --no-active">Ц</a>
+                        </li>
+                        <li class="table-of-contens-li"><a href="#CH" class="table-of-contens-link --no-active">Ч</a>
+                        </li>
+                        <li class="table-of-contens-li"><a href="#SH" class="table-of-contens-link">Ш</a></li>
+                        <li class="table-of-contens-li"><a href="#SHCH" class="table-of-contens-link --no-active">Щ</a>
+                        </li>
+                        <li class="table-of-contens-li"><a href="#EE" class="table-of-contens-link --no-active">Э</a>
+                        </li>
+                        <li class="table-of-contens-li"><a href="#YU" class="table-of-contens-link --no-active">Ю</a>
+                        </li>
+                        <li class="table-of-contens-li"><a href="#YA" class="table-of-contens-link --no-active">Я</a>
+                        </li>
+                        <li class="table-of-contens-li"><a href="#OTHERS"
+                                class="table-of-contens-link --no-active">Прочие</a></li>
+                    </ul>
+                    <div id="ALL">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus fugiat nesciunt nihil
+                            quam a, voluptate doloribus, iure, labore nobis consequatur velit eveniet cupiditate
+                            suscipit assumenda commodi architecto esse explicabo odio?</p>
+                    </div>
+                    <div id="A"></div>
+                    <div id="B"></div>
+                    <div id="V"></div>
+                    <div id="G"></div>
+                    <div id="D">
+                        <div class="item">
+                            <img src="./img/davidov.jpg" alt="Возрастная и педагогическая
+                            психология" class="item__cover">
+                            <h3 class="item__title"><a href="#" class="item__title-link">Давыдов В.В. и др. Возрастная и
+                                    педагогическая
+                                    психология. - 1979</a></h3>
+                            <p class="item__text">
+                                Давыдов В.В. и др. Возрастная и педагогическая психология: учеб.для студентов пед.
+                                ин-тов / В.В.Давыдов, Т.В. Драгунова, Л.Б. Ительсон и др.ж под ред. А.В.Петровского. -
+                                Изд. 2-е, испр и доп. - М.: Просвещение, 1979. - 287, [1] с. - Библиогр.: с.286.
+                            </p>
+                        </div>
+                        <div class="item">
+                            <img src="./img/davidov.jpg" alt="Возрастная и педагогическая
+                            психология" class="item__cover">
+                            <h3 class="item__title"><a href="#" class="item__title-link">Давыдов В.В. и др. Возрастная и
+                                    педагогическая
+                                    психология. - 1979</a></h3>
+                            <p class="item__text">
+                                Давыдов В.В. и др. Возрастная и педагогическая психология: учеб.для студентов пед.
+                                ин-тов / В.В.Давыдов, Т.В. Драгунова, Л.Б. Ительсон и др.ж под ред. А.В.Петровского. -
+                                Изд. 2-е, испр и доп. - М.: Просвещение, 1979. - 287, [1] с. - Библиогр.: с.286.
+                            </p>
+                        </div>
+                        <div class="item">
+                            <img src="./img/davidov.jpg" alt="Возрастная и педагогическая
+                            психология" class="item__cover">
+                            <h3 class="item__title"><a href="#" class="item__title-link">Давыдов В.В. и др. Возрастная и
+                                    педагогическая
+                                    психология. - 1979</a></h3>
+                            <p class="item__text">
+                                Давыдов В.В. и др. Возрастная и педагогическая психология: учеб.для студентов пед.
+                                ин-тов / В.В.Давыдов, Т.В. Драгунова, Л.Б. Ительсон и др.ж под ред. А.В.Петровского. -
+                                Изд. 2-е, испр и доп. - М.: Просвещение, 1979. - 287, [1] с. - Библиогр.: с.286.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="E">
+                        <div class="item">
+                            <img src="./img/davidov.jpg" alt="Возрастная и педагогическая
+                            психология" class="item__cover">
+                            <h3 class="item__title"><a href="#" class="item__title-link">Давыдов В.В. и др. Возрастная и
+                                    педагогическая
+                                    психология. - 1979</a></h3>
+                            <p class="item__text">
+                                Давыдов В.В. и др. Возрастная и педагогическая психология: учеб.для студентов пед.
+                                ин-тов / В.В.Давыдов, Т.В. Драгунова, Л.Б. Ительсон и др.ж под ред. А.В.Петровского. -
+                                Изд. 2-е, испр и доп. - М.: Просвещение, 1979. - 287, [1] с. - Библиогр.: с.286.
+                            </p>
+                        </div>
+                        <div class="item">
+                            <img src="./img/davidov.jpg" alt="Возрастная и педагогическая
+                            психология" class="item__cover">
+                            <h3 class="item__title"><a href="#" class="item__title-link">Давыдов В.В. и др. Возрастная и
+                                    педагогическая
+                                    психология. - 1979</a></h3>
+                            <p class="item__text">
+                                Давыдов В.В. и др. Возрастная и педагогическая психология: учеб.для студентов пед.
+                                ин-тов / В.В.Давыдов, Т.В. Драгунова, Л.Б. Ительсон и др.ж под ред. А.В.Петровского. -
+                                Изд. 2-е, испр и доп. - М.: Просвещение, 1979. - 287, [1] с. - Библиогр.: с.286.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="ZH"></div>
+                    <div id="Z"></div>
+                    <div id="I"></div>
+                    <div id="K"></div>
+                    <div id="L"></div>
+                    <div id="M"></div>
+                    <div id="N"></div>
+                    <div id="O"></div>
+                    <div id="P"></div>
+                    <div id="R"></div>
+                    <div id="S"></div>
+                    <div id="T"></div>
+                    <div id="U"></div>
+                    <div id="F"></div>
+                    <div id="H"></div>
+                    <div id="C"></div>
+                    <div id="CH"></div>
+                    <div id="SH"></div>
+                    <div id="SHCH"></div>
+                    <div id="EE"></div>
+                    <div id="YU"></div>
+                    <div id="YA"></div>
+                    <div id="OTHERS"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#textbooks__tabs").tabs();
+        });
+    </script>
+</body>
+</html>
