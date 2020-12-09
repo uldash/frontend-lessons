@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 40px;
+        }
+
+        input {
+            display: block;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" class="text">
+    <br>
+    <input type="button" value="Я добавлю +" class="plus">
+    <input type="button" value="Я добавлю -" class="min">
+    <input type="button" value="Я добавлю /" class="div">
+    <input type="button" value="Я добавлю *" class="mult">
+    <br>
+    <input type="button" value="1" class="btn b1">
+    <input type="button" value="2" class="btn b2">
+    <input type="button" value="3" class="btn b3">
+    <input type="button" value="4" class="btn b4">
+    <input type="button" value="5" class="btn b5">
+    <input type="button" value="6" class="btn b6">
+    <input type="button" value="7" class="btn b7">
+    <input type="button" value="8" class="btn b8">
+    <input type="button" value="9" class="btn b9">
+    <input type="button" value="0" class="btn b0">
+    <br>
+    <input type="button" value="C" class="cls">
+    <input type="button" value="=" class="evl">
+
+    <script>
+        window.onload = function () {
+            let txt = document.querySelector(".text");
+
+            let plus = document.querySelector(".plus");
+            let min = document.querySelector(".min");
+            let div = document.querySelector(".div");
+            let mult = document.querySelector(".mult");
+
+            let cls = document.querySelector(".cls");
+            let evl = document.querySelector(".evl");
+
+
+
+            const add = function () {
+                txt.value += this.value.slice(-1);
+            }
+
+            plus.onclick = add;
+            min.onclick = add;
+            div.onclick = add;
+            mult.onclick = add;
+
+            let btns = document.querySelectorAll(".btn");
+
+            btns.forEach(item => {
+                item.onclick = add;
+            })
+
+            evl.onclick = function () {
+                txt.value = eval(txt.value);
+            }
+            cls.onclick = function () {
+                txt.value = "";
+            }
+        }
+    </script>
+</body>
+</html>

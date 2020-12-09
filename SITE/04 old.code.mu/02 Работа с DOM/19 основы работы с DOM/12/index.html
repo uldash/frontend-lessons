@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12</title>
+    <style>
+        body {
+            padding: 40px;
+        }
+
+        input {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <p>Это input type="submit"</p>
+    <input type="submit" name="submit" id="submit" value="Нажми на меня!">
+
+    <script>
+        let btn = document.getElementById("submit");
+        btn.onclick = function (e) {
+            this.value = "О, теперь на меня больше не нажать";
+            this.disabled = true;
+        }
+    </script>
+</body>
+</html>

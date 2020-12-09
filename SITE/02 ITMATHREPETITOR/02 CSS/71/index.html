@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зарегистрируйтесь</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #54433E;
+            color: #54433E;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .payment {}
+
+        .payment__title {
+            background-color: #DB6655;
+            text-transform: uppercase;
+            line-height: 5rem;
+            padding: 0 40px;
+            margin: 0;
+            color: #fff;
+            font-size: 1rem;
+            position: relative;
+        }
+
+        .payment__title::after {
+            content: "\D7";
+            position: absolute;
+            right: 40px;
+            font-size: 3rem;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        .payment__items {
+            padding: 30px 40px;
+            background-color: #EDE1D1;
+        }
+
+        .payment__items-title {
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .payment__companyes {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .payment__company {
+            display: flex;
+            align-items: center;
+            max-width: 50%;
+            width: 100%;
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+
+        .payment__company:hover {
+            background-color: #FAF4E6;
+        }
+
+        .payment__company-pic {
+            margin-right: 20px;
+            max-width: 120px;
+            width: 100%;
+            max-height: 120px;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .payment__company-img {
+            width: 100%;
+        }
+
+        .payment__company-text {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .payment__company-text-title {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .payment__company-text-comission {
+            margin: 0;
+            color: #DB6655;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="payment">
+            <h2 class="payment__title">оплата услуг</h2>
+            <div class="payment__items">
+                <h3 class="payment__items-title">Мгновенная оплата</h3>
+                <div class="payment__companyes">
+                    <div class="payment__company">
+                        <div class="payment__company-pic">
+                            <img src="./img/1.jpg" alt="Яндекс.Деньги" class="payment__company-img">
+                        </div>
+                        <div class="payment__company-text">
+                            <h4 class="payment__company-text-title">Яндекс.Деньги</h4>
+                            <p class="payment__company-text-comission">
+                                0% комиссия
+                            </p>
+                        </div>
+                    </div>
+                    <div class="payment__company">
+                        <div class="payment__company-pic">
+                            <img src="./img/4.jpg" alt="Элекснет" class="payment__company-img">
+                        </div>
+                        <div class="payment__company-text">
+                            <h4 class="payment__company-text-title">Элекснет</h4>
+                            <p class="payment__company-text-comission">
+                                0% комиссия
+                            </p>
+                        </div>
+                    </div>
+                    <div class="payment__company">
+                        <div class="payment__company-pic">
+                            <img src="./img/2.jpg" alt="Webmoney" class="payment__company-img">
+                        </div>
+                        <div class="payment__company-text">
+                            <h4 class="payment__company-text-title">Webmoney</h4>
+                            <p class="payment__company-text-comission">
+                                0.8% комиссия
+                            </p>
+                        </div>
+                    </div>
+                    <div class="payment__company">
+                        <div class="payment__company-pic">
+                            <img src="./img/5.jpg" alt="Qiwi" class="payment__company-img">
+                        </div>
+                        <div class="payment__company-text">
+                            <h4 class="payment__company-text-title">Qiwi</h4>
+                            <p class="payment__company-text-comission">
+                                до 10% комиссия
+                            </p>
+                        </div>
+                    </div>
+                    <div class="payment__company">
+                        <div class="payment__company-pic">
+                            <img src="./img/3.jpg" alt="Visa, Mastercard" class="payment__company-img">
+                        </div>
+                        <div class="payment__company-text">
+                            <h4 class="payment__company-text-title">Карты Visa, Mastercard (процессинг Uniteller)</h4>
+                            <p class="payment__company-text-comission">
+                                0% комиссия
+                            </p>
+                        </div>
+                    </div>
+                    <div class="payment__company">
+                        <div class="payment__company-pic">
+                            <img src="./img/6.jpg" alt="Webmoney" class="payment__company-img">
+                        </div>
+                        <div class="payment__company-text">
+                            <h4 class="payment__company-text-title">Новоплат</h4>
+                            <p class="payment__company-text-comission">
+                                4% комиссия
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

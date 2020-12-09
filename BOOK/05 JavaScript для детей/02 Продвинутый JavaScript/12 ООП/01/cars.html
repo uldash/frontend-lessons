@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гонки</title>
+</head>
+<body>
+
+    <script src="../lib/jquery-3.5.1.js"></script>
+    <script>
+        let Car = function (x, y) {
+            this.x = x;
+            this.y = y;
+        };
+
+        let drawCar = function (car) {
+            let carHtml = '<img src="./img/car.webp">';
+
+            let carElement = $(carHtml)
+
+            carElement.css({
+                position: "absolute",
+                left: car.x,
+                top: car.y,
+            })
+
+            $("body").append(carElement);
+        }
+
+        let tesla = new Car(20, 20);
+        let nissan = new Car(100, 200);
+        drawCar(tesla);
+        drawCar(nissan);
+        // console.log(tesla);
+    </script>
+</body>
+</html>

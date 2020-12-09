@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+    <canvas id="canvas" width="200" height="200"></canvas>
+    <script>
+        let canvas = document.getElementById("canvas");
+        let ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "#ff0000";
+        ctx.fillRect(0, 0, 50, 100)
+        ctx.fillStyle = "#00ff00";
+        ctx.fillRect(50, 0, 50, 100)
+        ctx.fillStyle = "#0000ff";
+        ctx.fillRect(100, 0, 50, 100)
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13</title>
+    <style>
+        body {
+            padding: 40px;
+        }
+
+        .pic {
+            width: 300px;
+        }
+
+        img {
+            width: 100%;
+            display: none;
+        }
+
+        .--active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="pic">
+        <img src="./img/1.jpg" alt="" class="--active">
+        <img src="./img/2.jpg" alt="">
+    </div>
+    <script>
+        let pic = document.querySelector(".pic");
+        let img = document.querySelectorAll(".pic img");
+
+        let act = function (e) {
+            img.forEach(item => {
+                item.classList.toggle("--active");
+            });
+        }
+        pic.onmouseenter = act;
+        pic.onmouseleave = act;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05</title>
+    <style>
+        body {
+            padding: 40px;
+        }
+
+        #text {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="text" value="Ку-ку"><input type="button" name="" id="btn" value="Нажми меня">
+
+    <script>
+        window.onload = function () {
+            let btn = document.getElementById("btn")
+            let text = document.getElementById("text");
+
+            btn.onclick = function () {
+                // alert(text.getAttribute("value"));
+                alert(text.value);
+            }
+        }
+    </script>
+</body>
+</html>

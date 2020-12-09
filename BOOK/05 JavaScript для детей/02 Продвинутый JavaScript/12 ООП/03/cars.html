@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гонки</title>
+</head>
+<body>
+
+    <script src="../lib/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            let Car = function (x, y, speed) {
+                this.x = x;
+                this.y = y;
+                this.speed = speed;
+                this.draw();
+            };
+
+            Car.prototype.draw = function () {
+                let carHtml = '<img src="./img/car.webp">';
+
+                this.carElement = $(carHtml)
+
+                this.carElement.css({
+                    position: "absolute",
+                    left: this.x,
+                    top: this.y,
+                })
+
+                $("body").append(this.carElement);
+            }
+
+            Car.prototype.moveRight = function () {
+                this.x += this.speed;
+                this.carElement.css({
+                    left: this.x,
+                    top: this.y,
+                })
+            }
+            Car.prototype.moveLeft = function () {
+                this.x -= this.speed;
+                this.carElement.css({
+                    left: this.x,
+                    top: this.y,
+                })
+            }
+            Car.prototype.moveUp = function () {
+                this.x += this.speed;
+                this.carElement.css({
+                    left: this.x,
+                    top: this.y,
+                })
+            }
+            Car.prototype.moveDown = function () {
+                this.y += this.speed;
+                this.carElement.css({
+                    left: this.x,
+                    top: this.y,
+                })
+            }
+
+            let tesla = new Car(10, 20, 1);
+            let nissan = new Car(10, 200, 5);
+
+            let mR = function (obj) {
+                obj.moveRight();
+                if (tesla.x > $("body").width() - 120) {
+                    clearInterval(carIntervalId)
+                }
+                if (nissan.x > $("body").width() - 120) {
+                    clearInterval(carIntervalId2)
+                }
+            }
+
+            // console.log($("body").width())
+            let carIntervalId = setInterval(mR, 20, tesla);
+            let carIntervalId2 = setInterval(mR, 20, nissan);
+            // setTimeout(() => { clearInterval(carIntervalId) }, 1500)
+
+        });
+    </script>
+</body>
+</html>

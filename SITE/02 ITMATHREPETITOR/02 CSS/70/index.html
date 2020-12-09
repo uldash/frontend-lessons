@@ -8,18 +8,95 @@
         * {
             box-sizing: border-box;
         }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .counter {
+            position: absolute;
+            display: inline-flex;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .counter__plus,
+        .counter__num,
+        .counter__minus {
+            width: 1.5em;
+            height: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .counter__plus {
+            color: #fff;
+            background-color: #D2D2D2;
+            border-radius: 4px 0 0 4px;
+            border: 2px solid #BBBCBD;
+            cursor: pointer;
+        }
+
+        .counter__num {
+            color: #BBBCBD;
+            font-weight: 700;
+        }
+
+        .counter__minus {
+            color: #fff;
+            background-color: #D2D2D2;
+            border-radius: 0 4px 4px 0;
+            border: 2px solid #BBBCBD;
+            cursor: pointer;
+        }
+
+        .counter__plus:hover::after,
+        .counter__minus:hover::after {
+            content: attr(data-title);
+            color: #403B2D;
+            font-size: 0.7em;
+            width: 12rem;
+            position: absolute;
+            padding: 0.8rem;
+            background-color: #FEC958;
+            top: 0;
+            right: 0;
+            transform: translate(1rem, calc(-100% - 0.8rem));
+        }
+
+        .counter__plus:hover::before,
+        .counter__minus:hover::before {
+            content: "";
+            position: absolute;
+            border: 1rem solid transparent;
+            border-top: 1rem solid #FEC958;
+            transform: translateY(-1rem);
+        }
+
+        .counter__plus:hover {
+            background-color: #E33330;
+            border: 2px solid #E33330;
+        }
+
+        .counter__minus:hover {
+            background-color: #3033E3;
+            border: 2px solid #3033E3;
+        }
     </style>
 </head>
 <body>
     <div class="counter">
-        <div class="counter__prompt">
+        <!-- <div class="counter__prompt">
             <p class="counter__prompt-text">
                 Зарегистрируйтесь, чтобы иметь возможность голосовать
             </p>
-        </div>
-        <div class="counter__plus">+</div>
+        </div> -->
+        <div class="counter__plus" data-title="Зарегистрируйтесь, чтобы иметь возможность голосовать">+</div>
         <div class="counter__num">0</div>
-        <div class="counter__minus">-</div>
+        <div class="counter__minus" data-title="Зарегистрируйтесь, чтобы иметь возможность голосовать">-</div>
     </div>
 </body>
 </html>

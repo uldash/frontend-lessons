@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04</title>
+</head>
+<body>
+    <div class="actions">
+        <input type="button" name="save" value="Добавить">
+        <input type="button" name="delete" value="Удалить">
+    </div>
+    <script>
+        window.onload = function (e) {
+            let buttons = document.querySelectorAll(".actions input");
+
+            const btnClick = function (e) {
+                console.log(this)
+                // for (let k in this) {
+                //     document.body.innerHTML += `<b>${k}</b> ${this[k]}<br>`
+                // }
+
+                console.log(this.getAttribute("name"));
+            }
+
+            buttons.forEach(item => {
+                item.onclick = btnClick;
+            })
+
+            // console.log(buttons)
+
+        }
+    </script>
+</body>
+</html>

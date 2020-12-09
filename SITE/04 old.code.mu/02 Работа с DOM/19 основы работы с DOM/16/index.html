@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16</title>
+    <style>
+        body {
+            padding: 40px;
+        }
+
+        input[type="text"] {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="text" value="Ку-ку">
+    <input type="button" value="Нажми на меня!">
+    <script>
+        window.onload = function () {
+            let txt = document.getElementById("text");
+            let btn = document.querySelector("input[type=button]");
+
+            btn.onclick = function () {
+                txt.value = "Ой, я поменял свой текст и css!"
+                txt.style.color = "red";
+                txt.style.lineHeight = "3rem";
+                txt.style.border = "2px solid #000";
+                txt.style.borderRadius = "6px";
+                txt.style.width = "300px";
+            }
+        }
+    </script>
+</body>
+</html>

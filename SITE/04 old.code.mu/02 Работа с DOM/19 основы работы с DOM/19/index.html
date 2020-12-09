@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19</title>
+    <style>
+        body {
+            padding: 40px;
+        }
+
+        input[type="text"] {
+            width: 260px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="text" value="Ку-ку">
+    <input type="button" value="Нажми на меня!">
+    <script>
+        window.onload = function () {
+            let txt = document.getElementById("text");
+            let btn = document.querySelector("input[type=button]");
+
+            btn.onclick = function () {
+                txt.style.float = "right";
+                txt.value = "Теперь я плаваю справа!";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23</title>
+    <style>
+        body {
+            padding: 40px;
+        }
+
+        input {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        По нажатию на кнопку в нижнем инпуте появится квадрат числа из верхнего инпута. Если введено не число - должна
+        показаться ошибка.
+    </p>
+    <input type="text" name="" id="first" value="" placeholder="Введите число!">
+    <br>
+    <input type="text" name="" id="second" value="Здесь появится результат." disabled="disable">
+    <br>
+    <input type="button" value="Нажми на меня!">
+    <script>
+        window.onload = function () {
+            let first = document.getElementById("first");
+            let second = document.getElementById("second");
+            let btn = document.querySelector("input[type=button]");
+
+            btn.onclick = function () {
+                if (isNaN(parseInt(first.value))) {
+                    alert("Введено не число!!!")
+                } else {
+                    second.value = first.value * first.value;
+                }
+
+            }
+        }
+    </script>
+</body>
+</html>

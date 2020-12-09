@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .items {
+            display: flex;
+        }
+
+        .item {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            background-color: #eee;
+        }
+
+        .--item-active {
+            border: 1px solid red;
+        }
+
+        .price {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="items">
+        <div class="item" data-price="2500">Товар 1</div>
+        <div class="item" data-price="2000">Товар 2</div>
+        <div class="item" data-price="1500">Товар 3</div>
+        <div class="item" data-price="5000">Товар 4</div>
+    </div>
+    <div class="price">0</div>
+    <script>
+        'use strict';
+        window.onload = function (e) {
+            let items = document.querySelectorAll(".items .item");
+            let divPrice = document.querySelector(".price");
+
+            for (let i = 0; i < items.length; i++) {
+                items[i].onclick = function () {
+                    this.classList.toggle("--item-active");
+                    calcPrice();
+
+                }
+            }
+
+            function calcPrice() {
+                let price = 0;
+                for (let i = 0; i < items.length; i++) {
+                    if (items[i].classList.contains("--item-active")) {
+                        price += parseInt(items[i].getAttribute("data-price"));
+                    }
+                }
+                divPrice.innerHTML = price;
+                // console.log(price)
+            }
+        }
+    </script>
+</body>
+</html>

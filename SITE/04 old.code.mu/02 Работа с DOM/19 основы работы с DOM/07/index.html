@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07</title>
+    <style>
+        body {
+            padding: 40px;
+        }
+
+        .pic {
+            height: 200px;
+            width: 200px;
+            overflow: hidden;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="pic">
+        <img src="./img/1.jpg" alt="" id="pic">
+    </div>
+    <button id="btn">Нажми меня</button>
+    <script>
+        window.onload = function () {
+            let btn = document.getElementById("btn");
+            let pic = document.getElementById("pic");
+
+            btn.onclick = function (e) {
+                pic.setAttribute("src", pic.getAttribute("src").replace(/1/, 2))
+                console.log();
+            }
+        }
+    </script>
+</body>
+</html>

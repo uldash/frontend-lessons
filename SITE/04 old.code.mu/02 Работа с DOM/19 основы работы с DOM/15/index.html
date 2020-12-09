@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15</title>
+    <style>
+        body {
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="text" value="Ку-ку">
+    <input type="button" value="Нажми на меня!" class="hide">
+    <input type="button" value="Нажми потом на меня!" class="show">
+    <script>
+        window.onload = function () {
+            let txt = document.getElementById("text");
+            let hide = document.querySelector(".hide");
+            let show = document.querySelector(".show");
+
+            hide.onclick = function () {
+                txt.hidden = true;
+            }
+            show.onclick = function () {
+                txt.hidden = false;
+            }
+        }
+    </script>
+</body>
+</html>

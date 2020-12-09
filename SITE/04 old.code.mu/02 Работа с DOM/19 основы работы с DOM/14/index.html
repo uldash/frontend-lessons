@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14</title>
+    <style>
+        body {
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="text" value="Ку-ку">
+    <input type="button" value="Нажми на меня!">
+    <script>
+        window.onload = function () {
+            let txt = document.getElementById("text");
+            let btn = document.querySelector("input[type='button']");
+
+            btn.onclick = function () {
+                txt.style.color = "red";
+                txt.style.width = "300px";
+            }
+        }
+    </script>
+</body>
+</html>

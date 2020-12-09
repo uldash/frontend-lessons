@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24</title>
+    <style>
+        body {
+            padding: 40px;
+        }
+
+        input {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Обратите внимание на курсор в различных состояниях.
+    </p>
+    <input type="button" value="Нажми на меня!">
+    <script>
+        window.onload = function () {
+            let btn = document.querySelector("input[type=button]");
+
+            btn.onclick = function () {
+                btn.disabled = true;
+                btn.style.cursor = "not-allowed";
+            }
+        }
+    </script>
+</body>
+</html>

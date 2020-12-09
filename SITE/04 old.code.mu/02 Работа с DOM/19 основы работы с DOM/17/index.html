@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17</title>
+    <style>
+        body {
+            padding: 40px;
+        }
+
+        .disable {
+            display: block;
+            margin-bottom: 20px;
+            width: 260px;
+        }
+
+        .enable {
+            display: none;
+            width: 260px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Это input type="submit"
+    </p>
+    <input type="submit" value="Нажми на меня!" class="disable">
+    <input type="submit" value="Нажми чтобы отблокировать элемент" class="enable">
+    <script>
+        window.onload = function () {
+            let txt = document.getElementById("text");
+            let dsbl = document.querySelector(".disable");
+            let enbl = document.querySelector(".enable");
+
+            dsbl.onclick = function () {
+                this.value = "О, теперь на меня больше не нажать!"
+                this.disabled = true;
+
+                enbl.style.display = "block"
+            }
+
+            enbl.onclick = function () {
+                dsbl.disabled = false;
+                this.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

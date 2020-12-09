@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08</title>
+    <style>
+        body {
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" value="Нажми на меня!">
+    <script>
+        window.onload = function () {
+            let txt = document.querySelector("input");
+
+            txt.onclick = function (e) {
+                alert(this.value);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03</title>
+</head>
+<body>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <script>
+        window.onload = function (event) {
+            document.body.onclick = function (e) {
+                console.log(1);
+            }
+
+            // заменит предыдущий обработчик
+            document.body.onclick = function (e) {
+                console.log(2);
+            }
+            // добавит новый обработчик, не переписывая предыдущий
+            document.body.addEventListener('click', function () {
+                console.log(3);
+            });
+            document.body.addEventListener('click', function () {
+                console.log(4);
+            });
+        };
+    </script>
+</body>
+</html>

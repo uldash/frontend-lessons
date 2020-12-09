@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08</title>
+    <style>
+        body {
+            padding: 100px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="num1"> и
+    <input type="text" name="num2">
+    <input type="button" name="culc" value="=">
+    <span class="res"></span>
+    <script>
+        window.onload = function (e) {
+            let btn = document.querySelector("input[name=culc]");
+
+            let inp1 = document.querySelector("input[name=num1]");
+            let inp2 = document.querySelector("input[name=num2]");
+            let span = document.querySelector(".res");
+
+            btn.onclick = function () {
+                let res = parseInt(inp1.value) + parseInt(inp2.value);
+                btn.setAttribute("disabled", "disabled")
+                span.innerHTML = res;
+            }
+
+            const enable = function () {
+                btn.removeAttribute("disabled");
+            }
+
+            inp1.oninput = enable;
+            inp2.oninput = enable;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="text">12345</div>
+    <script>
+        let text = document.querySelector(".text");
+
+        const print_object = function (obj) {
+            let res = "<ul>";
+
+            for (i in obj) {
+                res += `<li><b>${i}</b>:${obj[i]}</li>`;
+            }
+
+            res += "</ul>";
+            document.write(res);
+        }
+
+        print_object(text);
+
+
+        text.onclick = function () {
+            text.style.color = "red";
+            text.innerHTML += "Hello!"
+            text.className = " test1"
+        }
+
+        console.log(text)
+    </script>
+</body>
+</html>

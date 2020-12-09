@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22</title>
+    <style>
+        body {
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        По нажатию на кнопку в нижнем инпуте появится квадрат числа из верхнего инпута.
+    </p>
+    <input type="text" name="" id="first" value="" placeholder="Введите число!">
+    <input type="text" name="" id="second" value="Здесь появится результат." disabled="disable">
+    <input type="button" value="Нажми на меня!">
+    <script>
+        window.onload = function () {
+            let first = document.getElementById("first");
+            let second = document.getElementById("second");
+            let btn = document.querySelector("input[type=button]");
+
+            btn.onclick = function () {
+                second.value = first.value * first.value;
+            }
+        }
+    </script>
+</body>
+</html>

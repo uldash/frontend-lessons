@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+
+        #gallery {
+            width: 860px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #gallery .photos {
+            height: 530px;
+            overflow: hidden;
+        }
+
+        #gallery .photos img {
+            width: 100%;
+            display: none;
+        }
+
+        #gallery .photos img:first-child {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="gallery">
+        <div class="photos">
+            <img src="./img/img100.jpg" alt="">
+            <img src="./img/img101.png" alt="">
+            <img src="./img/img102.jpg" alt="">
+            <img src="./img/img103.png" alt="">
+            <img src="./img/img104.jpg" alt="">
+            <img src="./img/img105.jpg" alt="">
+            <img src="./img/img1.jpg" alt="">
+            <img src="./img/img2.jpg" alt="">
+        </div>
+        <div class="buttons">
+            <input type="button" value="Назад" class="prev">
+            <input type="button" value="Вперед" class="next">
+        </div>
+    </div>
+
+    <script>
+        let btn_prev = document.querySelector("#gallery .buttons .prev");
+        let btn_next = document.querySelector("#gallery .buttons .next");
+
+        let images = document.querySelectorAll("#gallery .photos img");
+
+        let i = 0;
+
+        btn_prev.onclick = function () {
+            images[i].style.display = "none";
+            i--;
+            if (i < 0) {
+                i = images.length - 1;
+            }
+            images[i].style.display = "block";
+        }
+        btn_next.onclick = function () {
+            images[i].style.display = "none";
+            i++;
+            if (i === images.length) {
+                i = 0;
+            }
+            images[i].style.display = "block";
+        }
+    </script>
+</body>
+</html>

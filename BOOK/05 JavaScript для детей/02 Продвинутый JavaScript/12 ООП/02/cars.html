@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гонки</title>
+</head>
+<body>
+
+    <script src="../lib/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            let Car = function (x, y) {
+                this.x = x;
+                this.y = y;
+            };
+
+            Car.prototype.draw = function () {
+                let carHtml = '<img src="./img/car.webp">';
+
+                this.carElement = $(carHtml)
+
+                this.carElement.css({
+                    position: "absolute",
+                    left: this.x,
+                    top: this.y,
+                })
+
+                $("body").append(this.carElement);
+            }
+
+            Car.prototype.moveRight = function () {
+                this.x += 5;
+                this.carElement.css({
+                    left: this.x,
+                    top: this.y,
+                })
+            }
+            Car.prototype.moveLeft = function () {
+                this.x -= 5;
+                this.carElement.css({
+                    left: this.x,
+                    top: this.y,
+                })
+            }
+            Car.prototype.moveUp = function () {
+                this.x += 5;
+                this.carElement.css({
+                    left: this.x,
+                    top: this.y,
+                })
+            }
+            Car.prototype.moveDown = function () {
+                this.y += 5;
+                this.carElement.css({
+                    left: this.x,
+                    top: this.y,
+                })
+            }
+
+            let tesla = new Car(20, 20);
+            let nissan = new Car(100, 200);
+
+            tesla.draw();
+            nissan.draw();
+
+            let mR = function (obj) {
+                obj.moveRight();
+                if (obj.x > 380) {
+                    clearInterval(carIntervalId)
+                }
+            }
+            let carIntervalId = setInterval(mR, 20, tesla);
+            // setTimeout(() => { clearInterval(carIntervalId) }, 1500)
+
+        });
+    </script>
+</body>
+</html>

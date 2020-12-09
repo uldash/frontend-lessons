@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21</title>
+    <style>
+        body {
+            padding: 40px;
+        }
+
+        input[type="text"] {
+            /* width: 260px; */
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="hi" value="Привет!">
+    <input type="text" name="" id="by" value="Пока!">
+    <input type="button" value="Нажми на меня!">
+    <script>
+        window.onload = function () {
+            let hi = document.getElementById("hi");
+            let by = document.getElementById("by");
+            let btn = document.querySelector("input[type=button]");
+
+            btn.onclick = function () {
+                let tmp = hi.value;
+                hi.value = by.value;
+                by.value = tmp;
+            }
+        }
+    </script>
+</body>
+</html>
