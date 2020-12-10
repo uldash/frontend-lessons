@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Given a non-negative integer n, write a function toBinary/ToBinary which returns that number in a binary format.
+
+        to_binary(1)  // should return 1
+        to_binary(5)  // should return 101
+        to_binary(11) // should return 1011
+        */
+        function toBinary(n) {
+            return Number(n.toString(2));
+        }
+
+        function assertEquals(a, b) {
+            if (a === b) {
+                return true;
+            } else {
+                return `${typeof a}(${a}) === ${typeof b}(${b})`;
+            }
+
+        }
+
+        console.log(assertEquals(toBinary(1), 1));
+        console.log(assertEquals(toBinary(2), 10));
+        console.log(assertEquals(toBinary(3), 11));
+        console.log(assertEquals(toBinary(5), 101));
+    </script>
+</body>
+</html>
