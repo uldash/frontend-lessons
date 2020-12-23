@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../../test.js"></script>
+    <script>
+        /*
+        Complete the solution so that it reverses the string passed into it.
+
+        'world'  =>  'dlrow'
+        */
+        function solution(str) {
+            return str.split("").reverse().join('');
+        }
+
+        console.log(assertEquals(solution('world'), 'dlrow'))
+        console.log(assertEquals(solution('hello'), 'olleh'))
+        console.log(assertEquals(solution(''), ''))
+        console.log(assertEquals(solution('h'), 'h'))
+    </script>
+</body>
+</html>

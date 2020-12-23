@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../../test.js"></script>
+    <script>
+        /*
+        Write a function that takes an integer and returns an array [A, B, C], where A is the number of multiples of 3 (but not 5) below the given integer, B is the number of multiples of 5 (but not 3) below the given integer and C is the number of multiples of 3 and 5 below the given integer.
+
+For example, solution(20) should return [5, 2, 1]
+        */
+        function solution(number) {
+            let res = [0, 0, 0];
+            for (let i = 1; i < number; i++) {
+                if (!(i % 3) && (i % 5)) {
+                    res[0]++;
+                }
+                if ((i % 3) && !(i % 5)) {
+                    res[1]++;
+                }
+                if (!(i % 3) && !(i % 5)) {
+                    res[2]++;
+                }
+            }
+            return res;
+        }
+
+        console.log(assertEquals(solution(20), [5, 2, 1]));
+        console.log(assertEquals(solution(2), [0, 0, 0]));
+        console.log(assertEquals(solution(14), [4, 2, 0]));
+        console.log(assertEquals(solution(30), [8, 4, 1]));
+        console.log(assertEquals(solution(141), [37, 19, 9]));
+    </script>
+</body>
+</html>

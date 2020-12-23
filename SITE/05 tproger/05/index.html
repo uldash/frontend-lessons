@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 5</title>
+</head>
+<body>
+    <script>
+        window.onload = function () {
+            document.write(`
+            <p>
+                Выйдите из цикла, изменив только две отмеченные строки. Результат в консоли сейчас останавливается на 9 9. Должен на 5 4.
+            </p>
+            <pre>
+            for (let i = 0; i < 10; i++) { //! Эту строку можно изменить
+                for (let j = 0; j < 10; j++) {
+                    if (i === 5 && j === 5) {
+                        //! Эту строку можно изменить
+                    }
+                    console.log(i, j);
+                }
+            }
+            </pre>
+            <hr>
+            `)
+            label1: for (let i = 0; i < 10; i++) { //! Эту строку можно изменить
+                for (let j = 0; j < 10; j++) {
+                    if (i === 5 && j === 5) {
+                        break label1; //! Эту строку можно изменить
+                    }
+                    document.write(`${i} ${j}<br>`);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

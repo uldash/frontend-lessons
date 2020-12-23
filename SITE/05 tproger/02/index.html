@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 2</title>
+</head>
+<body>
+    <script>
+        window.onload = function () {
+            document.write(`
+            <p>
+                Напишите однострочное решение, которое вычисляет сумму квадратных корней для всех чётных чисел целочисленного
+                массива.
+            </p>
+            <hr>
+            `)
+            const getRandom = function (end = 100) {
+                return Math.floor(Math.random() * end);
+            }
+
+            let arr = new Array(getRandom(100));
+
+            document.write(`Длина массива: ${arr.length}<br>`);
+
+            for (let i = 0; i < arr.length; i++) {
+                arr[i] = getRandom(100);
+            }
+
+            document.write(`Массив: [${arr}]<br>`);
+
+            let res = arr.filter(item => !(item % 2)).reduce((acc, cur) => { return acc += Math.sqrt(cur) }, 0).toFixed(2);
+
+            document.write(`Результат: ${res}`)
+        }
+    </script>
+</body>
+</html>
