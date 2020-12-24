@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 9</title>
+    <style>
+        .container {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 10px 10px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 14px;
+            font-family: sans-serif;
+            color: #39487D;
+        }
+
+        .article__text {
+            max-width: calc(100% - 130px);
+            width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-left: auto;
+        }
+
+        .note {
+            display: flex;
+        }
+
+        .note__title {
+            width: 100px;
+            padding-right: 10px;
+            padding-left: 10px;
+            margin-right: -10px;
+            margin-top: 14px;
+            margin-bottom: 14px;
+            font-size: 10px;
+            flex-shrink: 0;
+        }
+
+        .note__text {
+            max-width: calc(100% - 120px);
+            width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+            <article class="article">
+                <p class="article__text">
+                    Основной текст размером 14px. Могущественный король Лир, почувствовав приближение старости,
+                    решает переложить бремя власти на плечи трех дочерей: Гонерильи, Реганы и Корделии, поделив
+                    между ними свое царство.
+                </p>
+            </article>
+            <section class="note">
+                <aside class="note__title">
+                    Примечание с размером текста 10px
+                </aside>
+                <p class="note__text">
+                    Король хочет услышать от дочерей, как они его любят, «чтоб при разделе могли мы нашу щедрость
+                    проявить».
+                </p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

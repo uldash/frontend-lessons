@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 6</title>
+    <style>
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 10px 10px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            margin-left: 10px;
+        }
+
+        .header__title {
+            margin: 10px 0;
+
+        }
+
+        .main {
+            display: flex;
+        }
+
+        .menu {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .menu__list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu__list-link {
+            line-height: 1.5em;
+            font-size: 1rem;
+        }
+
+        .article {
+            margin: 0;
+            margin-right: 10px;
+            width: calc(100% - 230px);
+        }
+
+        .article__text {
+            text-align: left;
+            font-size: 1rem;
+            font-family: sans-serif;
+            margin: 0;
+            line-height: 1.5em;
+        }
+
+        .clearfix::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header__title">ООО &laquo;Агросервис&raquo;</h1>
+        </header>
+        <div class="main clearfix">
+            <nav class="menu ">
+                <ul class="menu__list">
+                    <li class="menu__list-item"><a href="#" class="menu__list-link">Главная</a></li>
+                    <li class="menu__list-item"><a href="#" class="menu__list-link">Продукты</a></li>
+                    <li class="menu__list-item"><a href="#" class="menu__list-link">О нас</a></li>
+                    <li class="menu__list-item"><a href="#" class="menu__list-link">Контакты</a></li>
+                </ul>
+            </nav>
+            <article class="article">
+                <p class="article__text">
+                    Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты. Приставка
+                    переписали продолжил повстречался возвращайся реторический, моей гор знаках живет деревни лучше дал,
+                    жаренные свое назад рот злых пустился до?
+                </p>
+            </article>
+        </div>
+    </div>
+</body>
+</html>

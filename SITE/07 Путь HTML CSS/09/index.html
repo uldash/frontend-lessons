@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 8</title>
+    <style>
+        .container {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 10px 10px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 14px;
+            font-family: sans-serif;
+        }
+
+        .item {
+            background-color: #EFEFEF;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #000;
+            display: flex;
+        }
+
+        .box--yellow {
+            width: 150px;
+            height: 150px;
+            background-color: #FAFB9D;
+            margin-right: 10px;
+            border: 1px solid #000;
+            flex-shrink: 0;
+        }
+
+        .content {}
+
+        .content__text:first-child {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+            <div class="item">
+                <div class="box--yellow">
+                </div>
+                <div class="content">
+                    <p class="content__text">
+                        Одна или несколько строк текста размером 14px
+                    </p>
+                </div>
+            </div>
+            <div class="item clearfix">
+                <div class="box--yellow">
+                </div>
+                <div class="content">
+                    <p class="content__text">
+                        Одна или несколько строк текста размером 14px
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, natus. Impedit
+                        voluptatem dolorum distinctio consectetur. Repellat sit quam explicabo ad velit cum, neque
+                        eligendi qui. Odit debitis aperiam saepe natus.
+                        Eum blanditiis vitae dolorum magni illo porro. Culpa deserunt est accusamus dicta doloremque
+                        corrupti ex laudantium quasi esse, impedit obcaecati. Aspernatur animi possimus voluptate
+                        quaerat id aliquid laborum, a magni.
+                        Ab assumenda dicta adipisci voluptatibus illo eos rerum corporis ratione asperiores voluptas,
+                        accusamus architecto nesciunt quasi harum hic nemo, aspernatur sunt consequatur cupiditate animi
+                        quidem omnis! Impedit veritatis nulla maiores?
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi amet labore dolor autem vero sint
+                        eos recusandae expedita! Delectus nesciunt inventore a at vero nisi, velit veritatis tempora
+                        nobis totam.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

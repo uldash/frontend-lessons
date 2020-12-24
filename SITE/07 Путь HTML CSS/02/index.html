@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2</title>
+    <style>
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 10px 10px;
+            background-color: rgb(194, 194, 194);
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .box {
+            padding: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #000;
+
+        }
+
+        .text {
+            text-align: left;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            max-height: 200px;
+            font-weight: 700;
+        }
+
+        .--green {
+            background-color: #E2FFDC;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box --green">
+            <p class="text">
+                Текст размером 14px выровнен влево. Он заполняет весь блок. Ширина блока не превышает 600px.
+                Если окно маленькое, блок занимает столько места, сколько есть.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
