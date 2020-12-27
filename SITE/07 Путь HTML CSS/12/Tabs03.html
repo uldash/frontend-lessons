@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 12</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 90%;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 760px) {
+            .container {
+                max-width: 100%;
+            }
+        }
+
+        /* Tabs START */
+        .tabs {
+            margin-top: 60px;
+            position: relative;
+            display: flex;
+
+        }
+
+        @media screen and (max-width: 500px) {
+            .tabs {
+                flex-direction: column;
+                margin-top: 0;
+            }
+        }
+
+        .tab label {
+            position: relative;
+            user-select: none;
+            padding: 10px;
+            width: 100px;
+            color: #DBDBD3;
+            background-color: #525252;
+            border-radius: 4px 4px 0 0;
+            margin-right: 5px;
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 500px) {
+            .tab label {
+                width: 100%;
+                border-radius: 0;
+                border-top: 2px solid #4d4c47;
+            }
+        }
+
+        .tab label:hover {
+            background-color: #667876;
+        }
+
+        .tab [type=radio] {
+            display: none;
+        }
+
+        .content {
+            display: none;
+            /* position: relative; */
+            position: absolute;
+            left: 0;
+            right: 0;
+            border-top: 5px solid #B8B63E;
+            background-color: #F7EEC6;
+            padding: 0 10px;
+            border-radius: 0 3px 3px 3px;
+        }
+
+        @media screen and (max-width: 760px) {
+            .content {
+                border-radius: 0;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .content {
+                bottom: 0;
+                transform: translateY(99%);
+                border-top: inherit;
+            }
+        }
+
+        [type=radio]:checked~label {
+            color: #F2F2F2;
+            background-color: #B8B63E;
+        }
+
+        [type=radio]:checked~label~.content {
+            display: block;
+        }
+
+        /* Tabs END */
+
+        .header {
+            background-color: #404040;
+            width: 100%;
+        }
+
+        .menu {
+            padding: 5px 10px;
+        }
+
+        .menu__list {
+            display: flex;
+            list-style: none;
+            justify-content: flex-end;
+            margin: 0;
+        }
+
+        .menu__list-item+.menu__list-item {
+            margin-left: 10px;
+        }
+
+        .menu__list-link {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__list-item"><a href="#" class="menu__list-link">Tweet</a></li>
+                <li class="menu__list-item"><a href="#" class="menu__list-link">Edit Code</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="container">
+            <div class="tabs">
+                <div class="tab">
+                    <input type="radio" id="tab-1" name="tab-group-1" checked>
+                    <label for="tab-1" class="tab__label">One</label>
+                    <article class="content">
+                        <h2>Tab 1 heading</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis vero quidem molestias,
+                            non facilis asperiores cumque cum ea placeat alias dolores, minima aliquid tenetur, maiores
+                            dolorem eos temporibus perspiciatis? Similique?
+                        </p>
+                    </article>
+                </div>
+                <div class="tab">
+                    <input type="radio" id="tab-2" name="tab-group-1">
+                    <label for="tab-2" class="tab__label">Two</label>
+                    <article class="content">
+                        <h2>Tab 2 heading</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis vero quidem molestias,
+                            non facilis asperiores cumque cum ea placeat alias dolores, minima aliquid tenetur, maiores
+                            dolorem eos temporibus perspiciatis? Similique?
+                        </p>
+                    </article>
+                </div>
+                <div class="tab">
+                    <input type="radio" id="tab-3" name="tab-group-1">
+                    <label for="tab-3" class="tab__label">Three</label>
+                    <article class="content">
+                        <h2>Tab 3 heading</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis vero quidem molestias,
+                            non facilis asperiores cumque cum ea placeat alias dolores, minima aliquid tenetur, maiores
+                            dolorem eos temporibus perspiciatis? Similique?
+                        </p>
+                    </article>
+                </div>
+                <div class="tab">
+                    <input type="radio" id="tab-4" name="tab-group-1">
+                    <label for="tab-4" class="tab__label">Four</label>
+                    <article class="content">
+                        <h2>Tab 4 heading</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis vero quidem molestias,
+                            non facilis asperiores cumque cum ea placeat alias dolores, minima aliquid tenetur, maiores
+                            dolorem eos temporibus perspiciatis? Similique?
+                        </p>
+                    </article>
+                </div>
+            </div>
+            <h1>Hello</h1>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 12</title>
+    <style>
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        input {
+            display: none;
+        }
+
+        input:checked+label {
+            background-color: #CCC;
+        }
+
+        #tab1:checked~article:nth-of-type(1),
+        #tab2:checked~article:nth-of-type(2),
+        #tab3:checked~article:nth-of-type(3) {
+            display: block;
+        }
+
+        article {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <input type="radio" id="tab1" name="rbtn" checked="checked">
+            <label for="tab1" class="tabs">quitIM 0.1</label>
+            <input type="radio" id="tab2" name="rbtn">
+            <label for="tab2" class="tabs">quitIM 0.2</label>
+            <input type="radio" id="tab3" name="rbtn">
+            <label for="tab3" class="tabs">quitIM 0.3</label>
+            <article>
+                quitIM 0.1 - Однопоточный клиент, вышедший в 2008 году
+            </article>
+            <article>
+                quitIM 0.2 - Многопоточный клиент, вышедший в 2010 году
+            </article>
+            <article>
+                quitIM 0.3 - Многопоточный клиент, вышедший в 2010 году
+            </article>
+        </div>
+    </section>
+</body>
+</html>

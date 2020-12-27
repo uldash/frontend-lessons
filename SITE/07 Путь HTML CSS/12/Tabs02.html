@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 12</title>
+    <style>
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Tabs START */
+        .tabs {
+            margin-top: 60px;
+            position: relative;
+            display: flex;
+        }
+
+        .tab label {
+            position: relative;
+            user-select: none;
+        }
+
+        .tab [type=radio] {
+            display: none;
+        }
+
+        .content {
+            display: none;
+            position: absolute;
+            left: 0;
+        }
+
+        [type=radio]:checked~label {
+            z-index: 2;
+            background-color: #eee;
+        }
+
+        [type=radio]:checked~label~.content {
+            display: block;
+        }
+
+        /* Tabs END */
+
+        .header {
+            background-color: #404040;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .menu {
+            padding: 5px 10px;
+        }
+
+        .menu__list {
+            display: flex;
+            list-style: none;
+            justify-content: flex-end;
+            margin: 0;
+        }
+
+        .menu__list-item+.menu__list-item {
+            margin-left: 10px;
+        }
+
+        .menu__list-link {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__list-item"><a href="#" class="menu__list-link">Tweet</a></li>
+                <li class="menu__list-item"><a href="#" class="menu__list-link">Edit Code</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="container">
+            <div class="tabs">
+                <div class="tab">
+                    <input type="radio" id="tab-1" name="tab-group-1" checked>
+                    <label for="tab-1" class="tab__label">quitIM 0.1</label>
+                    <article class="content">
+                        quitIM 0.1 - Однопоточный клиент, вышедший в 2008 году
+                    </article>
+                </div>
+                <div class="tab">
+                    <input type="radio" id="tab-2" name="tab-group-1">
+                    <label for="tab-2" class="tab__label">quitIM 0.2</label>
+                    <article class="content">
+                        quitIM 0.2 - Многопоточный клиент, вышедший в 2010 году
+                    </article>
+                </div>
+                <div class="tab">
+                    <input type="radio" id="tab-3" name="tab-group-1">
+                    <label for="tab-3" class="tab__label">quitIM 0.3</label>
+                    <article class="content">
+                        quitIM 0.3 - Многопоточный клиент, вышедший в 2010 году
+                    </article>
+                </div>
+            </div>
+            <h1>Hello</h1>
+        </div>
+    </section>
+</body>
+</html>
