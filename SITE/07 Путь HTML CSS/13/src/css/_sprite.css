@@ -1,0 +1,59 @@
+.bg-Android {
+    width: 47px; height: 54px;
+    background: url('../img/css_sprites.png') -92px -86px;
+}
+
+.bg-Camera {
+    width: 60px; height: 56px;
+    background: url('../img/css_sprites.png') -92px -10px;
+}
+
+.bg-Computer_iMac {
+    width: 62px; height: 59px;
+    background: url('../img/css_sprites.png') -10px -10px;
+}
+
+.bg-Dribbble {
+    width: 30px; height: 30px;
+    background: url('../img/css_sprites.png') -172px -63px;
+}
+
+.bg-Facebook {
+    width: 30px; height: 30px;
+    background: url('../img/css_sprites.png') -172px -113px;
+}
+
+.bg-Fill {
+    width: 9px; height: 13px;
+    background: url('../img/css_sprites.png') -160px -174px;
+}
+
+.bg-Logo_Icon {
+    width: 39px; height: 33px;
+    background: url('../img/css_sprites.png') -172px -10px;
+}
+
+.bg-Phone {
+    width: 10px; height: 11px;
+    background: url('../img/css_sprites.png') -189px -174px;
+}
+
+.bg-Pinterest {
+    width: 30px; height: 30px;
+    background: url('../img/css_sprites.png') -10px -174px;
+}
+
+.bg-RSS {
+    width: 30px; height: 30px;
+    background: url('../img/css_sprites.png') -60px -174px;
+}
+
+.bg-Stop_Watch {
+    width: 55px; height: 65px;
+    background: url('../img/css_sprites.png') -10px -89px;
+}
+
+.bg-Twitter {
+    width: 30px; height: 30px;
+    background: url('../img/css_sprites.png') -110px -174px;
+}

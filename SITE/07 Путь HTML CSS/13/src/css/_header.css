@@ -30,13 +30,13 @@
 
 .logo__link::before{
     content: "";
-    background: url(../img/Logo_Icon.png) center no-repeat;
     position: absolute;
-    width: 39px;
-    height: 39px;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+    width: 39px; 
+    height: 33px;
+    background: url('../img/css_sprites.png') -172px -10px;
 }
 
 .nav {

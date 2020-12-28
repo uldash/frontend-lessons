@@ -40,7 +40,7 @@
     font-size: 14px;
     font-weight: 400;
     font-style: normal;
-    padding-left: 23px;
+    padding-left: 20px;
     color: #bebebe;
     margin-right: 30px;
     position: relative;
@@ -51,19 +51,19 @@
 .get-in__addr-city::before {
     content: "";
     position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     left: 0;
-    background-color: #fff;
-    background: url("../img/Fill.png") no-repeat center;
+    width: 9px;
+    height: 13px;
+    background: url('../img/css_sprites.png') -160px -174px;
 }
 
 .get-in__addr-phone {
     font-size: 14px;
     font-weight: 400;
     font-style: normal;
-    padding-left: 23px;
+    padding-left: 20px;
     color: #bebebe;
     position: relative;
     line-height: 1.5em;
@@ -72,12 +72,12 @@
 .get-in__addr-phone::before {
     content: "";
     position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     left: 0;
-    background-color: #fff;
-    background: url("../img/Phone.png") no-repeat center;
+    width: 10px; height: 11px;
+    background: url('../img/css_sprites.png') -189px -174px;
+
 }
 .get-in__social {
     text-align: center;

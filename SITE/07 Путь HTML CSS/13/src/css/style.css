@@ -1,5 +1,7 @@
-@import 'font.css';
-@import 'common.css';
-@import 'header.css';
-@import 'main.css';
-@import 'footer.css';
+@import '_font.css';
+@import '_common.css';
+@import '_sprite.css';
+@import '_header.css';
+@import '_main.css';
+@import '_footer.css';
+
