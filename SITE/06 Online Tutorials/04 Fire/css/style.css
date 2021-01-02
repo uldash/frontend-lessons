@@ -1,0 +1,44 @@
+@import '_font.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SourceSansPro', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0e0e0e;
+}
+
+.text {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    filter: url(#fire);
+}
+
+.text h2 {
+    position: relative;
+    color: #ffeb3b;
+    font-weight: 600;
+    font-size: 16em;
+    -webkit-box-reflect: below -100px linear-gradient(transparent, #0008);
+    text-shadow: 
+    0 0 10px #ff8c3b,
+    0 0 40px #ff8c3b,
+    0 0 80px #ff8c3b,
+    0 0 160px #ff8c3b,
+    0 0 240px #ff8c3b;
+}
+
+@media screen and (max-width: 425px){
+    .text h2 {
+        font-size: 6em;
+    }
+}

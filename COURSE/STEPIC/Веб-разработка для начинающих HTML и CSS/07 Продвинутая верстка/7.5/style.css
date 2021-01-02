@@ -1,0 +1,55 @@
+.block {
+    margin: 8px 0;
+    padding: 32px;
+    box-sizing: border-box;
+    color: #fff;
+    font: 32px sans-serif;
+    text-align: center;
+    background: #777;
+  }
+  
+  .layout {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .c1,
+  .c2,
+  .c6 {
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+  
+  @media screen and (max-width: 991.99px){
+    .c6, .c2, .c1 {
+        width: 100%;
+    }
+  }
+  @media screen and (min-width: 992px){
+    .c6 {
+        width: 100%;
+    }
+
+    .c2 {
+        width: 50%;
+    }
+
+    .c1 {
+        width: 33.33%;
+    }
+
+  }
+  @media screen and (min-width: 1200px){
+    .c6 {
+        width: 100%;
+    }
+
+    .c2 {
+        width: 33.33%;
+    }
+
+    .c1 {
+        width: 16.66%;
+    }
+  }
+  
