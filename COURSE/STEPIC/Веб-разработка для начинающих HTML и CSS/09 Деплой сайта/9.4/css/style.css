@@ -1,0 +1,13 @@
+@import './font.css';
+@import './vendor/bootstrap.css';
+@import './vendor/bootstrap-grid.css';
+@import './header.css';
+@import './main.css';
+@import './footer.css';
+@import './upper.css';
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+

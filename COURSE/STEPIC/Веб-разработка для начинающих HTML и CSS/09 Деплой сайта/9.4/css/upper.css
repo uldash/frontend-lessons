@@ -1,0 +1,27 @@
+.body__upper {
+    width: 80px;
+    height: 80px;
+    background-color: #59BD5A;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 25px;
+    overflow: hidden;
+    outline: none;
+    border: none;
+    z-index: 1;
+}
+
+.body__upper:focus {
+    outline: none;
+}
+
+.body__upper img {
+    height: 100%;
+    transition: all 0.2s ease-in;
+}
+
+.body__upper:active img {
+    height: 100%;
+    transform: scale(1.3);
+}
